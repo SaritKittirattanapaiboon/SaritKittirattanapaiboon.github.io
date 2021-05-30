@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pokemon Rejuvenation - Badge Two - Route 2</title>
+
+<link rel="stylesheet" href="../../styles/MainElements.css">
+<link rel="stylesheet" href="../../styles/WalkthroughElements.css">
+<link rel="stylesheet" href="../../styles/pokedex.css">
+
+<script src="../../Scripts/battlepokedex.js"></script>
+<script src="../../Scripts/pokedexPage.js"></script>
+<script src="../../Scripts/walkthroughElements.js"></script>
+<script src="../../Scripts/onload.js"></script>
+
+</head>
+
+<body onload="globalrunOnLoad('','');">
+
+  <div class="popUpNavigation" id="popUpNav">
+  </div>
+
+  <!-- Left Popup Side Bar -->
+
+  <div class="trainerSidebar" id="mapSidebarContent">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="encounterSidebarContent">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="shopSidebarContent">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="fieldEffects">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <!-- Main Walkthrough Content -->
+  
+  <div class="maincontent">
+    <div class="currentLocation">
+      <span class="pokedexNumber">#003 - Venusaur</span>
+    </div>
+    <div class="walkthrough">
+      <p class="walkthroughText">
+        <input type="text" id="myTextInput">     <button id="textInputButton" onclick="readText();">Click Here</button>
+      </p>
+      
+
+      <div id=testOutput>
+        <span class="pokedexAll">
+          <table class="pokedexTable">
+            <tr><th colspan="2" class="formTitle">Form: 1</th></tr>
+            <tr><td class="pokemonImageCell"><img class="pokemonImageSource" src="../../images/PokemonSprites/003.png"></td><td rowspan="2" class="pokemonType">Grass<br>Poison</td></tr>
+            <tr><th class="pokemonName">Venusaur</th></tr>
+            <tr><td class="pokemonAbility">Ability 1: Overgrow</td><td class="pokemonAbility">Hidden Ability: Chlorophyll</td></tr>
+          </table>
+          <table class="pokedexTable">
+            <tr class="statTitles"><td>HP</td><td>Attack</td><td>Defense</td><td>Special Attack</td><td>Special Defense</td><td>Speed</td><td>Base Stat Totals</td></tr>
+            <tr class="statTitles"><td>80</td><td>82</td><td>83</td><td>100</td><td>100</td><td>80</td><td>525</td></tr>
+          </table>
+          <table class="pokedexTable">
+            <tr><td class="genderRatio">Male: 88%<br>Female: 12%</td><td class="eggGroup">Egg Group 1: Monster<br>Egg Group 2: Grass</td></tr>
+            <tr><td class="expYield">Base Exp Yield: 236</td><td class="EVTitle">Effort Values Yield:</td><td class="EVYield">2 Special Attack<br>1 Special Defense</td></tr>
+            <tr><td class="evolutionFromTitle">Evolves from:</td><td class="evolutionFrom"><img class="pokemonImageSource" src="../../images/PokemonSprites/002.png"><br>Ivysaur<br>At Level 16</td></tr>
+            <tr><td class="evolutionToTitle">Evolves into:</td><td class="evolutionTo"><img class="pokemonImageSource" src="../../images/PokemonSprites/003_1.png"><br>Mega Venusaur<br>Through Mega Evolution</td></tr>
+          </table>
+          <br>
+          <table class="pokedexTable">
+            <tr><th colspan="2" class="formTitle">Form: 2</th></tr>
+            <tr><td class="pokemonImageCell"><img class="pokemonImageSource" src="../../images/PokemonSprites/003_1.png"></td><td rowspan="2" class="pokemonType">Grass<br>Poison</td></tr>
+            <tr><th class="pokemonName">Mega Venusaur</th></tr>
+            <tr><td class="pokemonAbility">Ability 1: Thick Fat</td><td class="pokemonAbility">Hidden Ability: None</td></tr>
+          </table>
+          <table class="pokedexTable">
+            <tr class="statTitles"><td>HP</td><td>Attack</td><td>Defense</td><td>Special Attack</td><td>Special Defense</td><td>Speed</td><td>Base Stat Totals</td></tr>
+            <tr class="statTitles"><td>80</td><td>100</td><td>123</td><td>122</td><td>120</td><td>80</td><td>625</td></tr>
+          </table>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Right Side Navigation -->
+
+  <div class="sidenavRight" id="rightSidebar">
+  </div>
+
+  <div class="resourcenavRight" id="resourceSidebar">
+  </div>
+
+  <script>
+    window.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        escapeToClose();
+      }
+    })
+    //Enter to send input text
+    var input=document.getElementById("myTextInput");
+    input.addEventListener('keyup', function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("textInputButton").click();
+      }
+    });
+  </script>
+</body>
+</html>

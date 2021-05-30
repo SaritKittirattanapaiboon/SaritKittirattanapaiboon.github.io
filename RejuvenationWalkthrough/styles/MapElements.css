@@ -1,0 +1,139 @@
+.mapSelectionLeft{
+    width: 100%;
+}
+
+.currentLocationMapTitle {
+    border-radius: 0px 15px 15px 0px;
+    margin-left: 50px; /* Same as the width of the sidebar */
+    /*margin-right: 400px;  Same as the width of the sidebar */
+    width: 65%;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 40px;
+    display: block;
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.mapSelectionList {
+    list-style-type: none; /* Remove bullets */
+    padding-left: 12px;
+    padding-bottom: 15px;
+    padding-right: 5px;
+}
+
+.mapSelectionList li {
+    margin-bottom: 10px;
+}
+
+.mapSelectionHiddenList {
+    display: none;
+
+    list-style-type: none; /* Remove bullets */
+    padding-left: 12px;
+    padding-bottom: 15px;
+    padding-right: 5px;
+    margin: 0;
+}
+
+.mapSelectionList .mapSelectionHiddenList {
+    padding-top: 10px;
+}
+
+.mapSelectionTitle {
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+    padding-bottom: 15px;
+
+    background-color: transparent;
+    border: none;
+}
+
+.mapSelectionTitle:hover {
+    color: gainsboro;
+    text-decoration: 1px gainsboro underline;
+}
+
+.mapSelectionLeft {
+    background-color: transparent;
+    border: none;
+
+    color: white;
+    font-size: 18px;
+
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.mapSelectionLeft:hover {
+    color:rgb(221, 221, 221);
+    text-decoration: 2px black solid underline;
+}
+
+.mapBackground {
+    border-radius: 0px 15px 15px 0px;
+    font-size: 17px;
+    margin-left: 50px; /* Same as the width of the sidebar */
+    /*margin-right: 400px;  Same as the width of the sidebar */
+    width: 65%;
+    padding: 10px 40px;
+    display: block;
+    background-color: rgb(221, 221, 221);
+}
+
+.largeMap{
+    height: 800px;
+    width: 800px;
+    z-index: 2;
+
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-20px,0px);
+
+    border: 2px black solid;
+}
+
+.NoEncounters {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.mapEncounterTable{
+    width: 100%;
+    border: solid black 2px;
+    border-collapse: collapse;
+    background-color: rgb(180, 180, 180);
+
+    text-align: center;
+}
+
+.mapEncounterTable th {
+    border: solid black 2px;
+    width: 150px;
+    font-size: 18px;
+}
+
+.mapEncounterTable td {
+    border: solid black 2px;
+    width: auto;
+    min-width: 80px;
+    font-size: 18px;
+}
+
+.mapEncounterTableType{
+    color: rgb(247, 247, 247);
+}
+
+.mapEncounterTableMethod{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.mapEncounterTableImage{
+    width: 100px;
+    height: 100px;
+}

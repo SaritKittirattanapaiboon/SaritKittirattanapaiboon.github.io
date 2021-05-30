@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pokemon Rejuvenation - Maps</title>
+
+<link rel="stylesheet" href="../../styles/MainElements.css">
+<link rel="stylesheet" href="../../styles/WalkthroughElements.css">
+<link rel="stylesheet" href="../../styles/MapElements.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+ integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+ crossorigin=""/>
+
+<script src="../../Scripts/battlepokedex.js"></script> <!--Battle Pokedex-->
+<script src="../../Scripts/trainerList.js"></script> <!--Trainer Locations-->
+<script src="../../Scripts/mapEncounterList.js"></script> <!--Encounters-->
+
+<script src="../../Scripts/walkthroughElements.js"></script>
+<script src="../../Scripts/onload.js"></script>
+<script src="../../Scripts/mapLeaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+
+</head>
+
+<body onload="globalrunOnLoad('','FloriaIsland');showMap('../../images/Screenshots/TrainerMaps/EGC-LeftSide.png', 0, 0);hiddenListSetup();">
+
+  <div class="popUpNavigation" id="popUpNav">
+  </div>
+
+  <!-- Left Popup Side Bar -->
+
+  <div class="trainerSidebar" id="FloriaIsland">
+    <ul class="mapSelectionList">
+      <li>
+        <span class="mapSelectionTitle" onclick="showHiddenList('GearenCityArea');">East Gearen City Area</span>
+        <ul class="mapSelectionHiddenList" id="GearenCityArea">
+          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/EGC-LeftSide.png', 0, 0);">East Gearen City - Left</button></li>
+          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/EGC-RightSide.png', 0, 1);">East Gearen City - Right</button></li>
+          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GearenPark.png', 2, 0);">Gearen Park</button></li>
+          <li>
+            <span class="mapSelectionTitle" onclick="showHiddenList('ChrisolaHotel');">Chrisola Hotel</span>
+            <ul class="mapSelectionHiddenList" id="ChrisolaHotel">
+              <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/ChrisolaHotel1F.png', 'Chrisola Hotel', -1);">Chrisola Hotel Floor 1</button></li>
+              <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/ChrisolaHotel2F3F.png', 'Chrisola Hotel', -1);">Chrisola Hotel Floor 2 & Pool</button></li>
+              <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/ChrisolaCasino.png', 'Chrisola Hotel', -1);">Chrisola Hotel Casino</button></li>
+              <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/ChrisolaRooftop.png', 1, 0);">Chrisola Hotel Rooftop</button></li>
+            </ul>
+          </li>
+          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GearenSewers.png', 3, 0);">Gearen Sewers</button></li>
+        </ul>
+      </li>
+      <li>
+        <span class="mapSelectionTitle" onclick="showHiddenList('Route1Area');">Route 1 and Goldenwood Forest Area</span>
+        <ul class="mapSelectionHiddenList" id="Route1Area">
+          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/Route1.png', 4, 0);">Route 1</button></li>
+          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GForest.png', 5, 0);">Goldenwood Forest</button></li>
+          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GForest-Xen.png', 5, 1);">Goldenwood Forest - Team Xen Attack</button></li>
+          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GCave.png', 6, 0);">Goldenwood Cave</button></li>
+        </ul>
+      </li>
+      <button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/Route2.png', 7, 0);">Route 2</button>
+    </ul>
+    
+  </div>
+
+  <div class="trainerSidebar" id="TerajumaIsland">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="AeviumPast">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="TerrialIsland">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="Badlands">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <!-- Main Walkthrough Content -->
+  
+  <div class="maincontent">
+    <div class="currentLocationMapTitle" id="currentMapLocation">
+      East Gearen City - Left Side
+    </div>
+    <div class="mapBackground">
+      <div class="largeMap" id="currentMap"></div>
+      <br><br>
+      <div class="currentMapEncounters" id="thisMapEncounters">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Right Side Navigation -->
+
+  <div class="sidenavRight" id="rightSidebar">
+  </div>
+
+  <div class="resourcenavRight" id="resourceSidebar">
+  </div>
+
+  <script>
+    window.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        escapeToClose();
+      }
+    })
+  </script>
+
+  <script>
+    var bounds = [[0,0], [800,800]];
+    var map = L.map('currentMap', {
+      crs: L.CRS.Simple,
+      minZoom: 0,
+      maxZoom: 2,
+      maxBounds: bounds,
+      maxBoundsViscosity: 1.0
+      });
+    var image = L.imageOverlay('../../images/Screenshots/Chapter 1/FullMaps/EastGearenCity-LeftNoEvents.png', bounds).addTo(map);
+    map.fitBounds(bounds);
+  </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+///Trainer Template
+      <div id="" class="TrainerPopup">
+        <span class="close" id="Close">&times;</span>
+        <p class="normalTrainerTitle" style="text-align:center;">
+        Name
+        </p>
+        <table class="trainerPopupContent">
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/">
+              <br>
+              Meowth (Kantonian), Level 11
+            </th>
+            <td rowspan="4">Shadow</td>
+            <td>----</td>
+          </tr>
+          <tr><td>---</td></tr>
+          <tr><td>---</td></tr>
+          <tr><td>---</td></tr>
+
+          <tr>
+            <td colspan="3">
+              Reward: None
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
+//////Trainer Pokemon Single Type
+
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/734.png">
+              <br>
+              Yungoos, Level 6
+            </th>
+            <td rowspan="4">Normal</td>
+            <td>Tackle</td>
+          </tr>
+          <tr><td>Leer</td></tr>
+          <tr><td>---</td></tr>
+          <tr><td>---</td></tr>
+
+//////Trainer Pokemon Dual Type
+
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/731.png">
+              <br>
+              Pikipek, Level 7
+            </th>
+            <td rowspan="2">Normal</td>
+            <td>Peck</td>
+          </tr>
+          <tr><td>Growl</td></tr>
+          <tr>
+            <td rowspan="2">Flying</td>
+            <td>Echoed Voice</td>
+          </tr>
+          <tr><td>---</td></tr>
+
+//////Encounter Pokemon Single Type
+
+          <tr>
+            <th rowspan="2">
+              <span class="wildPokemonName">
+                <img class="encounterPokemonImage" src="../../images/PokemonSprites/509.png">
+                <br>
+                #509 Purrloin
+                <span class="wildPokemonTooltip">
+                  Tooltip
+                </span>
+              </span>
+            </th>
+            <td rowspan="2">Type</td>
+            <td rowspan="2">Percentage</td>
+          </tr>
+
+
+//////Encounter Pokemon Dual Type
+
+          <tr>
+            <th rowspan="2">
+              <span class="wildPokemonName">
+                <img class="encounterPokemonImage" src="../../images/PokemonSprites/519.png">
+                <br>
+                #519 Pidove
+                <span class="wildPokemonTooltip">
+                  Tooltip
+                </span>
+              </span>
+            </th>
+            <td>Type1</td>
+            <td rowspan="2">30%</td>
+          </tr>
+          <tr><td>Type2</td></tr>
+
+//////Hidden Item Template
+<span class="hiddenItemText">Super Repel<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 1/Hidden Items/RightSide/SuperRepel.bmp"></span></span>
+
+///////Trainer Template
+<a href="javascript:void(0)" class="normalTrainerName" id="PrimaDonnaBiancaName">Prima Donna Bianca.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/TrainerBattles/RightSide/PrimaDonnaBianca.bmp"></span></a>
+
+//////Important Name Template
+<span class="ImportantName">Name Rater,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/LeftSide/NameRater.bmp"></span></span>
+
+//////Zygarde Cell Template
+<span class="ZygardeCell">Zygarde Cell<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/ZygradeCells/ZyCell1.png"></span></span>
+
+/////Trainer Table Template
+//Button
+<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="NewTrainersButton" onclick="showTrainerTable('NewTrainers')">Show Trainers</button></span>
+//Table
+        <table class="TrainerTable" id="OutsideTrainers">
+          <tr class="heading">
+            <td>Trainer</td>
+            <td>Location</td>
+          </tr>
+          <tr class="innertrainer">
+            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="OptimistTaliaTxT">Optimist Talia<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/TrainerBattles/LeftSide/OptimistTalia.bmp"></span></a></td>
+            <td>East Gearen City - Left<br>(Bottom Left from Gearen Lab)</td>
+          </tr>
+        </table>
+
+////Trainer Pokemon
+      <div id="OptimistTalia" class="TrainerPopup">
+        <span class="close" id="OptimistTaliaClose">&times;</span>
+        <p class="normalTrainerTitle" style="text-align:center;">
+        Optimist Talia
+        </p>
+        <table class="trainerPopupContent">
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/016.png">
+              <br>
+              Pidgey, Level 4
+            </th>
+            <td rowspan="2">Normal</td>
+            <td>Tackle</td>
+          </tr>
+          <tr><td>---</td></tr>
+          <tr><td rowspan="2">Flying</td><td>---</td></tr>
+          <tr><td>---</td></tr>
+
+          <tr>
+            <td colspan="3">
+              Reward: <img src="../../images/PokeDollar.png">24
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
+//////Field Effect Template
+    <div class="FieldEffects" id="GrassTerrain">
+      <p class="FieldEffectTitle"> [Synthetic]</p>
+      <p class="FieldEffectExplanation">Explanation</p>
+      <table class="FieldEffectTable">
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
+        <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
+        <tr><td class="FieldEffectEffects">Moves</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a></td></tr>
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
+        <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
+        <tr><td class="FieldEffectEffects">Moves</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a></td></tr>
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
+        <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
+        <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">-type moves have their Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Moves</td><td class="FieldEffectEffects">Deals -type damage in addition to its usual type<br>Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Moves</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
+        <tr><td class="FieldEffectEffects">Moves</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
+
+        <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into </td></tr>
+        <tr><td class="FieldEffectEffects">Camouflage</td><td class="FieldEffectEffects">Changes user's type to </td></tr>
+        <tr><td class="FieldEffectEffects">Secret Power</td><td class="FieldEffectEffects">Can inflict </td></tr>
+        
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Held Items</th></tr> <!--Items-->
+        <tr><th class="FieldEffectType">Item</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects"> Seed</td><td class="FieldEffectEffects">Boosts user's  by one stage<br>Inflicts  on the user</td></tr>
+      </table>
+    </div>
