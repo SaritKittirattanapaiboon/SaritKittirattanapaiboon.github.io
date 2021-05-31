@@ -309,6 +309,16 @@ var walkthroughTrainerList=[
       ['Hardcore Trainer Elizabeth', 'Special', 'Route 3 - Right after Cool Couple Nate & Delilah', 'Chapter 3/Route3/Trainers/']
       //Special Cincinno
     ], //Route 3 (0011)
+    [
+      ['Fragrant Lady Fennel', 528, 1, [[415,0,22],[416,0,24],[512,0,23],[683,0,23]], [], 'Mirage Woods - First trainer on the left', 'Chapter 3/MirageWoods/Trainers/'],
+      ['Schoolboy Tommy', 528, 1, [[159,0,23],[92,0,25],[457,0,23]], [], 'Mirage Woods - First trainer on the right', 'Chapter 3/MirageWoods/Trainers/'],
+    ], //Mirage Woods (0012)
+    [
+      ['Servant Ellie', 1092, 1, [[196,0,26],[197,0,26]], [], 'Chrysalis Mansion - After finding her bracelet', 'Chapter 3/ChrysalisCourtyard/'],
+      ['Servant Deandra', 1134, 1, [[24,0,26],[743,0,26],[97,0,27]], [], 'Chrysalis Courtyard - Left of the Gardevoir Statue<br>After accepting the trail of the maid in the mansion lobby', 'Chapter 3/ChrysalisCourtyard/'],
+      ['Servant Lara', 1176, 1, [[507,0,28],[680,0,28],[705,0,28]], [], 'Chrysalis Courtyard - Middle of the Maze Area<br>After accepting the trail of the maid in the mansion lobby', 'Chapter 3/ChrysalisCourtyard/'],
+      ['Servant Yara', 1176, 1, [[299,0,28],[200,0,28],[176,0,28]], [], 'Chrysalis Courtyard - Bottom left corner of the Pool Area<br>After accepting the trail of the maid in the mansion lobby', 'Chapter 3/ChrysalisCourtyard/'],
+    ], //Chrysalis Courtyard Maids (0013)
 ]
 
 /*

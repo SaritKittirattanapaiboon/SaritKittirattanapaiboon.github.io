@@ -5,6 +5,7 @@ function encounterSet(randomEncounterNumbers, eventEncounterNumbers, otherRandom
     var pokemonFormNumber;
     var currentRandomLoc;
     var curPokNum;
+    var exceptionsLoc=[4,8,9,10,11];
     for (var i=0; i<randomEncounterNumbers.length; i++){   
         currentRandomLoc=RandomEncounters[randomEncounterNumbers[i]];
         fulltext+=walkthroughRandomEncountersStart[randomEncounterNumbers[i]][0];
@@ -43,7 +44,7 @@ function encounterSet(randomEncounterNumbers, eventEncounterNumbers, otherRandom
         fulltext+=`</table></div>`
     } //Random Encounters
     for (var i=0; i<eventEncounterNumbers.length; i++){
-        if(eventEncounterNumbers[i][0]==4 || eventEncounterNumbers[i][0]==8 || eventEncounterNumbers[i][0]==9){
+        if(checkExceptions(i,eventEncounterNumbers)){
             fulltext+=walkthroughOtherEncountersList[eventEncounterNumbers[i][0]][eventEncounterNumbers[i][1]];
             continue; //Skip everything below
         }
@@ -89,6 +90,16 @@ function encounterSet(randomEncounterNumbers, eventEncounterNumbers, otherRandom
     } //Other Randoms such as Rock Smash, Fishing, Headbutt
     
     encounterLocation.innerHTML=fulltext;
+}
+
+function checkExceptions(curCheck,eventEncounterNumbers){
+    var exceptionsLoc=[4,8,9,10,11];
+    for (var j=0; j<exceptionsLoc.length; j++){
+        if(eventEncounterNumbers[curCheck][0]==exceptionsLoc[j]){
+            return true;
+        }
+    }
+    return false;
 }
 
 var walkthroughOtherEncountersList=[
@@ -455,6 +466,65 @@ var walkthroughOtherEncountersList=[
         </table>
     </div>`,
     ], //SPECIAL CASE - UNOWN AND ELGYEM
+
+    [ //Code 010 Mirage Woods - Zubat
+        `<div id="MirageWoodEventEncounters" class="EncounterPopup">
+            <span class="close" id="MirageWoodEventEncountersClose">&times;</span>
+            <p class="encounterDetails" style="text-align:center;">
+            Mirage Woods Event Encounters
+            </p>
+            <table class="encounterPopupContent">
+            <tr>
+                <th>Pokemon Name</th>
+                <td colspan>Obtained Method</td>
+            </tr>
+            
+            <tr>
+                <th class="wildPokemonTooltipPosition">
+                <span class="wildPokemonName">
+                    <span class="type1" style="background-color: var(--typePoison);"></span>
+                    <span class="type2" style="background-color: var(--typeFlying);"></span>
+                    <img class="encounterPokemonImage" src="../../images/PokemonSprites/041.png">
+                    <br>
+                    #041 Zubat
+                    <span class="wildPokemonTooltip">
+                    Despite its reputation as an annoyance in caves, Zubat and subsequently Crobat is a very good Pokemon. It can evolve into Golbat when you obtain it, and with some time it can evolve into Crobat via friendship. As a Crobat, it instantly learns the move Cross Poison, and it has great Attack and amazing Speed to back it up. It'll learn Bite at level 34, but after that there's a drought of moves until Leech Life at level 69. That being said, Crobat does also have support options in terms of moves. With a Heart Scale, it can learn Tailwind to help your team outspeed your opponents, or Toxic to spread status. Naturally, it will learn Quick Guard as a Zubat at level 20 to stop priority abusers and Haze as a Crobat at level 41 to stop set-up sweepers. It also has a surprising amount of bulk all around, making it a possible tank in the front line with its really good defensive typing.
+                    </span>
+                </th>
+                <td style="background-color: var(--alldayAvailable);">Defeat Crobat in the cave in the research area<br>Requires Flash</td>
+            </tr>
+            </table>
+        </div>`,
+    ],
+
+    [ //Code 011 Chrysalis Courtyard - Gothita
+        `<div id="CourtyardEventEncounters" class="EncounterPopup">
+            <span class="close" id="CourtyardEventEncountersClose">&times;</span>
+            <p class="encounterDetails" style="text-align:center;">
+                Crysalis Courtyard Event Encounters
+            </p>
+            <table class="encounterPopupContent">
+            <tr>
+                <th>Pokemon Name</th>
+                <td colspan>Obtained Method</td>
+            </tr>
+            
+            <tr>
+                <th class="wildPokemonTooltipPosition">
+                <span class="wildPokemonName">
+                    <span class="type1" style="background-color: var(--typePsychic);"></span>
+                    <img class="encounterPokemonImage" src="../../images/PokemonSprites/574.png">
+                    <br>
+                    #574 Gothita
+                    <span class="wildPokemonTooltip">
+                    Gothita itself has pretty low stats, and even after evolving to Gothorita at level 32 its stats aren't particularly high for that point in the game, but it can hold its own against Pokemon that are weak to Psychic. The main prize though is Gothitelle at level 41, meaning you can get it before the level limit using a Rare Candy then Reverse Candy. Gothitelle effectively functions as a defensive Psychic type, as it has very high Special Defense and a good HP pool. It's Special Attack is good enough that it's not completely without offensive power. It also comes with a large variety of stat-lowering moves that can be used to weaken the opponent, such as Charm and Fake Tears. With its already high Special Defense, Charm means that it will be able to also wall physical threats. It does have low speed though, so it will often have to take a hit before it can start crippling the enemy. Gothitelle is definitely worth a consideration if you want to use a stalling strategy, but do not that it'll be another two gyms before we can actually get a Gothitelle.
+                    </span>
+                </th>
+                <td style="background-color: var(--alldayAvailable);">Interact with the Gardevoir statue during Indriad's trail<br>Requires Ancient Book from the Sheridan Help Request: The Hidden Library 2</td>
+            </tr>
+            </table>
+        </div>`,
+    ],
 ]
 
 var walkthroughRandomEncountersStart=[

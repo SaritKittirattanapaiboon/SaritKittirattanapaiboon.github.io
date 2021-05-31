@@ -512,6 +512,67 @@ var OtherRandomEncounters=[
             </table>
         </div>`, //Ameythyst Other Encounters (Fishing)
     ],//Code 002
+
+    [['Route 3', 'Other Random Encounters'],
+        `<div id="Route3Others" class="EncounterPopup">
+        <span class="close" id="Route3OthersClose">&times;</span>
+        <p class="encounterDetails" style="text-align:center;">
+            Route 3, Phasial Cave, and Mirage Woods Extra Encounters
+        </p>
+        <table class="encounterPopupContent">
+        <tr>
+            <th>Pokemon Name</th>
+            <td colspan="6">Obtain Method + Rarity</td>
+        </tr>
+
+        <tr>
+            <th class="wildPokemonTooltipPosition">
+            <span class="wildPokemonName">
+                <span class="type1" style="background-color: var(--typeWater);"></span>
+                <img class="encounterPokemonImage" src="../../images/PokemonSprites/456.png">
+                <br>
+                #456 Finneon
+                <span class="wildPokemonTooltip">
+                Finneon is a bad Pokemon. Don't use it. It's movepool isn't great, with Water Pulse being its strongest STAB moved learned naturally. It evolves pretty late at level 31, and even then it doesn't have the stats to deal or take damage. It's just not a good Pokemon to use.
+                </span>
+            </span>
+            </th>
+            <td colspan="3" style="background-color: var(--fishingAvailable);">Old Rod<br>70%</td>
+            <td colspan="3" style="background-color: var(--fishingAvailable);">Good Rod<br>80%</td>
+        </tr>
+
+        <tr>
+            <th class="wildPokemonTooltipPosition">
+            <span class="wildPokemonName">
+                <span class="type1" style="background-color: var(--typeWater);"></span> 
+                <img class="encounterPokemonImage" src="../../images/PokemonSprites/194.png">
+                <br>
+                #194 Wooper
+                <span class="wildPokemonTooltip">
+                Wooper/Quagsire doesn't really stand out from other Water-type or Ground-type Pokemon at this point in the game. It's stats are mixed, with a high HP pool, and good physical stats but low special stats, and very low speed. It's movepool is also nothing special, with the only big thing being that it learns Earthquake kind of early at level 36 and it can naturally learn Rain Dance at level 41 if you are using a Rain-based team. Otherwise, it doesn't really have much that makes it special aside from its unique typing at this point in the game.
+                </span>
+            </span>
+            </th>
+            <td colspan="6" style="background-color: var(--fishingAvailable);">Old Rod<br>30%</td>
+        </tr>
+
+        <tr>
+            <th class="wildPokemonTooltipPosition">
+            <span class="wildPokemonName">
+                <span class="type1" style="background-color: var(--typeWater);"></span> 
+                <img class="encounterPokemonImage" src="../../images/PokemonSprites/195.png">
+                <br>
+                #195 Quagsire
+                <span class="wildPokemonTooltip">
+                Wooper/Quagsire doesn't really stand out from other Water-type or Ground-type Pokemon at this point in the game. It's stats are mixed, with a high HP pool, and good physical stats but low special stats, and very low speed. It's movepool is also nothing special, with the only big thing being that it learns Earthquake kind of early at level 36 and it can naturally learn Rain Dance at level 41 if you are using a Rain-based team. Otherwise, it doesn't really have much that makes it special aside from its unique typing at this point in the game.
+                </span>
+            </span>
+            </th>
+            <td colspan="6" style="background-color: var(--fishingAvailable);">Good Rod<br>20%</td>
+        </tr>
+        </table>
+    </div>`, //Code 000 - Route 3, Mirage Woods, Phasial Cave Old Rod/Good Rod
+    ], //Code 003
 ]
 ////////////////////////////////////////////////Event Pokemon////////////////////////////////////////////////////////////////////
 var EventEncounters=[
