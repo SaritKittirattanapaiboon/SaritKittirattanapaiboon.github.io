@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="trainersSet(3);encounterSet([4,5,6],[[4,0]]);globalrunOnLoad('First');">
+<body onload="trainersSet([3],['CaveTrainers']);encounterSet([4,5,6],[[4,0]]);globalrunOnLoad('First');">
 
   <!-- Left Side Bar -->
 
@@ -90,31 +90,49 @@
         <br>
         Before heading up into Goldenwood Cave, talk to the Driftblim a little to the left. You'll be taken into a short cutscene, and you'll get a HP Up for your troubles. Go back and switch up your Pokemon if you want, then head into Goldenwood Cave.
         <br><br>
-        <p class="subsectionHeader">Goldenwood Cave<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="CaveTrainersButton" onclick="showTrainerTable('CaveTrainers')">Show Trainers</button></span></p>
+        <p class="subsectionHeader">Goldenwood Cave<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="CaveTrainersButton" onclick="showTrainerTable('CaveTrainers')">Show Trainers</button></span><button class="showHiddenButton" id="CaveHiddenButton" onclick="showHiddenTable('CaveHidden')">Show Hidden Items</button></span></p>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 1/Goldenwood/MeliaParty.png">
         <br>
         <table class="TrainerTable" id="CaveTrainers">
+        </table>
+        <table class="TrainerTable" id="CaveHidden">
           <tr class="heading">
-            <td>Trainer</td>
+            <td>Item</td>
             <td>Location</td>
           </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="SchoolboyDarinGangMemberEmileTxT">Schoolboy Darin & Gang Member Emile<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/SchoolboyDarinGangMemberEmile.png"></span></a></td>
-            <td>Goldenwood Cave</td>
+          <tr>
+            <td><a class="normalTrainerNameTable">Red Shard<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/RedShard.png"></span></a></td>
+            <td>In a rock by the entrance area</td>
           </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="CoolGuyJeffYoungsterNickolusTxT">Cool Guy Jeff & Youngster Nickolus<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/CoolGuyJeffYoungsterNickolus.png"></span></a></td>
-            <td>Goldenwood Cave</td>
+          <tr>
+            <td><a class="normalTrainerNameTable">Tiny Mushroom<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/TinyMushroom.png"></span></a></td>
+            <td>Flower patch up the first set of stairs</td>
           </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="OptimistKairiTouristKarinTxT">Optimist Kairi & Tourist Karin<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/OptimistKairiTouristKarin.png"></span></a></td>
-            <td>Goldenwood Cave</td>
+          <tr>
+            <td><a class="normalTrainerNameTable">Tiny Mushroom<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/TinyMushroom.png"></span></a></td>
+            <td>Flower patch up the first set of stairs</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Tiny Mushroom<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/TinyMushroom2.png"></span></a></td>
+            <td>On the upper landing, around the middle part</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Tiny Mushroom<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/TinyMushroom3.png"></span></a></td>
+            <td>On the upper landing, back near the entrance area</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">PP Up<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/PPUp.png"></span></a></td>
+            <td>Near Culvier Clan Mars</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Great Ball<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/GreatBall.png"></span></a></td>
+            <td>In the middle rock through the mural</td>
           </tr>
         </table>
         <br>
-        Similar to Gearen Sewers, you'll be paired up with Melia for most of this cave, and all the battles will be in the Doubles format. Additionally, battles here will be fought in the <a class="continueElsewhere" href="../Information/FieldEffects-Telluric.html#Cave" target=_blank>Cave</a> field. Close to the entrance, is a <span class="hiddenItemText">Red Shard<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/RedShard.png"></span></span>, and right up the first set of stairs is a <span class="hiddenItemText">Tiny Mushroom.<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/TinyMushroom.png"></span></span> The first set of trainers are <a href="javascript:void(0)" class="normalTrainerName" id="SchoolboyDarinGangMemberEmileName">Schoolboy Darin and Gang Member Emile.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/SchoolboyDarinGangMemberEmile.png"></span></a> There's an item nearby, but we'll have to come back for it after we have Rock Smash. A little past them is <a href="javascript:void(0)" class="normalTrainerName" id="CoolGuyJeffYoungsterNickolusName">Cool Guy Jeff and Youngster Nickolus,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/CoolGuyJeffYoungsterNickolus.png"></span></a> and then <a href="javascript:void(0)" class="normalTrainerName" id="OptimistKairiTouristKarinName">Optimist Kairi and Tourist Karin.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/OptimistKairiTouristKarin.png"></span></a>. Near the end, before you go inbetween the narrow path by the two rocks, head up the stairs to the right. Here, you can find a <span class="hiddenItemText">Tiny Mushroom<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/TinyMushroom2.png"></span></span> and <span class="hiddenItemText">another one<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/TinyMushroom3.png"></span></span> not too far away.
+        Similar to Gearen Sewers, you'll be paired up with Melia for most of this cave, and all the battles will be in the Doubles format. Additionally, battles here will be fought in the <a class="continueElsewhere" href="../Information/FieldEffects-Telluric.html#Cave" target=_blank>Cave</a> field. The first set of trainers are <a href="javascript:void(0)" class="normalTrainerName" id="SchoolboyDarinGangMemberEmileName">Schoolboy Darin and Gang Member Emile.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/SchoolboyDarinGangMemberEmile.png"></span></a> There's an item nearby, but we'll have to come back for it after we have Rock Smash. A little past them is <a href="javascript:void(0)" class="normalTrainerName" id="CoolGuyJeffYoungsterNickolusName">Cool Guy Jeff and Youngster Nickolus,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/CoolGuyJeffYoungsterNickolus.png"></span></a> and then <a href="javascript:void(0)" class="normalTrainerName" id="OptimistKairiTouristKarinName">Optimist Kairi and Tourist Karin.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/Goldenwood/Trainers/OptimistKairiTouristKarin.png"></span></a>. Near the end, before you go inbetween the narrow path by the two rocks, head up the stairs to the right. Here, you can find a two Tiny Mushrooms to sell later.
         <br><br>
-        That's all there is to do, but you can use Melia to heal up your Pokemon while you are grinding levels. Once you walk past the two rocks, Melia will leave your party. After a short cutscene, she'll head off deeper into the cave. Before you follow her, there's a <span class="hiddenItemText">Great Ball<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/GreatBall.png"></span></span> off to the side. Here, you can also undergo Culvier Clan Mars' challenge. We won't be able to return here for a while after this, so if you want a Sewaddle now is the time.
+        That's all there is to do, but you can use Melia to heal up your Pokemon while you are grinding levels. Once you walk past the two rocks, Melia will leave your party. After a short cutscene, she'll head off deeper into the cave. Before you follow her, you can also undergo Culvier Clan Mars' challenge. We won't be able to return here for a while after this, so if you want a Sewaddle now is the time.
         <br><br>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 1/Goldenwood/MarsChallenge.png">
         <br>
@@ -133,10 +151,7 @@
             <td>Return</td>
           </tr>
           <td>Bug Bite</td>  
-          <tr>
-            <td rowspan="2">Grass</td>
-            <td>Seed Bomb</td>
-          </tr>
+          <tr><td rowspan="2">Grass</td><td>Seed Bomb</td></tr>
           <td>Light Screen</td>
 
           <tr>
@@ -149,10 +164,7 @@
             <td>Return</td>
           </tr>
           <td>Seed Bomb</td>  
-          <tr>
-            <td rowspan="2">Grass</td>
-            <td>Iron Defense</td>
-          </tr>
+          <tr><td rowspan="2">Grass</td><td>Iron Defense</td></tr>
           <td>Double Team</td>
 
           <tr>
@@ -165,10 +177,7 @@
             <td>Return</td>
           </tr>
           <td>Seed Bomb</td>  
-          <tr>
-            <td rowspan="2">Grass</td>
-            <td>Iron Defense</td>
-          </tr>
+          <tr><td rowspan="2">Grass</td><td>Iron Defense</td></tr>
           <td>Synthesis</td>
 
           <tr>
@@ -178,9 +187,7 @@
           </tr>
         </table>
         <br>
-
-        Either way, once you're done with this you can follow Melia deeper into the cave. Be sure to grab the <span class="hiddenItemText">PP Up<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 1/Goldenwood/Hidden Items/PPUp.png"></span></span> on the way. Once you're out, you'll find yourself in Goldenwood Grove.
-
+        Either way, once you're done with this you can follow Melia deeper into the cave. Be sure to grab the PP Up in the rock on the way. Once you're out, you'll find yourself in Goldenwood Grove.
         <br><br>
         <p class="subsectionHeader">Goldenwood Grove</p>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 1/Goldenwood/Picnic.png">
@@ -403,8 +410,7 @@
       </div>
     
       <!-- Encounters Start Here -->
-      <div id="encountersHere">
-      </div>
+      <div id="encountersHere"></div>
 
       <!-- Maps Start Here -->
       <div id="RouteOne" class="EncounterPopup">

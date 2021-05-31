@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="trainersSet(10);encounterSet([11,12],[[8,0],[8,1]]);globalrunOnLoad('Second');">
+<body onload="trainersSet([10]);encounterSet([11,12],[[8,0],[8,1]]);globalrunOnLoad('Second');">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>
@@ -55,7 +55,7 @@
     </div>
     <div class="walkthrough">
       <p class="walkthroughText">
-        <p class="subsectionHeader">Caratos Mountain<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="CaratosTrainersButton" onclick="showTrainerTable('CaratosTrainers')">Show Trainers</button></span></p>
+        <p class="subsectionHeader">Caratos Mountain<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="CaratosTrainersButton" onclick="showTrainerTable('CaratosTrainers')">Show Trainers</button></span><button class="showHiddenButton" id="CaratosHiddenButton" onclick="showHiddenTable('CaratosHidden')">Show Hidden Items</button></span></p>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 2/CaratosMountain/CaratosMountain.png">
         <br>
         <table class="TrainerTable" id="CaratosTrainers">
@@ -85,6 +85,28 @@
             <td>Caratos Mountain<br>On the main path right after the second SEC battle</td>
           </tr>
         </table>
+        <table class="TrainerTable" id="CaratosHidden">
+          <tr class="heading">
+            <td>Item</td>
+            <td>Location</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Full Heal<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/HiddenItems/FullHeal.png"></span></a></td>
+            <td>Second room, barrel by the entrance</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Red Shard<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/HiddenItems/RedShard.png"></span></a></td>
+            <td>Second room, southeast of the first SEC in the room</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Ultra Ball<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/HiddenItems/UltraBall.png"></span></a></td>
+            <td>Second room, on the mining machine on the right after beating SEC the second time</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Reverse Candy<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/HiddenItems/ReverseCandy.png"></span></a></td>
+            <td>Second room, in a room to the right and down after beating SEC the second time</td>
+          </tr>
+        </table>
         <br>
         Upon entering, you'll find yourself in the middle of a volcano. Aelita will accompany you, and battles here are fought in the <a class="continueElsewhere" href="../Information/FieldEffects-Elemental.html#VolcanicField" target="_blank">Volcanic Field</a> and wild battles will be in a Doubles format while Aelita is with you. Like all partners, Aelita will heal you after every battle, so use this opportunity to train with the Exp Share if you need to. Go ahead and go straight through the area, on the top left there's Rock Smash rock that you can get a Carbos if you get past it. Head across the second bridge, and interact with the weird machine there. It'll introduce itself as SEC, a Team Xen invention. It'll also challenge you to a battle once it realizes you are not part of Team Xen.
         <br><br>
@@ -107,7 +129,7 @@
         </table>
         <br>
         Feel free to catch the Shadow Ponyta if you want, we'll be able to purify them very soon. After the battle SEC will self-terminate its current body and you'll be free to continue deeper inside.<br><br>
-        Inside, you'll immediately face <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenDanieName">Team Xen Danie<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenDanie.png"></span></a> in a Double Battle with Aelita as your partner. Once you beat her, there's a PC nearby if you need to change out your Pokemon, and there's a <span class="hiddenItemText">Full Heal<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/CaratosMountain/HiddenItems/FullHeal.png"></span></span> hidden in a nearby barrel. Head left to battle <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenZenethName">Team Xen Zeneth,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenZeneth.png"></span></a> then up to battle <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenTimothyName">Team Xen Timothy.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenTimothy.png"></span></a> Right above Timothy, there's a plaque that'll give you one of the passwords you'll need soon. You'll come across SEC again, but before you interact with him you can grab a <span class="hiddenItemText">Red Shard<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/CaratosMountain/HiddenItems/RedShard.png"></span></span> nearby. Then talk to SEC, and battle him again.
+        Inside, you'll immediately face <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenDanieName">Team Xen Danie<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenDanie.png"></span></a> in a Double Battle with Aelita as your partner. Once you beat her, there's a PC nearby if you need to change out your Pokemon. Head left to battle <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenZenethName">Team Xen Zeneth,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenZeneth.png"></span></a> then up to battle <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenTimothyName">Team Xen Timothy.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenTimothy.png"></span></a> Right above Timothy, there's a plaque that'll give you one of the passwords you'll need soon. You'll come across SEC again, so talk to SEC and battle him again.
         <br><br>
         <div class="eventTrainerName" style="text-align:center;">
           Security Component SEC
@@ -127,7 +149,7 @@
           <tr><td>Baby-Doll Eyes</td></tr>
         </table>
         <br>
-        He'll self-destruct again once you beat him, so move on forward. The left path will take you to a second password plaque, and the right side will take you to an <span class="hiddenItemText">Ultra Ball<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/CaratosMountain/HiddenItems/UltraBall.png"></span></span> in a mining machine and down to another intersection. At that intersection, grab a <span class="hiddenItemText">Reverse Candy.<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/CaratosMountain/HiddenItems/ReverseCandy.png"></span></span> Going right across the bridge will net you a Fire Stone. Heading down from the intersection will be <span class="ImportantName">TM43 - Flame Charge.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/TM43-FlameCharge.png"></span></span> This is a really good move at this point in the game, so teach it to anyone who can learn it. Beat <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenBenName">Team Xen Ben<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenBen.png"></span></a> to access the final password plaque. Go back to where you defeated SEC the second time, battle <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenAlyssaName">Team Xen Alyssa,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenAlyssa.png"></span></a> and you'll have access to SEC again. He'll ask for the three passwords, which are <span class="textSpoilers">"BEAUTY", "IDOL", "SHADOW", in that order with that capitalization</span>. Once you beat him, he'll challenge you to yet another battle.
+        He'll self-destruct again once you beat him, so move on forward. The left path will take you to a second password plaque, and the right side will take you to another intersection. Going right across the bridge will net you a Fire Stone. Heading down from the intersection will be <span class="ImportantName">TM43 - Flame Charge.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/TM43-FlameCharge.png"></span></span> This is a really good move at this point in the game, so teach it to anyone who can learn it. Beat <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenBenName">Team Xen Ben<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenBen.png"></span></a> to access the final password plaque. Go back to where you defeated SEC the second time, battle <a href="javascript:void(0)" class="normalTrainerName" id="TeamXenAlyssaName">Team Xen Alyssa,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/CaratosMountain/Trainers/XenAlyssa.png"></span></a> and you'll have access to SEC again. He'll ask for the three passwords, which are <span class="textSpoilers">"BEAUTY", "IDOL", "SHADOW", in that order with that capitalization</span>. Once you beat him, he'll challenge you to yet another battle.
         <br><br>
         <div class="eventTrainerName" style="text-align:center;">
           Security Component SEC
@@ -148,10 +170,10 @@
         </table>
         <br>
         You can catch this Quagsire if you want. He'll self-destruct a final time, and you and Aelita can access the elevator to reach the next area.
-        <p class="subsectionHeader">Madelis' Palace<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="Route2TrainersButton" onclick="showTrainerTable('Route2Trainers')">Show Trainers</button></span></p>
+        <p class="subsectionHeader">Madelis' Palace<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="XenLabTrainersButton" onclick="showTrainerTable('XenLabTrainers')">Show Trainers</button></span></p>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 2/CaratosMountain/MadelisInner.png">
         <br>
-        <table class="TrainerTable" id="Route2Trainers">
+        <table class="TrainerTable" id="XenLabTrainers">
           <tr class="heading">
             <td>Trainer</td>
             <td>Location</td>
@@ -202,7 +224,6 @@
         <br>
         <div class="eventTrainerName">
           Xen Executive Madelis
-          <span class="eventTrainerTooltip">The biggest standouts in this battle is her Shadow Mewtwo and Houndoom, both of which have very powerful moves and can easily one shot your Pokemon and are difficult to take down, especially if Aromatisse manages to get the screens up. The good news is that this battle is effectively a 12v6, with Keta as your partner, and the rest of her Pokemon are not too threatening. If you're able to set up on Floette or Golbat, you can easily sweep her team and be ready for Houndoom and Mewtwo. Two of Keta's Pokemon has Fake Out, which you can take advantage of to deal heavy damage. If you manage to take out one of her two aces, turning the battle into a 2v1 will even the odds by a lot.</span>
         </div>
         <table class="eventTrainerBattle">
           <tr>
@@ -281,6 +302,8 @@
           </tr>
         </table>
         <br>
+        The biggest standouts in this battle is her Shadow Mewtwo and Houndoom, both of which have very powerful moves and can easily one shot your Pokemon and are difficult to take down, especially if Aromatisse manages to get the screens up. The good news is that this battle is effectively a 12v6, with Keta as your partner, and the rest of her Pokemon are not too threatening. If you're able to set up on Floette or Golbat, you can easily sweep her team and be ready for Houndoom and Mewtwo. Two of Keta's Pokemon has Fake Out, which you can take advantage of to deal heavy damage. If you manage to take out one of her two aces, turning the battle into a 2v1 will even the odds by a lot.
+        <br><br>
         After the battle, you and Aelita can enter the back door of the previous room. Head over and go down the elevator, making sure to pick up the data for our next battle. After a cutscene you'll find yourself in another Dimensional Rift, and once you step onto the middle platform, a battle will begin.
         <br><br>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 2/CaratosMountain/VSRiftVolcanion.png">
@@ -315,7 +338,7 @@
           </tr>
           <tr class="innertrainer">
             <td>
-              Shadow Meowth
+              Shadow Meowth (Kantonian)
             </td>
             <td>Beat Up*, Bite, Glare*, Fury Swipes</td>
           </tr>

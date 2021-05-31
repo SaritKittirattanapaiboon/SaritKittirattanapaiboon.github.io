@@ -2117,7 +2117,7 @@ var BattlePokedex=[
         [ 'Pyroar', ['Normal', 'Fire'], ['Rivalry', 'Unnerve'], ['Moxie'], [86, 68, 72, 109, 66, 106, 507], 177, ['2 Special Attack'], 'Both', '667', ['None'], ['1.5 m', '81.5 kg'], ['None'], [], [], [], [] ],
     ],
     ['669', 1, ['Fairy'], 2, 20, 225, 70,
-        [ 'Flabébé', ['Fairy'], ['Flower Veil'], ['Symbiosis'], [44, 38, 39, 61, 79, 42, 303], 61, ['1 Special Defense'], 'F', 'None', ['Level 19','670'], ['0.1 m', '0.1 kg'], ['None'], [], [], [], [] ],
+        [ 'Flabebe', ['Fairy'], ['Flower Veil'], ['Symbiosis'], [44, 38, 39, 61, 79, 42, 303], 61, ['1 Special Defense'], 'F', 'None', ['Level 19','670'], ['0.1 m', '0.1 kg'], ['None'], [], [], [], [] ],
     ],
     ['670', 1, ['Fairy'], 2, 20, 120, 70,
         [ 'Floette', ['Fairy'], ['Flower Veil'], ['Symbiosis'], [54, 45, 47, 75, 98, 52, 371], 130, ['2 Special Defense'], 'F', '669', ['Use a Shiny Stone','671'], ['0.2 m', '0.9 kg'], ['None'], [], [], [], [] ],

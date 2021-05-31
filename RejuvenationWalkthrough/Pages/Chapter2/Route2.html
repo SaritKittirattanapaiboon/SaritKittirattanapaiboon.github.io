@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="trainersSet(7);encounterSet([7],[],[1]);shopsSet([[10,2]],[]);globalrunOnLoad('Second');">
+<body onload="trainersSet([7],['Route2Trainers']);encounterSet([7],[],[1]);shopsSet([[10,2]],[]);globalrunOnLoad('Second');">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>
@@ -49,47 +49,63 @@
     </div>
     <div class="walkthrough">
       <p class="walkthroughText">
-        <p class="subsectionHeader">Route 2<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="Route2TrainersButton" onclick="showTrainerTable('Route2Trainers')">Show Trainers</button></span></p>
+        <p class="subsectionHeader">Route 2<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="Route2TrainersButton" onclick="showTrainerTable('Route2Trainers')">Show Trainers</button></span><button class="showHiddenButton" id="Route2HiddenButton" onclick="showHiddenTable('Route2Hidden')">Show Hidden Items</button></span></p>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 2/Route2/Nim1.png">
         <br>
         <table class="TrainerTable" id="Route2Trainers">
+        </table>
+        <table class="TrainerTable" id="Route2Hidden">
           <tr class="heading">
-            <td>Trainer</td>
+            <td>Item</td>
             <td>Location</td>
           </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="TouristHinataTxT">Tourist Hinata<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/TouristHinata.png"></span></a></td>
-            <td>Route 2 - On the First Bridge</td>
+          <tr>
+            <td><a class="normalTrainerNameTable">Carbos<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/Carbos.png"></span></a></td>
+            <td>Southwest of the train station</td>
           </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="FragrantLadyRuddieTxT">Fragrant Lady Ruddie<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/FragrantLadyRuddie.png"></span></a></td>
-            <td>Route 2 - Left of the Healing Star</td>
+          <tr>
+            <td><a class="normalTrainerNameTable">Green Shard<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/GreenShard.png"></span></a></td>
+            <td>Clearing by the Meganium</td>
           </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="YoungsterKaiusTxT">Youngster Kaius<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/YoungsterKaius.png"></span></a></td>
-            <td>Route 2 - Roaming Right of the Healing Star</td>
+          <tr>
+            <td><a class="normalTrainerNameTable">Red Shard<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/RedShard.png"></span></a></td>
+            <td>Upper branch before going across the first bridge</td>
           </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="FishermanConnaldTxT">Fisherman Connald<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/FishermanConnald.png"></span></a></td>
-            <td>Route 2 - On Bridge South of Healing Star</td>
+          <tr>
+            <td><a class="normalTrainerNameTable">Blue Shard<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/BlueShard.png"></span></a></td>
+            <td>On the path to the first bridge</td>
           </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="PrimaDonnaJiaraTxT">Prima Donna Jiara<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/PrimaDonnaJiara.png"></span></a></td>
-            <td>Route 2 - Northwest of Kecleon Shop</td>
+          <tr>
+            <td><a class="normalTrainerNameTable">Gourmet Treat<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/GourmetTreat.png"></span></a></td>
+            <td>Above the Kecleon shop</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Magical Seed<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/MagicalSeed.png"></span></a></td>
+            <td>Southeast of the Kecleon shop</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Blue Shard<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/BlueShard2.png"></span></a></td>
+            <td>On the path after Prima Donna Jiara</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Rose Incense<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/RoseIncense.png"></span></a></td>
+            <td>In the bottom left of the northwest patch of grass</td>
+          </tr>
+          <tr>
+            <td><a class="normalTrainerNameTable">Friend Ball<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/FriendBall.png"></span></a></td>
+            <td>In the top right of the northwest patch of grass</td>
           </tr>
         </table>
         <br>
-        When you enter Route 2, you'll be bumped into by a black-haired girl. She'll run away, and you realized she stole some money away from you. Before you go too far, near the train station there's a <span class="hiddenItemText">Carbos<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/Carbos.png"></span></span> and a <span class="hiddenItemText">Green Shard.<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/GreenShard.png"></span></span> After that, follow the girl to the right and use Rock Smash, and she'll continue running away. Before we continue further, head up north to pick up <span class="hiddenItemText">Red Shard.<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/RedShard.png"></span></span> There's a few things that we to note that we can do here. There is a chance of a Pokemon battle when you use Rock Smash, and there are also <span class="ImportantName">headbuttable trees<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HeadbuttTree.png"></span></span> scattered throughout the map. The trees are separated into two variants. High trees have a higher chance of spawning a Pokemon, but have less rare Pokemon as a result. Low trees have a lower chance of spawning a Pokemon, but have rarer Pokemon. As for Pokemon that can learn Headbutt, Seel from the Chrisola Casino is one of the easiest option. You can also catch Drowzee at nights on this route. You can also fish here if you picked up the Old Rod, but you'll only find Finneon here.
+        When you enter Route 2, you'll be bumped into by a black-haired girl. She'll run away, and you realized she stole some money away from you. There's a few hidden items in Route 2, the most useful being a Carbos and Magical Seed. Follow the girl to the right and use Rock Smash, and she'll continue running away. There's a few things that we to note that we can do here. There is a chance of a Pokemon battle when you use Rock Smash, and there are also <span class="ImportantName">headbuttable trees<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/HeadbuttTree.png"></span></span> scattered throughout the map. The trees are separated into two variants. High trees have a higher chance of spawning a Pokemon, but have less rare Pokemon as a result. Low trees have a lower chance of spawning a Pokemon, but have rarer Pokemon. As for Pokemon that can learn Headbutt, Seel from the Chrisola Casino is one of the easiest option. You can also catch Drowzee at nights on this route. You can also fish here if you picked up the Old Rod, but you'll only find Finneon here.
         <br><br>
-        Head back down to where the girl ran away, picking up the <span class="hiddenItemText">Blue Shard<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/Carbos.png"></span></span> in the process. You'll see a tree run away across the bridge, and on the bridge you'll battle <a href="javascript:void(0)" class="normalTrainerName" id="TouristHinataName">Tourist Hinata.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/TouristHinata.png"></span></a> Once you beat him, go ahead and cross the bridge.
+        Head back down to where the girl ran away, and you'll see a tree run away across the bridge, and on the bridge you'll battle <a href="javascript:void(0)" class="normalTrainerName" id="TouristHinataName">Tourist Hinata.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/TouristHinata.png"></span></a> Once you beat him, go ahead and cross the bridge.
         <br><br>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 2/Route2/Aipoms.png">
         <br>
-        In this area, during the day you can find Aipom standing around the tree. If you do want to use one, catch an extra one as it will be used to trade with a Pancham in the next city. You can also find a <span class="ImportantName">Kecleon Shop<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/KecleonShop.png"></span></span> here, who will sell you some items if you need to restock on a few basic needs. Above the Kecleon Shop you can find a <span class="hiddenItemText">Gourmet Treat, <span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/GourmetTreat.png"></span></span> and a <span class="ZygardeCell">Zygarde Cell.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/ZygradeCells/ZyCell8.png"></span></span>
+        In this area, during the day you can find Aipom standing around the tree. If you do want to use one, catch an extra one as it will be used to trade with a Pancham in the next city. You can also find a <span class="ImportantName">Kecleon Shop<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/KecleonShop.png"></span></span> here, who will sell you some items if you need to restock on a few basic needs. Above the Kecleon Shop you can find a <span class="ZygardeCell">Zygarde Cell.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/ZygradeCells/ZyCell8.png"></span></span> From there, head to the right to battle <a href="javascript:void(0)" class="normalTrainerName" id="FragrantLadyRuddieName">Fragrant Lady Ruddie,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/FragrantLadyRuddie.png"></span></a> and then you can use the Healing Star to heal if needed. Roaming near the Healing Star is <a href="javascript:void(0)" class="normalTrainerName" id="YoungsterKaiusName">Youngster Kaius<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/YoungsterKaius.png"></span></a> and below him on the bridge is <a href="javascript:void(0)" class="normalTrainerName" id="FishermanConnaldName">Fisherman Connald.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/FishermanConnald.png"></span></a>
         <br><br>
-        A little bit to the southeast of the Kecleon Shop is a <span class="hiddenItemText">Magical Seed.<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/MagicalSeed.png"></span></span> From there, head to the right to battle <a href="javascript:void(0)" class="normalTrainerName" id="FragrantLadyRuddieName">Fragrant Lady Ruddie,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/FragrantLadyRuddie.png"></span></a> and then you can use the Healing Star to heal if needed. Roaming near the Healing Star is <a href="javascript:void(0)" class="normalTrainerName" id="YoungsterKaiusName">Youngster Kaius<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/YoungsterKaius.png"></span></a> and below him on the bridge is <a href="javascript:void(0)" class="normalTrainerName" id="FishermanConnaldName">Fisherman Connald.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/FishermanConnald.png"></span></a>
-        <br><br>
-        That's all to do on the right side, so head on over to the left side of the Kecleon Shop. Before you cross the bridge, you'll battle <a href="javascript:void(0)" class="normalTrainerName" id="PrimaDonnaJiaraName">Prima Donna Jiara.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/PrimaDonnaJiara.png"></span></a> After that battle, head across the bridge and pick up a <span class="hiddenItemText">Blue Shard.<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/BlueShard2.png"></span></span> Keep heading left and up the stairs, and you can find a <span class="hiddenItemText">Rose Incense<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/RoseIncense.png"></span></span> and a <span class="hiddenItemText">Friend Ball.<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 2/Route2/HiddenItems/FriendBall.png"></span></span> Here, you can also find a <span class="ImportantName">painter<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/PainterQuest.png"></span></span> who is looking for his favorite three Pokemon. If you do have a Cherrim in your party, showing it to him will give you a Miracle Seed. We don't have access to Magcargo yet, so we'll come back later.
+        That's all to do on the right side, so head on over to the left side of the Kecleon Shop. Before you cross the bridge, you'll battle <a href="javascript:void(0)" class="normalTrainerName" id="PrimaDonnaJiaraName">Prima Donna Jiara.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/Trainers/PrimaDonnaJiara.png"></span></a> Keep heading left and up the stairs. Here, you can also find a <span class="ImportantName">painter<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2/Route2/PainterQuest.png"></span></span> who is looking for his favorite three Pokemon. If you do have a Cherrim in your party, showing it to him will give you a Miracle Seed. We don't have access to Magcargo yet, so we'll come back later.
         <br><br>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 2/Route2/Nim2.png">
         <br>
@@ -99,7 +115,6 @@
         <br>
         <div class="eventTrainerName">
           Apprentice Nim
-          <span class="eventTrainerTooltip">This is another one of the battles where the field is not in your favor. In the <a class="continueElsewhere" href="../Information/FieldEffects-Magical.html#PsychicTerrain" target="_blank">Psychic Terrain,</a> Dark-type moves are severely weakened, so the common moves of Bite will not do much. Bug-type Pokemon will also be hurt by the fact that Solrock and Lunatone both have Rock Slide, which will deal heavy damage. If you have a Water-type and a non-Poison Grass-type, they can make short work of Solrock and Lunatone. Once those two are out of the way, Inkay and Espurr are not too threatening. Espurr will often try to set up screens, so get rid of it before it can set up. Inkay can status your Pokemon, but otherwise its moves are not very strong. You can use Bug-type Pokemon to great effect once the two Rock Sliders are down</span>
         </div>
         <table class="eventTrainerBattle">
           <tr>
@@ -120,10 +135,8 @@
           </tr>
           <tr><td>Confusion</td><td>Psywave</td></tr>
           <tr>
-            <td rowspan="2">Psychic</td>
-            <td>Ancient Power</td>
-            <td rowspan="2">Psychic</td>
-            <td>Fire Spin</td>
+            <td rowspan="2">Psychic</td><td>Ancient Power</td>
+            <td rowspan="2">Psychic</td><td>Fire Spin</td>
           </tr>
           <tr><td>Cosmic Power</td><td>Harden</td></tr>
 
@@ -145,8 +158,7 @@
           </tr>
           <tr><td>Psywave</td><td>Psybeam</td></tr>
           <tr>
-            <td rowspan="2">Dark</td>
-            <td>Hypnosis</td>
+            <td rowspan="2">Dark</td><td>Hypnosis</td>
             <td>Reflect</td>
           </tr>
           <tr><td>Swagger</td><td>Light Screen</td></tr>
@@ -158,6 +170,8 @@
           </tr>
         </table>
         <br>
+        This is another one of the battles where the field is not in your favor. In the <a class="continueElsewhere" href="../Information/FieldEffects-Magical.html#PsychicTerrain" target="_blank">Psychic Terrain,</a> Dark-type moves are severely weakened, so the common moves of Bite will not do much. Bug-type Pokemon will also be hurt by the fact that Solrock and Lunatone both have Rock Slide, which will deal heavy damage. If you have a Water-type and a non-Poison Grass-type, they can make short work of Solrock and Lunatone. Once those two are out of the way, Inkay and Espurr are not too threatening. Espurr will often try to set up screens, so get rid of it before it can set up. Inkay can status your Pokemon, but otherwise its moves are not very strong. You can use Bug-type Pokemon to great effect once the two Rock Sliders are down.
+        <br><br>
         After the battle, Nim will give you a Twisted Spoon, which can boost your Psychic-type moves. She'll teleport you back to the cave entrance, and lets you know that she'll be cheering you on. Heal up, then head on into Amethyst Cave.
       </p>
       

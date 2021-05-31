@@ -7,167 +7,169 @@ function trainersSet(locationCode, idName){
     var pokemonIDString;
     var moves;
     var movesUsed;
-    
-    for(var i=0; i<walkthroughTrainerList[locationCode].length; i++){
-      if(walkthroughTrainerList[locationCode][i][1]=='Special'){
-        continue; //Skip Special Trainers
-      }
-        temptext=walkthroughTrainerList[locationCode][i][0].replaceAll(' ','');
-        temptext=temptext.replaceAll('&','');
-        fulltext+='<div id="'+temptext+'" class="TrainerPopup">';
-        fulltext+='<span class="close" id="'+temptext+'Close">&times;</span><p class="normalTrainerTitle" style="text-align:center;">'+walkthroughTrainerList[locationCode][i][0]+'</p><table class="trainerPopupContent">';
-        if(walkthroughTrainerList[locationCode][i][2]==1){ //Single Battles
-          pokemonList=walkthroughTrainerList[locationCode][i][3];
-            for(var pokemonNum=0; pokemonNum<pokemonList.length; pokemonNum++){
-                movesUsed=0;
-                pokemonIDNum=pokemonList[pokemonNum][0];
-                pokemonFormNum=pokemonList[pokemonNum][1];
-                pokemonLevelNum=pokemonList[pokemonNum][2];
+
+    for (var blankLoc=0; blankLoc<locationCode.length; blankLoc++){
+      for(var i=0; i<walkthroughTrainerList[locationCode].length; i++){
+        if(walkthroughTrainerList[locationCode][i][1]=='Special'){
+          continue; //Skip Special Trainers
+        }
+          temptext=walkthroughTrainerList[locationCode][i][0].replaceAll(' ','');
+          temptext=temptext.replaceAll('&','');
+          fulltext+='<div id="'+temptext+'" class="TrainerPopup">';
+          fulltext+='<span class="close" id="'+temptext+'Close">&times;</span><p class="normalTrainerTitle" style="text-align:center;">'+walkthroughTrainerList[locationCode][i][0]+'</p><table class="trainerPopupContent">';
+          if(walkthroughTrainerList[locationCode][i][2]==1){ //Single Battles
+            pokemonList=walkthroughTrainerList[locationCode][i][3];
+              for(var pokemonNum=0; pokemonNum<pokemonList.length; pokemonNum++){
+                  movesUsed=0;
+                  pokemonIDNum=pokemonList[pokemonNum][0];
+                  pokemonFormNum=pokemonList[pokemonNum][1];
+                  pokemonLevelNum=pokemonList[pokemonNum][2];
+                  pokemonIDString=String(pokemonIDNum);
+                  moves=fourPokemonMoves(pokemonIDNum,pokemonFormNum,pokemonLevelNum);
+  
+                  ///Picture and Name
+                  if(pokemonIDString.length==1){
+                      pokemonIDString="00"+pokemonIDString;
+                  } else if (pokemonIDString.length==2){
+                      pokemonIDString="0"+pokemonIDString;
+                  }
+                  if(pokemonFormNum==0){
+                      temptext='<tr><th rowspan="4"><img class="trainerPokemonImage" src="../../images/PokemonSprites/'+pokemonIDString+'.png"><br>'
+                  } else {
+                      temptext='<tr><th rowspan="4"><img class="trainerPokemonImage" src="../../images/PokemonSprites/'+pokemonIDString+'_'+pokemonFormNum+'.png"><br>'
+                  }
+                  temptext+=BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][0]+", Level "+pokemonLevelNum+'</th>';
+  
+                  ///Type
+                  typeAmount=BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1].length;
+                  if(typeAmount==1){
+                      temptext+='<td rowspan="4">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][0]+'</td>'
+                  } else {
+                      temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][0]+'</td>'
+                  }
+                  if(movesUsed<moves.length){ //Move 1
+                      movesUsed+=1;
+                      temptext+='<td>'+moves[moves.length-movesUsed]+'</td></tr>';
+                  }
+                  if(movesUsed<moves.length){ //Move 2
+                      movesUsed+=1;
+                      temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td></tr>';
+                  } else {
+                      temptext+='<tr><td>---</td></tr>';
+                  }
+  
+                  temptext+='<tr>';
+                  if(typeAmount==2){
+                      temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][1]+'</td>'
+                  }
+                  if(movesUsed<moves.length){ //Move 3
+                      movesUsed+=1;
+                      temptext+='<td>'+moves[moves.length-movesUsed]+'</td></tr>';
+                  } else {
+                      temptext+='<td>---</td></tr>';
+                  }
+                  if(movesUsed<moves.length){ //Move 4
+                      movesUsed+=1;
+                      temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td></tr>';
+                  } else {
+                      temptext+='<tr><td>---</td></tr>';
+                  }
+                  fulltext+=temptext;
+              }
+              fulltext+='<tr><td class="moneyGained" colspan="3">Reward: <img src="../../images/PokeDollar.png">'+walkthroughTrainerList[locationCode][i][1]+'</td></tr></table></div>';
+          }
+          else { //Double Battles
+            pokemonList=walkthroughTrainerList[locationCode][i][3];
+            pokemonList2=walkthroughTrainerList[locationCode][i][4];
+            secondPokemonExists=false;
+            for(var setNum=0; setNum<pokemonList.length; setNum++){
+              movesUsed=0; movesUsed2=0;
+              if(pokemonList[setNum][0]=="---"){
+                temptext='<tr><th rowspan="4">---</th><td rowspan="4">---</td><td>---</td>';
+                typeAmount=1;
+                moves=['---','---','---','---'];
+                movesUsed++;
+              }
+              else {
+                pokemonIDNum=pokemonList[setNum][0];
+                pokemonFormNum=pokemonList[setNum][1];
+                pokemonLevelNum=pokemonList[setNum][2];
                 pokemonIDString=String(pokemonIDNum);
                 moves=fourPokemonMoves(pokemonIDNum,pokemonFormNum,pokemonLevelNum);
-
-                ///Picture and Name
+                for(var movesMissing=moves.length; movesMissing<4; movesMissing++){
+                  moves.unshift('---');
+                }
+                typeAmount=BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1].length;
                 if(pokemonIDString.length==1){
                     pokemonIDString="00"+pokemonIDString;
                 } else if (pokemonIDString.length==2){
                     pokemonIDString="0"+pokemonIDString;
                 }
-                if(pokemonFormNum==0){
-                    temptext='<tr><th rowspan="4"><img class="trainerPokemonImage" src="../../images/PokemonSprites/'+pokemonIDString+'.png"><br>'
-                } else {
-                    temptext='<tr><th rowspan="4"><img class="trainerPokemonImage" src="../../images/PokemonSprites/'+pokemonIDString+'_'+pokemonFormNum+'.png"><br>'
-                }
-                temptext+=BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][0]+", Level "+pokemonLevelNum+'</th>';
-
-                ///Type
-                typeAmount=BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1].length;
+                temptext='<tr><th rowspan="4"><img class="trainerPokemonImage" src="../../images/PokemonSprites/'+getImageCode(pokemonIDString,pokemonFormNum)+'.png"><br>'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][0]+", Level "+pokemonLevelNum+'</th>';
                 if(typeAmount==1){
-                    temptext+='<td rowspan="4">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][0]+'</td>'
+                  temptext+='<td rowspan="4">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][0]+'</td>';
                 } else {
-                    temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][0]+'</td>'
+                  temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][0]+'</td>';
                 }
-                if(movesUsed<moves.length){ //Move 1
-                    movesUsed+=1;
-                    temptext+='<td>'+moves[moves.length-movesUsed]+'</td></tr>';
+                movesUsed++;
+                temptext+='<td>'+moves[moves.length-movesUsed]+'</td>';
+              }
+              // IF Second Pokemon exists
+              if(pokemonList2.length>=setNum+1){
+                secondPokemonExists=true;
+                movesUsed2=0;
+                pokemonIDNum2=pokemonList2[setNum][0];
+                pokemonFormNum2=pokemonList2[setNum][1];
+                pokemonLevelNum2=pokemonList2[setNum][2];
+                pokemonIDString2=String(pokemonIDNum2);
+                moves2=fourPokemonMoves(pokemonIDNum2,pokemonFormNum2,pokemonLevelNum2);
+                typeAmount2=BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][1].length;
+                for(var movesMissing=moves2.length; movesMissing<4; movesMissing++){
+                  moves2.unshift('---');
                 }
-                if(movesUsed<moves.length){ //Move 2
-                    movesUsed+=1;
-                    temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td></tr>';
+  
+                if(pokemonIDString2.length==1){
+                    pokemonIDString2="00"+pokemonIDString2;
+                } else if (pokemonIDString2.length==2 ){
+                    pokemonIDString2="0"+pokemonIDString2;
+                }
+                temptext+='<th rowspan="4"><img class="trainerPokemonImage" src="../../images/PokemonSprites/'+getImageCode(pokemonIDString2,pokemonFormNum2)+'.png"><br>'+BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][0]+", Level "+pokemonLevelNum2+'</th>';
+                if(typeAmount2==1){
+                  temptext+='<td rowspan="4">'+BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][1][0]+'</td>';
                 } else {
-                    temptext+='<tr><td>---</td></tr>';
+                  temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][1][0]+'</td>';
                 }
-
-                temptext+='<tr>';
-                if(typeAmount==2){
-                    temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][1]+'</td>'
-                }
-                if(movesUsed<moves.length){ //Move 3
-                    movesUsed+=1;
-                    temptext+='<td>'+moves[moves.length-movesUsed]+'</td></tr>';
-                } else {
-                    temptext+='<td>---</td></tr>';
-                }
-                if(movesUsed<moves.length){ //Move 4
-                    movesUsed+=1;
-                    temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td></tr>';
-                } else {
-                    temptext+='<tr><td>---</td></tr>';
-                }
-                fulltext+=temptext;
-            }
-            fulltext+='<tr><td class="moneyGained" colspan="3">Reward: <img src="../../images/PokeDollar.png">'+walkthroughTrainerList[locationCode][i][1]+'</td></tr></table></div>';
-        }
-        else { //Double Battles
-          pokemonList=walkthroughTrainerList[locationCode][i][3];
-          pokemonList2=walkthroughTrainerList[locationCode][i][4];
-          secondPokemonExists=false;
-          for(var setNum=0; setNum<pokemonList.length; setNum++){
-            movesUsed=0; movesUsed2=0;
-            if(pokemonList[setNum][0]=="---"){
-              temptext='<tr><th rowspan="4">---</th><td rowspan="4">---</td><td>---</td>';
-              typeAmount=1;
-              moves=['---','---','---','---'];
-              movesUsed++;
-            }
-            else {
-              pokemonIDNum=pokemonList[setNum][0];
-              pokemonFormNum=pokemonList[setNum][1];
-              pokemonLevelNum=pokemonList[setNum][2];
-              pokemonIDString=String(pokemonIDNum);
-              moves=fourPokemonMoves(pokemonIDNum,pokemonFormNum,pokemonLevelNum);
-              for(var movesMissing=moves.length; movesMissing<4; movesMissing++){
-                moves.unshift('---');
-              }
-              typeAmount=BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1].length;
-              if(pokemonIDString.length==1){
-                  pokemonIDString="00"+pokemonIDString;
-              } else if (pokemonIDString.length==2){
-                  pokemonIDString="0"+pokemonIDString;
-              }
-              temptext='<tr><th rowspan="4"><img class="trainerPokemonImage" src="../../images/PokemonSprites/'+getImageCode(pokemonIDString,pokemonFormNum)+'.png"><br>'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][0]+", Level "+pokemonLevelNum+'</th>';
-              if(typeAmount==1){
-                temptext+='<td rowspan="4">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][0]+'</td>';
-              } else {
-                temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][0]+'</td>';
-              }
-              movesUsed++;
-              temptext+='<td>'+moves[moves.length-movesUsed]+'</td>';
-            }
-            // IF Second Pokemon exists
-            if(pokemonList2.length>=setNum+1){
-              secondPokemonExists=true;
-              movesUsed2=0;
-              pokemonIDNum2=pokemonList2[setNum][0];
-              pokemonFormNum2=pokemonList2[setNum][1];
-              pokemonLevelNum2=pokemonList2[setNum][2];
-              pokemonIDString2=String(pokemonIDNum2);
-              moves2=fourPokemonMoves(pokemonIDNum2,pokemonFormNum2,pokemonLevelNum2);
-              typeAmount2=BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][1].length;
-              for(var movesMissing=moves2.length; movesMissing<4; movesMissing++){
-                moves2.unshift('---');
-              }
-
-              if(pokemonIDString2.length==1){
-                  pokemonIDString2="00"+pokemonIDString2;
-              } else if (pokemonIDString2.length==2 ){
-                  pokemonIDString2="0"+pokemonIDString2;
-              }
-              temptext+='<th rowspan="4"><img class="trainerPokemonImage" src="../../images/PokemonSprites/'+getImageCode(pokemonIDString2,pokemonFormNum2)+'.png"><br>'+BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][0]+", Level "+pokemonLevelNum2+'</th>';
-              if(typeAmount2==1){
-                temptext+='<td rowspan="4">'+BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][1][0]+'</td>';
-              } else {
-                temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][1][0]+'</td>';
-              }
-              movesUsed2++;
-              temptext+='<td>'+moves2[moves2.length-movesUsed2]+'</td>';
-            }
-            // IF Second Pokemon does NOT exist
-            else {
-                temptext+='<th rowspan="4">---</th><td rowspan="4">---</td><td>---</td>';
-                moves2=['---','---','---','---']
                 movesUsed2++;
-                typeAmount2=1;
+                temptext+='<td>'+moves2[moves2.length-movesUsed2]+'</td>';
+              }
+              // IF Second Pokemon does NOT exist
+              else {
+                  temptext+='<th rowspan="4">---</th><td rowspan="4">---</td><td>---</td>';
+                  moves2=['---','---','---','---']
+                  movesUsed2++;
+                  typeAmount2=1;
+              }
+              //Setup Complete
+              movesUsed++; movesUsed2++;
+              temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td><td>'+moves2[moves2.length-movesUsed2]+'</td></tr>';
+              movesUsed++; movesUsed2++;
+              if(typeAmount==1){
+                temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td>'
+              } else {
+                temptext+='<tr><td rowspan="2">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][1]+'</td><td>'+moves[moves.length-movesUsed]+'</td>'
+              }
+              if(typeAmount2==1){
+                temptext+='<td>'+moves2[moves2.length-movesUsed2]+'</td></tr>'
+              } else {
+                temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][1][1]+'</td><td>'+moves2[moves2.length-movesUsed2]+'</td></tr>'
+              }
+              movesUsed++; movesUsed2++;
+              temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td><td>'+moves2[moves2.length-movesUsed2]+'</td></tr>';
+              fulltext+=temptext;
             }
-            //Setup Complete
-            movesUsed++; movesUsed2++;
-            temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td><td>'+moves2[moves2.length-movesUsed2]+'</td></tr>';
-            movesUsed++; movesUsed2++;
-            if(typeAmount==1){
-              temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td>'
-            } else {
-              temptext+='<tr><td rowspan="2">'+BattlePokedex[pokemonIDNum-1][pokemonFormNum+7][1][1]+'</td><td>'+moves[moves.length-movesUsed]+'</td>'
-            }
-            if(typeAmount2==1){
-              temptext+='<td>'+moves2[moves2.length-movesUsed2]+'</td></tr>'
-            } else {
-              temptext+='<td rowspan="2">'+BattlePokedex[pokemonIDNum2-1][pokemonFormNum2+7][1][1]+'</td><td>'+moves2[moves2.length-movesUsed2]+'</td></tr>'
-            }
-            movesUsed++; movesUsed2++;
-            temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td><td>'+moves2[moves2.length-movesUsed2]+'</td></tr>';
-            fulltext+=temptext;
+            fulltext+='<tr><td class="moneyGained" colspan="6">Reward: <img src="../../images/PokeDollar.png">'+walkthroughTrainerList[locationCode][i][1]+'</td></tr></table></div>';
           }
-          fulltext+='<tr><td class="moneyGained" colspan="6">Reward: <img src="../../images/PokeDollar.png">'+walkthroughTrainerList[locationCode][i][1]+'</td></tr></table></div>';
-        }
+      }
     }
     trainerHereLocation.innerHTML=fulltext;
     if(idName!=null){
@@ -197,7 +199,12 @@ function createTrainerTable(locationCode, idName){
   for(var curTrainer=0; curTrainer<trainerList.length; curTrainer++){
     shortTrainerName=trainerList[curTrainer][0].replaceAll('&','');
     shortTrainerName=shortTrainerName.replaceAll(' ','');
-    fulltext+='<tr><td><a href="javascript:void(0)" class="normalTrainerNameTable" id="'+shortTrainerName+'TxT">'+trainerList[curTrainer][0]+'<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/'+trainerList[curTrainer][trainerList[curTrainer].length-1]+shortTrainerName+'.png"></span></a></td><td>'+trainerList[curTrainer][trainerList[curTrainer].length-2]+'</td></tr>';
+    fulltext+='<tr><td><a href="javascript:void(0)" class="normalTrainerNameTable" id="'+shortTrainerName+'TxT">'+trainerList[curTrainer][0]+'<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/'+trainerList[curTrainer][trainerList[curTrainer].length-1]+shortTrainerName;
+    if(idName=="OutsideTrainers"){
+      fulltext+='.bmp"></span></a></td><td>'+trainerList[curTrainer][trainerList[curTrainer].length-2]+'</td></tr>';
+    } else {
+      fulltext+='.png"></span></a></td><td>'+trainerList[curTrainer][trainerList[curTrainer].length-2]+'</td></tr>';
+    }
   }
   trainerTableLoc.innerHTML=fulltext;
 }
@@ -208,40 +215,40 @@ function createTrainerTable(locationCode, idName){
 var walkthroughTrainerList=[
     //Template: [Name, Money Earned, 1=Single 2=Doubles, [List of Pokemon]]
     [
-        ['Optimist Talia', 24, 1, [[52,1,3], [16,0,4]]],
-        ['Charmer Derek', 27, 1, [[174,0,3], [734,0,3]]],
-        ['Enthusiast Lacey', 45, 1, [[16,0,4], [265,0,5]]],
-        ['Yukata Girl Shakotal', 72, 1, [[753,0,5], [183,0,6]]],
-        ['Mistress Nadine', 96, 1, [[265,0,6], [439,0,5]]],
-        ['Schoolgirl Zara', 30, 1, [[672,0,4], [273,0,5], [535,0,6]]],
-        ['Youngster Kaleb', 36, 1, [[161,0,4], [21,0,5], [353,0,6]]],
-        ['Clerk Samson', 90, 1, [[406,0,5], [41,0,6]]],
-        ['Clerk Allison', 105, 1, [[734,0,6], [731,0,7]]],
-        ['Clerk Andrew', 120, 1, [[403,0,8], [396,0,8]]],
-        ['Clerk Henry', 120, 1, [[736,0,8], [163,0,8]]],
-        ['Hardcore Trainer Salem', 100, 1, [[263,0,9], [293,0,10]]],
-        ['Technician Jonah', 60, 1, [[172,0,6]]],
+        ['Optimist Talia', 24, 1, [[52,1,3], [16,0,4]], [], 'East Gearen City - Left<br>(Bottom Left from Gearen Lab)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Charmer Derek', 27, 1, [[174,0,3], [734,0,3]], [], 'East Gearen City - Left<br>(Bottom Right from Gearen Lab)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Enthusiast Lacey', 45, 1, [[16,0,4], [265,0,5]], [], 'East Gearen City - Left<br>(Bottom Entrace to East Gearen City - Right)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Yukata Girl Shakotal', 72, 1, [[753,0,5], [183,0,6]], [], 'East Gearen City - Left<br>(Near the Right-Side Bridge)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Mistress Nadine', 96, 1, [[265,0,6], [439,0,5]], [], 'East Gearen City - Left<br>(In Front of Leaflet Park)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Schoolgirl Zara', 30, 1, [[672,0,4], [273,0,5], [535,0,6]], [], 'East Gearen City - Left<br>(Inside Leaflet Park)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Youngster Kaleb', 36, 1, [[161,0,4], [21,0,5], [353,0,6]], [], 'East Gearen City - Left<br>(Outside Violet Building)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Clerk Andrew', 120, 1, [[403,0,8], [396,0,8]], [], 'Emerald Building<br>(Blocking the Elevator)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Clerk Henry', 120, 1, [[736,0,8], [163,0,8]], [], 'Emerald Building<br>(First Floor)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Hardcore Trainer Salem', 100, 1, [[263,0,9], [293,0,10]], [], 'Emerald Building<br>(Second Floor)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Clerk Samson', 90, 1, [[406,0,5], [41,0,6]], [], 'Velvet Building<br>(First Floor)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Technician Jonah', 60, 1, [[172,0,6]], [], 'Violet Building<br>(First Floor)', 'Chapter 1/TrainerBattles/LeftSide/'],
+        ['Clerk Allison', 105, 1, [[734,0,6], [731,0,7]], [], 'Violet Building<br>(Second Floor)', 'Chapter 1/TrainerBattles/LeftSide/'],
     ], //East Gearen City Left (0000)
     [
-        ['Prima Donna Bianca', 56, 1, [[298,0,6], [527,0,7]]],
-        ['Prima Donna Penelope', 48, 1, [[349,0,6], [77,0,5]]],
-        ['Cool Guy Sim', 54, 1, [[252,0,6], [396,0,6]]],
-        ['Hiker Denko', 63, 1, [[41,0,6], [194,0,6], [194,0,6]]],
-        ['Gang Member Rufus', 35, 1, [[767,0,6], [519,0,7], [216,0,7]]],
+        ['Prima Donna Bianca', 56, 1, [[298,0,6], [527,0,7]], [], 'East Gearen City - Right<br>(Along the path before Chrisola Hotel)', 'Chapter 1/TrainerBattles/RightSide/'],
+        ['Prima Donna Penelope', 48, 1, [[349,0,6], [77,0,5]], [], 'East Gearen City - Right<br>(Left of Aqua Building)', 'Chapter 1/TrainerBattles/RightSide/'],
+        ['Cool Guy Sim', 54, 1, [[252,0,6], [396,0,6]], [], 'East Gearen City - Right<br>(Outside Venam\'s House)', 'Chapter 1/TrainerBattles/RightSide/'],
+        ['Hiker Denko', 63, 1, [[41,0,6], [194,0,6], [194,0,6]], [], 'East Gearen City - Right<br>(On the bridge below the marketplace)', 'Chapter 1/TrainerBattles/RightSide/'],
+        ['Gang Member Rufus', 35, 1, [[767,0,6], [519,0,7], [216,0,7]], [], 'East Gearen City - Right<br>(On the path to the sewers)', 'Chapter 1/TrainerBattles/RightSide/'],
     ], //East Gearen City Right (0001)
     [
-      ['Enthusiast Luca', 81, 2, [[300,0,8],[396,0,8]],[[316,0,9]]],
-      ['Technician Jerald', 90, 2,[[172,0,7]],[[25,0,9]]],
-      //Schoolgirl Amanda - Special
-      ['Youngster Ben', 54, 2, [[54,0,7],[659,0,9]],[[434,0,8]]],
-      ['Gang Member Bob', 40, 2, [[296,0,7],[296,0,8]],[[532,0,8]]],
+      ['Enthusiast Luca', 81, 2, [[300,0,8],[396,0,8]],[[316,0,9]], [], 'Gearen Sewers<br>(Across the First Bridge)', 'Chapter 1/Sewers/Trainers/'],
+      ['Technician Jerald', 90, 2,[[172,0,7]],[[25,0,9]], [], 'Gearen Sewers<br>(Near the Second Bridge)', 'Chapter 1/Sewers/Trainers/'],
+      ['Schoolgirl Amanda', 'Special', 'Gearen Sewers<br>(Across the Bridge Below the Sewerk Room)', 'Chapter 1/Sewers/Trainers/'],
+      ['Youngster Ben', 54, 2, [[54,0,7],[659,0,9]],[[434,0,8]], [], 'Gearen Sewers<br>(In the Sewerk)', 'Chapter 1/Sewers/Trainers/'],
+      ['Gang Member Bob', 40, 2, [[296,0,7],[296,0,8]],[[532,0,8]], [], 'Gearen Sewers<br>(To the Left of the Generator Room)', 'Chapter 1/Sewers/Trainers/'],
     ], //Gearen Sewers (0002)
     [
       //Fishermen Shane and Orlando - Special Magikarp Tackle
-      ['Schoolboy Darin & Gang Member Emile', 60, 2, [[58,0,10],[261,0,11],[74,0,12]],[[66,0,10],[659,0,11],[529,0,12]]],
-      ['Cool Guy Jeff & Youngster Nickolus', 117, 2, [[270,0,12],[355,0,11],[524,0,13]],[[172,0,12],[36,0,12],[343,0,12]]],
-      ['Optimist Kairi & Tourist Karin', 72, 2, [[27,0,12],[513,0,11],[515,0,12]],[[37,0,12],[511,0,12],[669,0,12]]],
-    ], //Goldenwood Part 1 (0003)
+      ['Schoolboy Darin & Gang Member Emile', 60, 2, [[58,0,10],[261,0,11],[74,0,12]],[[66,0,10],[659,0,11],[529,0,12]], 'Goldenwood Cave', 'Chapter 1/Goldenwood/Trainers/'],
+      ['Cool Guy Jeff & Youngster Nickolus', 117, 2, [[270,0,12],[355,0,11],[524,0,13]],[[172,0,12],[36,0,12],[343,0,12]], 'Goldenwood Cave', 'Chapter 1/Goldenwood/Trainers/'],
+      ['Optimist Kairi & Tourist Karin', 72, 2, [[27,0,12],[513,0,11],[515,0,12]],[[37,0,12],[511,0,12],[669,0,12]], 'Goldenwood Cave', 'Chapter 1/Goldenwood/Trainers/'],
+    ], //Goldenwood Part 1 (Cave Only) (0003)
     [
       ['Team Xen Shiela', 56, 1, [[285,0,14],[276,0,13],[345,0,13]]],
       ['Team Xen Daryle', 56, 1, [[580,0,12],[347,0,12],[100,0,14]]],
@@ -271,16 +278,16 @@ var walkthroughTrainerList=[
       ['Guitarist Natalia', 56, 1, [[23,0,14],[15,0,13]]],
     ], //Gearen Gym (0006)
     [
-      ['Tourist Hinata', 378, 1, [[520,0,17],[662,0,18]]],
-      ['Fragrant Lady Ruddie', 198, 1, [[406,0,18],[682,0,18],]],
-      ['Youngster Kaius', 102, 1, [[156,0,17],[414,0,17]]],
-      ['Prima Donna Jiara', 198, 1, [[175,0,15],[39,0,16],[301,0,17]]],
-      //Special Fisherman Connald Magikarps
+      ['Tourist Hinata', 378, 1, [[520,0,17],[662,0,18]], [], 'Route 2 - On the First Bridge', 'Chapter 2/Route2/Trainers/'],
+      ['Fragrant Lady Ruddie', 198, 1, [[406,0,18],[682,0,18]], [], 'Route 2 - Left of the Healing Star', 'Chapter 2/Route2/Trainers/'],
+      ['Youngster Kaius', 102, 1, [[156,0,17],[414,0,17]], [], 'Route 2 - Roaming Right of the Healing Star', 'Chapter 2/Route2/Trainers/'],
+      ['Fisherman Connald', 'Special', 'Route 2 - On Bridge South of Healing Star', 'Chapter 2/Route2/Trainers/'],
+      ['Prima Donna Jiara', 198, 1, [[175,0,15],[39,0,16],[301,0,17]], [], 'Route 2 - Northwest of Kecleon Shop', 'Chapter 2/Route2/Trainers/'],
     ], //Route 2 (0007)
     [
-      ['News Crew Henrietta and Jeff', 76, 2, [[81,0,19]],[[293,0,19]]],
-      ['Technician Edward', 200, 1, [[599,0,18],[714,0,20]]],
-      ['Mistress Era', 336, 1, [[263,0,17],[264,0,21]]],
+      ['News Crew Henrietta and Jeff', 76, 2, [[81,0,19]],[[293,0,19]], [], 'Route 2 - Right side of Amethyst Cave entrance', 'Chapter 2/AmethystCave/Trainers/'],
+      ['Technician Edward', 200, 1, [[599,0,18],[714,0,20]], [], 'Amethyst Cave - Up the first set of stairs in the first room', 'Chapter 2/AmethystCave/Trainers/'],
+      ['Mistress Era', 336, 1, [[263,0,17],[264,0,21]], [], 'Amethyst Cave - Right side of the second room of Amethyst Cave', 'Chapter 2/AmethystCave/Trainers/'],
     ], //Amethyst Cave (0008)
     [
       ['Battle Girl Lilith', 266, 1, [[417,0,18],[777,0,19]]],
