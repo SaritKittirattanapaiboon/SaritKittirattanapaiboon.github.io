@@ -2,10 +2,12 @@ function shopsSet(shopIDNums, generalLocationNames){
     var shopHTMLLoc=document.getElementById("shopsHere");
     var fulltext="";
     var thisShop;
-    var otherIDs=getGeneralLocation(generalLocationNames);
+    var otherIDs=getGeneralLocation(generalLocationNames); //Add the other shops (All of East Gearen City, for example)
     for(var i=0; i<otherIDs.length;i++){
         shopIDNums.push(otherIDs[i]);
     }
+    shopIDNums.sort(([a, b], [c, d]) => a - c);
+    setShopSidebars(shopIDNums);
     for(var curShop=0; curShop<shopIDNums.length; curShop++){
         thisShop=walkthroughShops[shopIDNums[curShop][0]];
         fulltext+='<div id="'+thisShop[0][0]+'" class="EncounterPopup">';
@@ -27,8 +29,8 @@ function shopsSet(shopIDNums, generalLocationNames){
 }
 
 function getGeneralLocation(generalLocationNames){
-    var moreIDNums=[];
-    var soloIDNums=[];
+    var moreIDNums=[]; //Compiled IDs
+    var soloIDNums=[]; //Each area's ID
     for(var curLoc=0; curLoc<generalLocationNames.length; curLoc++){
         curLocName=generalLocationNames[curLoc];
         for(var checkLoc=0; checkLoc<locationShopCodes.length; checkLoc++){
@@ -45,6 +47,16 @@ function getGeneralLocation(generalLocationNames){
         }
     }
     return moreIDNums;
+}
+
+function setShopSidebars(shopIDNums){
+    var shopSidebar=document.getElementById("shopSidebarContent");
+    fullSidetext="";
+    for(var curShop=0; curShop<shopIDNums.length; curShop++){
+        thisShop=walkthroughShops[shopIDNums[curShop][0]];
+        fullSidetext+='<a href="javascript:void(0)" class="encounterDetailsSidebar" id="'+thisShop[0][0]+'TxT">'+thisShop[0][1]+'</a><br><br>'
+    }
+    shopSidebar.innerHTML=fullSidetext;
 }
 
 /*
@@ -247,8 +259,9 @@ var walkthroughShops=[
             ['Lemonade',350],
             ['Moomoo Milk',500],
         ],
-        [0], //Initial
+        [0], //Initial (2)
         [0,1], //After 2 Badges
+        [0,1,2,3], //After 3 Badges
     ], //Sheridan Drinks [0012]
 
     [
@@ -273,6 +286,19 @@ var walkthroughShops=[
         ],
         ['All'], //Initial
     ], //Route 3 Upper Right [0014]
+
+    [
+        ['GoldenleafMart','Goldenleaf Town Pokemart'],
+        [
+            ['Great Ball',600],
+            ['Super Potion',700],
+            ['Gourmet Treat',2000],
+            ['Repel',350],
+            ['Super Repel',500],
+            ['Escape Rope',550],
+        ],
+        ['All'],
+    ], //Goldenleaf Pokemart [0015]
 ]
 
 /*

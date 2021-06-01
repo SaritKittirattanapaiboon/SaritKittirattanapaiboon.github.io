@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pokemon Rejuvenation - Badge Four - Goldenleaf Town</title>
+
+<link rel="stylesheet" href="../../styles/MainElements.css">
+<link rel="stylesheet" href="../../styles/WalkthroughElements.css">
+
+<script src="../../Scripts/battlepokedex.js"></script>
+<script src="../../Scripts/movespokedex.js"></script>
+<script src="../../Scripts/mapEncounterList.js"></script>
+<script src="../../Scripts/walkthroughTrainers.js"></script>
+<script src="../../Scripts/walkthroughEncounterList.js"></script>
+<script src="../../Scripts/walkthroughShopList.js"></script>
+<script src="../../Scripts/walkthroughElements.js"></script>
+<script src="../../Scripts/onload.js"></script>
+
+</head>
+
+<body onload="trainersSet([14],['GoldenleafTrainers']);encounterSet([18,19,20],[],[]);shopsSet([[5,2],[6,5],[12,4],[15,2]],['East Gearen City']);globalrunOnLoad('Fourth','');">
+
+  <div class="popUpNavigation" id="popUpNav">
+  </div>
+
+  <!-- Left Popup Side Bar -->
+
+  <div class="trainerSidebar" id="mapSidebarContent">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="encounterSidebarContent">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="shopSidebarContent">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <div class="trainerSidebar" id="fieldEffects">
+    <h1 class="noSideBar">None</h1>
+  </div>
+
+  <!-- Main Walkthrough Content -->
+  
+  <div class="maincontent">
+    <div class="currentLocation">
+      Goldenleaf Town
+    </div>
+    <div class="walkthrough">
+      <p class="walkthroughText">
+        <p class="subsectionHeader">Post-Gym Activities<span class="showTrainersButtonAnchor">
+          <button class="showTrainersButton" id="OneTrainersButton" onclick="showTrainerTable('OneTrainers')">Show Trainers</button></span></p>
+        <img class="centeredImage" src="../../images/Screenshots/Chapter 4/Chapter4Title.png">
+        <br>
+        <table class="TrainerTable" id="OneTrainers">
+          <tr class="heading">
+            <td>Trainer</td>
+            <td>Location</td>
+          </tr>
+          <tr class="innertrainer">
+            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="BattleGirlJanelleTxT">Battle Girl Janelle<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/Throh1.png"></span></a></td>
+            <td>In front of Sheridan Village Shop</td>
+          </tr>
+        </table>
+
+        <br>
+        At this point, the chapter title card wouldn't show up yet but it's a good transition point. Grab the <span class="ImportantName">TM42 - Facade<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/TM42Facade.png"></span></span> off on the side as the reward for beating Marianette. You're now in the Deep Sewers, which mostly contains the evolved forms of the Gearen Sewers. Step outside and eavesdrop on Venam's conversation with her friends. If you answer "Yes" to her question, you'll gain a relationship point with her. Anyways, she'll ask you why you were looking for her, and then agree to help out. You can quick travel with her to Route 3 if you want, but there's a few things we can do before heading to Goldenleaf proper. Before we leave East Gearen City though, the Pokeball Emporium now also sells Net Balls which can be useful for difficult to catch Water-types like Basculin.
+        <br><br>
+        Head over to Sheridan Village, and in front of the Sheridan Village Shop will be <span class="ImportantName">two people, a Sawk, and a Throh.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/Throh1.png"></span></span> Head over and speak with them, and you'll find out that the Sawk and Throh are retired movie stars. The girl will want them both, so <a href="javascript:void(0)" class="normalTrainerName" id="BattleGirlJanelleName">she'll challenge you to a battle</a> over the Pokemon. She's a strong opponent with a variety of Pokemon, but at this point your team should be more than capable than taking out her team. Be careful of getting swept by Rampardos or Zangoose and you should be fine. Once you defeat her, you can battle Throh and catch it, while Sawk will go to the other trainer. Once we have the ability to breed the Throh with Ditto, we'll be able to trade the original Throh to her so that we can get a Sawk.
+        <br><br>
+        With everything done, go ahead and meet up with Venam at the metal bars in front of the Route 3-Goldenwood Forest gate. She'll melt the bars for you, and you'll be free to enter the gate and beyond it, Goldenleaf Town.
+        <br><br>
+        <p class="subsectionHeader">Goldenleaf Town<span class="showTrainersButtonAnchor">
+          <button class="showTrainersButton" id="GoldenleafTrainersButton" onclick="showTrainerTable('GoldenleafTrainers')">Show Trainers</button></span>
+          <button class="showHiddenButton" id="GoldenleafHiddenButton" onclick="showHiddenTable('GoldenleafHidden')">Show Hidden Items</button></span></p>
+        <img class="centeredImage" src="../../images/Screenshots/Chapter 4/GoldenleafTown/GoldenleafTown.png">
+        <br>
+        <table class="TrainerTable" id="GoldenleafTrainers">
+        </table>
+        <table class="TrainerTable" id="GoldenleafHidden">
+        </table>
+        <br>
+        Welcome to Goldenleaf Town, where the inhabitants are less than welcoming of outsiders. You'll see a cutscene once you enter the town, but we don't have to progress the story right away. You're free to explore the area for a bit, near the house in the center of town <a href="javascript:void(0)" class="normalTrainerName" id="SchoolgirlJulieName">Schoolgirl Julie<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/Trainers/SchoolGirlJulie.png"></span></a> will battle you, and along the southern part you can battle <a href="javascript:void(0)" class="normalTrainerName" id="GhostGuyPietroName">Ghost Guy Pietro<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/Trainers/GhostGuyPietro.png"></span></a> to gain access to the tall grass garden. Along the top left, you'll come across a <span class="ImportantName">cuttable tree<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/CutTree.png"></span></span> where you can gain access to the Wispy Ruins behind the waterfall. There's a few encounters there that you may be interested in. A little south from that tree is a bridge leading to a graveyard, where you can talk to <span class="ImportantName">a girl<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/DittoContinued.png"></span></span> who is actually Ditto, and also grab a <span class="ZygardeCell">Zygarde Cell.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/ZygradeCells/ZyCell12.png"></span></span> Finally, you can quick travel to and from Goldenleaf Town using Truck Guy located around the bottom left of the town. One final thing we can do before moving on is enter the house to the right of the Giratina statue. You'll be able to talk with Ren's mom and learn a bit more about their family.
+        <br><br>
+        With all that done, we can now continue the story. Go ahead and talk to the group of people by the Giratina statue, and you'll be thrown into a battle against <a href="javascript:void(0)" class="normalTrainerName" id="SchoolgirlJulieName">Ghost Girl Sariah.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/Trainers/GhostGirlSariah.png"></span></a> Beat her, and then Mosely will run away. Head to the upper left part to talk to <span class="ImportantName">Narcissa,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/Narcissa.png"></span></span> the leader of the town, and she'll agree to battle you if you calm the trainers in the Pokemon Center down. Save, and then head over to the Pokemon Center. Before you get to enter, Aelita will show up and challenge you to a battle.
+        <br><br>
+        Tips and tricks
+        <br><br>
+        After the battle, go ahead and enter the Pokemon Center. After talking to Aelita inside, a group of Goldenleaf citizens will enter to try to force everyone away. You'll have to battle <a href="javascript:void(0)" class="normalTrainerName" id="SchoolgirlJulieName">Ghost Girl Sariah<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/Trainers/GhostGirlSariahSecondBattle.png"></span></a> again. Beat her, heal up, then exit the Pokemon Center to battle <a href="javascript:void(0)" class="normalTrainerName" id="SchoolgirlJulieName">Ghost Girl Sariah<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/GoldenleafTown/Trainers/GhostGirlSariahThirdBattle.png"></span></a> for the third time. Watch the scene afterwards. Before we catch up with Narcissa at Wispy Tower, we can take a detour through the upper left exit that leads to the Forgotten Path.
+        <br><br>
+        <p class="subsectionHeader">Forgotten Path<span class="showTrainersButtonAnchor">
+          <button class="showHiddenButton" id="GoldenleafHiddenButton" onclick="showHiddenTable('GoldenleafHidden')">Show Hidden Items</button></span></p>
+        <br>
+        <table class="TrainerTable" id="GoldenleafHidden">
+        </table>
+        <br>
+        There aren't any trainers here, and the encounters are mostly the same as in Goldenleaf Town. There are a few hidden items scattered around, and if you cut the tree on the right side you can climb the vines to get a hidden Dusk Stone halfway, and <span class="ImportantName">TM39 Rock Tomb.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/ForgottenPath/TM39RockTomb.png"></span></span> That's all we can do here for now, so heal up and head off to the bottom left exit of Goldenleaf Town and onto Wispy Path.
+      </p>
+      
+      <!--End Hyperlinks--->
+      <br><br>
+      <p class="previousWalkthroughPage">
+        <a href="../Chapter3/CourtyardGymLeader.html">&lt&lt Chrysalis Courtyard Gym Leader</a>
+        <span class="nextWalkthroughPage">
+          <a href="../Chapter4/WispyPath.html">Wispy Path &gt&gt</a>
+        </span>
+      </p>
+
+      <!-- Trainers -->
+      <div id="trainersHere"></div>
+      <div id="BattleGirlJanelle" class="TrainerPopup">
+        <span class="close" id="BattleGirlJanelleClose">&times;</span>
+        <p class="normalTrainerTitle" style="text-align:center;">
+          Battle Girl Janelle
+        </p>
+        <table class="trainerPopupContent">
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/028.png">
+              <br>
+              Sandslash, Level 32
+            </th>
+            <td rowspan="4">Ground</td>
+            <td>Slash</td>
+          </tr>
+          <tr><td>Sand Tomb</td></tr>
+          <tr><td>Fury Swipes</td></tr>
+          <tr><td>Swift</td></tr>
+
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/291.png">
+              <br>
+              Ninjask, Level 32
+            </th>
+            <td rowspan="2">Bug</td>
+            <td>Bug Bite</td>
+          </tr>
+          <tr><td>Slash</td></tr>
+          <tr><td rowspan="2">Flying</td><td>Swords Dance</td></tr>
+          <tr><td>Protect</td></tr>
+
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/335.png">
+              <br>
+              Zangoose, Level 33
+            </th>
+            <td rowspan="4">Normal</td>
+            <td>Crush Claw</td>
+          </tr>
+          <tr><td>Slash</td></tr>
+          <tr><td>Revenge</td></tr>
+          <tr><td>Hone Claws</td></tr>
+
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/409.png">
+              <br>
+              Rampardos, Level 32
+            </th>
+            <td rowspan="4">Rock</td>
+            <td>Chip Away</td>
+          </tr>
+          <tr><td>Head Smash</td></tr>
+          <tr><td>Zen Headbutt</td></tr>
+          <tr><td>Take Down</td></tr>
+
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/215.png">
+              <br>
+              Sneasel, Level 33
+            </th>
+            <td rowspan="2">Ice</td>
+            <td>Ice Shard</td>
+          </tr>
+          <tr><td>Low Kick</td></tr>
+          <tr><td rowspan="2">Dark</td><td>Slash</td></tr>
+          <tr><td>Hone Claws</td></tr>
+
+          <tr>
+            <td class="moneyGained" colspan="6">
+              Reward: <img src="../../images/PokeDollar.png">1386
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Encounters Start Here -->
+      <div id="encountersHere"></div>
+
+      <!-- Maps Start Here -->
+      
+
+      <!-- Shops Start Here -->
+      <div id="shopsHere"></div>
+      
+
+    </div>
+  </div>
+
+
+  <!-- Right Side Navigation -->
+
+  <div class="sidenavRight" id="rightSidebar">
+  </div>
+
+  <div class="resourcenavRight" id="resourceSidebar">
+  </div>
+
+  <script>
+    window.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        escapeToClose();
+      }
+    })
+  </script>
+</body>
+</html>

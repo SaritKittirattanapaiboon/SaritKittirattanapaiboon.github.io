@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pokemon Rejuvenation - Badge Two - Route 2</title>
+<title>Pokemon Rejuvenation - Badge Four - Goldenleaf Town</title>
 
 <link rel="stylesheet" href="../../styles/MainElements.css">
 <link rel="stylesheet" href="../../styles/WalkthroughElements.css">
@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="trainersSet(0);encounterSet([],[],[]);globalrunOnLoad('Second','');">
+<body onload="trainersSet([],[]);encounterSet([],[],[]);shopsSet([],[]);globalrunOnLoad('Fourth','');">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>
@@ -48,18 +48,14 @@
     </div>
     <div class="walkthrough">
       <p class="walkthroughText">
-        <p class="subsectionHeader">SubHeader<span class="showTrainersButtonAnchor"><button class="showTrainersButton" id="Route2TrainersButton" onclick="showTrainerTable('Route2Trainers')">Show Trainers</button></span></p>
+        <p class="subsectionHeader">SubHeader<span class="showTrainersButtonAnchor">
+          <button class="showTrainersButton" id="TrainersButton" onclick="showTrainerTable('Trainers')">Show Trainers</button></span>
+          <button class="showHiddenButton" id="HiddenButton" onclick="showHiddenTable('Hidden')">Show Hidden Items</button></span></p>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 2/">
         <br>
-        <table class="TrainerTable" id="Route2Trainers">
-          <tr class="heading">
-            <td>Trainer</td>
-            <td>Location</td>
-          </tr>
-          <tr class="innertrainer">
-            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="TxT">Name<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 2"></span></a></td>
-            <td>Route 2 - On the first bridge</td>
-          </tr>
+        <table class="TrainerTable" id="Trainers">
+        </table>
+        <table class="TrainerTable" id="Hidden">
         </table>
         <br>
         Content
@@ -84,6 +80,7 @@
       
 
       <!-- Shops Start Here -->
+      <div id="shopsHere"></div>
       
 
     </div>

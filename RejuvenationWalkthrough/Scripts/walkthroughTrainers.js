@@ -15,6 +15,7 @@ function trainersSet(locationCode, idName){
         }
           temptext=walkthroughTrainerList[locationCode][i][0].replaceAll(' ','');
           temptext=temptext.replaceAll('&','');
+          temptext=temptext.replaceAll('-','');
           fulltext+='<div id="'+temptext+'" class="TrainerPopup">';
           fulltext+='<span class="close" id="'+temptext+'Close">&times;</span><p class="normalTrainerTitle" style="text-align:center;">'+walkthroughTrainerList[locationCode][i][0]+'</p><table class="trainerPopupContent">';
           if(walkthroughTrainerList[locationCode][i][2]==1){ //Single Battles
@@ -199,6 +200,7 @@ function createTrainerTable(locationCode, idName){
   for(var curTrainer=0; curTrainer<trainerList.length; curTrainer++){
     shortTrainerName=trainerList[curTrainer][0].replaceAll('&','');
     shortTrainerName=shortTrainerName.replaceAll(' ','');
+    shortTrainerName=shortTrainerName.replaceAll('-','');
     fulltext+='<tr><td><a href="javascript:void(0)" class="normalTrainerNameTable" id="'+shortTrainerName+'TxT">'+trainerList[curTrainer][0]+'<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/'+trainerList[curTrainer][trainerList[curTrainer].length-1]+shortTrainerName;
     if(idName=="OutsideTrainers"){
       fulltext+='.bmp"></span></a></td><td>'+trainerList[curTrainer][trainerList[curTrainer].length-2]+'</td></tr>';
@@ -326,8 +328,11 @@ var walkthroughTrainerList=[
       ['Servant Lara', 1176, 1, [[507,0,28],[680,0,28],[705,0,28]], [], 'Chrysalis Courtyard - Middle of the Maze Area<br>After accepting the trail of the maid in the mansion lobby', 'Chapter 3/ChrysalisCourtyard/'],
       ['Servant Yara', 1176, 1, [[299,0,28],[200,0,28],[176,0,28]], [], 'Chrysalis Courtyard - Bottom left corner of the Pool Area<br>After accepting the trail of the maid in the mansion lobby', 'Chapter 3/ChrysalisCourtyard/'],
     ], //Chrysalis Courtyard Maids (0013)
+    [
+      ['Schoolgirl Julie', 465, 1, [[216,0,30],[271,0,30],[333,0,31]], [], 'Next to the house below the Pokemon Center', 'Chapter 4/GoldenleafTown/Trainers/'],
+      ['Ghost Guy Pietro', 372, 1, [[198,0,30],[526,0,30],[510,0,31]], [], 'Blocking a grassy area to the south of the town', 'Chapter 4/GoldenleafTown/Trainers/'],
+      ['Ghost Girl Sariah', 408, 1, [[709,0,34]], [], 'Next to the Giratina Statue<br>Forced story battle', 'Chapter 4/GoldenleafTown/Trainers/'],
+      ['Ghost Girl Sariah - Second Battle', 408, 1, [[680,0,34],[93,0,32]], [], 'Inside the Pokemon Center<br>Forced story battle', 'Chapter 4/GoldenleafTown/Trainers/'],
+      ['Ghost Girl Sariah - Third Battle', 408, 1, [[355,0,32],[680,0,34],[93,0,34]], [], 'Right outside the Pokemon Center<br>Forced story battle', 'Chapter 4/GoldenleafTown/Trainers/'],
+    ], //Goldenleaf Town (0014)
 ]
-
-/*
-
-*/

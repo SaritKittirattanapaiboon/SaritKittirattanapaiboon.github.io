@@ -45,10 +45,10 @@ function encounterSet(randomEncounterNumbers, eventEncounterNumbers, otherRandom
     } //Random Encounters
     for (var i=0; i<eventEncounterNumbers.length; i++){
         if(checkExceptions(i,eventEncounterNumbers)){
-            fulltext+=walkthroughOtherEncountersList[eventEncounterNumbers[i][0]][eventEncounterNumbers[i][1]];
+            fulltext+=walkthroughOtherEncountersList[eventEncounterNumbers[i][0]][eventEncounterNumbers[i][1]][0];
             continue; //Skip everything below
         }
-        fulltext+=walkthroughOtherEncountersList[eventEncounterNumbers[i][0]][0];
+        fulltext+=walkthroughOtherEncountersList[eventEncounterNumbers[i][0]][0][0];
         for (var j=0; j<walkthroughOtherEncountersList[eventEncounterNumbers[i][0]][eventEncounterNumbers[i][1]].length;j++){
             curPok=walkthroughOtherEncountersList[eventEncounterNumbers[i][0]][eventEncounterNumbers[i][1]][j];
             if(EventEncounters[eventEncounterNumbers[i][0]][curPok+1][0].length>3){
@@ -85,11 +85,12 @@ function encounterSet(randomEncounterNumbers, eventEncounterNumbers, otherRandom
     } //Event Encounters
     if(otherRandomEncounterNumbers!=null){
         for(var i=0; i<otherRandomEncounterNumbers.length; i++){
-            fulltext+=OtherRandomEncounters[otherRandomEncounterNumbers[i]][1];
+            fulltext+=OtherRandomEncounters[otherRandomEncounterNumbers[i][0]][otherRandomEncounterNumbers[i][1]];
         }
     } //Other Randoms such as Rock Smash, Fishing, Headbutt
-    
     encounterLocation.innerHTML=fulltext;
+
+    setEncounterSidebarContent(randomEncounterNumbers, eventEncounterNumbers, otherRandomEncounterNumbers);
 }
 
 function checkExceptions(curCheck,eventEncounterNumbers){
@@ -102,9 +103,38 @@ function checkExceptions(curCheck,eventEncounterNumbers){
     return false;
 }
 
-var walkthroughOtherEncountersList=[
+function setEncounterSidebarContent(randomEncounterNumbers, eventEncounterNumbers, otherRandomEncounterNumbers){
+    sidebarContent=document.getElementById("encounterSidebarContent");
+    fulltext="";
+    temptext="";
+    if(sidebarContent==null){
+        return;
+    }
+    for(var curLoc=0; curLoc<randomEncounterNumbers.length; curLoc++){
+        if(randomEncounterNumbers[curLoc]==0){
+            fulltext+='<a href="javascript:void(0)" class="encounterDetailsSidebar" id="GearenGrassTxT">East Gearen City Grass</a><br><br>';
+        } else {
+            fulltext+='<a href="javascript:void(0)" class="encounterDetailsSidebar" id="'+walkthroughRandomEncountersStart[randomEncounterNumbers[curLoc]][1]+'TxT">'+RandomEncounters[randomEncounterNumbers[curLoc]][0][0]+' - '+RandomEncounters[randomEncounterNumbers[curLoc]][0][RandomEncounters[randomEncounterNumbers[curLoc]][0].length-1]+'</a><br><br>';
+        }
+    }
+    if(otherRandomEncounterNumbers!=null){
+        for(var curLoc=0; curLoc<otherRandomEncounterNumbers.length; curLoc++){
+            fulltext+='<a href="javascript:void(0)" class="encounterDetailsSidebar" id="'+OtherRandomEncounters[otherRandomEncounterNumbers[curLoc][0]][0][OtherRandomEncounters[otherRandomEncounterNumbers[curLoc][0]][0].length-1]+'TxT">'+OtherRandomEncounters[otherRandomEncounterNumbers[curLoc][0]][0][0]+' - '+OtherRandomEncounters[otherRandomEncounterNumbers[curLoc][0]][0][OtherRandomEncounters[otherRandomEncounterNumbers[curLoc][0]][0].length-2]+'</a><br><br>';
+        }
+    }
+    for(var curLoc=0; curLoc<eventEncounterNumbers.length; curLoc++){
+        if(checkExceptions(curLoc,eventEncounterNumbers)){
+            fulltext+='<a href="javascript:void(0)" class="encounterDetailsSidebar" id="'+walkthroughOtherEncountersList[eventEncounterNumbers[curLoc][0]][eventEncounterNumbers[curLoc][1]][1]+'TxT">'+walkthroughOtherEncountersList[eventEncounterNumbers[curLoc][0]][eventEncounterNumbers[curLoc][1]][2]+'</a><br><br>';
+            continue; //Skip everything below
+        }
+        fulltext+='<a href="javascript:void(0)" class="encounterDetailsSidebar" id="'+walkthroughOtherEncountersList[eventEncounterNumbers[curLoc][0]][0][1]+'TxT">'+walkthroughOtherEncountersList[eventEncounterNumbers[curLoc][0]][0][2]+'</a><br><br>';
+    }
+    sidebarContent.innerHTML=fulltext;
+}
+
+var walkthroughOtherEncountersList=[ //Event Encounters - NOT RANDOM
     [ //Code 000 Oceana Pier
-    `<div id="OceanaPier" class="EncounterPopup">
+    [`<div id="OceanaPier" class="EncounterPopup">
         <span class="close" id="OceanaPierClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
         Oceana Pier Pokemon
@@ -114,13 +144,13 @@ var walkthroughOtherEncountersList=[
             <th>Pokemon Name</th>
             <td>Location</td>
             <td>Other Requirements</td>
-        </tr>`,
+        </tr>`, 'OceanaPier', 'Oceana Pier Static Encounters'],
         [0,1], //Initial (01)
         [0,1,2], //Add Litleo (02)
     ],
 
     [ //Code 001 Gearen Events
-    `<div id="GearenEvents" class="EncounterPopup">
+    [`<div id="GearenEvents" class="EncounterPopup">
         <span class="close" id="EventsClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
         Event Pokemon - Gained through Other Means
@@ -130,8 +160,7 @@ var walkthroughOtherEncountersList=[
             <th>Pokemon Name</th>
             <td>Location</td>
             <td>Other Requirements</td>
-        </tr>
-        `,
+        </tr>`, 'GearenEvents', 'East Gearen City Static and Event Pokemon'],
         [0,1], //Left Side Only (01)
         [0,1,4,5,3], //Right Side Only (02)
         [0,1,2,4,5,3], //Both Left and Right Sides (03)
@@ -141,7 +170,7 @@ var walkthroughOtherEncountersList=[
     ],
 
     [ //Code 002 Chrisola Hotel Events
-    `<div id="HotelEvents" class="EncounterPopup">
+    [`<div id="HotelEvents" class="EncounterPopup">
         <span class="close" id="HotelEventsClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
         Chrisola Hotel Casino and Event Pokemon
@@ -151,8 +180,7 @@ var walkthroughOtherEncountersList=[
             <th>Pokemon Name</th>
             <td>Location</td>
             <td>Other Requirements</td>
-        </tr>
-       `,
+        </tr>`, 'HotelEvents', 'Chrisola Hotel Casino and Event Pokemon'],
        [0,1,2,3], //Hotel Casino Only (01)
        [0,1,2,3,4], //+Mincinno (02)
     ],
@@ -161,7 +189,7 @@ var walkthroughOtherEncountersList=[
     ],
 
     [ //Code 004 Goldenwood Events
-    `<div id="GoldenwoodEvents" class="EncounterPopup">
+    [`<div id="GoldenwoodEvents" class="EncounterPopup">
         <span class="close" id="GoldenwoodEventsClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
           Route 1/Goldenwood Event Pokemon - Gained through Other Means
@@ -207,9 +235,9 @@ var walkthroughOtherEncountersList=[
           </tr>
           
         </table>
-    </div>`, //Code 000 Goldenwood Events Initial
+    </div>`, 'GoldenwoodEvents', 'Goldenwood Forest/Cave Event Pokemon'], //Code 000 Goldenwood Events Initial
 
-    `<div id="GoldenwoodShadows" class="EncounterPopup">
+    [`<div id="GoldenwoodShadows" class="EncounterPopup">
         <span class="close" id="GoldenwoodShadowsClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
         Catchable Shadow Pokemon
@@ -273,14 +301,14 @@ var walkthroughOtherEncountersList=[
             <td>Xen Executive Zetta</td>
         </tr>
         </table>
-    </div>`, //Code 001 Goldenwood Shadows
+    </div>`, 'GoldenwoodShadows', 'Goldenwood Forest - Catchable Shadow Pokemon'], //Code 001 Goldenwood Shadows
     ], //SPECIAL CASE - SHADOWS & ALSO ROUTE 1
 
     [ //Code 005 Route 2
     ],
 
     [ //Code 006 Amethyst Cave
-    `<div id="AmethystEvents" class="EncounterPopup">
+    [`<div id="AmethystEvents" class="EncounterPopup">
         <span class="close" id="AmethystEventsClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
         Amethyst Cave - Event Encounters
@@ -290,30 +318,30 @@ var walkthroughOtherEncountersList=[
             <th>Pokemon Name</th>
             <td>Location</td>
             <td>Other Requirements</td>
-        </tr>`, //Code 000 Ameythyst Other Encounters (Fishing)
+        </tr>`, 'AmethystEvents', 'Amethyst Cave - Event Pokemon'], //Code 000 Ameythyst Other Encounters (Fishing)
         [0,3], //Lunatone and Klink (01)
         [0,1,3], //+Solrock (02)
         [0,1,2,3], //+Houndour (03)
     ],
 
     [ //Code 007 Sheridan Village Arena
-    `<div id="SheridanEvents" class="EncounterPopup">
+    [`<div id="SheridanEvents" class="EncounterPopup">
         <span class="close" id="SheridanEventsClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
-        Event Pokemon
+        Sheridan Village and Arena - Event Pokemon
         </p>
         <table class="encounterPopupContent">
         <tr>
             <th>Pokemon Name</th>
             <td>Location</td>
             <td>Other Requirements</td>
-        </tr>`, //Code 000 Sheriden Village Events Initial
+        </tr>`, 'SheridanEvents', 'Sheridan Village and Arena - Event Pokemon'], //Code 000 Sheriden Village Events Initial
         [0,1], //Sheridan Village
         [0,1,2,3], //Sheridan Village + Help Plaza
     ],
 
     [ //Code 008 Caratos Mountain
-    `<div id="CaratosMountainOthers" class="EncounterPopup">
+    [`<div id="CaratosMountainOthers" class="EncounterPopup">
         <span class="close" id="CaratosMountainOthersClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
         Caratos Mountain
@@ -354,10 +382,25 @@ var walkthroughOtherEncountersList=[
             <td style="background-color: var(--fishingAvailable);">Old Rod<br>30%</td>
             <td style="background-color: var(--fishingAvailable);">Good Rod<br>100%</td>
         </tr>
-        </table>
-    </div>`, //Caratos Mountain (Volcano) Other Encounters (Old Rod, Good Rod)
 
-    `<div id="CaratosShadows" class="EncounterPopup">
+        <tr>
+            <th class="wildPokemonTooltipPosition">
+            <span class="wildPokemonName">
+                <span class="type1" style="background-color: var(--typePsychic);"></span>
+                <span class="type2" style="background-color: var(--typeFairy);"></span>
+                <img class="encounterPokemonImage" src="../../images/PokemonSprites/439.png">
+                <br>
+                #439 Mime Jr.
+                <span class="wildPokemonTooltip">
+                Mime Jr. will evolve into Mr. Mime with the move Mimic, which it will learn at level 32. While its a Mime Jr., it won't be doing much as its stats are on par with the other baby Pokemon. Mr. Mime, on the other hand, is a very strong on the special side while also having decent Speed. It learns Psybeam relatively early, and it can learn both Reflect and Light Screen before the fourth gym with the Rare Candy trick to get it to level 36. Overall, its definitely worth considering as Mr. Mime can be a strong supportive teammate in the later levels.
+                </span>
+            </th>
+            <td colspan="2" style="background-color: var(--allDayAvailable);">Interact in the Xen Lab</td>
+        </tr>
+        </table>
+    </div>`, 'CaratosMountainOthers', 'Caratos Mountain - Event and Fishing Encounters'], //Caratos Mountain (Volcano) Other Encounters (Old Rod, Good Rod)
+
+    [`<div id="CaratosShadows" class="EncounterPopup">
         <span class="close" id="CaratosShadowsClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
         Catchable Shadow Pokemon
@@ -421,11 +464,11 @@ var walkthroughOtherEncountersList=[
             <td>Security Component SEC (Third Battle)</td>
         </tr>
         </table>
-    </div>`, //Caratos (Volcano) Shadows
+    </div>`, 'CaratosShadows', 'Caratos Shadow Pokemon'], //Caratos (Volcano) Shadows
     ], //SPECIAL CASE - SHADOWS AND MADELIS LABORATORY
 
     [ //Code 009 Hidden Library
-    `<div id="HiddenLibraryEncounters" class="EncounterPopup">
+    [`<div id="HiddenLibraryEncounters" class="EncounterPopup">
         <span class="close" id="HiddenLibraryEncountersClose">&times;</span>
         <p class="encounterDetails" style="text-align:center;">
         Hidden Library
@@ -464,11 +507,11 @@ var walkthroughOtherEncountersList=[
             <td style="background-color: var(--alldayAvailable);">Random Encounter (100%)</td>
         </tr>
         </table>
-    </div>`,
+    </div>`, 'HiddenLibraryEncounters', 'Hidden Library Encounters'],
     ], //SPECIAL CASE - UNOWN AND ELGYEM
 
     [ //Code 010 Mirage Woods - Zubat
-        `<div id="MirageWoodEventEncounters" class="EncounterPopup">
+        [`<div id="MirageWoodEventEncounters" class="EncounterPopup">
             <span class="close" id="MirageWoodEventEncountersClose">&times;</span>
             <p class="encounterDetails" style="text-align:center;">
             Mirage Woods Event Encounters
@@ -494,11 +537,11 @@ var walkthroughOtherEncountersList=[
                 <td style="background-color: var(--alldayAvailable);">Defeat Crobat in the cave in the research area<br>Requires Flash</td>
             </tr>
             </table>
-        </div>`,
-    ],
+        </div>`, 'MirageWoodEventEncounters', 'Mirage Woods - Event Encounters'],
+    ], //Special - Just Zubat
 
     [ //Code 011 Chrysalis Courtyard - Gothita
-        `<div id="CourtyardEventEncounters" class="EncounterPopup">
+        [`<div id="CourtyardEventEncounters" class="EncounterPopup">
             <span class="close" id="CourtyardEventEncountersClose">&times;</span>
             <p class="encounterDetails" style="text-align:center;">
                 Crysalis Courtyard Event Encounters
@@ -523,7 +566,22 @@ var walkthroughOtherEncountersList=[
                 <td style="background-color: var(--alldayAvailable);">Interact with the Gardevoir statue during Indriad's trail<br>Requires Ancient Book from the Sheridan Help Request: The Hidden Library 2</td>
             </tr>
             </table>
-        </div>`,
+        </div>`, 'CourtyardEventEncounters', 'Crysalis Courtyard - Event Encounters'],
+    ], //Special - Just Gothita
+
+    [ //Code 012 Wispy Path
+        [`<div id="WispyPathEvents" class="EncounterPopup">
+        <span class="close" id="SheridanEventsClose">&times;</span>
+        <p class="encounterDetails" style="text-align:center;">
+        Wispy Path - Event Pokemon
+        </p>
+        <table class="encounterPopupContent">
+        <tr>
+            <th>Pokemon Name</th>
+            <td>Location</td>
+            <td>Other Requirements</td>
+        </tr>`, 'WispyPathEvents', 'Wispy Path - Event Pokemon'], //Code 000 Wispy Path Events Initial
+        [0], //Just Espurr (01)
     ],
 ]
 
@@ -537,7 +595,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Time of Day + Rarity</td>
-    </tr>`], //Random Gearen Grass (00)
+    </tr>`, 'GearenGrass'], //Random Gearen Grass (00)
 
     [`<div id="HotelEncounters" class="EncounterPopup">
     <span class="close" id="HotelEncountersClose">&times;</span>
@@ -548,7 +606,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td>Location</td>
-    </tr>`], //Random Chrisola Hotel Rooftop (01)
+    </tr>`, 'HotelEncounters'], //Random Chrisola Hotel Rooftop (01)
 
     [`<div id="GearenPark" class="EncounterPopup">
     <span class="close" id="GearenParkClose">&times;</span>
@@ -559,7 +617,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Time of Day + Rarity</td>
-    </tr>`], //Random Gearen Park (02)
+    </tr>`, 'GearenPark'], //Random Gearen Park (02)
 
     [`<div id="GearenSewersEncounters" class="EncounterPopup">
     <span class="close" id="GearenSewersEncountersClose">&times;</span>
@@ -570,7 +628,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Time of Day + Rarity</td>
-    </tr>`], //Random Gearen Sewers (03)
+    </tr>`, 'GearenSewersEncounters'], //Random Gearen Sewers (03)
 
     [`<div id="Route1Grass" class="EncounterPopup">
     <span class="close" id="Route1GrassClose">&times;</span>
@@ -581,7 +639,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Time of Day + Rarity</td>
-    </tr>`], //Random Route 1 Grass (04)
+    </tr>`, 'Route1Grass'], //Random Route 1 Grass (04)
 
     [`<div id="GoldenwoodForestEnc" class="EncounterPopup">
     <span class="close" id="GoldenwoodForestEncClose">&times;</span>
@@ -592,7 +650,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Time of Day + Rarity</td>
-    </tr>`], //Random Goldenwood Forest Grass Low Level (05)
+    </tr>`, 'GoldenwoodForestEnc'], //Random Goldenwood Forest Grass Low Level (05)
 
     [`<div id="GoldenwoodCaveEnc" class="EncounterPopup">
     <span class="close" id="GoldenwoodCaveEncClose">&times;</span>
@@ -603,7 +661,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Time of Day + Rarity</td>
-    </tr>`], //Random Goldenwood Cave 1F (06)
+    </tr>`, 'GoldenwoodCaveEnc'], //Random Goldenwood Cave 1F (06)
 
     [`<div id="Route2Grass" class="EncounterPopup">
     <span class="close" id="Route2GrassClose">&times;</span>
@@ -614,7 +672,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Time of Day + Rarity</td>
-    </tr>`], //Random Route 2 Grass (07)
+    </tr>`, 'Route2Grass'], //Random Route 2 Grass (07)
 
     [`<div id="AmethystCaveEncounters" class="EncounterPopup">
     <span class="close" id="AmethystCaveEncountersClose">&times;</span>
@@ -625,7 +683,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Time of Day + Rarity</td>
-    </tr>`], //Random Amethyst Cave (08)
+    </tr>`, 'AmethystCaveEncounters'], //Random Amethyst Cave (08)
 
     [`<div id="AmethystGrottoEncounters" class="EncounterPopup">
     <span class="close" id="AmethystGrottoEncountersClose">&times;</span>
@@ -636,7 +694,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td>Time of Day + Rarity</td>
-    </tr>`], //Random Amethyst Grotto (09)
+    </tr>`, 'AmethystGrottoEncounters'], //Random Amethyst Grotto (09)
 
     [`<div id="SheridanVillageArenaGrass" class="EncounterPopup">
     <span class="close" id="SheridanVillageArenaGrassClose">&times;</span>
@@ -647,7 +705,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="2">Time of Day + Rarity</td>
-    </tr>`], //Random Sheridan Village/Arena Grass (10)
+    </tr>`, 'SheridanVillageArenaGrass'], //Random Sheridan Village/Arena Grass (10)
 
     [`<div id="SpringPurification" class="EncounterPopup">
     <span class="close" id="SpringPurificationClose">&times;</span>
@@ -658,7 +716,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td>Time of Day + Rarity</td>
-    </tr>`], //Random Spring of Purification (11)
+    </tr>`, 'SpringPurification'], //Random Spring of Purification (11)
 
     [`<div id="CaratosMountain" class="EncounterPopup">
     <span class="close" id="CaratosMountainClose">&times;</span>
@@ -669,7 +727,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td colspan="3">Obtained Method + Rarity</td>
-    </tr>`], //Random Caratos Mountain (12)
+    </tr>`, 'CaratosMountain'], //Random Caratos Mountain (12)
 
     [`<div id="PomPomMeadowEncounters" class="EncounterPopup">
     <span class="close" id="PomPomMeadowEncountersClose">&times;</span>
@@ -680,7 +738,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td>Time of Day + Rarity</td>
-    </tr>`], //Random Pom Pom Meadows Grass (13)
+    </tr>`, 'PomPomMeadowEncounters'], //Random Pom Pom Meadows Grass (13)
 
     [`<div id="Route3Encounters" class="EncounterPopup">
     <span class="close" id="Route3EncountersClose">&times;</span>
@@ -691,7 +749,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td>Time of Day + Rarity</td>
-    </tr>`], //Random Route 3 Grass (14)
+    </tr>`, 'Route3Encounters'], //Random Route 3 Grass (14)
 
     [`<div id="PhasialCaveEncounters" class="EncounterPopup">
     <span class="close" id="PhasialCaveEncountersClose">&times;</span>
@@ -702,7 +760,7 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td>Time of Day + Rarity</td>
-    </tr>`], //Random Phasial Cave (15)
+    </tr>`, 'PhasialCaveEncounters'], //Random Phasial Cave (15)
 
     [`<div id="MirageWoodsEncounters" class="EncounterPopup">
     <span class="close" id="MirageWoodsEncountersClose">&times;</span>
@@ -713,16 +771,104 @@ var walkthroughRandomEncountersStart=[
     <tr>
         <th>Pokemon Name</th>
         <td>Time of Day + Rarity</td>
-    </tr>`], //Random Mirage Woods Grass (16)
+    </tr>`, 'MirageWoodsEncounters'], //Random Mirage Woods Grass (16)
 
-    [`<div id="CrysalisCourtyardEncounters" class="EncounterPopup">
-    <span class="close" id="CrysalisCourtyardEncountersClose">&times;</span>
+    [`<div id="ChrysalisCourtyardEncounters" class="EncounterPopup">
+    <span class="close" id="ChrysalisCourtyardEncountersClose">&times;</span>
     <p class="encounterDetails" style="text-align:center;">
-    Mirage Woods Grass
+    Chrysalis Courtyard Grass
     </p>
     <table class="encounterPopupContent">
     <tr>
         <th>Pokemon Name</th>
         <td>Time of Day + Rarity</td>
-    </tr>`], //Random Crysalis Courtyard Grass (17)
+    </tr>`, 'ChrysalisCourtyardEncounters'], //Random Crysalis Courtyard Grass (17)
+
+    [`<div id="DeepSewers" class="EncounterPopup">
+    <span class="close" id="DeepSewersClose">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">
+    Deep Sewers
+    </p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td>Time of Day + Rarity</td>
+    </tr>`, 'DeepSewers'], //Deep Sewers (18)
+
+    [`<div id="GoldenwoodTown" class="EncounterPopup">
+    <span class="close" id="GoldenwoodTownClose">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">
+    Goldenwood Town
+    </p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td colspan="3">Time of Day + Rarity</td>
+    </tr>`, 'GoldenwoodTown'], //Goldenwood Town (19)
+
+    [`<div id="ForgottenPath" class="EncounterPopup">
+    <span class="close" id="ForgottenPathClose">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">
+    Forgotten Path
+    </p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td colspan="3">Time of Day + Rarity</td>
+    </tr>`, 'ForgottenPath'], //Forgotten Path (20)
+
+    [`<div id="WispyRuins" class="EncounterPopup">
+    <span class="close" id="WispyRuinsClose">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">
+    Wispy Ruins
+    </p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td>Time of Day + Rarity</td>
+    </tr>`, 'WispyRuins'], //Wispy Ruins (21)
+
+    [`<div id="WispyPath" class="EncounterPopup">
+    <span class="close" id="WispyPathClose">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">
+    Wispy Path
+    </p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td>Time of Day + Rarity</td>
+    </tr>`, 'WispyPath'], //Wispy Path (22)
+
+    [`<div id="ForsakenLaboratory" class="EncounterPopup">
+    <span class="close" id="ForsakenLaboratoryClose">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">
+    Forsaken Laboratory
+    </p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td>Time of Day + Rarity</td>
+    </tr>`, 'ForsakenLaboratory'], //Forsaken Laboratory (23)
+
+    [`<div id="GoldenwoodForest" class="EncounterPopup">
+    <span class="close" id="GoldenwoodForestClose">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">
+    Goldenwood Forest Grass
+    </p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td>Time of Day + Rarity</td>
+    </tr>`, 'GoldenwoodForest'], //Random Goldenwood Forest Grass High Level (24)
+
+    [`<div id="BackstageTheatre" class="EncounterPopup">
+    <span class="close" id="BackstageTheatreClose">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">
+    Backstage Theatre
+    </p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td>Time of Day + Rarity</td>
+    </tr>`, 'BackstageTheatre'], //Backstage Theatre (22)
 ]

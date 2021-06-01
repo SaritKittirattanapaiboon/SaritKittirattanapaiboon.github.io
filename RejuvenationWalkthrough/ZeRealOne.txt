@@ -33,7 +33,7 @@
 <a href="javascript:void(0)" class="normalTrainerName" id="PrimaDonnaBiancaName">Prima Donna Bianca.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/TrainerBattles/RightSide/PrimaDonnaBianca.bmp"></span></a>
 
 //////Important Name Template
-<span class="ImportantName">Name Rater,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/LeftSide/NameRater.bmp"></span></span>
+<span class="ImportantName">Name Rater,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4"></span></span>
 
 //////Zygarde Cell Template
 <span class="ZygardeCell">Zygarde Cell<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/ZygradeCells/ZyCell1.png"></span></span>

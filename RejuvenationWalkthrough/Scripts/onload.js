@@ -286,8 +286,20 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
       <div class="separateSet">
       <div class="badgeNumber" id="FourthTxT">Fourth Badge<div class:"arrowParent"><div class="downArrow"></div></div></div>
       <div class="collabsibleRightSidebar" id="Fourth">
-        <a href="../Chapter4/AfterFourthBadge.html">
+        <a href="../Chapter4/GoldenleafTown.html">
           <span class="subTitle">After the Fourth Gym</span>
+        </a>
+        <a href="../Chapter4/WispyPath.html">
+          <span class="subTitle">Wispy Path</span>
+        </a>
+        <a href="../Chapter4/WispyTower.html">
+          <span class="subTitle">Wispy Tower</span>
+        </a>
+        <a href="../Chapter4/SideActivity-GoldenwoodForest.html">
+          <span class="subTitle">Side Activity - Goldenwood Forest Revisit</span>
+        </a>
+        <a href="../Chapter4/GoldenleafGym.html">
+          <span class="subTitle">Goldenleaf Gym</span>
         </a>
       </div>
     </div>
