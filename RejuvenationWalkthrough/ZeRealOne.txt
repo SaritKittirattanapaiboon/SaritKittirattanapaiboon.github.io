@@ -27,13 +27,13 @@
       </div>
 
 //////Hidden Item Template
-<span class="hiddenItemText">Super Repel<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 1/Hidden Items/RightSide/SuperRepel.bmp"></span></span>
+<span class="hiddenItemText">Name<span class="hiddenItemImage"><img class=hiddenMapImage src="../../images/Screenshots/Chapter 4/"></span></span>
 
 ///////Trainer Template
-<a href="javascript:void(0)" class="normalTrainerName" id="PrimaDonnaBiancaName">Prima Donna Bianca.<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 1/TrainerBattles/RightSide/PrimaDonnaBianca.bmp"></span></a>
+<a href="javascript:void(0)" class="normalTrainerName" id="Name">Name<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/"></span></a>
 
 //////Important Name Template
-<span class="ImportantName">Name Rater,<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4"></span></span>
+<span class="ImportantName">Name<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 4/"></span></span>
 
 //////Zygarde Cell Template
 <span class="ZygardeCell">Zygarde Cell<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/ZygradeCells/ZyCell1.png"></span></span>

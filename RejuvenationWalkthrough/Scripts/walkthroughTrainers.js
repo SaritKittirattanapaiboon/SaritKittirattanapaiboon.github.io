@@ -9,17 +9,17 @@ function trainersSet(locationCode, idName){
     var movesUsed;
 
     for (var blankLoc=0; blankLoc<locationCode.length; blankLoc++){
-      for(var i=0; i<walkthroughTrainerList[locationCode].length; i++){
-        if(walkthroughTrainerList[locationCode][i][1]=='Special'){
+      for(var i=0; i<walkthroughTrainerList[locationCode[blankLoc]].length; i++){
+        if(walkthroughTrainerList[locationCode[blankLoc]][i][1]=='Special'){
           continue; //Skip Special Trainers
         }
-          temptext=walkthroughTrainerList[locationCode][i][0].replaceAll(' ','');
+          temptext=walkthroughTrainerList[locationCode[blankLoc]][i][0].replaceAll(' ','');
           temptext=temptext.replaceAll('&','');
           temptext=temptext.replaceAll('-','');
           fulltext+='<div id="'+temptext+'" class="TrainerPopup">';
-          fulltext+='<span class="close" id="'+temptext+'Close">&times;</span><p class="normalTrainerTitle" style="text-align:center;">'+walkthroughTrainerList[locationCode][i][0]+'</p><table class="trainerPopupContent">';
-          if(walkthroughTrainerList[locationCode][i][2]==1){ //Single Battles
-            pokemonList=walkthroughTrainerList[locationCode][i][3];
+          fulltext+='<span class="close" id="'+temptext+'Close">&times;</span><p class="normalTrainerTitle" style="text-align:center;">'+walkthroughTrainerList[locationCode[blankLoc]][i][0]+'</p><table class="trainerPopupContent">';
+          if(walkthroughTrainerList[locationCode[blankLoc]][i][2]==1){ //Single Battles
+            pokemonList=walkthroughTrainerList[locationCode[blankLoc]][i][3];
               for(var pokemonNum=0; pokemonNum<pokemonList.length; pokemonNum++){
                   movesUsed=0;
                   pokemonIDNum=pokemonList[pokemonNum][0];
@@ -77,11 +77,11 @@ function trainersSet(locationCode, idName){
                   }
                   fulltext+=temptext;
               }
-              fulltext+='<tr><td class="moneyGained" colspan="3">Reward: <img src="../../images/PokeDollar.png">'+walkthroughTrainerList[locationCode][i][1]+'</td></tr></table></div>';
+              fulltext+='<tr><td class="moneyGained" colspan="3">Reward: <img src="../../images/PokeDollar.png">'+walkthroughTrainerList[locationCode[blankLoc]][i][1]+'</td></tr></table></div>';
           }
           else { //Double Battles
-            pokemonList=walkthroughTrainerList[locationCode][i][3];
-            pokemonList2=walkthroughTrainerList[locationCode][i][4];
+            pokemonList=walkthroughTrainerList[locationCode[blankLoc]][i][3];
+            pokemonList2=walkthroughTrainerList[locationCode[blankLoc]][i][4];
             secondPokemonExists=false;
             for(var setNum=0; setNum<pokemonList.length; setNum++){
               movesUsed=0; movesUsed2=0;
@@ -168,14 +168,14 @@ function trainersSet(locationCode, idName){
               temptext+='<tr><td>'+moves[moves.length-movesUsed]+'</td><td>'+moves2[moves2.length-movesUsed2]+'</td></tr>';
               fulltext+=temptext;
             }
-            fulltext+='<tr><td class="moneyGained" colspan="6">Reward: <img src="../../images/PokeDollar.png">'+walkthroughTrainerList[locationCode][i][1]+'</td></tr></table></div>';
+            fulltext+='<tr><td class="moneyGained" colspan="6">Reward: <img src="../../images/PokeDollar.png">'+walkthroughTrainerList[locationCode[blankLoc]][i][1]+'</td></tr></table></div>';
           }
       }
     }
     trainerHereLocation.innerHTML=fulltext;
     if(idName!=null){
       for(var curLoc=0; curLoc<idName.length; curLoc++){
-        createTrainerTable(locationCode,idName[curLoc]);
+        createTrainerTable(locationCode[curLoc],idName[curLoc]);
       }
     }
 }
@@ -335,4 +335,39 @@ var walkthroughTrainerList=[
       ['Ghost Girl Sariah - Second Battle', 408, 1, [[680,0,34],[93,0,32]], [], 'Inside the Pokemon Center<br>Forced story battle', 'Chapter 4/GoldenleafTown/Trainers/'],
       ['Ghost Girl Sariah - Third Battle', 408, 1, [[355,0,32],[680,0,34],[93,0,34]], [], 'Right outside the Pokemon Center<br>Forced story battle', 'Chapter 4/GoldenleafTown/Trainers/'],
     ], //Goldenleaf Town (0014)
+    [
+      ['Hardcore Trainer Michelle', 870, 1, [[510,0,28],[302,0,29]], [], 'First trainer on the Wispy Path', 'Chapter 4/WispyPath/Trainers/'],
+      ['Ghost Girl Anna', 372, 1, [[93,0,30],[679,0,30],[562,0,31]], [], 'Second trainer on the Wispy Path', 'Chapter 4/WispyPath/Trainers/'],
+      ['Old Lady Lanya', 1131, 1, [[662,0,29],[732,0,29]], [], 'North near the Wispy Tower exit', 'Chapter 4/WispyPath/Trainers/'],
+    ], //Wispy Path - 1 (0015)
+    [
+      ['Team Xen George', 'Special', 'First trainer on the Wispy Path<br>After being freed from prison', 'Chapter 4/WispyPath/Trainers/'],
+      ['Team Xen Loriel', 360, 1, [[172,0,29],[168,0,30],[757,0,30]], [], 'Second trainer along the north part of the Wispy Path<br>After being freed from prison', 'Chapter 4/WispyPath/Trainers/'],
+    ], //Wispy Path - 2 (0016)
+    [
+      ['Team Xen Danni', 'Special', 'Guarding the green panel down the right set of stars', 'Chapter 4/WispyTower/Trainers/'],
+      ['Team Xen Malik', 372, 1, [[443,0,30],[444,0,31],[147,0,30],[148,0,31]], [], 'First trainer down the left set of stairs', 'Chapter 4/WispyTower/Trainers/'],
+      ['Team Xen Sheila', 372, 1, [[24,0,29],[422,0,30],[523,0,30]], [], 'Second trainer down the left set of stairs', 'Chapter 4/WispyTower/Trainers/'],
+      ['Team Xen Layla', 'Special', 'Guarding the green panel down the left set of stars', 'Chapter 4/WispyTower/Trainers/'],
+      ['Team Xen Cecilia', 372, 1, [[64,0,30],[578,0,31],[353,0,31]], [], 'Guarding the right room down the left set of stairs', 'Chapter 4/WispyTower/Trainers/'],
+    ], //Wispy Tower (0017)
+    [
+      ['Old Lady Margaret', 1287, 1, [[425,0,32],[92,0,31],[200,0,31],[353,0,33]], [], 'In the right room, first floor', 'Chapter 4/GoldenleafGym/Trainers/'],
+      ['Ghost Girl Marissa', 408, 1, [[354,0,34]], [], 'Behind the painting', 'Chapter 4/GoldenleafGym/Trainers/'],
+    ], //Goldenleaf Gym (0018)
 ]
+
+/*
+left=0; right=length-1;
+for(i=0;i<length;i++){
+  if(comp(Originalvector.at(i),Originalvector.at(pivot))){
+    newvector.at(left)=Originalvector.at(i);
+    left++;
+  }
+  else{
+    newvector.at(right)=Originalvector.at(i);
+    right--;
+  }
+}
+newvector.at(left)=Originalvector.at(pivot);
+*/

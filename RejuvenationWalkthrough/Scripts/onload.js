@@ -296,7 +296,7 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
           <span class="subTitle">Wispy Tower</span>
         </a>
         <a href="../Chapter4/SideActivity-GoldenwoodForest.html">
-          <span class="subTitle">Side Activity - Goldenwood Forest Revisit</span>
+          <span class="subTitle">Side Activities - Goldenwood Forest Revisit</span>
         </a>
         <a href="../Chapter4/GoldenleafGym.html">
           <span class="subTitle">Goldenleaf Gym</span>
