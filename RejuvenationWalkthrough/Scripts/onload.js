@@ -308,6 +308,30 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
       <div class="separateSet">
       <div class="badgeNumber" id="FifthTxT">Fifth Badge<div class:"arrowParent"><div class="downArrow"></div></div></div>
       <div class="collabsibleRightSidebar" id="Fifth">
+        <a href="../Chapter5/WispyRuins.html">
+          <span class="subTitle">Wispy Ruins</span>
+        </a>
+        <a href="../Chapter5/Route4.html">
+          <span class="subTitle">Route 4</span>
+        </a>
+        <a href="../Chapter5/AkuwaTown.html">
+          <span class="subTitle">Akuwa Town</span>
+        </a>
+        <a href="../Chapter5/SideActivities.html">
+          <span class="subTitle">Side Activities</span>
+        </a>
+        <a href="../Chapter5/Blacksteeple.html">
+          <span class="subTitle">Blacksteeple Castle</span>
+        </a>
+        <a href="../Chapter5/XenBattleship.html">
+          <span class="subTitle">The Battleship</span>
+        </a>
+        <a href="../Chapter5/TerajumaIsland.html">
+          <span class="subTitle">Terajuma Island</span>
+        </a>
+        <a href="../Chapter5/BadgeFive.html">
+          <span class="subTitle">Terajuma Jungle Gym Battle</span>
+        </a>
       </div>
     </div>
 
