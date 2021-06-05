@@ -355,19 +355,27 @@ var walkthroughTrainerList=[
       ['Old Lady Margaret', 1287, 1, [[425,0,32],[92,0,31],[200,0,31],[353,0,33]], [], 'In the right room, first floor', 'Chapter 4/GoldenleafGym/Trainers/'],
       ['Ghost Girl Marissa', 408, 1, [[354,0,34]], [], 'Behind the painting', 'Chapter 4/GoldenleafGym/Trainers/'],
     ], //Goldenleaf Gym (0018)
+    [
+      ['Battle Girl Moira', 2016, 1, [[67,0,35],[286,0,35],[454,0,36]], [], 'Deep Wispy Ruins, south of the roundabout', 'Chapter 5/WispyRuins/Trainers/'],
+      ['Punk Rudey', 840, 1, [[745,1,35],[185,0,35],[405,0,35]], [], 'Deep Wispy Ruins, north of the roundabout', 'Chapter 5/WispyRuins/Trainers/'],
+      ['Hiker Jeremie', 1296, 1, [[75,0,35],[75,1,35],[95,0,36]], [], 'Wispy Ruins, second floor entrance', 'Chapter 5/WispyRuins/Trainers/'],
+      ['Guitarist Vitali', 592, 1, [[469,0,37],[294,0,36]], [], 'Wispy Ruins, second floor right side', 'Chapter 5/WispyRuins/Trainers/'],
+    ], //Wispy Ruins (0019)
+    [
+      ['Punk Max', 912, 1, [[82,0,36],[358,0,36],[294,0,38]], [], 'Route 4, first road intersection', 'Chapter 5/Route4/Trainers/'],
+      ['Enthusiast Tana', 1368, 1, [[556,0,37],[370,0,37],[754,0,38]], [], 'Route 4, along the left turn of the first intersection', 'Chapter 5/Route4/Trainers/'],
+      ['Youngster Timmy', 888, 1, [[762,0,37],[763,0,36],[317,0,35]], [], 'Route 4, near the gold Healing Star', 'Chapter 5/Route4/Trainers/'],
+      ['Mistress Sissy', 2496, 1, [[20,1,39],[735,0,39]], [], 'Route 4, right path from the gold Healing Star', 'Chapter 5/Route4/Trainers/'],
+      ['Optimist Shiela', 888, 1, [[300,0,36],[301,0,37],[432,0,37],[53,0,37]], [], 'Route 4, right path from the gold Healing Star', 'Chapter 5/Route4/Trainers/'],
+    ], //Route 4 (0020)
+    [
+      ['Prison Guard Simon', 1824, 2, [[319,0,37],[306,0,38]], [[59,0,37],], 'Blacksteeple Castle, west of the Absol statue', 'Chapter 5/Blacksteeple/Trainers/'],
+      ['Prison Guard Herald', 1776, 2, [[368,0,37],[565,0,35]], [[367,0,36],], 'Blacksteeple Castle, south of the Absol statue', 'Chapter 5/Blacksteeple/Trainers/'],
+      ['Prison Guard Shin', 1824, 2, [[234,0,36],[367,0,38]], [[130,0,38],], 'Blacksteeple Castle, south of Prison Guard Herald', 'Chapter 5/Blacksteeple/Trainers/'],
+      ['Prison Guard Edward', 1776, 2, [[319,0,36],[593,0,37]], [[508,0,35],], 'Blacksteeple Castle, guarding the stairs up the wall', 'Chapter 5/Blacksteeple/Trainers/'],
+
+    ], //Blacksteeple (0021)
 ]
 
 /*
-left=0; right=length-1;
-for(i=0;i<length;i++){
-  if(comp(Originalvector.at(i),Originalvector.at(pivot))){
-    newvector.at(left)=Originalvector.at(i);
-    left++;
-  }
-  else{
-    newvector.at(right)=Originalvector.at(i);
-    right--;
-  }
-}
-newvector.at(left)=Originalvector.at(pivot);
 */

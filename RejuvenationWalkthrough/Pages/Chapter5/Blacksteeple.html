@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="trainersSet([],[]);encounterSet([28],[],[]);shopsSet([],[]);globalrunOnLoad('Fifth','');">
+<body onload="trainersSet([21],['BlacksteepleTwoTrainers']);encounterSet([28],[],[]);shopsSet([],[]);globalrunOnLoad('Fifth','');">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>
@@ -48,14 +48,55 @@
     </div>
     <div class="walkthrough">
       <p class="walkthroughText">
-        <p class="subsectionHeader">SubHeader<span class="showTrainersButtonAnchor">
-          <button class="showTrainersButton" id="TrainersButton" onclick="showTrainerTable('Trainers')">Show Trainers</button>
-          <button class="showHiddenButton" id="HiddenButton" onclick="showHiddenTable('Hidden')">Show Hidden Items</button></span></p>
+        <p class="subsectionHeader">Akuwa Aquarium</p>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 2/">
         <br>
-        <table class="TrainerTable" id="Trainers">
+        Content
+        <p class="subsectionHeader">Blacksteeple Castle - Day 1<span class="showTrainersButtonAnchor">
+          <button class="showHiddenButton" id="BlacksteepleHiddenButton" onclick="showHiddenTable('BlacksteepleHidden')">Show Hidden Items</button></span></p>
+        <img class="centeredImage" src="../../images/Screenshots/Chapter 2/">
+        <table class="TrainerTable" id="BlacksteepleHidden">
+          <tr class="heading">
+            <td>Item</td>
+            <td>Location</td>
+          </tr>
+          <tr class="innertrainer">
+            <td><a class="normalTrainerNameTable">Heart Scale<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 5/Blacksteeple/HiddenItems/HeartScale.png"></span></a></td>
+            <td>Beneath the bed of the fourth cell from the left</td>
+            </tr>
+          <tr class="innertrainer">
+            <td><a class="normalTrainerNameTable">Ability Capsule<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 5/Blacksteeple/HiddenItems/AbilityCapsule.png"></span></a></td>
+            <td>Beneath the bed of the cell on the right</td>
+          </tr>
         </table>
-        <table class="TrainerTable" id="Hidden">
+        <br>
+        Content
+        <br>
+        <p class="subsectionHeader">Blacksteeple Castle - Day 2</p>
+        <img class="centeredImage" src="../../images/Screenshots/Chapter 2/">
+        <br>
+        Content
+        <p class="subsectionHeader">Blacksteeple Castle - Day 3<span class="showTrainersButtonAnchor">
+          <button class="showTrainersButton" id="BlacksteepleOneTrainersButton" onclick="showTrainerTable('BlacksteepleOneTrainers')">Show Trainers</button></span></p>
+        <img class="centeredImage" src="../../images/Screenshots/Chapter 2/">
+        <br>
+        <table class="TrainerTable" id="BlacksteepleOneTrainers">
+          <tr class="heading">
+            <td>Trainer</td>
+            <td>Location</td>
+          </tr>
+          <tr class="innertrainer">
+            <td><a href="javascript:void(0)" class="normalTrainerNameTable" id="PrisonGuardEmileTxT">Prison Guard Emile<span class="normalTrainerImage"><img class=normalTrainerMap src="../../images/Screenshots/Chapter 5/Blacksteeple/Trainers/PrisonGuardEmile.png"></span></a></td>
+            <td>Secret Grove<br>Forced story battle</td>
+          </tr>
+        </table>
+        <br>
+        Content
+        <p class="subsectionHeader">Blacksteeple Castle - Breakout<span class="showTrainersButtonAnchor">
+          <button class="showTrainersButton" id="BlacksteepleTwoTrainersButton" onclick="showTrainerTable('BlacksteepleTwoTrainers')">Show Trainers</button></p>
+        <img class="centeredImage" src="../../images/Screenshots/Chapter 2/">
+        <br>
+        <table class="TrainerTable" id="BlacksteepleTwoTrainers">
         </table>
         <br>
         Content
@@ -72,6 +113,58 @@
 
       <!-- Trainers -->
       <div id="trainersHere"></div>
+      <div id="PrisonGuardEmile" class="TrainerPopup">
+        <span class="close" id="PrisonGuardEmileClose">&times;</span>
+        <p class="normalTrainerTitle" style="text-align:center;">
+          Prison Guard Emile
+        </p>
+        <table class="trainerPopupContent">
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/460.png">
+              <br>
+              Abomasnow, Level 36
+            </th>
+            <td rowspan="2">Grass</td>
+            <td>Wood Hammer</td>
+          </tr>
+          <tr><td>Ice Shard</td></tr>
+          <tr><td rowspan="2">Ice</td><td>Mist</td></tr>
+          <tr><td>Ingrain</td></tr>
+
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/424.png">
+              <br>
+              Ambipom, Level 35
+            </th>
+            <td rowspan="4">Normal</td>
+            <td>Double Hit</td>
+          </tr>
+          <tr><td>Swift</td></tr>
+          <tr><td>Screech</td></tr>
+          <tr><td>Agility</td></tr>
+
+          <tr>
+            <th rowspan="4">
+              <img class="trainerPokemonImage" src="../../images/PokemonSprites/340.png">
+              <br>
+              Whiscash, Level 37
+            </th>
+            <td rowspan="2">Water</td>
+            <td>Aqua Tail</td>
+          </tr>
+          <tr><td>Earthquake</td></tr>
+          <tr><td rowspan="2">Ground</td><td>Snore</td></tr>
+          <tr><td>Rest</td></tr>
+          
+          <tr>
+            <td class="moneyGained" colspan="6">
+              Reward: <img src="../../images/PokeDollar.png">1776
+            </td>
+          </tr>
+        </table>
+      </div>
 
       <!-- Encounters Start Here -->
       <div id="encountersHere"></div>

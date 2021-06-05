@@ -329,7 +329,7 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
         <a href="../Chapter5/TerajumaIsland.html">
           <span class="subTitle">Terajuma Island</span>
         </a>
-        <a href="../Chapter5/BadgeFive.html">
+        <a href="../Chapter5/Badge5.html">
           <span class="subTitle">Terajuma Jungle Gym Battle</span>
         </a>
       </div>

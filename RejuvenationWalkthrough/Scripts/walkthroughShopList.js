@@ -153,8 +153,8 @@ var walkthroughShops=[
             ['Occa Berry',750],
         ],
         [0,1], //Initial (2)
-        [0,1,2,4], //After 5 badges
-        [0,1,2,4,5], //After 8 badges
+        [0,1,2,3], //After 5 badges
+        [0,1,2,3,4], //After 8 badges
     ], //Berry Emporium [0005]
 
     [
@@ -299,6 +299,63 @@ var walkthroughShops=[
         ],
         ['All'],
     ], //Goldenleaf Pokemart [0015]
+
+    [
+        ['LostCampAndrew','Lost Camp Andrew'],
+        [
+            ['Pomeg Berry',600],
+            ['Kelpsy Berry',600],
+            ['Qualot Berry',600],
+            ['Hondew Berry - After 1 Upgrade',600],
+            ['Grepa Berry - After 1 Upgrade',600],
+            ['Tamato Berry - After 2 Upgrades',600],
+        ],
+        ['All'],
+    ], //Lost Camp Andrew [0016]
+
+    [
+        ['LostCampMatthew','Lost Camp Matthew'],
+        [
+            ['Water Stone',2100],
+            ['Fire Stone',2100],
+            ['Leaf Stone',2100],
+        ],
+        ['All'],
+    ], //Lost Camp Matthew [0017]
+
+    [
+        ['XenBattleshipStore','Xen Battleship Store'],
+        [
+            ['Poke Ball',200],
+            ['Great Ball',600],
+            ['Potion',300],
+            ['Super Potion',700],
+            ['Antidote',100],
+            ['Ice Heal',250],
+            ['Gourmet Treat',2000],
+            ['Super Repel',500],
+            ['Reverse Candy',50],
+        ],
+        ['All'],
+    ], //Xen Battleship Store [0018]
+
+    [
+        ['TerajumaShoreStore','Terajuma Island Stores'],
+        [
+            ['Poke Ball',200],
+            ['Great Ball',600],
+            ['Potion',300],
+            ['Super Potion',700],
+            ['Antidote',100],
+            ['Ice Heal',250],
+            ['Gourmet Treat',2000],
+            ['Super Repel',500],
+            ['Reverse Candy',50],
+            ['Spice Powder',850],
+        ],
+        ['All'], //Shore Store
+        [0,1,2,3,4,5,6,7,8] //Jungle Store
+    ], //Terajuma Stores [0019]
 ]
 
 /*
