@@ -4,6 +4,12 @@ function globalrunOnLoad(badgeNum, fieldType){ //On webpage load
     loadSidebars(); //Setup the left side and walkthrough onclicks
 }
 
+function overviewOnLoad(){
+  setRightSideNavOnLoad("","")
+  var modal=document.getElementById("blankSidebar");
+  modal.style.width="230px"
+}
+
 function addSidebarDropdowns(){ // Add Dropdowns to Left Sidebar
     var modal=document.getElementsByClassName("trainerSidebar");
     //For Walkthrough
