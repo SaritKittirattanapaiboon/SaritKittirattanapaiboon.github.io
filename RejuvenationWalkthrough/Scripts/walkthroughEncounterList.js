@@ -7,8 +7,24 @@ function encounterSet(randomEncounterNumbers, eventEncounterNumbers, otherRandom
     var curPokNum;
     var exceptionsLoc=[4,8,9,10,11];
     for (var i=0; i<randomEncounterNumbers.length; i++){   
-        currentRandomLoc=RandomEncounters[randomEncounterNumbers[i]];
-        fulltext+=walkthroughRandomEncountersStart[randomEncounterNumbers[i]][0];
+        if(isNaN(randomEncounterNumbers[i])){
+            surfNum=parseInt(randomEncounterNumbers[i].substr(1))
+            surfText=SurfEncounters[surfNum][0][0]
+            surfTextShort=surfText.replaceAll(" ","")+"Surf"
+            fulltext+=`<div id="`+surfTextShort+`" class="EncounterPopup">
+            <span class="close" id="`+surfTextShort+`Close">&times;</span>
+            <p class="encounterDetails" style="text-align:center;">`+surfText+` Surfing Encounters</p>
+            <table class="encounterPopupContent">
+            <tr>
+                <th>Pokemon Name</th>
+                <td colspan="1">Rarity</td>
+            </tr>`;
+            currentRandomLoc=SurfEncounters[surfNum]
+        }
+        else{
+            currentRandomLoc=RandomEncounters[randomEncounterNumbers[i]];
+            fulltext+=walkthroughRandomEncountersStart[randomEncounterNumbers[i]][0];
+        }
         for (var curPok=2; curPok<currentRandomLoc.length; curPok++){
             if(currentRandomLoc[curPok][0].length>3){
                 actualPokemonNumber=currentRandomLoc[curPok][0].substr(0,3);
@@ -111,6 +127,13 @@ function setEncounterSidebarContent(randomEncounterNumbers, eventEncounterNumber
         return;
     }
     for(var curLoc=0; curLoc<randomEncounterNumbers.length; curLoc++){
+        if(isNaN(randomEncounterNumbers[curLoc])){
+            surfNum=parseInt(randomEncounterNumbers[curLoc].substr(1))
+            surfText=SurfEncounters[surfNum][0][0]
+            surfTextShort=surfText.replaceAll(" ","")+"Surf"
+            fulltext+='<a href="javascript:void(0)" class="encounterDetailsSidebar" id="'+"Route1Surf"+'TxT">'+surfText+' - Surfing'+'</a><br><br>'
+            continue;
+        }
         if(randomEncounterNumbers[curLoc]==0){
             fulltext+='<a href="javascript:void(0)" class="encounterDetailsSidebar" id="GearenGrassTxT">East Gearen City Grass</a><br><br>';
         } else {
@@ -1024,3 +1047,14 @@ var walkthroughOtherEncountersList=[ //Event Encounters - NOT RANDOM
     ],
 ]
 
+var walkthroughSurfStart=[
+    [`<div id="`,`" class="EncounterPopup">
+    <span class="close" id="`,`Close">&times;</span>
+    <p class="encounterDetails" style="text-align:center;">`,
+    ` Surfing Encounters</p>
+    <table class="encounterPopupContent">
+    <tr>
+        <th>Pokemon Name</th>
+        <td colspan="1">Rarity</td>
+    </tr>`], //Random Surfing
+]

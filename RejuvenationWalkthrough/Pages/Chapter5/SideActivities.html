@@ -8,16 +8,17 @@
 
 <script src="../../Scripts/battlepokedex.js"></script>
 <script src="../../Scripts/movespokedex.js"></script>
-<script src="../../Scripts/mapEncounterList.js"></script>
+<script src="../../Scripts/fullEncounterTooltips.js"></script>
+<script src="../../Scripts/fullEncounters.js"></script>
+<script src="../../Scripts/fullEncountersWalkthrough.js"></script>
 <script src="../../Scripts/walkthroughTrainers.js"></script>
-<script src="../../Scripts/walkthroughEncounterList.js"></script>
 <script src="../../Scripts/walkthroughShopList.js"></script>
 <script src="../../Scripts/walkthroughElements.js"></script>
 <script src="../../Scripts/onload.js"></script>
 
 </head>
 
-<body onload="trainersSet([],[]);encounterSet([10,26,27],[[7,4]],[]);shopsSet([[16,2]],[]);globalrunOnLoad('Fifth','');">
+<body onload="trainersSet([],[]);encountersCreate([],[]);shopsSet([[16,2]],[]);globalrunOnLoad('Fifth','');">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>
@@ -53,7 +54,7 @@
         <br>
         Now that we have Ditto, we can breed the Throh we got from earlier. Once you've bred one, you can give your old one to the Battle Girl inside the daycare. She'll give us a Sawk in return. You could have done this earlier, but its good to have an extra Throh as a backup in case you need it.
         <br><br>
-        <p class="subsectionHeader">Route 3 Mystery Egg</p>
+        <p class="subsectionHeader" id="MysteryEgg">Route 3 Mystery Egg</p>
         <img class="centeredImage" src="../../images/Screenshots/Chapter 5/SideActivities/Phantump.png">
         <br>
         While we're at the daycare, there's also another Egg that we need. Go ahead and breed a Phantump with the Ditto we got earlier, or if you have a female Phantump you can also choose a male from its corresponding Egg group. Oddish, Seedot, Cherubi, Duskull, or Koffing are pretty easy options to catch. Either way, once you have a Phantump Egg, don't hatch it. Instead, head over to the Route 3 Marketplace and talk to the Youngster above. He'll trade you an Egg for the Phantump Egg. You can soft reset the Egg for natures/IVs/abilities, but the species is set when the save file is created. The possible species are:
@@ -121,7 +122,7 @@
         <br>
         We won't be able to return here for a while, so here's a few side activities that you should complete. Items marked with a * won't be available anymore upon our return.
         <ul style="text-align: center;list-style-type: none;font-size: 20px;">
-          <li>Mystery Egg Trade</li>
+          <li><a class="continueElsewhere" href="#MysteryEgg">Mystery Egg Trade</a></li>
           <li><a class="continueElsewhere" href="../Chapter4/SideActivity-GoldenwoodForest.html">Finding Ditto</a></li>
           <li><a class="continueElsewhere" href="../Chapter4/SideActivity-GoldenwoodForest.html">Goldenwood Forest Revisited*</a></li>
           <li><a class="continueElsewhere" href="../Chapter3/MirageWoods.html">Mirage Woods - Get Itemfinder</a></li>

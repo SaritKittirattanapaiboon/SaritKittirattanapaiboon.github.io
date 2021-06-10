@@ -8,16 +8,17 @@
 
 <script src="../../Scripts/battlepokedex.js"></script>
 <script src="../../Scripts/movespokedex.js"></script>
-<script src="../../Scripts/mapEncounterList.js"></script>
+<script src="../../Scripts/fullEncounterTooltips.js"></script>
+<script src="../../Scripts/fullEncounters.js"></script>
+<script src="../../Scripts/fullEncountersWalkthrough.js"></script>
 <script src="../../Scripts/walkthroughTrainers.js"></script>
-<script src="../../Scripts/walkthroughEncounterList.js"></script>
 <script src="../../Scripts/walkthroughShopList.js"></script>
 <script src="../../Scripts/walkthroughElements.js"></script>
 <script src="../../Scripts/onload.js"></script>
 
 </head>
 
-<body onload="trainersSet([10]);encounterSet([11,12],[[8,0],[8,1]],[]);globalrunOnLoad('Second');">
+<body onload="trainersSet([10]);encountersCreate([['Sheridan Village and Arena', ['Grass', 'Events']], ['Caratos Mountain', ['Cave', 'Others', 'Events', 'Shadows']], ['Spring of Purification', ['Grass']]], [0, 0]);globalrunOnLoad('Second');">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>

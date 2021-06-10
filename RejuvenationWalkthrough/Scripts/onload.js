@@ -345,6 +345,39 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
       <div class="separateSet">
       <div class="badgeNumber" id="SixthTxT">Sixth Badge<div class:"arrowParent"><div class="downArrow"></div></div></div>
       <div class="collabsibleRightSidebar" id="Sixth">
+      <a href="../Chapter6/TerajumaJungle.html">
+        <span class="subTitle">Terajuma Jungle</span>
+      </a>
+      <a href="../Chapter6/KakoriVillage.html">
+        <span class="subTitle">Kakori Village</span>
+      </a>
+      <a href="../Chapter6/Side-SafariZone.html">
+        <span class="subTitle">Side Activity - Safari Zone</span>
+      </a>
+      <a href="../Chapter6/Route5.html">
+        <span class="subTitle">Route 5</span>
+      </a>
+      <a href="../Chapter6/SheridanWetlands.html">
+        <span class="subTitle">Sheridan Wetlands</span>
+      </a>
+      <a href="../Chapter6/ShadowHeadquarters.html">
+        <span class="subTitle">Shadow HQ</span>
+      </a>
+      <a href="../Chapter6/SideActivities-Overview.html">
+        <span class="subTitle">Side Activities - Overview</span>
+      </a>
+      <a href="../Chapter6/SideActivity-Backtrack.html">
+        <span class="subTitle">Side Activity - Backtracking with Surf</span>
+      </a>
+      <a href="../Chapter6/Route11Evergreen.html">
+        <span class="subTitle">Side Activity - Route 11 and Evergreen Islands</span>
+      </a>
+      <a href="../Chapter6/SideActivity-KakoriHelpCenter.html">
+        <span class="subTitle">Side Activity - Kakori Village Help Center</span>
+      </a>
+      <a href="../Chapter6/KakoriVillageGym.html">
+        <span class="subTitle">Kakori Village Gym</span>
+      </a>
       </div>
     </div>
 

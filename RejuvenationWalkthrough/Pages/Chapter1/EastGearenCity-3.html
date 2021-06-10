@@ -8,16 +8,17 @@
 
 <script src="../../Scripts/battlepokedex.js"></script>
 <script src="../../Scripts/movespokedex.js"></script>
-<script src="../../Scripts/mapEncounterList.js"></script>
+<script src="../../Scripts/fullEncounterTooltips.js"></script>
+<script src="../../Scripts/fullEncounters.js"></script>
+<script src="../../Scripts/fullEncountersWalkthrough.js"></script>
 <script src="../../Scripts/walkthroughTrainers.js"></script>
-<script src="../../Scripts/walkthroughEncounterList.js"></script>
 <script src="../../Scripts/walkthroughShopList.js"></script>
 <script src="../../Scripts/walkthroughElements.js"></script>
 <script src="../../Scripts/onload.js"></script>
 
 </head>
 
-<body onload="trainersSet([5],[]);encounterSet([0,1,2],[[1,3],[2,1]]);shopsSet([[0,2],[5,2],[6,2]],['East Gearen City']);globalrunOnLoad('First');">
+<body onload="trainersSet([5],[]);encountersCreate([['East Gearen City', ['Grass', 'Events']], ['Chrisola Hotel Rooftop', ['Grass']], ['Chrisola Hotel', ['Events']], ['Gearen Park', ['Grass']]], [3,0]);shopsSet([[0,2],[5,2],[6,2]],['East Gearen City']);globalrunOnLoad('First');">
 
   <!-- Left Side Bar -->
 

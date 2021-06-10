@@ -8,16 +8,17 @@
 
 <script src="../../Scripts/battlepokedex.js"></script>
 <script src="../../Scripts/movespokedex.js"></script>
-<script src="../../Scripts/mapEncounterList.js"></script>
+<script src="../../Scripts/fullEncounterTooltips.js"></script>
+<script src="../../Scripts/fullEncounters.js"></script>
+<script src="../../Scripts/fullEncountersWalkthrough.js"></script>
 <script src="../../Scripts/walkthroughTrainers.js"></script>
-<script src="../../Scripts/walkthroughEncounterList.js"></script>
 <script src="../../Scripts/walkthroughShopList.js"></script>
 <script src="../../Scripts/walkthroughElements.js"></script>
 <script src="../../Scripts/onload.js"></script>
 
 </head>
 
-<body onload="trainersSet([9]);encounterSet([8,9,10],[[6,2],[7,1]],[[2,1]]);shopsSet([[12,2]],['Sheridan Village']);globalrunOnLoad('Second');">
+<body onload="trainersSet([9]);encountersCreate([['Sheridan Village and Arena', ['Grass', 'Events']], ['Route 2', ['Grass', 'Fishing', 'Others']], ['Amethyst Cave', ['Cave', 'Fishing', 'Others', 'Events']], ['Amethyst Grotto', ['Grass']]], [0, 1]);shopsSet([[12,2]],['Sheridan Village']);globalrunOnLoad('Second');">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>

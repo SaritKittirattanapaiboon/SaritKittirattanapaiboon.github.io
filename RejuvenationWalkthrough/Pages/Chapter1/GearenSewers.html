@@ -8,16 +8,17 @@
 
 <script src="../../Scripts/battlepokedex.js"></script>
 <script src="../../Scripts/movespokedex.js"></script>
-<script src="../../Scripts/mapEncounterList.js"></script>
+<script src="../../Scripts/fullEncounterTooltips.js"></script>
+<script src="../../Scripts/fullEncounters.js"></script>
+<script src="../../Scripts/fullEncountersWalkthrough.js"></script>
 <script src="../../Scripts/walkthroughTrainers.js"></script>
-<script src="../../Scripts/walkthroughEncounterList.js"></script>
 <script src="../../Scripts/walkthroughShopList.js"></script>
 <script src="../../Scripts/walkthroughElements.js"></script>
 <script src="../../Scripts/onload.js"></script>
 
 </head>
 
-<body onload="trainersSet([2],['SewersTrainers']);encounterSet([3],[[2,1]],[[0,1]]);shopsSet([],['East Gearen City','Gearen Sewers']);globalrunOnLoad('First');">
+<body onload="trainersSet([2],['SewersTrainers']);encountersCreate([['Gearen Sewers', ['Cave']],['Chrisola Hotel', ['Events']]], [0]);globalrunOnLoad('First');">
 
   <!-- Left Side Bar -->
 

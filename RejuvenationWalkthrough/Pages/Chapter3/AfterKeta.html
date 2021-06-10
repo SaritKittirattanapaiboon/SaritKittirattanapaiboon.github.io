@@ -8,16 +8,17 @@
 
 <script src="../../Scripts/battlepokedex.js"></script>
 <script src="../../Scripts/movespokedex.js"></script>
-<script src="../../Scripts/mapEncounterList.js"></script>
+<script src="../../Scripts/fullEncounterTooltips.js"></script>
+<script src="../../Scripts/fullEncounters.js"></script>
+<script src="../../Scripts/fullEncountersWalkthrough.js"></script>
 <script src="../../Scripts/walkthroughTrainers.js"></script>
-<script src="../../Scripts/walkthroughEncounterList.js"></script>
 <script src="../../Scripts/walkthroughShopList.js"></script>
 <script src="../../Scripts/walkthroughElements.js"></script>
 <script src="../../Scripts/onload.js"></script>
 
 </head>
 
-<body onload="encounterSet([0,1,2,7,8,10],[[1,6],[2,2],[6,3],[7,2]],[[1,1],[2,1]]);shopsSet([[5,2],[6,4],[10,2],[12,3]],['East Gearen City','Sheridan Village']);globalrunOnLoad('Third','');">
+<body onload="encountersCreate([['Gearen Park', ['Grass', 'Events']], ['Pom-Pom Meadow', ['Grass']]],[0]);shopsSet([[5,2],[6,4],[10,2],[12,3]],['East Gearen City','Sheridan Village']);globalrunOnLoad('Third','');">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>
