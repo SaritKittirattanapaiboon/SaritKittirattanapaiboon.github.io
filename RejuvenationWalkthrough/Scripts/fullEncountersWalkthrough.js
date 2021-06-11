@@ -139,7 +139,22 @@ function makePokemon(pokemonList, eventNum){
                 pokemonText+="<td>"+actualPokList[curPok][1][0]+"</td>"
                 colorSet=getColorTime(actualPokList[curPok][1][1])
                 pokemonText+='<td style="background-color: var(--'+colorSet+');">'+actualPokList[curPok][1][1]+'</td>'
-            } else { //All Other Cases
+            } else if (pokemonList[0]=='Others') {
+                colorLists=[]
+                for(timeDay=0; timeDay<pokemonList[1][0]; timeDay++){
+                    colorLists.push(getColorTime(pokemonList[1][1][timeDay]))
+                }
+                colorListsNum=0;
+                for(encRate=0;encRate<pokemonList[1][0];encRate++){
+                    if(actualPokList[curPok][1][encRate]=="0%"){
+                        pokemonText+="<td>"+actualPokList[curPok][1][encRate]+"</td>"
+                    } else {
+                        pokemonText+='<td style="background-color: var(--'+colorLists[colorListsNum]+');">'+actualPokList[curPok][1][encRate]+'</td>'
+                    }
+                    colorListsNum=colorListsNum+1 % pokemonList[1][0]
+                }
+            } 
+            else { //All Other Cases
                 colorSet=getColor(pokemonList[0])
                 for(encRate=0;encRate<pokemonList[1][0];encRate++){
                     if(actualPokList[curPok][1][encRate]=="0%"){
@@ -173,7 +188,12 @@ function getColorTime(description){
         return "daytimeAvailable"
     } else if (description.indexOf("Morning")!=-1) {
         return "morningAvailable"
-    } else {
+    } else if (description.indexOf("Rock Smash")!=-1){
+        return "rocksmashAvailable"
+    } else if (description.indexOf("Headbutt")!=-1){
+        return "headbuttAvailable"
+    }
+    else {
         return "alldayAvailable"
     }
 }
