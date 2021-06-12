@@ -355,7 +355,7 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
         <span class="subTitle">Side Activity - Safari Zone</span>
       </a>
       <a href="../Chapter6/Route5.html">
-        <span class="subTitle">Route 5</span>
+        <span class="subTitle">Route 5 & Valor Shore</span>
       </a>
       <a href="../Chapter6/SheridanWetlands.html">
         <span class="subTitle">Sheridan Wetlands</span>

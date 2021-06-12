@@ -27,7 +27,8 @@ function outputMoves(pokeName){
     outputPlace=document.getElementById("speNum")
     speNumber=allmoves.pokemon_species[keyList[0]]
     formNumber=allmoves.pokemon_form[keyList[0]]
-    outputPlace.innerHTML=speNumber
+    pokName=allmoves.pokemon_name[keyList[0]]
+    outputPlace.innerHTML=speNumber+", Form: "+formNumber+", Name: "+pokName
 
     outputPlace=document.getElementById("stats")
     fulltext='<table class="eventTrainerBattle"><tr><td>HP</td><td>Attack</td><td>Defense</td><td>Special Attack</td><td>Special Defense</td><td>Speed</td><td>BST</td></tr><tr>'

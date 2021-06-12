@@ -161,7 +161,7 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0007
-    [['Goldenwood Cave', ['Cave', 'Fishing', 'Events']], 
+    [['Goldenwood Cave', ['Cave', 'Fishing', 'Events', 'Surfing']], 
         ['Cave', [1, ['All Day']], 
             [
                 [['527', 'Level 11'], ['31%'], 0],
@@ -180,6 +180,12 @@ var AllEncounters=[
         ['Events', [2, ['Location', 'Other Requirements']],
             [
                 [['540'], ['Goldenwood Cave - Near Mural', 'Defeat Culvier Clans Mars'], 0, 0],
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['054', 'Levels 36, 38'], ['90%'], 0],
+                [['456', 'Level 37'], ['10%'], 0],
             ],
         ],
     ], //Code 0008
@@ -237,7 +243,7 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0009
-    [['Amethyst Cave', ['Cave', 'Fishing', 'Events']], 
+    [['Amethyst Cave', ['Cave', 'Surfing','Fishing', 'Events']], 
         ['Cave', [1, ['All Day']], 
             [
                 [['074'], ['34%'], 0],
@@ -246,6 +252,12 @@ var AllEncounters=[
                 [['177'], ['10%'], 0],
                 [['050'], ['9%'], 0],
                 [['703'], ['2%'], 0],
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['223'], ['95%'], 0],
+                [['339'], ['5%'], 1],
             ],
         ],
         ['Fishing', [1, ['Old Rod']],
@@ -263,7 +275,7 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0010
-    [['Sheridan Village and Sheridan Arena', ['Grass', 'Events']],
+    [['Sheridan Village and Sheridan Arena', ['Grass', 'Surfing', 'Events']],
         ['Grass', [2, ['Morning and Daytime', 'Night']],
             [
                 [['296'], ['30%', '10%'], 0],
@@ -278,6 +290,11 @@ var AllEncounters=[
                 [['163'], ['0%', '16%'], 0],
                 [['269'], ['0%', '10%'], 0],
             ]
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['457'], ['100%'], 0],
+            ],
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
@@ -354,7 +371,7 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0015
-    [['Route 3', ['Grass', 'Fishing']],
+    [['Route 3', ['Grass', 'Fishing', 'Surfing']],
         ['Grass', [1, ['All Day']],
             [
                 [['736'], ['39%'], 0],
@@ -370,6 +387,11 @@ var AllEncounters=[
                 [['194'], ['30%', '0%'], 0],
                 [['195'], ['0%', '20%'], 0],
             ]
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['550'], ['100%'], 0],
+            ],
         ],
     ], //Code 0016
     [['Phasial Cave', ['Cave', 'Fishing']],
@@ -400,7 +422,7 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0018
-    [['Mirage Woods', ['Grass', 'Fishing', 'Events']],
+    [['Mirage Woods', ['Grass', 'Fishing', 'Surfing', 'Events']],
         ['Grass', [1, ['All Day']],
             [
                 [['352'], ['36%'], 0],
@@ -421,6 +443,13 @@ var AllEncounters=[
             [
                 [['041'], ['Mirage Woods Cave', 'Defeat Crobat in the cave in the research area<br>Requires Flash'], 0],
             ]
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['283'], ['65%'], 0],
+                [['457'], ['34%'], 0],
+                [['550'], ['1%'], 0],
+            ],
         ],
     ], //Code 0019
     [['Chrysalis Courtyard', ['Grass', 'Events']],
@@ -481,6 +510,9 @@ var AllEncounters=[
         ],
         ['Surfing', [1, ['Random Encounter']],
             [
+                [['118'], ['65%'], 0],
+                [['546'], ['30%'], 0],
+                [['550'], ['5%'], 0],
             ],
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
@@ -519,10 +551,13 @@ var AllEncounters=[
         ],
         ['Surfing', [1, ['Random Encounter']],
             [
+                [['118'], ['65%'], 0],
+                [['546'], ['30%'], 0],
+                [['550'], ['5%'], 0],
             ],
         ],
     ], //Code 0021
-    [['Wispy Path', ['Grass', 'Events']],
+    [['Wispy Path', ['Grass', 'Events', 'Surfing']],
         ['Grass', [1, ['All Day']],
             [
                 [['263'], ['30%'], 0],
@@ -537,6 +572,14 @@ var AllEncounters=[
         ['Events', [2, ['Location', 'Other Requirements']],
             [
                 [['677'], ['Wispy Path', 'Play with it until it\'s friendship reaches a threshold'], 0, 0],
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['118'], ['60%'], 0],
+                [['119'], ['30%'], 0],
+                [['550'], ['6%'], 0],
+                [['457'], ['4%'], 0],
             ],
         ],
     ], //Code 0022
@@ -572,7 +615,7 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0024
-    [['Goldenwood Forest - Overgrown', ['Grass']], 
+    [['Goldenwood Forest - Overgrown', ['Grass', 'Surfing']], 
         ['Grass', [1, ['All Day']], 
             [
                 [['745'], ['40%'], 0],
@@ -580,6 +623,12 @@ var AllEncounters=[
                 [['666'], ['14%'], 0],
                 [['520'], ['11%'], 0],
                 [['162'], ['1%'], 0],
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['054', 'Levels 36, 38'], ['90%'], 0],
+                [['456', 'Level 37'], ['10%'], 0],
             ],
         ],
     ], //Code 0025
@@ -678,10 +727,13 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0031
-    [['Terajuma Beach', ['Surfing', 'Fishing', 'Others','Events']],
-        ['Surfing', [1, ['All Day']],
+    [['Terajuma Beach', ['Surfing', 'Fishing', 'Others', 'Events']],
+        ['Surfing', [1, ['Random Encounter']],
             [
-            ]
+                [['458'], ['90%'], 0],
+                [['098'], ['9%'], 0],
+                [['118'], ['1%'], 0],
+            ],
         ],
         ['Fishing', [2, ['Old Rod', 'Good Rod']],
             [
@@ -698,16 +750,17 @@ var AllEncounters=[
         ['Events', [2, ['Location', 'Other Requirements']],
             [
                 [['771'], ['Along Terajuma Beach', 'Give it a Gourmet Treat'], 0, 0],
+                [['489'], ['Surf south to the lighthouse from the Pier', 'Give it a Gourmet Treat'], 0, 0],
             ]
         ],
-    ], //Code 0031
+    ], //Code 0032
     [['Terajuma Jungle', ['Grass', 'Surfing', 'Fishing','Events']],
         ['Grass', [3, ['Morning', 'Daytime', 'Night']],
             [
                 [['736'], ['30%', '20%', '0%'], 1],
                 [['732'], ['29%', '0%', '0%'], 0],
                 [['070'], ['20%', '0%', '0%'], 0],
-                [['433'], ['10%', '0%', '0%'], 0],
+                [['165'], ['10%', '0%', '0%'], 0],
                 [['400'], ['10%', '25%', '0%'], 1],
                 [['737'], ['1%', '0%', '0%'], 1],
                 [['591'], ['0%', '40%', '0%'], 0],
@@ -725,9 +778,11 @@ var AllEncounters=[
                 [['164'], ['0%', '0%', '1%'], 1],
             ]
         ],
-        ['Surfing', [1, ['All Day']],
+        ['Surfing', [1, ['Random Encounter']],
             [
-            ]
+                [['318'], ['95%'], 0],
+                [['055'], ['5%'], 0],
+            ],
         ],
         ['Fishing', [2, ['Old Rod', 'Good Rod']],
             [
@@ -737,10 +792,257 @@ var AllEncounters=[
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
-                [['187'], ['Along Terajuma Beach', 'Run into it<br>Mornings only'], 0, 0],
+                [['187'], ['Along Terajuma Beach', 'Run into it<br>Mornings only'], 0, 0], //Hoppip
+                [['058'], ['Outside Kakori Village', 'Play with it until friendship threshold is reached'], 0, 1], //Growlithe
             ]
         ],
-    ], //Code 0032
+    ], //Code 0033
+    [['Deep Terajuma Jungle', ['Grass', 'Surfing', 'Fishing','Events']],
+        ['Grass', [3, ['Morning', 'Daytime', 'Night']],
+            [
+                [['737'], ['31%', '20%', '0%'], 1],
+                [['732'], ['29%', '0%', '0%'], 0],
+                [['070'], ['20%', '0%', '0%'], 0],
+                [['165'], ['10%', '0%', '0%'], 0],
+                [['400'], ['10%', '20%', '0%'], 0],
+                [['015'], ['0%', '21%', '0%'], 0],
+                [['102'], ['0%', '15%', '0%'], 0],
+                [['591'], ['0%', '10%', '0%'], 0],
+                [['592'], ['0%', '9%', '0%'], 0],
+                [['012'], ['0%', '5%', '0%'], 1],
+                [['755'], ['0%', '0%', '30%'], 0],
+                [['163'], ['0%', '0%', '20%'], 1],
+                [['044'], ['0%', '0%', '15%'], 0],
+                [['167'], ['0%', '0%', '10%'], 1],
+                [['048'], ['0%', '0%', '10%'], 0],
+                [['402'], ['0%', '0%', '5%'], 0],
+                [['168'], ['0%', '0%', '5%'], 1],
+                [['756'], ['0%', '0%', '4%'], 0],
+                [['164'], ['0%', '0%', '1%'], 1],
+
+            ]
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['318'], ['95%'], 0],
+                [['055'], ['5%'], 0],
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['318'], ['100%', '80%'], 0],
+                [['550'], ['0%', '20%'], 0],
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['045'], ['Scattered in Terajuma Forest', 'Use a Spice Powder'], 0, 0], //Vileplume
+                [['351'], ['Weather Institute', 'Trade using a Dunsparce'], 0, 1], //Castform
+                [['001'], ['Weather Institute', 'Complete the Bandit at Large Help Request'], 0, 2], //Bulbasaur
+                [['722'], ['Grove across the broken bridge', 'Complete the Building Bridges Help Request'], 0, 2], //Rowlet
+            ]
+        ],
+    ], //Code 0034
+    [['Hula Meadow', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['741_2'], ['64%'], 0],
+                [['732'], ['15%'], 0],
+                [['735'], ['10%'], 0],
+                [['269'], ['5%'], 1],
+                [['765'], ['5%'], 0],
+                [['733'], ['1%'], 0],
+            ]
+        ],
+    ], //Code 0035
+    [['Kakori Village', ['Events']],
+        ['Events', [1, ['All Day']],
+            [
+            ]
+        ],
+    ], //Code 0037
+    [['Jeminra Woods: Area 1 (Middle Left Area)', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['231'], ['31%'], 1], //Phanpy
+                [['177'], ['30%'], 1], //Natu
+                [['084'], ['20%'], 0], //Doduo
+                [['044'], ['9%'], 0], //Gloom
+                [['054'], ['5%'], 0], //Psyduck
+                [['055'], ['4%'], 0], //Golduck
+                [['202'], ['1%'], 0], //Wobbuffet
+            ]
+        ],
+    ], //Code 0038
+    [['Jeminra Woods: Area 2 (Bottom Left Area)', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['203'], ['40%'], 0], //Girafarig
+                [['045'], ['30%'], 0], //Vileplume
+                [['070'], ['15%'], 0], //Weepinbell
+                [['097'], ['9%'], 0], //Hypno
+                [['047'], ['5%'], 0], //Parasect
+                [['214'], ['1%'], 0], //Heracross
+            ]
+        ],
+    ], //Code 0039
+    [['Jeminra Woods: Area 3 (Upper Left Area)', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['327'], ['40%'], 0], //Spinda
+                [['109'], ['20%'], 1], //Koffing
+                [['219'], ['16%'], 0], //Magcargo
+                [['110'], ['10%'], 0], //Weezing
+                [['322'], ['9%'], 1], //Numel
+                [['044'], ['4%'], 0], //Gloom
+                [['115'], ['1%'], 0], //Kangaskhan
+            ]
+        ],
+    ], //Code 0040
+    [['Jeminra Woods: Area 4 (Beach Area)', ['Grass', 'Fishing', 'Others', 'Surfing']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['352'], ['20%'], 0], //Kecleon
+                [['327'], ['20%'], 0], //Spinda
+                [['109'], ['20%'], 1], //Koffing
+                [['110'], ['10%'], 0], //Weezing
+                [['299'], ['10%'], 1], //Nosepass
+                [['322'], ['9%'], 1], //Numel
+                [['219'], ['6%'], 0], //Magcargo
+                [['335'], ['4%'], 0], //Zangoose
+                [['115'], ['1%'], 0], //Kangaskhan
+            ]
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['341'], ['70%', '0%'], 0], //Corphish
+                [['318'], ['30%', '0%'], 0], //Carvanha
+                [['370'], ['0%', '80%'], 0], //Luvdisc
+                [['550'], ['0%', '20%'], 0], //Basculin
+            ]
+        ],
+        ['Others', [1, ['Rock Smash']],
+            [
+                [['688'], ['94%'], 0], //Binacle
+                [['324'], ['6%'], 0], //Torkoal
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['318'], ['100%'], 0],
+            ],
+        ],
+    ], //Code 0041
+    [['Jeminra Woods: Area 5 (Maze Area)', ['Grass', 'Fishing', 'Others']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['355'], ['30%'], 1], //Duskull
+                [['417'], ['20%'], 1], //Pachirisu
+                [['108'], ['20%'], 0], //Lickitung
+                [['400'], ['15%'], 1], //Bibarel
+                [['357'], ['9%'], 0], //Tropius
+                [['047'], ['4%'], 0], //Parasect
+                [['115'], ['1%'], 0], //Kangaskhan
+                [['335'], ['1%'], 0], //Chansey
+
+            ]
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['318'], ['100%', '0%'], 0], //Carvanha
+                [['339'], ['0%', '60%'], 0], //Barboach
+                [['340'], ['0%', '20%'], 0], //Whiscash
+                [['594'], ['0%', '20%'], 0], //Alomomola
+            ]
+        ],
+        ['Others', [1, ['Rock Smash']],
+            [
+                [['557'], ['90%'], 0], //Dwebble
+                [['213'], ['5%'], 0], //Shuckle
+                [['688'], ['5%'], 0], //Binacle
+            ],
+        ],
+    ], //Code 0042
+    [['Jeminra Woods: Corrupted Cave Area', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['525'], ['40%'], 0], //Boldore
+                [['088'], ['20%'], 1], //Grimer (Kantonian)
+                [['089'], ['16%'], 0], //Muk (Kantonian)
+                [['757'], ['10%'], 0], //Salandit
+                [['110'], ['9%'], 0], //Weezing
+                [['317'], ['4%'], 0], //Swalot
+                [['758'], ['1%'], 0], //Salazzle
+            ]
+        ],
+    ], //Code 0043
+    [['Jeminra Woods: Purified Cave Area', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+            ]
+        ],
+    ], //Code 0044
+    [['Jeminra Woods: Special Area', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['100'], ['30%'], 0], //Voltorb
+                [['074'], ['20%'], 1], //Geodude (Kantonian)
+                [['025'], ['19%'], 0], //Pikachu
+                [['081'], ['19%'], 0], //Magnemite
+                [['075_1'], ['10%'], 0], //Graveler (Alolan)
+                [['101'], ['1%'], 0], //Electrode
+                [['738'], ['1%'], 0], //Vikavolt
+            ]
+        ],
+    ], //Code 0045
+    [['Route 6', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['098'], ['40%'], 0], //Krabby
+                [['269'], ['24%'], 1], //Dustox
+                [['267'], ['14%'], 0], //Beautifly
+                [['070'], ['12%'], 0], //Weepinbell
+                [['268'], ['5%'], 0], //Cascoon
+                [['266'], ['5%'], 0], //Silcoon
+            ]
+        ],
+    ], //Code 0046
+    [['Route 5/Valor Shore', ['Grass', 'Surfing', 'Fishing', 'Others']],
+        ['Grass', [2, ['Morning and Daytime', 'Night']],
+            [
+                [['218'], ['30%', '0%'], 1], //Slugma
+                [['066'], ['20%', '0%'], 1], //Machop
+                [['400'], ['15%', '0%'], 1], //Bibarel
+                [['327'], ['10%', '0%'], 0], //Spinda
+                [['067'], ['10%', '0%'], 0], //Machoke
+                [['322'], ['10%', '30%'], 0], //Numel
+                [['266'], ['5%', '0%'], 0], //Medicham
+                [['164'], ['0%', '35%'], 1], //Noctowl
+                [['343'], ['0%', '15%'], 0], //Baltoy
+                [['168'], ['0%', '15%'], 0], //Ariados
+                [['358'], ['0%', '5%'], 0], //Chimecho
+            ]
+        ],
+        ['Surfing', [1, ['Random Encounters']],
+            [
+                [['223'], ['90%'], 1], //Remoraid
+                [['098'], ['9%'], 1], //Krabby
+                [['118'], ['1%'], 1], //Goldeen
+            ]
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['118'], ['100%', '80%'], 0], //Goldeen
+                [['550'], ['0%', '20%'], 0], //Basculin
+            ]
+        ],
+        ['Others', [1, ['Rock Smash']],
+            [
+                [['074'], ['90%'], 0], //Geodude
+                [['688'], ['10%'], 0], //Binacle
+            ],
+        ],
+    ], //Code 0047
 ]
 
 /*
