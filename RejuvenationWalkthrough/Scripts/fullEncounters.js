@@ -27,7 +27,8 @@ var AllEncounters=[
             [['418'], ['East Gearen City - Right Side', 'After talking to previous owner in Oceana Pier'], 0, 1],
             [['172'], ['Help Plaza', 'Complete "Battle Me" Help Request'], 0, 3],
             [['029'], ['East Gearen City - Left Side', 'Chase it down around the city'], 0, 4],
-            [['522'], ['Gearen Junction', 'Requires Rock Smash to reach it'], 0, 5],
+            [['522'], ['Gearen Junction', 'Requires Rock Smash to reach it'], 0, 5], //Blitzle
+            [['725'], ['Gearen Junction', 'Requires Dull Key to reach it'], 0, 6], //Litten
         ],
     ],
     ], //Code 0000
@@ -50,6 +51,7 @@ var AllEncounters=[
                 [['694'], ['Chrisola Hotel Casino', 'Buy for 6500 Coins'], 0, 0],
                 [['572'], ['Chrisola Hotel<br>Right Hallway, Second Room', 'Chase down and save Mincinno'], 0, 1],
                 [['403'], ['Chrisola Hotel<br>Right Hallway, First Room', 'After visiting Route 2'], 0, 2],
+                [['158'], ['Chrisola Hotel Pool', 'Nighttime Only<br>Required Gourmet Treat'], 0, 3], //Litten
             ],
         ],
     ], //Code 0002
@@ -482,7 +484,7 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0019
-    [['Goldenleaf Town', ['Grass', 'Fishing', 'Surfing', 'Events']], 
+    [['Goldenleaf Town', ['Grass', 'Fishing', 'Surfing', 'Events']],   
         ['Grass', [3, ['Morning', 'Daytime', 'Night']], 
             [
                 [['263'], ['30%', '10%', '0%'], 0],
@@ -510,9 +512,9 @@ var AllEncounters=[
         ],
         ['Surfing', [1, ['Random Encounter']],
             [
-                [['118'], ['65%'], 0],
-                [['546'], ['30%'], 0],
-                [['550'], ['5%'], 0],
+                [['118'], ['65%'], 0], //Goldeen
+                [['456'], ['30%'], 0], //Finneon
+                [['550'], ['5%'], 0], //Basculin
             ],
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
@@ -552,7 +554,7 @@ var AllEncounters=[
         ['Surfing', [1, ['Random Encounter']],
             [
                 [['118'], ['65%'], 0],
-                [['546'], ['30%'], 0],
+                [['456'], ['30%'], 0],
                 [['550'], ['5%'], 0],
             ],
         ],
@@ -651,7 +653,7 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0027
-    [['Akuwa Town', ['Grass', 'Fishing', 'Events']],
+    [['Akuwa Town', ['Grass', 'Fishing', 'Surfing', 'Events']],
         ['Grass', [3, ['Morning', 'Daytime', 'Night']],
             [
                 [['039'], ['30%', '0%', '0%'], 1],
@@ -671,6 +673,11 @@ var AllEncounters=[
                 [['118'], ['30%', '0%'], 0],
                 [['370'], ['0%', '80%'], 0],
                 [['594'], ['0%', '20%'], 0],
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounters']],
+            [
+                [['456'], ['100%', '0%'], 0], //Finneon
             ],
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
@@ -754,7 +761,7 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0032
-    [['Terajuma Jungle', ['Grass', 'Surfing', 'Fishing','Events']],
+    [['Terajuma Jungle', ['Grass', 'Surfing', 'Fishing', 'Events']],
         ['Grass', [3, ['Morning', 'Daytime', 'Night']],
             [
                 [['736'], ['30%', '20%', '0%'], 1],
@@ -797,7 +804,7 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0033
-    [['Deep Terajuma Jungle', ['Grass', 'Surfing', 'Fishing','Events']],
+    [['Deep Terajuma Jungle', ['Grass', 'Surfing', 'Fishing', 'Events']],
         ['Grass', [3, ['Morning', 'Daytime', 'Night']],
             [
                 [['737'], ['31%', '20%', '0%'], 1],
@@ -1043,6 +1050,271 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0047
+    [['Secret Shore', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['057'], ['35%'], 0], //Primeape
+                [['056'], ['24%'], 0], //Mankey
+                [['433'], ['10%'], 2], //Chingling
+                [['017'], ['10%'], 1], //Pidgeotto
+                [['401'], ['10%'], 1], //Kricketot
+                [['358'], ['5%'], 0], //Chimecho
+                [['402'], ['4%'], 0], //Kricketune
+                [['018'], ['2%'], 0], //Pidgeot
+            ]
+        ],
+    ], //Code 0048
+    [['Sheridan Wetlands', ['Grass', 'Surfing', 'Fishing', 'Events']],
+        ['Grass', [3, ['Morning', 'Daytime', 'Night']],
+            [
+                [['535'], ['30%', '0%', '0%'], 0], //Tympole
+                [['114'], ['20%', '0%', '0%'], 0], //Tangela
+                [['451'], ['15%', '15%', '30%'], 0], //Skorupi
+                [['024'], ['15%', '15%', '15%'], 1], //Arbok
+                [['536'], ['10%', '30%', '15%'], 1], //Palpitoad
+                [['453'], ['9%', '5%', '9%'], 0], //Croagunk
+                [['422'], ['1%', '1%', '1%'], 0], //Shellos
+                [['588'], ['0%', '34%', '0%'], 0], //Karrablast
+                [['164'], ['0%', '0%', '30%'], 1], //Noctowl
+            ]
+        ],
+        ['Surfing', [1, ['Random Encounters']],
+            [
+                [['535'], ['60%'], 0], //Tympole
+                [['618'], ['35%'], 0], //Stunfisk
+                [['536'], ['4%'], 0], //Palpitoad
+                [['422'], ['1%'], 0], //Shellos
+            ]
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['339'], ['100%', '0%'], 0], //Barboach
+                [['341'], ['0%', '100%'], 0], //Corphish
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['422'], ['Scattered around Sheridan Wetlands', 'Interact with it'], 0, 0], //Gastrodon
+                //Mudkip placeholder
+            ]
+        ],
+    ], //Code 0049
+    [['Shadow HQ', ['Shadows', 'Events']], 
+        ['Shadows', [2, ['Moves', 'Trainer']],
+            [
+                [['084'], [''], ''], //Masquerain
+                [['343'], [''], ''], //Masquerain
+                [['455'], [''], ''], //Carnivine
+            ],
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                //Beldum/Ralts placeholder
+            ]
+        ],
+    ], //Code 0050
+    [['Wispy Tower (Outside)', ['Grass']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['517'], ['30%'], 0], //Munna
+                [['354'], ['21%'], 0], //Banette
+                [['353'], ['20%'], 2], //Shuppet
+                [['425'], ['10%'], 1], //Drifloon
+                [['018'], ['9%'], 1], //Pidgeot
+                [['745_1'], ['9%'], 0], //Lycanroc (Midnight)
+                [['292'], ['1%'], 0], //Shedinja
+            ]
+        ],
+    ], //Code 0051
+    [['Route 11 & Evergreen Island', ['Fishing', 'Others']],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['118'], ['100%', '80%'], 0], //Goldeen
+                [['550'], ['0%', '20%'], 0], //Basculin
+            ]
+        ],
+        ['Others', [1, ['Rock Smash']],
+            [
+                [['074'], ['95%'], 0], //Geodude
+                [['688'], ['5%'], 0], //Binacle
+            ]
+        ],
+    ], //Code 0052
+    [['Route 11 (South Side)', ['Surfing', 'Events']],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['458'], ['90%'], 0], //Mantyke
+                [['098'], ['9%'], 0], //Krabby
+                [['118'], ['1%'], 0], //Krabby
+            ],
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['124'], ['On island in Route 11 (South Side)', 'Give the Xen Grunt 10 Sweet Hearts<br>Buyable at Route 3 Marketplace'], 0, 0], //Jynx
+            ]
+        ],
+    ], //Code 0053
+    [['Route 11 (North Side)', ['Surfing', 'Events']],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['458'], ['60%'], 0], //Mantyke
+                [['072'], ['34%'], 0], //Tentacool
+                [['320'], ['6%'], 0], //Wailmer
+            ],
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+            ]
+        ],
+    ], //Code 0054
+    [['Evergreen Island', ['Surfing', 'Events']],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['458'], ['90%'], 0], //Mantyke
+                [['320'], ['5%'], 0], //Wailmer
+                [['226'], ['4%'], 0], //Mantine
+                [['073'], ['1%'], 0], //Tentacruel
+
+            ],
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['224'], ['Along the beach of the Evergreen Islands', 'Interact with it'], 0, 0], //Octillery
+                [['131'], ['In cave in the middle of the Evergreen Islands', 'Use Blizzard in one battle, then Magnitude, Bulldoze, or Earthquake in the next to open the path'], 0, 0], //Lapras
+                [['285'], ['Island above the middle cave', 'Trade for it using a Lopunny'], 0, 0], //Shroomish
+            ]
+        ],
+    ], //Code 0055
+    [['Evergreen Cave South/Seabound Cave', ['Cave', 'Surfing', 'Fishing', 'Others', 'Events']],
+        ['Cave', [1, ['Random Encounter']],
+            [
+                [['238'], ['30%'], 0], //Smoochum
+                [['027'], ['30%'], 0], //Sandshrew (Kantonian)
+                [['582'], ['15%'], 0], //Vanillite
+                [['583'], ['15%'], 0], //Vanillish
+                [['124'], ['5%'], 0], //Jynx
+                [['712'], ['4%'], 0], //Bergmite
+                [['713'], ['1%'], 0], //Avalugg
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['086'], ['60%'], 0], //Seel
+                [['087'], ['34%'], 0], //Dewgong
+                [['099'], ['6%'], 0], //Kingler
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['118'], ['100%', '0%'], 0], //Goldeen
+                [['223'], ['0%', '100%'], 0], //Remoraid
+            ]
+        ],
+        ['Others', [1, ['Rock Smash']],
+            [
+                [['688'], ['94%'], 0], //Binacle
+                [['206'], ['5%'], 0], //Dunsparce
+                [['213'], ['1%'], 0], //Shuckle
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+            ]
+        ],
+    ], //Code 0056
+    [['Evergreen Cave North', ['Cave', 'Surfing', 'Fishing', 'Others', 'Events']],
+        ['Cave', [1, ['Random Encounter']],
+            [
+                [['220'], ['50%'], 0], //Swinub
+                [['583'], ['15%'], 0], //Vanillish
+                [['582'], ['10%'], 0], //Vanillite
+                [['238'], ['10%'], 0], //Smoochum
+                [['221'], ['5%'], 0], //Piloswine
+                [['124'], ['5%'], 0], //Jynx
+                [['712'], ['4%'], 0], //Bergmite
+                [['713'], ['1%'], 0], //Avalugg
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['086'], ['60%'], 0], //Seel
+                [['087'], ['34%'], 0], //Dewgong
+                [['099'], ['6%'], 0], //Kingler
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['118'], ['100%', '0%'], 0], //Goldeen
+                [['223'], ['0%', '100%'], 0], //Remoraid
+            ]
+        ],
+        ['Others', [1, ['Rock Smash']],
+            [
+                [['688'], ['94%'], 0], //Binacle
+                [['206'], ['5%'], 0], //Dunsparce
+                [['213'], ['1%'], 0], //Shuckle
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+            ]
+        ],
+    ], //Code 0057
+    [['Evergreen Forest', ['Grass', 'Surfing', 'Fishing', 'Others', 'Events']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['459'], ['34%'], 0], //Snover
+                [['613'], ['29%'], 0], //Cubchoo
+                [['582'], ['20%'], 0], //Vanillish
+                [['083'], ['15%'], 0], //Farfetch'd (Kantonian)
+                [['676'], ['2%'], 0], //Furfrou
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['086'], ['90%'], 0], //Seel
+                [['550'], ['10%'], 0], //Basculin
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['118'], ['100%', '80%'], 0], //Goldeen
+                [['341'], ['0%', '20%'], 0], //Corphish
+            ]
+        ],
+        ['Others', [2, ['Headbutt High', 'Headbutt Low']],
+            [
+                [['190'], ['30%', '0%'], 0], //Aipom
+                [['164'], ['25%', '0%'], 0], //Noctowl
+                [['017'], ['20%', '0%'], 0], //Pidgeotto
+                [['102'], ['10%', '0%'], 0], //Exeggcute
+                [['739'], ['5%', '15%'], 0], //Crabrawler
+                [['166'], ['4%', '0%'], 0], //Ledian
+                [['287'], ['1%', '0%'], 0], //Slakoth
+                [['204'], ['0%', '35%'], 0], //Pineco
+                [['412'], ['0%', '25%'], 0], //Burmy
+                [['013'], ['0%', '20%'], 0], //Weedle
+                [['012'], ['0%', '4%'], 0], //Butterfree
+                [['015'], ['0%', '1%'], 0], //Beedrill
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['333'], ['Flying around in Evergreen Forest', 'Interact with it'], 0, 0], //Swablu
+                [['234'], ['Right side of Evergreen Forest', 'Interact with it'], 0, 0], //Stantler
+                [['361'], ['Surf across the right side of Evergreen Forest', 'Night Only'], 0, 0], //Snorunt
+                [['393'], ['Spring of Preservation', 'Show Anju\'s Pendant at the shrine'], 0, 0], //Piplup
+            ]
+        ],
+    ], //Code 0058
+    [['Kakori Village Gym', ['Events']],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['127'], ['In the Kakori Village Gym', 'Forced story battle'], 0, 0], //Pinsir
+            ]
+        ],
+    ], //Code 0059
+
 ]
 
 /*
