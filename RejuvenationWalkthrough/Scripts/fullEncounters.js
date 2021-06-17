@@ -18,19 +18,21 @@ var AllEncounters=[
             ],
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
-        [
-            [['353'], ['Emerald Building 3rd Floor', 'Nighttime Only'], 0, 0],
-            [['417'], ['Velvet Building 3rd Floor', 'Nighttime Only'], 0, 0],
-            [['506'], ['Violet Building 2nd Floor', 'After visiting Goldenwood Forest'], 0, 2],
-            [['427'], ['Aqua Building 1st Floor', 'Trade using a Male Cherubi'], 0, 1],
-            [['100'], ['Gearen Market, Top-Right Vendor', 'But 4 Poke Balls'], 0, 1],
-            [['418'], ['East Gearen City - Right Side', 'After talking to previous owner in Oceana Pier'], 0, 1],
-            [['172'], ['Help Plaza', 'Complete "Battle Me" Help Request'], 0, 3],
-            [['029'], ['East Gearen City - Left Side', 'Chase it down around the city'], 0, 4],
-            [['522'], ['Gearen Junction', 'Requires Rock Smash to reach it'], 0, 5], //Blitzle
-            [['725'], ['Gearen Junction', 'Requires Dull Key to reach it'], 0, 6], //Litten
+            [
+                [['353'], ['Emerald Building 3rd Floor', 'Nighttime Only'], 0, 0],
+                [['417'], ['Velvet Building 3rd Floor', 'Nighttime Only'], 0, 0],
+                [['506'], ['Violet Building 2nd Floor', 'After visiting Goldenwood Forest'], 0, 2],
+                [['427'], ['Aqua Building 1st Floor', 'Trade using a Male Cherubi'], 0, 1],
+                [['100'], ['Gearen Market, Top-Right Vendor', 'But 4 Poke Balls'], 0, 1],
+                [['418'], ['East Gearen City - Right Side', 'After talking to previous owner in Oceana Pier'], 0, 1],
+                [['172'], ['Help Plaza', 'Complete "Battle Me" Help Request'], 0, 3],
+                [['029'], ['East Gearen City - Left Side', 'Chase it down around the city'], 0, 4],
+                [['522'], ['Gearen Junction', 'Requires Rock Smash to reach it'], 0, 5], //Blitzle
+                [['725'], ['Gearen Junction', 'Requires Dull Key to reach it'], 0, 6], //Litten
+                [['239'], ['Gearen Lab<br>Left of Professor Jenner\'s Area', 'Seen 350 Pokemon to choose between Elekid or Magby<br>Seen 550 to get it if not chosen at 350'], 0, 7], //Elekid
+                [['240'], ['Gearen Lab<br>Left of Professor Jenner\'s Area', 'Seen 350 Pokemon to choose between Elekid or Magby<br>Seen 550 to get it if not chosen at 350'], 0, 7], //Magby
+            ],
         ],
-    ],
     ], //Code 0000
     [['Chrisola Hotel Rooftop', ['Grass']],
         ['Grass', [1, ['All Day']],
@@ -245,15 +247,15 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0009
-    [['Amethyst Cave', ['Cave', 'Surfing','Fishing', 'Events']], 
+    [['Amethyst Cave', ['Cave', 'Surfing', 'Fishing', 'Events']], 
         ['Cave', [1, ['All Day']], 
             [
-                [['074'], ['34%'], 0],
-                [['307'], ['30%'], 0],
-                [['027'], ['15%'], 0],
-                [['177'], ['10%'], 0],
-                [['050'], ['9%'], 0],
-                [['703'], ['2%'], 0],
+                [['074'], ['34%'], 0], //Geodude
+                [['307'], ['30%'], 0], //Meditite
+                [['027'], ['15%'], 0], //Sandshrew
+                [['177'], ['10%'], 0], //Natu
+                [['050'], ['9%'], 0], //Diglett
+                [['703'], ['2%'], 0], //Carbink
             ],
         ],
         ['Surfing', [1, ['Random Encounter']],
@@ -264,16 +266,16 @@ var AllEncounters=[
         ],
         ['Fishing', [1, ['Old Rod']],
             [
-                [['118'], ['70%'], 0],
-                [['339'], ['30%'], 0],
+                [['118'], ['70%'], 0], //Goldeen
+                [['339'], ['30%'], 0], //Barboach
             ],
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
-                [['337'], ['Amethyst Depths - Right Side', 'Give Gourmet Treat'], 0, 0],
-                [['338'], ['Amethyst Cave - Second Room', 'Accept to help find a girl\'s boyfriend in Sheridan Village'], 0, 1],
-                [['228'], ['Amethyst Cave - First Room', 'Complete Karrina\'s Gang War Sidequest'], 0, 2],
-                [['599'], ['Amethyst Cave - First Room', 'Drop an Electric Gem into the gear cart'], 0, 0],
+                [['337'], ['Amethyst Depths - Right Side', 'Give Gourmet Treat'], 0, 0], //Lunatone
+                [['338'], ['Amethyst Cave - Second Room', 'Accept to help find a girl\'s boyfriend in Sheridan Village'], 0, 1], //Solrock
+                [['228'], ['Amethyst Cave - First Room', 'Complete Karrina\'s Gang War Sidequest'], 0, 2], //Houndour
+                [['599'], ['Amethyst Cave - First Room', 'Drop an Electric Gem into the gear cart'], 0, 0], //Klink
             ],
         ],
     ], //Code 0010
@@ -332,7 +334,8 @@ var AllEncounters=[
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
-                [['439'], ['Madelis\'s Lab, bottom right room<br>Only available before the battle against the Dimensional Rift', 'Interact with it'], 0, 0],
+                [['439'], ['Madelis\'s Lab, bottom right room<br>Only available before the battle against the Dimensional Rift', 'Interact with it'], 0, 0], //Mime Jr
+                [['155'], ['Caratos Mountain, first room<br>Right side maze', 'Requires Magma Drift<br>Pick up its egg'], 0, 1], //Cyndaquil
             ],
         ],
         ['Shadows', [2, ['Moves', 'Trainer']],
@@ -396,7 +399,7 @@ var AllEncounters=[
             ],
         ],
     ], //Code 0016
-    [['Phasial Cave', ['Cave', 'Fishing']],
+    [['Phasial Cave', ['Cave', 'Fishing', 'Events']],
         ['Cave', [1, ['All Day']],
             [
                 [['194'], ['36%'], 0],
@@ -411,6 +414,11 @@ var AllEncounters=[
                 [['194'], ['30%', '0%'], 0],
                 [['195'], ['0%', '20%'], 0],
             ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['060'], ['Bottom half of Phasial Cave', 'Found the 6 Poliwag Troupe'], 0, 0], //Poliwag
+            ],
         ],
     ], //Code 0017
     [['Pom-Pom Meadow', ['Grass']],
@@ -588,16 +596,16 @@ var AllEncounters=[
     [['Wispy Ruins', ['Cave', 'Events']],
         ['Cave', [1, ['All Day']],
             [           
-                [['622'], ['40%'], 0],
-                [['343'], ['26%'], 0],
-                [['075_1'], ['15%'], 0],
-                [['524'], ['14%'], 0],
-                [['703'], ['5%'], 1],
+                [['622'], ['40%'], 0], //Golett
+                [['343'], ['26%'], 0], //Baltoy
+                [['075_1'], ['15%'], 0], //Graveler (Alolan)
+                [['524'], ['14%'], 0], //Roggenrola
+                [['703'], ['5%'], 1], //Carbink
             ]
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
-                [['708'], ['Deep Wispy Ruins', 'Interact with it'], 0, 0],
+                [['708'], ['Deep Wispy Ruins', 'Interact with it'], 0, 0], //Phantump
             ],
         ],
     ], //Code 0023
@@ -613,7 +621,7 @@ var AllEncounters=[
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
-                //Type:Null Placeholder
+                [['772'], ['Forsaken Laboratory<br>Inner Lab', 'After talking to Matthew at River\'s End'], 0, 0], //Type:Null
             ],
         ],
     ], //Code 0024
@@ -653,7 +661,7 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0027
-    [['Akuwa Town', ['Grass', 'Fishing', 'Surfing', 'Events']],
+    [['Akuwa Town', ['Grass', 'Fishing', 'Surfing', 'Events', 'Fossils']],
         ['Grass', [3, ['Morning', 'Daytime', 'Night']],
             [
                 [['039'], ['30%', '0%', '0%'], 1],
@@ -682,9 +690,14 @@ var AllEncounters=[
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
-                [['580'], ['Akuwa Town - South side', 'Pick up its egg'], 0, 0],
-                [['222'], ['Akuwa Town - Along the beach', 'Interact with it'], 0, 0],
-                [['132'], ['Akuwa Town - Near the research lab on the beach', 'Have found it four other times along the journey'], 0, 0],
+                [['580'], ['Akuwa Town - South side', 'Pick up its egg'], 0, 0], //Ducklett
+                [['222'], ['Akuwa Town - Along the beach', 'Interact with it'], 0, 0], //Corsola
+                [['132'], ['Akuwa Town - Near the research lab on the beach', 'Have found it four other times along the journey'], 0, 0], //Ditto
+            ]
+        ],
+        ['Fossils', [2, ['Fossil Aquire Method']],
+            [
+                [['140'], ['Mine it from a mining rock'], 0, 0], //Kabuto
             ]
         ],
     ], //Code 0028
@@ -756,8 +769,9 @@ var AllEncounters=[
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
-                [['771'], ['Along Terajuma Beach', 'Give it a Gourmet Treat'], 0, 0],
-                [['489'], ['Surf south to the lighthouse from the Pier', 'Give it a Gourmet Treat'], 0, 0],
+                [['771'], ['Along Terajuma Beach', 'Give it a Gourmet Treat'], 0, 0], //Pyukumuku
+                [['489'], ['Surf south to the lighthouse from the Pier', 'Give it a Gourmet Treat'], 0, 0], //Phione
+                [['120'], ['Near the Lighthouse on the beach', 'After completing the "Lighthouse" Help Request in Kristiline Town'], 0, 1], //Staryu
             ]
         ],
     ], //Code 0032
@@ -862,12 +876,42 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0035
-    [['Kakori Village', ['Events']],
-        ['Events', [1, ['All Day']],
+    [['Rivers End', ['Grass', 'Surfing', 'Fishing', 'Others', 'Events']],
+        ['Grass', [1, ['All Day']],
             [
+                [['616'], ['35%'], 0], //Shelmet
+                [['762'], ['30%'], 0], //Steenee
+                [['743'], ['29%'], 0], //Ribombee
+                [['192'], ['4%'], 0], //Sunflora
+                [['764'], ['2%'], 0], //Comfey
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['618'], ['65%'], 0], //Stunfisk
+                [['055'], ['34%'], 0], //Golduck
+                [['457'], ['1%'], 0], //Lumineon
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['456'], ['100%', '0%'], 0], //Finneon
+                [['779'], ['0%', '80%'], 0], //Bruxish
+                [['341'], ['0%', '20%'], 0], //Corphish
             ]
         ],
-    ], //Code 0037
+        ['Others', [1, ['Rock Smash']],
+            [
+                [['213'], ['66%'], 0], //Shuckle
+                [['557'], ['34%'], 0], //Dwebble
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['309'], ['Behind the house on the top right', 'Feed it a Gourmet Treat'], 0, 0], //Electrike
+            ]
+        ],
+    ], //Code 0036 - Out of order
     [['Jeminra Woods: Area 1 (Middle Left Area)', ['Grass']],
         ['Grass', [1, ['All Day']],
             [
@@ -983,9 +1027,10 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0043
-    [['Jeminra Woods: Purified Cave Area', ['Grass']],
-        ['Grass', [1, ['All Day']],
+    [['Jeminra Woods: Purified Cave Area', ['Events']],
+        ['Events', [2, ['Location', 'Other Requirements']],
             [
+                [['767'], ['Through the purified cave', 'Chase it down<br>After purifying the cave from Route 5'], 0, 0], //Wimpod
             ]
         ],
     ], //Code 0044
@@ -1002,7 +1047,7 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0045
-    [['Route 6', ['Grass']],
+    [['Route 6', ['Grass', 'Surfing', 'Fishing', 'Others', 'Events']],
         ['Grass', [1, ['All Day']],
             [
                 [['098'], ['40%'], 0], //Krabby
@@ -1013,8 +1058,34 @@ var AllEncounters=[
                 [['266'], ['5%'], 0], //Silcoon
             ]
         ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['223'], ['90%'], 0], //Remoraid
+                [['098'], ['9%'], 0], //Krabby
+                [['118'], ['1%'], 0], //Goldeen
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['118'], ['100%', '80%'], 0], //Goldeen
+                [['550'], ['0%', '20%'], 0], //Basculin
+            ]
+        ],
+        ['Others', [1, ['Rock Smash']],
+            [
+                [['074'], ['90%'], 0], //Geodude
+                [['688'], ['10%'], 0], //Binacle
+               
+            ],
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['098'], ['Walking around on Route 6', 'Interact with it'], 0, 0], //Krabby
+                [['366'], ['Near the Lighthouse through Aquamarine Cave', 'After completing the "Lighthouse" Help Request in Kristiline Town'], 0, 1], //Clamperl
+            ]
+        ],
     ], //Code 0046
-    [['Route 5/Valor Shore', ['Grass', 'Surfing', 'Fishing', 'Others']],
+    [['Route 5/Valor Shore', ['Grass', 'Surfing', 'Fishing', 'Others', 'Events', 'Shadows']],
         ['Grass', [2, ['Morning and Daytime', 'Night']],
             [
                 [['218'], ['30%', '0%'], 1], //Slugma
@@ -1047,6 +1118,16 @@ var AllEncounters=[
             [
                 [['074'], ['90%'], 0], //Geodude
                 [['688'], ['10%'], 0], //Binacle
+            ],
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['079'], ['Near the Lighthouse on Valor Shore', 'After completing the "Lighthouse" Help Request in Kristiline Town'], 0, 0], //Slowpoke
+            ]
+        ],
+        ['Shadows', [2, ['Moves', 'Trainer']],
+            [
+                [['170'], ['Cosmic Power, Parabolic Charge'], 'Xen Executive Zetta'], //Chinchou
             ],
         ],
     ], //Code 0047
@@ -1095,16 +1176,16 @@ var AllEncounters=[
         ['Events', [2, ['Location', 'Other Requirements']],
             [
                 [['422'], ['Scattered around Sheridan Wetlands', 'Interact with it'], 0, 0], //Gastrodon
-                //Mudkip placeholder
+                [['258'], ['Sheridan Wetlands, left side', 'Chase it down'], 0, 1], //Mudkip
             ]
         ],
     ], //Code 0049
     [['Shadow HQ', ['Shadows', 'Events']], 
         ['Shadows', [2, ['Moves', 'Trainer']],
             [
-                [['084'], [''], ''], //Masquerain
-                [['343'], [''], ''], //Masquerain
-                [['455'], [''], ''], //Carnivine
+                [['284'], ['Aqua Ring, Discharge'], ''], //Masquerain
+                [['343'], ['Flamethrower, Rock Blast'], ''], //Baltoy
+                [['455'], ['Fire Lash, Coil'], ''], //Carnivine
             ],
         ],
         ['Events', [2, ['Location', 'Other Requirements']],
@@ -1307,13 +1388,299 @@ var AllEncounters=[
             ]
         ],
     ], //Code 0058
-    [['Kakori Village Gym', ['Events']],
+    [['Kakori Village', ['Events']],
         ['Events', [2, ['Location', 'Other Requirements']],
             [
                 [['127'], ['In the Kakori Village Gym', 'Forced story battle'], 0, 0], //Pinsir
+                [['193'], ['In the Kakori Village Gym<br>Gym Battle Room', 'Run into it'], 0, 0], //Yanma
+                [['137'], ['In the Kakori Ranger Center<br>Backroom of the Recreation Room', 'Get the Data Drive while doing the "???" Help Request in Kritiline Town'], 0, 1], //Porygon
             ]
         ],
     ], //Code 0059
+    [['Aquamarine Cave', ['Cave', 'Surfing', 'Fishing', 'Events']],
+        ['Cave', [1, ['Random Encounter']],
+            [
+                [['054'], ['30%'], 0], //Psyduck
+                [['363'], ['30%'], 0], //Spheal
+                [['364'], ['19%'], 0], //Sealeo
+                [['055'], ['14%'], 0], //Golduck
+                [['099'], ['6%'], 0], //Kingler
+                [['222'], ['1%'], 0], //Corsola
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['363'], ['65%'], 0], //Spheal
+                [['086'], ['30%'], 0], //Seel
+                [['087'], ['4%'], 0], //Dewgong
+                [['364'], ['1%'], 0], //Sealeo
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['118'], ['70%', '0%'], 0], //Goldeen
+                [['318'], ['30%', '0%'], 0], //Carvanha
+                [['363'], ['0%', '60%'], 0], //Spheal
+                [['086'], ['0%', '20%'], 0], //Seel
+                [['550'], ['0%', '20%'], 0], //Basculin
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['007'], ['Aquamarine Chamber<br>Left of where Saki was', 'Give Gourmet Treat and Battle'], 0, 0], //Squirtle
+                [['236'], ['Aquamarine Cave Depths', 'Give the worker in the bottom right a Protein'], 0, 1], //Tyrogue
+            ]
+        ],
+    ], //Code 0060
+    [['Teila Resort', ['Events', 'Shadows']],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['766'], ['Middle Bottom House', 'Trade using an Oranguru'], 0, 0], //Passimian
+            ]
+        ],
+        ['Shadows', [2, ['Moves', 'Trainer']],
+            [
+                [['056'], ['Sucker Punch, Explosion'], ''], //Mankey
+                [['216'], ['Bonemarang, Avalanche, Parting Shot'], ''], //Teddiursa
+            ],
+        ],
+    ], //Code 0061
+    [['Tower of Theolia', ['Cave']],
+        ['Cave', [1, ['All Day']],
+            [           
+                [['220'], ['55%'], 0], //Swinub
+                [['225'], ['25%'], 0], //Delibird
+                [['363'], ['19%'], 0], //Spheal
+                [['712'], ['1%'], 0], //Bergmite
+            ]
+        ],
+    ], //Code 0062
+    [['Isle of Angels', ['Grass', 'Fishing', 'Events']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['057'], ['35%'], 0], //Roselia
+                [['056'], ['24%'], 0], //Swadloon
+                [['433'], ['10%'], 2], //Butterfree
+                [['017'], ['10%'], 1], //Lickitung
+                [['401'], ['10%'], 1], //Lurantis
+            ]
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['341'], ['70%', '0%'], 0], //Corphish
+                [['318'], ['30%', '0%'], 0], //Carvanha
+                [['370'], ['0%', '80%'], 0], //Luvdisc
+                [['550'], ['0%', '20%'], 0], //Basculin
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                //Deino Placeholder
+            ]
+        ],
+    ], //Code 0063
+    [['Kristiline Town', ['Grass', 'Fishing', 'Events']],
+        ['Grass', [1, ['All Day']],
+            [
+                [['057'], ['35%'], 0], //Roselia
+                [['056'], ['24%'], 0], //Swadloon
+                [['433'], ['10%'], 2], //Butterfree
+                [['017'], ['10%'], 1], //Lickitung
+                [['401'], ['10%'], 1], //Lurantis
+            ]
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['341'], ['70%', '0%'], 0], //Corphish
+                [['318'], ['30%', '0%'], 0], //Carvanha
+                [['370'], ['0%', '80%'], 0], //Luvdisc
+                [['550'], ['0%', '20%'], 0], //Basculin
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['179'], ['Kristiline Town Help Plaza', 'Complete the "Lighthouse" Help Request'], 0, 0], //Mareep
+                [['686'], ['Kristiline Town Help Plaza', 'Complete the "???" Help Request'], 0, 0], //Inkay
+                [['037_1'], ['Kristiline Town Pier', 'Trade using Alolan Sandshrew'], 0, 1], //Alolan Vulpix
+            ]
+        ],
+    ], //Code 0064
+    [['Deep Amethyst Cave', ['Cave', 'Surfing', 'Fishing', 'Events']], 
+        ['Cave', [1, ['All Day']], 
+            [
+                [['075'], ['34%'], 0], //Graveler
+                [['307'], ['20%'], 0], //Meditite
+                [['028'], ['15%'], 0], //Sandslash
+                [['308'], ['10%'], 0], //Medicham
+                [['178'], ['10%'], 0], //Xatu
+                [['051'], ['9%'], 0], //Dugtrio
+                [['703'], ['2%'], 0], //Carbink
+            ],
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['223'], ['90%'], 0], //Remoraid
+                [['339'], ['10%'], 1], //Barboach
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['118'], ['80%', '0%'], 0], //Goldeen
+                [['223'], ['0%', '90%'], 0], //Remoraid
+                [['339'], ['20%', '10%'], 0], //Barboach
+            ],
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['607'], ['Cliffside Grave', 'Activate all the panels in Amethyst Cave, then make your way to the top'], 0, 0], //Litwick
+            ],
+        ],
+    ], //Code 0065
+    [['Wispy Chasm Depths', ['Cave', 'Events']],
+        ['Cave', [1, ['All Day']],
+            [           
+                [['622'], ['40%'], 0], //Golett
+                [['343'], ['20%'], 0], //Baltoy
+                [['525'], ['15%'], 0], //Boldore
+                [['075'], ['14%'], 0], //Graveler
+                [['344'], ['6%'], 0], //Claydol
+                [['703'], ['5%'], 2], //Carbink
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['559'], ['Wispy Chasm Depths', 'Behind the Badge 5 Door'], 0, 0], //Scraggy
+            ],
+        ],
+    ], //Code 0066
+    [['Corrupted Caratos Mountain', ['Cave']],
+        ['Cave', [1, ['All Day']],
+            [           
+                [['757'], ['31%'], 0], //Salandit
+                [['047'], ['20%'], 0], //Parasect
+                [['045'], ['10%'], 0], //Vileplume
+                [['435'], ['10%'], 0], //Skuntank
+                [['551'], ['10%'], 0], //Sandile
+                [['089'], ['5%'], 0], //Muk
+                [['028'], ['5%'], 0], //Sandslash
+                [['315'], ['4%'], 0], //Roselia
+                [['452'], ['4%'], 0], //Drapion
+                [['758'], ['1%'], 0], //Salazzle
+            ]
+        ],
+    ], //Code 0067
+    [['Garufan Chamber', ['Events']],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['570'], ['Garufan Chambers, lowest basement', 'Solve the lowest basement puzzle'], 0, 0], //Zorua
+            ],
+        ],
+    ], //Code 0068
+    [['Chamber of Awakening', ['Cave']],
+        ['Cave', [1, ['All Day']],
+            [           
+                [['047'], ['20%'], 0], //Parasect
+                [['044'], ['20%'], 0], //Gloom
+                [['551'], ['11%'], 0], //Sandile
+                [['435'], ['10%'], 0], //Skuntank
+                [['045'], ['10%'], 0], //Vileplume
+                [['451'], ['10%'], 0], //Skorupi
+                [['089'], ['5%'], 0], //Muk
+                [['028'], ['5%'], 0], //Sandslash
+                [['315'], ['4%'], 0], //Roselia
+                [['452'], ['4%'], 0], //Drapion
+                [['552'], ['1%'], 0], //Krokorok
+            ]
+        ],
+    ], //Code 069
+    [['Valor Mountain (Normal)', ['Cave', 'Events']],
+        ['Cave', [1, ['All Day']],
+            [           
+                [['622'], ['30%'], 0], //Golett
+                [['525'], ['30%'], 0], //Boldore
+                [['033'], ['10%'], 0], //Nidorino
+                [['105'], ['10%'], 0], //Marowak (Kanto)
+                [['030'], ['5%'], 0], //Nidorina
+                [['051'], ['5%'], 0], //Dugtrio
+                [['344'], ['5%'], 0], //Claydol
+                [['621'], ['5%'], 0], //Druddigon
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+            ],
+        ],
+    ], //Code 0070
+    [['Valor Mountain (Fire)', ['Cave', 'Events']],
+        ['Cave', [1, ['All Day']],
+            [           
+                [['218'], ['20%'], 0], //Slugma
+                [['322'], ['20%'], 0], //Numel
+                [['323'], ['20%'], 0], //Camerupt
+                [['219'], ['15%'], 0], //Magcargo
+                [['075'], ['15%'], 0], //Graveler (Kanto)
+                [['324'], ['5%'], 0], //Torkoal
+                [['776'], ['5%'], 0], //Turtonator
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['498'], ['Valor Mountain Blockade', 'Feed it 6 Gourmet Treats'], 0, 0], //Tepig
+                [['037'], ['Valor Mountain 4F', 'Interact with it<br>Activate the crystal from the top, then come back down to 4F'], 0, 0], //Vulpix
+                [['631'], ['Valor Mountain 2F', 'Feed it a Gourmet Treat'], 0, 0], //Heatmor
+            ],
+        ],
+    ], //Code 0071
+    [['Valor Mountain (Calm)', ['Cave', 'Surfing', 'Fishing', 'Events']],
+        ['Cave', [1, ['All Day']],
+            [           
+                [['459'], ['20%'], 0], //Snover
+                [['028'], ['20%'], 0], //Sandslash (Alolan)
+                [['615'], ['15%'], 0], //Cryogonal
+                [['225'], ['14%'], 0], //Delibird
+                [['614'], ['10%'], 0], //Beartic
+                [['460'], ['10%'], 0], //Abomasnow
+                [['221'], ['5%'], 0], //Piloswine
+                [['780'], ['5%'], 0], //Drampa
+                [['712'], ['1%'], 0], //Bergmite
+            ]
+        ],
+        ['Surfing', [1, ['Random Encounter']],
+            [
+                [['086'], ['65%'], 0], //Seel
+                [['087'], ['34%'], 0], //Dewgong
+                [['364'], ['1%'], 1], //Sealeo
+            ],
+        ],
+        ['Fishing', [2, ['Old Rod', 'Good Rod']],
+            [
+                [['086'], ['100%', '0%'], 0], //Seel
+                [['090'], ['0%', '80%'], 0], //Shellder
+                [['120'], ['0%', '20%'], 0], //Shellder
+            ],
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+            ],
+        ],
+    ], //Code 0072
+    [['Valor Mountain Cliffside & Summit', ['Grass', 'Events']],
+        ['Cave', [1, ['All Day']],
+            [           
+                [['774'], ['36%'], 0], //Minior
+                [['232'], ['34%'], 0], //Donphan
+                [['455'], ['19%'], 0], //Carnivine
+                [['111'], ['10%'], 0], //Rhyhorn
+                [['112'], ['1%'], 0], //Rhydon
+            ]
+        ],
+        ['Events', [2, ['Location', 'Other Requirements']],
+            [
+                [['063'], ['Valor Mountain Summit', 'All the way to the right<br>Requires Blast Powder'], 0, 0], //Abra
+            ],
+        ],
+    ], //Code 0073
+
 
 ]
 

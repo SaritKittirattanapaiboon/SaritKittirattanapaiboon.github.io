@@ -366,13 +366,13 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
       <a href="../Chapter6/SideActivities-Overview.html">
         <span class="subTitle">Side Activities - Overview</span>
       </a>
-      <a href="../Chapter6/SideActivity-Backtrack.html">
+      <a href="../Chapter6/SideActivities-Backtrack.html">
         <span class="subTitle">Side Activity - Backtracking with Surf</span>
       </a>
-      <a href="../Chapter6/Route11Evergreen.html">
+      <a href="../Chapter6/SideActivities-Route11Evergreen.html">
         <span class="subTitle">Side Activity - Route 11 and Evergreen Islands</span>
       </a>
-      <a href="../Chapter6/SideActivity-KakoriHelpCenter.html">
+      <a href="../Chapter6/SideActivities-KakoriHelpCenter.html">
         <span class="subTitle">Side Activity - Kakori Village Help Center</span>
       </a>
       <a href="../Chapter6/KakoriVillageGym.html">
@@ -385,6 +385,21 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
       <div class="separateSet">
       <div class="badgeNumber" id="SeventhTxT">Seventh Badge<div class:"arrowParent"><div class="downArrow"></div></div></div>
       <div class="collabsibleRightSidebar" id="Seventh">
+      <a href="../Chapter7/Route6AquamarineCave.html">
+        <span class="subTitle">Route 6 and Aquamarine Cave</span>
+      </a>
+      <a href="../Chapter7/TeilaResort.html">
+        <span class="subTitle">Teila Resort</span>
+      </a>
+      <a href="../Chapter7/SideActivity-TypeNull.html">
+        <span class="subTitle">Side Activity - Type: Null</span>
+      </a>
+      <a href="../Chapter7/KristilineTown.html">
+        <span class="subTitle">Kristiline Town & Isle of Angels - Frozen</span>
+      </a>
+      <a href="../Chapter7/TowerOfTheolia.html">
+        <span class="subTitle">Tower of Theolia - The Seventh Badge</span>
+      </a>
       </div>
     </div>
 
@@ -392,6 +407,27 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
       <div class="separateSet">
       <div class="badgeNumber" id="EighthTxT">Eighth Badge<div class:"arrowParent"><div class="downArrow"></div></div></div>
       <div class="collabsibleRightSidebar" id="Eighth">
+      <a href="../Chapter8/KristilineTown-PostAngie.html">
+        <span class="subTitle">Kristiline Town - Unfrozen</span>
+      </a>
+      <a href="../Chapter8/KristilineTownHelpCenter.html">
+        <span class="subTitle">Side Activity - Kristiline Town Help Center</span>
+      </a>
+      <a href="../Chapter8/BacktrackRockClimb.html">
+        <span class="subTitle">Side Activity - Backtracking with Rock Climb</span>
+      </a>
+      <a href="../Chapter8/CaratosMountain-Corrupted.html">
+        <span class="subTitle">Caratos Mountain - Second Visit</span>
+      </a>
+      <a href="../Chapter8/GarufanRuins.html">
+        <span class="subTitle">Garufan Ruins</span>
+      </a>
+      <a href="../Chapter8/ValorMountain.html">
+        <span class="subTitle">Valor Mountain</span>
+      </a>
+      <a href="../Chapter8/TeilaResortGym.html">
+        <span class="subTitle">Teila Resort Gym - The Eighth Badge</span>
+      </a>
       </div>
     </div>
 
