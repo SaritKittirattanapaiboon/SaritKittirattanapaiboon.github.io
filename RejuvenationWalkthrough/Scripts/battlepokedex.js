@@ -2349,6 +2349,7 @@ var BattlePokedex=[
         [ 'Oricorio - Pom Pom Style', ['Flying', 'Electric'], ['Dancer'], ['None'], [75, 70, 70, 98, 70, 93, 476], 167, ['2 Special Attack'], '75F', 'None', ['None'], ['0.6 m', '3.4 kg'], ['Honey', '5%'], [], [], [], [] ],
         [ 'Oricorio - Pa\'u Style', ['Flying', 'Psychic'], ['Dancer'], ['None'], [75, 70, 70, 98, 70, 93, 476], 167, ['2 Special Attack'], '75F', 'None', ['None'], ['0.6 m', '3.4 kg'], ['Honey', '5%'], [], [], [], [] ],
         [ 'Oricorio - Sunsu Style', ['Flying', 'Ghost'], ['Dancer'], ['None'], [75, 70, 70, 98, 70, 93, 476], 167, ['2 Special Attack'], '75F', 'None', ['None'], ['0.6 m', '3.4 kg'], ['Honey', '5%'], [], [], [], [] ],
+
     ],
     ['742', 1, ['Bug', 'Fairy'], 2, 20, 190, 50,
         [ 'Cutiefly', ['Bug', 'Fairy'], ['Honey Gather', 'Shield Dust'], ['Sweet Veil'], [40, 45, 40, 55, 40, 84, 304], 61, ['1 Speed'], 'Both', 'None', ['Level 25','743'], ['0.1 m', '0.2 kg'], ['Honey', '5%'], [], [], [], [] ],

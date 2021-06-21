@@ -293,7 +293,7 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
       <div class="badgeNumber" id="FourthTxT">Fourth Badge<div class:"arrowParent"><div class="downArrow"></div></div></div>
       <div class="collabsibleRightSidebar" id="Fourth">
         <a href="../Chapter4/GoldenleafTown.html">
-          <span class="subTitle">After the Fourth Gym</span>
+          <span class="subTitle">Goldenleaf Town</span>
         </a>
         <a href="../Chapter4/WispyPath.html">
           <span class="subTitle">Wispy Path</span>
