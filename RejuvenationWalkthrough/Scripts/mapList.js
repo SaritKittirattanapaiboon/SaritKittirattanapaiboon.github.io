@@ -27,7 +27,7 @@ var mapList=[
         ['GearenSewers', ['Gearen Sewers'], [[600, 800], [[8,395], [308,795]]], [['Enthusiast Luca', 155, 665], ['Technician Jerald', 215, 625], ['Schoolgirl Amanda', 95, 465], ['Youngster Ben', 325, 75], ['Gang Member Bob', 225, 325], ['Technician Arnold', 205, 235]], [[165,495,295,55], [285,495,115,55], [165,745,525,655]], []], //End
         ['GoldenwoodForest', ['Goldenwood Forest'], [[1050,660], [[0,114], [400,444]]], [['Fisherman Shane', 365, 485], ['Fisherman Orlando', 455, 405]], [], []], //End
         ['GoldenwoodCave', ['Goldenwood Cave'], [[480,800], [[0,360], [240,760]]], [['Schoolboy Darin & Gang Member Emile', 170, 535], ['Cool Guy Jeff & Youngster Nickolus', 170, 455], ['Optimist Kairi & Tourist Karin', 155, 295]], [[425,365,375,575]], []], //End
-        ['GoldenwoodGrove', ['Goldenwood Forest'], [[440, 710], [[250,50], [150,170]]], [['Pre-Trainer Melia', 252, 252]], [], [['Water Stone', 426, 558]]], //End
+        ['GoldenwoodGrove', ['Goldenwood Forest'], [[440, 710], [[250,50], [150,170]]], [['Pre-Trainer Melia', 252, 252]], [], [['Icy Rock', 426, 558]]], //End
         ['GoldenwoodForest-Xen', ['Goldenwood Forest'], [[1050,660], [[556,114], [956,444]]], [['Team Xen Nickoli', 755, 275], ['Team Xen Leela', 465, 225], ['Team Xen Shiela', 475, 435], ['Team Xen Daryle', 275, 455], ['Team Xen Henrie', 245, 375]], [], []], //End
     ], //G
     [

@@ -1,5 +1,5 @@
 var allOverlays=[]
-
+/*
 function showMap(mapName, locationCode, locationID){
   var locationName
   var changelocation = document.getElementById("currentMapLocation");
@@ -55,7 +55,7 @@ function showMap(mapName, locationCode, locationID){
   addPins(locationName);
   createEncounterTable(locationCode, locationID);
 }
-
+*/
 function showMapVersion2(selectedValue, changeView){
   if(typeof selectedValue == 'string'){
     pictureCode=selectedValue;
@@ -116,7 +116,7 @@ function showMapVersion2(selectedValue, changeView){
     setTimeout(1000);
     map.invalidateSize();
   
-    map.setMaxBounds([[0,0], [mapNumbers[0][0],mapNumbers[0][1]]]);
+    map.setMaxBounds([[0,0], [mapNumbers[0][0]+50,mapNumbers[0][1]]]);
     bounds = [[0,0], [mapNumbers[0][0],mapNumbers[0][1]]];
   
     var image = L.imageOverlay(mapFilePath, bounds).addTo(map);
