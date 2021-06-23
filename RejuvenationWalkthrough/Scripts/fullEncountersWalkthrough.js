@@ -14,10 +14,11 @@ function makeSidebars(pageEncounters){
         if(testExistenceLoc==-1){
             continue Loop1;
         }
+        AllEncountersCurrentLoc=returnHashedArray(testExistenceLoc);
         curLocLoop=pageEncounters[curLoc]
         Loop2:
         for(curType=0; curType<curLocLoop[1].length; curType++){
-            testExistenceType=findEncTypeIndex(AllEncounters[testExistenceLoc][0][1],curLocLoop[1][curType])
+            testExistenceType=findEncTypeIndex(AllEncountersCurrentLoc[0][1],curLocLoop[1][curType])
             if(testExistenceType==-1){
                 continue Loop2;
             }
@@ -39,11 +40,12 @@ function makePopups(pageEncounters,eventNumbers){
         if(testExistenceLoc==-1){
             continue Loop1;
         }
-        AllEncountersCurrentLoc=AllEncounters[testExistenceLoc]
+        //AllEncountersCurrentLoc=AllEncounters[testExistenceLoc]
+        AllEncountersCurrentLoc=returnHashedArray(testExistenceLoc);
         curLocLoop=pageEncounters[curLoc]
         Loop2:
         for(curType=0; curType<curLocLoop[1].length; curType++){
-            testExistenceType=findEncTypeIndex(AllEncounters[testExistenceLoc][0][1],curLocLoop[1][curType])
+            testExistenceType=findEncTypeIndex(AllEncountersCurrentLoc[0][1],curLocLoop[1][curType])
             if(testExistenceType==-1){
                 continue Loop2;
             }

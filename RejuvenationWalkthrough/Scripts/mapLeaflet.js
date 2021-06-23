@@ -1,3 +1,5 @@
+var allOverlays=[]
+
 function showMap(mapName, locationCode, locationID){
   var locationName
   var changelocation = document.getElementById("currentMapLocation");
@@ -54,69 +56,173 @@ function showMap(mapName, locationCode, locationID){
   createEncounterTable(locationCode, locationID);
 }
 
-function addPins(locationName){
-  //Trainers
-  var locationNumber=-1;
-  var currentTrainerList
-  for (var i = 0; i < testTrainers.length; i++){
-    if(testTrainers[i][0]==locationName){
-      locationNumber=i;
+function showMapVersion2(selectedValue, changeView){
+  if(typeof selectedValue == 'string'){
+    pictureCode=selectedValue;
+    hashNumber = selectedValue.charCodeAt(0)-65;
+    var changeTitle=document.getElementById("currentMapLocation");
+    if(pictureCode=="EGC-LeftSide"){
+      changeTitle.innerHTML="East Gearen City - Left"
+    } else {
+      changeTitle.innerHTML=pictureCode;
+    }
+  }
+  else {
+    pictureCode = selectedValue.value;
+    hashNumber = pictureCode.charCodeAt(0)-65;
+    var changeTitle=document.getElementById("currentMapLocation");
+    changeTitle.innerHTML=selectedValue.options[selectedValue.selectedIndex].text;
+  }
+  
+
+  dataArray = null;
+  for(i=0; i<mapList[hashNumber].length; i++){
+    if(mapList[hashNumber][i]==undefined){
+      break;
+    }
+    if(mapList[hashNumber][i][0]==pictureCode){
+      dataArray=mapList[hashNumber][i];
       break;
     }
   }
-  if(locationNumber>=0){
-    currentTrainerList=testTrainers[locationNumber];
-    for (var i = 3; i < currentTrainerList.length; i++){
-      L.marker(L.latLng(currentTrainerList[i][1],currentTrainerList[i][2])).addTo(map).bindPopup(currentTrainerList[i][0]);
+  if(dataArray==null){
+    return
+  }
+
+  var changeMapSize=document.getElementById("currentMap");
+  if(changeView){
+    map.eachLayer(function (layer) {
+      map.removeLayer(layer);
+    });
+    mapNumbers = dataArray[2];
+    mapFilePath='../../images/Screenshots/TrainerMaps/'+pictureCode+'.png';
+    var newHeight=mapNumbers[0][0];
+    if(newHeight<800){
+      newHeight=newHeight.toString().concat('px');
+      changeMapSize.style.height=newHeight;
     }
+    else{
+      changeMapSize.style.height='800px';
+    }
+    var newWidth=mapNumbers[0][1];
+    if(newWidth<800){
+      newWidth=newWidth.toString().concat('px');
+      changeMapSize.style.width=newWidth;
+    }
+    else{
+      changeMapSize.style.width='800px';
+    }
+  
+    setTimeout(1000);
+    map.invalidateSize();
+  
+    map.setMaxBounds([[0,0], [mapNumbers[0][0],mapNumbers[0][1]]]);
+    bounds = [[0,0], [mapNumbers[0][0],mapNumbers[0][1]]];
+  
+    var image = L.imageOverlay(mapFilePath, bounds).addTo(map);
+    map.fitBounds([mapNumbers[1][0],mapNumbers[1][1]]);
+  } else {
+    for(i=0; i<allOverlays.length; i++){
+      map.removeLayer(allOverlays[i]);
+      allOverlays.shift;
+    }
+  }
+
+  addPins(dataArray);
+  createEncounterTable(dataArray[1]);
+}
+
+function addPins(currentData){
+  var battleIcon = L.icon({
+    iconUrl: '../../images/markerIcons/battleMarkerTestRed.png',
+  
+    iconSize: [26,26],
+    iconAnchor: [13,13],
+    popupAnchor: [0,0],
+  })
+
+  var hiddenIcon = L.icon({
+    iconUrl: '../../images/markerIcons/battleMarker2.png',
+  
+    iconSize: [26,26],
+    iconAnchor: [13,13],
+    popupAnchor: [0,0],
+  })
+  //Trainers
+  checkboxCheck=document.getElementById("showTrainers");
+  if(checkboxCheck.checked){
+    var currentWorkingList=currentData[3]
+    trainerMarkers = L.layerGroup();
+    for (var i = 0; i < currentWorkingList.length; i++){
+      curMarker = L.marker(L.latLng(currentWorkingList[i][1],currentWorkingList[i][2]), {icon: battleIcon}).bindPopup(currentWorkingList[i][0]);
+      trainerMarkers.addLayer(curMarker);
+    }
+    trainerMarkers.addTo(map);
+    allOverlays.push(trainerMarkers)
   }
 
   //Map Connections
-  locationNumber=-1;
-  for (var i = 0; i < mapConnections.length; i++){
-    if(mapConnections[i][0]==locationName){
-      locationNumber=i;
-      break;
+  checkboxCheck=document.getElementById("showConnections");
+  if(checkboxCheck.checked){
+    currentWorkingList=currentData[4]
+    connectionMarkers = L.layerGroup();
+    for (var i = 0; i < currentWorkingList.length; i++){
+      curLine = L.polyline([[currentWorkingList[i][0],currentWorkingList[i][1]], [currentWorkingList[i][2],currentWorkingList[i][3]]]);
+      connectionMarkers.addLayer(curLine);
     }
+    allOverlays.push(connectionMarkers);
+    connectionMarkers.addTo(map);
   }
-  if(locationNumber>=0){
-    currentTrainerList=mapConnections[locationNumber];
-    for (var i = 1; i < currentTrainerList.length; i++){
-      L.polyline([[currentTrainerList[i][0],currentTrainerList[i][1]], [currentTrainerList[i][2],currentTrainerList[i][3]]]).addTo(map);
+
+  checkboxCheck=document.getElementById("showHiddenItems");
+  if(checkboxCheck.checked){
+    currentWorkingList=currentData[5]
+    connectionMarkers = L.layerGroup();
+    for (var i = 0; i < currentWorkingList.length; i++){
+      curLine = L.marker(L.latLng(currentWorkingList[i][1],currentWorkingList[i][2]), {icon: hiddenIcon}).bindPopup(currentWorkingList[i][0]);
+      connectionMarkers.addLayer(curLine);
     }
+    allOverlays.push(connectionMarkers);
+    connectionMarkers.addTo(map);
   }
+
 }
 
-function createEncounterTable(locationCode, locationID){
-  var locationName
-  if(Number.isInteger(locationCode)){
-    locationName = RandomEncounters[locationCode][0][locationID];
-  }
-  else{
-    locationName=locationCode;
-  }
+function createEncounterTable(locationName){
   var thisMapEncounters=document.getElementById("thisMapEncounters");
-  
-  var timeofDayNum;
-  var timeofDayList=[];
-  var fulltext='';
 
-  var locationNumber=[];
-  var currentLocationArray;
-
-  //Random Encounters
-  for (var i = 0; i < RandomEncounters.length; i++){
-    if(RandomEncounters[i][0][0]==locationName || RandomEncounters[i][0][locationID]==locationName){
-      locationNumber.push(i);
-    }
-  }
-
-  if(locationNumber.length==0){
+  if(locationName=="No Encounters"){
     fulltext='<p class="NoEncounters">No Encounters</p>';
     thisMapEncounters.innerHTML=fulltext;
     return;
   }
 
+  var fulltext="";
+  for(locationsMap=0; locationsMap<locationName.length; locationsMap++){
+    fullEncounterList = returnHashedArray(locationName[locationsMap]);
+    encounterTypeList=fullEncounterList[0][1];
+    for(encounterType=0; encounterType<encounterTypeList.length; encounterType++){
+      EncType = fullEncounterList[encounterType+1];
+      fulltext+='<table class="mapEncounterTable"><tr><th class="mapEncounterTableMethod" colspan="9">'+encounterTypeList[encounterType]+'</th></tr>';
+      methodList=EncType[1][1];
+      pokemonEncTypeList=EncType[2];
+      for(curPok=0; curPok<pokemonEncTypeList.length; curPok++){
+        fulltext+=createPokemonText(pokemonEncTypeList[curPok],methodList)+'<tr><td colspan="9"></td></tr>';
+      }
+      fulltext=fulltext.slice(0,-30);
+      fulltext+='</table><br>'
+    }
+  }
+  thisMapEncounters.innerHTML=fulltext;
+  return; 
+
+  
+  var timeofDayNum;
+  var timeofDayList=[];
+  var locationNumber=[];
+  var currentLocationArray;
+
+  //Random Encounters
   for(var j=0; j < locationNumber.length; j++){
     currentLocationArray=RandomEncounters[locationNumber[j]];
     timeofDayList=[];
@@ -168,16 +274,16 @@ function createPokemonText(thisPokemon, listofTimes){
   currentPokemonAbilities=[];
 
   //Setup
-  currentPokemonNumberText = thisPokemon[0].substr(0,3);
+  currentPokemonNumberText = thisPokemon[0][0].substr(0,3);
   currentPokemonNumber = parseInt(currentPokemonNumberText);
   currentPokemon = BattlePokedex[currentPokemonNumber-1];
 
   //Form Check
-  if(thisPokemon[0].length==3){
+  if(thisPokemon[0][0].length==3){
     currentPokemonFormNumber=0;
   }
   else {
-    currentPokemonFormNumber=thisPokemon[0].slice(thisPokemon[0].length-1);
+    currentPokemonFormNumber=thisPokemon[0][0].slice(thisPokemon[0][0].length-1);
   }
   currentPokemonFormNumber=parseInt(currentPokemonFormNumber);
   currentPokemonForm=currentPokemon[currentPokemonFormNumber+7]; //7 things before the data
@@ -234,7 +340,7 @@ function createPokemonText(thisPokemon, listofTimes){
   currentPokemonNumberNameText=`
     <tr>
       <th class="mapEncounterTableMainName" rowspan="6" colspan="3">
-        <img class="mapEncounterTableImage" src="../../images/PokemonSprites/`+currentPokemon[0]+`.png"><br>#`+currentPokemonNumber+`, `+currentPokemonForm[0]+'<br>Held Item: <br>'+currentPokemonHoldItemText+'</th>';
+        <img class="mapEncounterTableImage" src="../../images/PokemonSprites/`+thisPokemon[0][0]+`.png"><br>#`+currentPokemonNumberText+`, `+currentPokemonForm[0]+'<br>Held Item: <br>'+currentPokemonHoldItemText+'</th>';
   
   //Rate Text
   currentPokemonRateText = `<td class="mapEncounterTablePercentage" rowspan="2" colspan="4">`;
@@ -273,18 +379,56 @@ function createPokemonText(thisPokemon, listofTimes){
   return currentPokemonFullText;
 }
 
-function showHiddenList(listID){
-  var hiddenList=document.getElementById(listID);
+function showHiddenList(selectElement){
+  var allhiddenLists=document.getElementsByClassName("areaSelect")
+  for (var i = 0; i < allhiddenLists.length; i++) {
+    allhiddenLists[i].style.display="none";
+  }
+  if(typeof selectElement === 'string'){
+    hiddenList=document.getElementById(selectElement);
+    hiddenList.style.display="block";
+    return
+  }
+  hiddenList=document.getElementById(selectElement.value);
+  if(hiddenList==null){
+    return
+  }
   if(hiddenList.style.display=="none"){
-    hiddenList.style.display="inherit";
+    hiddenList.style.display="block";
   } else {
     hiddenList.style.display="none";
   }
+
+  if(selectElement.value=="FloriaIsland"){
+    showHiddenList2("EastGearenCity");
+  } else if(selectElement.value=="TerajumaIsland"){
+    showHiddenList2("TerajumaBeach");
+  } else if(selectElement.value=="AeviumPast"){
+    showHiddenList2("Kugearen");
+  } else if(selectElement.value=="TerrialIsland"){
+    showHiddenList2("Route7");
+  } else if(selectElement.value=="Badlands"){
+    showHiddenList2("ZorrailynArea");
+  }
 }
 
-function hiddenListSetup(){
-  var hiddenlists=document.getElementsByClassName("mapSelectionHiddenList");
-  for(var i=0; i<hiddenlists.length; i++){
-    showHiddenList(hiddenlists[i].id);
+function showHiddenList2(selectElement){
+  var allhiddenLists=document.getElementsByClassName("locationSelect")
+  for (var i = 0; i < allhiddenLists.length; i++) {
+    allhiddenLists[i].style.display="none";
+  }
+  if(typeof selectElement === 'string'){
+    hiddenList=document.getElementById(selectElement);
+    hiddenList.style.display="block";
+    return
+  }
+  hiddenList=document.getElementById(selectElement.value);
+  if(hiddenList==null){
+    return
+  }
+  if(hiddenList.style.display=="none"){
+    hiddenList.style.display="block";
+  } else {
+    hiddenList.style.display="none";
   }
 }

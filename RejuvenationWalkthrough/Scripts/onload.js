@@ -435,6 +435,7 @@ function setSideNav(fieldType) { //Set Right Walkthrough Navigation and Open to 
       <div class="separateSet">
       <div class="badgeNumber" id="NinthTxT">Ninth Badge<div class:"arrowParent"><div class="downArrow"></div></div></div>
       <div class="collabsibleRightSidebar" id="Ninth">
+      
       </div>
     </div>
 

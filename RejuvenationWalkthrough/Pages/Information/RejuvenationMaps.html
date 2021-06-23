@@ -12,7 +12,8 @@
 
 <script src="../../Scripts/battlepokedex.js"></script> <!--Battle Pokedex-->
 <script src="../../Scripts/trainerList.js"></script> <!--Trainer Locations-->
-<script src="../../Scripts/mapEncounterList.js"></script> <!--Encounters-->
+<script src="../../Scripts/mapList.js"></script> <!--Trainer Locations-->
+<script src="../../Scripts/fullEncounters.js"></script> <!--Encounters-->
 
 <script src="../../Scripts/walkthroughElements.js"></script>
 <script src="../../Scripts/onload.js"></script>
@@ -23,68 +24,147 @@
 
 </head>
 
-<body onload="globalrunOnLoad('','FloriaIsland');showMap('../../images/Screenshots/TrainerMaps/EGC-LeftSide.png', 0, 0);hiddenListSetup();">
+<body onload="globalrunOnLoad('','');showHiddenList('FloriaIsland');showHiddenList2('EastGearenCity');showMapVersion2('EGC-LeftSide')">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>
 
   <!-- Left Popup Side Bar -->
 
-  <div class="trainerSidebar" id="FloriaIsland">
-    <ul class="mapSelectionList">
-      <li>
-        <span class="mapSelectionTitle" onclick="showHiddenList('GearenCityArea');">East Gearen City Area</span>
-        <ul class="mapSelectionHiddenList" id="GearenCityArea">
-          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/EGC-LeftSide.png', 0, 0);">East Gearen City - Left</button></li>
-          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/EGC-RightSide.png', 0, 1);">East Gearen City - Right</button></li>
-          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GearenPark.png', 2, 0);">Gearen Park</button></li>
-          <li>
-            <span class="mapSelectionTitle" onclick="showHiddenList('ChrisolaHotel');">Chrisola Hotel</span>
-            <ul class="mapSelectionHiddenList" id="ChrisolaHotel">
-              <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/ChrisolaHotel1F.png', 'Chrisola Hotel', -1);">Chrisola Hotel Floor 1</button></li>
-              <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/ChrisolaHotel2F3F.png', 'Chrisola Hotel', -1);">Chrisola Hotel Floor 2 & Pool</button></li>
-              <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/ChrisolaCasino.png', 'Chrisola Hotel', -1);">Chrisola Hotel Casino</button></li>
-              <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/ChrisolaRooftop.png', 1, 0);">Chrisola Hotel Rooftop</button></li>
-            </ul>
-          </li>
-          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GearenSewers.png', 3, 0);">Gearen Sewers</button></li>
-        </ul>
-      </li>
-      <li>
-        <span class="mapSelectionTitle" onclick="showHiddenList('Route1Area');">Route 1 and Goldenwood Forest Area</span>
-        <ul class="mapSelectionHiddenList" id="Route1Area">
-          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/Route1.png', 4, 0);">Route 1</button></li>
-          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GForest.png', 5, 0);">Goldenwood Forest</button></li>
-          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GForest-Xen.png', 5, 1);">Goldenwood Forest - Team Xen Attack</button></li>
-          <li><button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/GCave.png', 6, 0);">Goldenwood Cave</button></li>
-        </ul>
-      </li>
-      <button class="mapSelectionLeft" onclick="showMap('../../images/Screenshots/TrainerMaps/Route2.png', 7, 0);">Route 2</button>
-    </ul>
-    
-  </div>
+  <div class="mapSidebar">
+    <form class="regionSelect"> <!--Region Selection-->
+      <select onchange="showHiddenList(this);">
+        <option value="FloriaIsland">Floria Island</option>
+        <option value="TerajumaIsland">Terajuma Island</option>
+        <option value="AeviumPast">Aevium (Past)</option>
+        <option value="TerrialIsland">Terrial Island</option>
+        <option value="Badlands">Badlands</option>
+      </select>
+    </form>
 
-  <div class="trainerSidebar" id="TerajumaIsland">
-    <h1 class="noSideBar">None</h1>
-  </div>
+    <br><br>
+    <form class="areaSelect" id="FloriaIsland"> <!--Area Selection-->
+      <select onchange="showHiddenList2(this);">
+        <option value="EastGearenCity">East Gearen City</option>
+        <option value="Goldenwood">Goldenwood Area</option>
+        <option value="Route2">Route 2</option>
+        <option value="AmethystCave">Amethyst Cave</option>
+        <option value="SheridanVillage">Sheridan Village</option>
+      </select>
+    </form>
+    <form class="areaSelect" id="TerajumaIsland">
+      <select onchange="showHiddenList2(this);">
+        <option value="TerajumaBeach">Terajuma Beach Area</option>
+        <option value="TerajumaJungle">Terajuma Jungle Area</option>
+        <option value="KakoriVillage">Kakori Village</option>
+        <option value="Route5">Route 5/Valor Shore</option>
+        <option value="Route6">Route 6</option>
+        <option value="Aquamarine Cave">Aquamarine Cave</option>
+      </select>
+    </form>
+    <form class="areaSelect" id="AeviumPast">
+      <select onchange="showHiddenList2(this);">
+        <option value="Kugearen">Kugearen</option>
+        <option value="Route3Past">Route 3 (Past)</option>
+        <option value="AmbretteTown">Ambrette Town</option>
+        <option value="MansionPast">Mansion (Past)</option>
+      </select>
+    </form>
+    <form class="areaSelect" id="TerrialIsland">
+      <select onchange="showHiddenList2(this);">
+        <option value="Route7">Route 7</option>
+        <option value="HonecWoods">Honec Woods</option>
+        <option value="DarchlightWoods">Darchlight Woods</option>
+        <option value="SensuMeadow">Sensu Meadow</option>
+        <option value="Azure Shore">Azure Shore</option>
+        <option value="Route8">Route 8</option>
+      </select>
+    </form>
+    <form class="areaSelect" id="Badlands">
+      <select onchange="showHiddenList2(this);">
+        <option value="ZorrailynArea">Zorrailyn Area</option>
+        <option value="VoidalChasm">Voidal Chasm</option>
+        <option value="SashilaVillage">Sashila Village</option>
+        <option value="AlamissaUrban">Alamissa Urban</option>
+        <option value="RuinedCity">Ruined City</option>
+        <option value="SandStreamCave">Sand Stream Cave</option>
+      </select>
+    </form>
 
-  <div class="trainerSidebar" id="AeviumPast">
-    <h1 class="noSideBar">None</h1>
-  </div>
+    <br><br> <!--Location Selection-->
+    <div> <!--Floria Island-->
+      <form class="locationSelect" id="EastGearenCity"> 
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true)"  id="initialShow">
+          <option value="EGC-LeftSide" selected="true">East Gearen City - Left</option>
+          <option value="EGC-RightSide">East Gearen City - Right</option>
+          <option value="ChrisolaHotel">Chrisola Hotel</option>
+          <option value="GearenPark">Gearen Park</option>
+          <option value="GearenSewers">Gearen Sewers</option>
+        </select>
+      </form>
+      <form class="locationSelect" id="Goldenwood">
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true)">
+          <option value="Route1">Route 1</option>
+          <option value="GoldenwoodForest">Goldenwood Forest</option>
+          <option value="GoldenwoodCave">Goldenwood Cave</option>
+          <option value="GoldenwoodGrove">Goldenwood Grove</option>
+          <option value="GoldenwoodForest-Xen">Goldenwood Forest - Xen</option>
+        </select>
+      </form>
+      <form class="locationSelect" id="Route2">
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true)">
+          <option value="Route2">Route 2</option>
+          <option value="Route2Alt">Route 2 (Altered)</option>
+        </select>
+      </form>
+    </div>
+    <div> <!--Terajuma Island-->
+      <form class="locationSelect" id="TerajumaBeach">
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true)">
+          <option value="TerajumaShoreline">Terajuma Shoreline</option>
+          <option value="TerajumaPier">TerajumaPier</option>
+          <option value="SSOceanaWreck">S.S. Oceana Wreck</option>
+        </select>
+      </form>
+    </div>
+    <div> <!--Aevium Past-->
+      <form class="locationSelect" id="Kugearen">
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true)">
+          <option value="KugearenCity">Kugearen City</option>
+          <option value="KugearenWoods">Kugearen Woods</option>
+        </select>
+      </form>
+    </div>
+    <div> <!--Terrial Island-->
+      <form class="locationSelect" id="Route7">
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true)">
+          <option value="Route7">Route 7</option>
+        </select>
+      </form>
+    </div>
+    <div> <!--Badlands-->
+      <form class="locationSelect" id="ZorrailynArea">
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true)">
+          <option value="ZorrailynDesertNorth">Zorrailyn Desert (North)</option>
+          <option value="ZorrailynDesertSouth">Zorrailyn Desert (South)</option>
+          <option value="ZorrailynCoast">Zorrailyn Coast</option>
+        </select>
+      </form>
+    </div>
 
-  <div class="trainerSidebar" id="TerrialIsland">
-    <h1 class="noSideBar">None</h1>
-  </div>
+    <!--Pin Options-->
+    <br>
+    <p class="pinOptionsText">Pin Options</p>
+    <input type="checkbox" class="pinChecks" id="showTrainers" name="showTrainers" value="trainers" checked="true" onchange="showMapVersion2(currentlySelected, false);"><label class="pinCheckLabels" for="showTrainers"> Show Trainers</label><br>
+    <input type="checkbox" class="pinChecks" id="showConnections" name="showConnections" value="connections" checked="true" onchange="showMapVersion2(currentlySelected, false);"><label class="pinCheckLabels" for="showConnections"> Show Connections</label><br>
+    <input type="checkbox" class="pinChecks" id="showHiddenItems" name="showHiddenItems" value="hiddenItems" onchange="showMapVersion2(currentlySelected, false);" checked="true"><label class="pinCheckLabels" for="showHiddenItems"> Show Items</label><br>
 
-  <div class="trainerSidebar" id="Badlands">
-    <h1 class="noSideBar">None</h1>
   </div>
 
   <!-- Main Walkthrough Content -->
   
   <div class="maincontent">
     <div class="currentLocationMapTitle" id="currentMapLocation">
-      East Gearen City - Left Side
     </div>
     <div class="mapBackground">
       <div class="largeMap" id="currentMap"></div>
@@ -118,10 +198,15 @@
       minZoom: 0,
       maxZoom: 2,
       maxBounds: bounds,
-      maxBoundsViscosity: 1.0
+      maxBoundsViscosity: 1.0,
+      //attributionControl: false,
       });
     var image = L.imageOverlay('../../images/Screenshots/Chapter 1/FullMaps/EastGearenCity-LeftNoEvents.png', bounds).addTo(map);
     map.fitBounds(bounds);
+  </script>
+
+  <script>
+    var currentlySelected=document.getElementById("initialShow");
   </script>
 </body>
 </html>
