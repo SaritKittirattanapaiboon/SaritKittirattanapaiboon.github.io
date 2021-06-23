@@ -118,9 +118,10 @@ function showMapVersion2(selectedValue, changeView){
   
     map.setMaxBounds([[0,0], [mapNumbers[0][0]+50,mapNumbers[0][1]]]);
     bounds = [[0,0], [mapNumbers[0][0],mapNumbers[0][1]]];
+    map.fitBounds([mapNumbers[1][0],mapNumbers[1][1]]);
   
     var image = L.imageOverlay(mapFilePath, bounds).addTo(map);
-    map.fitBounds([mapNumbers[1][0],mapNumbers[1][1]]);
+    
   } else {
     for(i=0; i<allOverlays.length; i++){
       map.removeLayer(allOverlays[i]);
