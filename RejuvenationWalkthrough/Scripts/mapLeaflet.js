@@ -56,7 +56,7 @@ function showMap(mapName, locationCode, locationID){
   createEncounterTable(locationCode, locationID);
 }
 */
-function showMapVersion2(selectedValue, changeView){
+function showMapVersion2(selectedValue, changeView, folderName1, folderName2){
   if(typeof selectedValue == 'string'){
     pictureCode=selectedValue;
     hashNumber = selectedValue.charCodeAt(0)-65;
@@ -86,6 +86,9 @@ function showMapVersion2(selectedValue, changeView){
     }
   }
   if(dataArray==null){
+    var thisMapEncounters=document.getElementById("thisMapEncounters");
+    fulltext='<p class="NoEncounters">Map Not Found</p>';
+    thisMapEncounters.innerHTML=fulltext;
     return
   }
 
@@ -95,7 +98,7 @@ function showMapVersion2(selectedValue, changeView){
       map.removeLayer(layer);
     });
     mapNumbers = dataArray[2];
-    mapFilePath='../../images/Screenshots/TrainerMaps/'+pictureCode+'.png';
+    mapFilePath='../../images/Screenshots/TrainerMaps/'+folderName1+"/"+folderName2+"/"+pictureCode+'.png';
     var newHeight=mapNumbers[0][0];
     if(newHeight<800){
       newHeight=newHeight.toString().concat('px');
@@ -192,7 +195,7 @@ function addPins(currentData){
 function createEncounterTable(locationName){
   var thisMapEncounters=document.getElementById("thisMapEncounters");
 
-  if(locationName=="No Encounters"){
+  if(locationName=="No Encounters" || locationName == "None"){
     fulltext='<p class="NoEncounters">No Encounters</p>';
     thisMapEncounters.innerHTML=fulltext;
     return;
@@ -405,9 +408,11 @@ function showHiddenList(selectElement){
   } else if(selectElement.value=="TerajumaIsland"){
     showHiddenList2("TerajumaBeach");
   } else if(selectElement.value=="AeviumPast"){
-    showHiddenList2("Kugearen");
+    showHiddenList2("KugearenArea");
   } else if(selectElement.value=="TerrialIsland"){
-    showHiddenList2("Route7");
+    showHiddenList2("ExpressTrain");
+  } else if(selectElement.value=="GrandDreamCity"){
+    showHiddenList2("DreamDistrict");
   } else if(selectElement.value=="Badlands"){
     showHiddenList2("ZorrailynArea");
   }

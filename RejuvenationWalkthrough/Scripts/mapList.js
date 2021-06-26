@@ -1,16 +1,65 @@
 var mapList=[
     //Format: [0-PictureFileName, 1-EncounterListLocation, 2-[FullSize, StartingLocation], 3-[Trainers], 4-[Connections], ...(Hidden items and stuff)]
+    /*
+        ['Template Name', ['Encounter Locations'], [[800, 800], [[0,0], [800,800]]],
+            ['Trainer List'],
+            ['Connections List'],
+            ['Items List']], //End
+    */
     [
-
+        ['AbandonedLab', ['None'], [[750, 600], [[0,0], [750,600]]], [], [],
+            [['Grass Memory', 615, 165],['Super Repel', 615, 405]]], //End
+        ['AmethystCaveMain', ['Amethyst Cave'], [[650, 700], [[10,220], [335,570]]],
+            [['Technician Edward', 515, 585], ['Gang Member Charly', 505, 355]], 
+            [[235,235,285,235], [285,235,285,105], [285,105,255,105], [255,105,255,55], [255,55,265,55]],
+            [['Nugget', 175, 365], ['Mineral Ball', 165, 205], ['Green Shard', 235, 155], ['Red Shard', 275, 365], ['Mineral Ball', 355, 345], ['Green Shard', 355, 455], ['Super Potion', 455, 365], ['Reverse Candy', 405, 155], ['Mineral Ball', 415, 585], ['Zinc', 555, 435], ['Electric Gem', 495, 345]]], //End
+        ['AmethystCaveRoom2', ['Amethyst Cave'], [[360, 600], [[0,0], [180,300]]],
+            [['Mistress Era', 275, 335]], [[225,385,215,385], [215,385,215,515], [215,515,185,515]],
+            [['Genius Wing', 55, 115], ['Red Shard', 305, 255], ['Reverse Candy', 205, 265], ['Blue Shard', 105, 315], ['X-Attack', 145, 395], ['Mineral Ball', 215, 65], ['Reverse Candy', 165, 55]]], //End
+        ['AmethystCaveRoom3', ['Amethyst Cave'], [[640, 800], [[314,400], [634,800]]],
+            [], [],
+            [['X-Defend', 505, 625], ['Repel', 455, 585], ['Rock Gem', 465, 645], ['Repel', 505, 745], ['Rare Candy', 545, 485], ['Red Shard', 415, 465], ['Rock Gem', 365, 625], ['Water Gem', 315, 525], ['Steel Gem', 285, 445], ['Rock Gem', 365, 625]]], //End
+        ['AmethystCaveRoom4', ['Amethyst Cave'], [[390, 450], [[0,0], [390,450]]],
+            [], [],
+            [['Super Potion', 95, 195], ['Mineral Ball', 115, 135], ['Reverse Candy', 115, 315], ['Rock Gem', 205, 245]]], //End
+        ['AmethystDepths1', ['Amethyst Cave'], [[550, 700], [[0,0], [550,700]]],
+            [], [],
+            [['HP Up', 465, 105], ['Antidote', 445, 235], ['Potion', 365, 245], ['Zinc', 415, 555], ['Green Shard', 225, 505], ['Resist Wing', 145, 545], ['Blue Shard', 125, 335], ['Carbos', 505, 395]]], //End
+        ['AmethystDepths2', ['Amethyst Cave'], [[1100, 800], [[0,0], [800,800]]],
+            [['Xen Executive Zetta', 790, 410]], [],
+            [['Electric Gem', 390, 190], ['Revive', 170, 570], ['Fire Gem', 430, 450], ['Super Repel', 630, 290], ['X Speed', 690, 530], ['Great Ball', 630, 230], ['Blue Shard', 690, 670]]], //End
+        ['AmethystGrotto', ['Amethyst Grotto'], [[600, 500], [[61,116], [361,366]]],
+            [['Spirit Keta', 425, 245]], [],
+            [['Heart Scale', 255, 315], ['Red Shard', 365, 145], ['Moon Ball', 165, 205], ['Escape Rope', 165, 145], ['Ability Capsule', 145, 75], ['Red Shard', 175, 325], ['TM22', 135, 405]]], //End
+        ['AmethystMines1', ['Amethyst Cave'], [[1000, 1000], [[0,130], [800,930]]],
+            [['Security Drone', 850, 830],['Security Drone', 850, 190]],
+            [
+                [430,790,670,790], [670,790,670,830], [670,830,730,830],
+                [430,250,670,250], [670,250,670,190], [670,190,730,190],
+            ],
+            [['Phase Dial', 830, 790], ['Elixer', 270, 290]]], //End
+        ['AmethystMines2', ['Amethyst Cave'], [[550, 500], [[0,0], [550,500]]],
+            [], [],
+            [['Escape Rope', 475, 375], ['Repel', 165, 445], ['Ether', 185, 45], ['Super Repel', 465, 115], ['PP Up', 375, 65], ['Rock Gem', 135, 325]]], //End
+        ['AmethystMines3', ['Amethyst Cave'], [[900, 800], [[0,0], [900,800]]],
+            [], [],
+            [['Rift Dex - Feris', 370, 450]]], //End
+        ['AmethystGarufanChamber', ['None'], [[400,600], [[33,247], [233,547]]], [], [], []], //End
     ], //A
     [
     
     ], //B
     [
-        ['ChrisolaHotel', ['Chrisola Hotel Rooftop', 'Chrisola Hotel'], [[1000, 1450], [[50,340], [350,600]]], [['Wanderer Novae', 445, 1085]], [[295,445,555,445], [555,445,555,805], [555,805,805,805], [805,805,805,445], [805,805,825,805], [825,805,825,1035], [675,805,675,1275], [675,1045,625,1045], [675,1275,625,1275], [475,1275,385,1275]], [['Ether', 215, 245], ['Red Shard', 275, 55], ['TM21', 505, 875], ['Repel', 785, 1015], ['Burn Heal', 755, 1285], ['Water Stone', 795, 1215], ['Oran Berry', 793, 343], ['Reverse Candy', 803, 563], ['Achievement Card', 355, 1305], ['Coin Case (Start)', 535, 1305]]], //End
+        ['ChrisolaHotel', ['Chrisola Hotel Rooftop', 'Chrisola Hotel'], [[1000, 1450], [[50,340], [350,600]]], 
+            [['Wanderer Novae', 445, 1085]], 
+            [[295,445,555,445], [555,445,555,805], [555,805,805,805], [805,805,805,445], [805,805,825,805], [825,805,825,1035], [675,805,675,1275], [675,1045,625,1045], [675,1275,625,1275], [475,1275,385,1275]], 
+            [['Ether', 215, 245], ['Red Shard', 275, 55], ['TM21', 505, 875], ['Repel', 785, 1015], ['Burn Heal', 755, 1285], ['Water Stone', 795, 1215], ['Oran Berry', 793, 343], ['Reverse Candy', 803, 563], ['Achievement Card', 355, 1305], ['Coin Case (Start)', 535, 1305]]], //End
+        ['CliffsideGrave', ['Amethyst Cave'], [[800, 820], [[0,0], [800,820]]],
+            [], [[510,410,630,410]],
+            [['Iron', 210, 410], ['Rare Candy', 210, 510], ['Shiny Stone', 390, 470]]], //End
     ], //C
     [
-    
+
     ], //D
     [
         ['EGC-LeftSide', ['East Gearen City'], [[800,800], [[0,0], [800,800]]], 
@@ -30,6 +79,9 @@ var mapList=[
             [['Team Xen Wilbur & Team Xen Hayleigh', 335, 430]], [],
             [['Honey', 305, 125], ['Carbos', 105, 185], ['Leaf Stone', 105, 275], ['Yellow Shard', 105, 425], ['Blue Shard', 255, 435], ['Muscle Wing', 305, 
             415]]], //End
+        ['GearenApartments', ['None'], [[690,670], [[0,0], [690,670]]],
+            [['Technician Jonah', 595, 265], ['Clerk Allison', 625, 435], ['Clerk Samson', 445, 295], ['Clerk Andrew', 305, 95], ['Clerk Henry', 235, 195], ['Hardcore Trainer Salem', 235, 355], ['Challenger Mercury', 95, 565]], [],
+            [['Potion', 535, 235], ['Repel', 525, 425], ['Paralyze Heal', 585, 545], ['Dusk Ball', 625, 615], ['Great Ball', 365, 195], ['Blue Shard', 365, 465], ['Potion', 475, 445], ['Reverse Candy', 435, 595], ['Iron', 295, 295], ['Max Repel', 215, 215], ['Red Shard', 205, 425], ['Chesto Berry', 235, 455], ['Ultra Ball', 145, 215], ['Old Rod', 65, 395], ['Amulet Coin', 55, 565]]], //End
         ['GearenSewers', ['Gearen Sewers'], [[600, 1000], [[8,395], [308,795]]],
             [['Enthusiast Luca', 155, 665], ['Technician Jerald', 215, 625], ['Schoolgirl Amanda', 95, 465], ['Youngster Ben', 495, 665], ['Gang Member Bob', 225, 325], ['Technician Arnold', 205, 235], ['Garbage Crew Garbodor', 375, 165]],
             [
@@ -50,6 +102,22 @@ var mapList=[
             [['Icy Rock', 426, 558]]], //End
         ['GoldenwoodForest-Xen', ['Goldenwood Forest'], [[1050,660], [[556,114], [956,444]]],
             [['Team Xen Nickoli', 755, 275], ['Team Xen Leela', 465, 225], ['Team Xen Shiela', 475, 435], ['Team Xen Daryle', 275, 455], ['Team Xen Henrie', 245, 375], ['Misfortunate Duo Sharon and Ellie', 225, 285], ['Xen Executive Zetta', 265, 285]], [], []], //End
+        ['GearenLab', ['None'], [[700, 850], [[0,0], [700,850]]],
+            [['Johto Virtual Badges #1-#2', 175, 235]],
+            [
+                [315,235,375,235], [445,425,445,585], [445,585,605,585], [605,585,605,725], [605,725,575,725], //Jenner's Room
+                [405,305,435,305], [435,305,435,685], [435,685,415,685], //Melia's Room
+                [315,395,345,395], [345,395,345,485], [345,485,55,485], [55,485,55,645], [55,645,95,645], //EV Training Room
+            ],
+            []], //End
+        ['GearenLabBasement', ['None'], [[680, 800], [[0,0], [700,850]]],
+            [],
+            [
+                [335,375,335,425], [425,575,495,575], [580,245,580,235], [580,235,485,235], [485,235,485,220], [580,85,580,95], [580,95,485,95], [485,95,485,110], //Stairs
+                [205,85,165,85], [165,85,165,25], [165,25,115,25], //Break Room
+                [205,135,165,135], [165,135,165,245], [165,245,115,245], //Other Room
+            ],
+            []], //End
     ], //G
     [
     
@@ -73,10 +141,19 @@ var mapList=[
     
     ], //N
     [
-    
+        ['OceanaPier', ['Oceana Pier'], [[450,780], [[0,0], [450,780]]],
+            [['Gang Member Den', 185, 145], ['Poke Gang Lion Troupe', 375, 575]],
+            [],
+            [['X Accuracy', 165, 425], ['Sweet Heart', 155, 445]]], //End
+        ['OceanaPierBuildings', ['Oceana Pier'], [[360,600], [[0,0], [360,600]]],
+            [['Gang Member Usain', 85, 225], ['Gang Member Samwell and Gang Member Jacksin', 265, 325]],
+            [],
+            [['TM 09', 155, 405]]], //End
     ], //O
     [
-    
+        ['PomPomMeadow', ['Pom-Pom Meadow'], [[680, 800], [[0,0], [680,800]]],
+            [], [],
+            [['Yellow Nectar', 330, 550]]], //End
     ], //P
     [
     
@@ -84,15 +161,21 @@ var mapList=[
     [
         ['Route1', ['Route 1'], [[860, 800], [[0,0], [860,800]]], [], [],
             [['Potion', 150, 210],['Super Repel', 290, 530]]], //End
-        ['Route2', ['Route 2'], [[580,900], [[0,58], [580,858]]],
+        ['Route2', ['Route 2'], [[580,900], [[0,0], [290,400]]],
             [['Tourist Hinata', 145, 555], ['Fragrant Lady Ruddie', 315, 695], ['Youngster Kaius', 355, 705], ['Fisherman Connald', 245, 715], ['Prima Donna Jiara', 325, 485], ['News Crew Henrietta and Jeff', 315, 750], ['Appentice Nim', 455, 725]], [],
             [['Carbos', 105, 95], ['Green Shard', 155, 225], ['Red Shard', 235, 325], ['Blue Shard', 115, 495], ['Gourmet Treat', 375, 545], ['Blue Shard', 305, 415], ['TM46', 415, 425], ['Rose Incense', 365, 165], ['Friend Ball', 445, 155], ['Magical Seed', 475, 635]]], //End
+        ['Route2Alt', ['Route 2 (Altered)'], [[580,900], [[0,0], [290,400]]],
+            [], [],
+            [['TM46', 415, 425], ['Rare Candy', 375, 525], ['Blue Shard', 305, 415], ['Dusk Stone', 315, 365], ['Rose Incense', 365, 165]]], //End
     ], //R
     [
     
     ], //S
     [
-    
+        ['TerajumaShoreline', ['Terajuma Beach'], [[680, 600], [[0,0], [680,600]]], [], [],
+            [['Passho Berry', 355, 295], ['Fresh Water', 355, 285], ['Lemonade', 365, 185], ['Soda Pop', 195, 255], ['Elixer', 285, 385], ['Blue Shard', 605, 375]]], //End
+        ['TerajumaPier', ['Terajuma Beach'], [[510, 740], [[0,0], [510,740]]], [], [],
+            [['Grass Gem', 375, 455],]], //End
     ], //T
     [
     
