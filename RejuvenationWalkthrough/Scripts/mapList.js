@@ -49,7 +49,7 @@ var mapList=[
     [
         ['BlakeoryManor', ['None'], [[500, 500], [[0,0], [500,500]]],
             [['Team Anti-Assist Team', 425, 220]],
-            [], []], //End
+            [[145,85,145,95], [145,95,415,95], [415,95,415,125], [390,305,390,355], [100,305,100,355]], []], //End
     ], //B
     [
         ['ChrisolaHotel', ['Chrisola Hotel Rooftop', 'Chrisola Hotel'], [[1000, 1450], [[50,340], [350,600]]], 
@@ -143,8 +143,8 @@ var mapList=[
     
     ], //M
     [
-        ['NewsHQ', ['None'], [[550, 900], [[0,0], [550,900]]],
-            [], [], []], //End
+        ['NewsHQ', ['None'], [[600, 840], [[0,0], [600,840]]],
+            [['Pokemon Breeder', 150, 170]], [], [['Hyper Potion', 70, 70]]], //End
     ], //N
     [
         ['OceanaPier', ['Oceana Pier'], [[450,780], [[0,0], [450,780]]],
@@ -195,29 +195,29 @@ var mapList=[
     ], //V
     [
         ['WestGearenSewers', ['None'], [[850, 600], [[0,0], [850,600]]],
-            [],
+            [['Dimensional Rift Garbodor', 285, 155]],
             [[695,435,615,435], [695,505,615,505]],
             [['Zoom Lens', 425, 315], ['PP Up', 265, 535], ['Hyper Potion', 175, 535], ['Rare Candy', 215, 255], ['TM 84', 165, 255]]], //End
         ['WestSewersDistortedPath', ['None'], [[450, 650], [[0,0], [450,650]]],
-            [],
+            [['Dimensional Rift Garbodor', 355, 535]],
             [],
             []], //End
         ['WestGearenCityTop', ['West Gearen City'], [[560, 870], [[0,0], [560,870]]],
-            [],
+            [['Youngster Nathan', 155, 365], ['Schoolboy Kasey', 155, 445]],
             [],
             [['Magnet', 415, 375], ['Data Drive', 405, 355], ['Lemonade', 235, 155], ['Rose Incense', 105, 235]]], //End
         ['WestGearenCityBot', ['West Gearen City'], [[600, 760], [[0,0], [600,760]]],
-            [],
+            [['Technician Luke', 455, 565], ['Charmer Dacabe', 285, 435], ['Optimist Sughou', 135, 535], ['Technician GLM-T04-171', 215, 345], ['Kimono Girl Sarudo', 255, 275]],
             [],
             [['Synthetic Seed', 495, 485], ['Yellow Shard', 425, 445], ['Max Repel', 355, 345], ['Dusk Stone', 405, 275], ['Synthetic Seed', 445, 205], ['Float Stone', 455, 295], ['TM 27', 505, 205], ['Gourmet Treat', 295, 435], ['Max Repel', 195, 535], ['Muscle Wing', 205, 425], ['Zinc', 275, 145], 
             ['Synthetic Seed', 345, 95]]], //End
         ['WestGearenCityBuildings', ['None'], [[530, 400], [[0,0], [530,400]]],
-            [],
+            [['Johto Elite Four', 305, 115]],
             [],
             [['Protective Pads', 445, 335]]], //End
         ['WestGearenPowerplant', ['None'], [[1000, 850], [[175,450], [575,850]]],
-            [['Pokemon Trainer Amanda', 365, 785]],
-            [],
+            [['Pokemon Trainer Amanda', 365, 785], ['Technician Luke', 275, 195]],
+            [[375,605,445,605], [285,570,285,520], [305,425,375,425], [475,485,525,485], [285,355,285,325], [205,115,145,115], [285,155,385,155], [535,285,595,285], [595,285,595,130], [595,130,625,130]],
             [['Magmarizer', 105, 215], ['Electirizer', 415, 335], ['Cell Battery', 515, 135], ['Cell Battery', 515, 225], ['TM 64', 905, 275], ['Metal Coat', 385, 495]]], //End
     ], //W
     [
