@@ -138,10 +138,10 @@ function showMapVersion2(selectedValue, changeView, folderName1, folderName2){
 
 function addPins(currentData){
   var battleIcon = L.icon({
-    iconUrl: '../../images/markerIcons/battleMarkerTestRed.png',
+    iconUrl: '../../images/markerIcons/battleMarkerExclamationY2.png',
   
-    iconSize: [26,26],
-    iconAnchor: [13,13],
+    iconSize: [30,30],
+    iconAnchor: [15,15],
     popupAnchor: [0,0],
   })
 

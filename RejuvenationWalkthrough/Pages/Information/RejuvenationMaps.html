@@ -24,7 +24,7 @@
 
 </head>
 
-<body onload="globalrunOnLoad('','');showHiddenList('FloriaIsland');showHiddenList2('EastGearenCity');showMapVersion2('EGC-LeftSide')">
+<body onload="globalrunOnLoad('','');showHiddenList('FloriaIsland');showHiddenList2('EastGearenCity');showMapVersion2(currentlySelected, true, folderName1, folderName2);">
 
   <div class="popUpNavigation" id="popUpNav">
   </div>
@@ -60,7 +60,7 @@
         <option value="AkuwaTown">Akuwa Town</option>
         <option value="Route11Area">Route 11/Evergreen Area</option>
         <option value="BlacksteepleArea">Blacksteeple Area</option>
-        <option value="WestGearenCity">West Gearen City</option> <!--To DO!!!!-->
+        <option value="WestGearenCity">West Gearen City</option>
       </select>
     </form>
     <form class="areaSelect" id="TerajumaIsland">
@@ -279,11 +279,10 @@
       <form class="locationSelect" id="WestGearenCity">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
           <option value="WestGearenSewers">West Gearen Sewers</option>
+          <option value="WestSewersDistortedPath">Sewers Path</option>
           <option value="WestGearenCityTop">West Gearen City (North)</option>
           <option value="WestGearenCityBot">West Gearen City (South)</option>
           <option value="WestGearenCityBuildings">West Gearen Buildings</option>
-          <option value="WestGearenCityBuildings">West Gearen Help Plaza</option>
-          <option value="SewersDistortedPath">Sewers Path</option>
           <option value="JunctionBridge">Junction Bridge</option>
           <option value="WestGearenPowerplant">West Gearen Powerplant</option>
           <option value="BlakeoryManor">Blakeory Manor</option>

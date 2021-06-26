@@ -44,10 +44,12 @@ var mapList=[
         ['AmethystMines3', ['Amethyst Cave'], [[900, 800], [[0,0], [900,800]]],
             [], [],
             [['Rift Dex - Feris', 370, 450]]], //End
-        ['AmethystGarufanChamber', ['None'], [[400,600], [[33,247], [233,547]]], [], [], []], //End
+        ['AmethystGarufanChamber', ['None'], [[400,600], [[0,0], [400,600]]], [], [], []], //End
     ], //A
     [
-    
+        ['BlakeoryManor', ['None'], [[500, 500], [[0,0], [500,500]]],
+            [['Team Anti-Assist Team', 425, 220]],
+            [], []], //End
     ], //B
     [
         ['ChrisolaHotel', ['Chrisola Hotel Rooftop', 'Chrisola Hotel'], [[1000, 1450], [[50,340], [350,600]]], 
@@ -77,8 +79,7 @@ var mapList=[
     [
         ['GearenPark', ['Gearen Park'], [[420, 570], [[134,139], [344,424]]],
             [['Team Xen Wilbur & Team Xen Hayleigh', 335, 430]], [],
-            [['Honey', 305, 125], ['Carbos', 105, 185], ['Leaf Stone', 105, 275], ['Yellow Shard', 105, 425], ['Blue Shard', 255, 435], ['Muscle Wing', 305, 
-            415]]], //End
+            [['Honey', 305, 125], ['Carbos', 105, 185], ['Leaf Stone', 105, 275], ['Yellow Shard', 105, 425], ['Blue Shard', 255, 435], ['Muscle Wing', 305, 415]]], //End
         ['GearenApartments', ['None'], [[690,670], [[0,0], [690,670]]],
             [['Technician Jonah', 595, 265], ['Clerk Allison', 625, 435], ['Clerk Samson', 445, 295], ['Clerk Andrew', 305, 95], ['Clerk Henry', 235, 195], ['Hardcore Trainer Salem', 235, 355], ['Challenger Mercury', 95, 565]], [],
             [['Potion', 535, 235], ['Repel', 525, 425], ['Paralyze Heal', 585, 545], ['Dusk Ball', 625, 615], ['Great Ball', 365, 195], ['Blue Shard', 365, 465], ['Potion', 475, 445], ['Reverse Candy', 435, 595], ['Iron', 295, 295], ['Max Repel', 215, 215], ['Red Shard', 205, 425], ['Chesto Berry', 235, 455], ['Ultra Ball', 145, 215], ['Old Rod', 65, 395], ['Amulet Coin', 55, 565]]], //End
@@ -88,7 +89,7 @@ var mapList=[
                 [285,495,475,495], [165,495,195,495], [195,495,195,645], [195,645,475,645], //Rooms
                 [225,375,255,375], [255,375,255,135], [255,135,275,135], //Main Room
                 [165,745,205,745], [205,745,205,765], [205,765,225,765], //Time Crystal Path
-                [75,765,75,895], [75,895,85,895], //Stairs
+                [75,765,75,815], [75,815,170,815], [170,815,170,865], //Stairs
             ],
             [['Poison Gem', 25, 575], ['Great Ball', 145, 765], ['Zinc', 255, 715], ['Potion', 385, 575], ['Pecha Berry', 255, 465], ['Reverse Candy', 25, 465], ['Coin Case', 95, 395], ['Antidote', 275, 315], ['Rare Candy', 385, 475]]], //End
         ['GoldenwoodForest', ['Goldenwood Forest'], [[1050,660], [[0,114], [400,444]]],
@@ -123,10 +124,14 @@ var mapList=[
     
     ], //H
     [
-    
+        ['IgnisIronworks', ['None'], [[440, 720], [[0,0], [440,720]]],
+            [], [], []], //End
     ], //I
     [
-    
+        ['JunctionBridge', ['East Gearen City'], [[800, 530], [[0,0], [800,530]]],
+            [], [], []], //End
+        ['JenkelLab', ['None'], [[500, 500], [[0,0], [500,500]]],
+            [['Mad Scientist Dr. Jenkel', 405, 225]], [], [['Cell Battery', 265, 325], ['Cell Battery', 265, 335]]] //End
     ], //J
     [
     
@@ -138,7 +143,8 @@ var mapList=[
     
     ], //M
     [
-    
+        ['NewsHQ', ['None'], [[550, 900], [[0,0], [550,900]]],
+            [], [], []], //End
     ], //N
     [
         ['OceanaPier', ['Oceana Pier'], [[450,780], [[0,0], [450,780]]],
@@ -154,6 +160,8 @@ var mapList=[
         ['PomPomMeadow', ['Pom-Pom Meadow'], [[680, 800], [[0,0], [680,800]]],
             [], [],
             [['Yellow Nectar', 330, 550]]], //End
+        ['PokeballFactory', ['None'], [[580, 700], [[0,0], [580,700]]],
+            [], [], []], //End
     ], //P
     [
     
@@ -167,6 +175,8 @@ var mapList=[
         ['Route2Alt', ['Route 2 (Altered)'], [[580,900], [[0,0], [290,400]]],
             [], [],
             [['TM46', 415, 425], ['Rare Candy', 375, 525], ['Blue Shard', 305, 415], ['Dusk Stone', 315, 365], ['Rose Incense', 365, 165]]], //End
+        ['RiversEnd', ['Rivers End'], [[550, 900], [[0,0], [550,900]]], [], [],
+            [['Fresh Water', 395, 355], ['PP Up', 355, 565], ['Blue Shard', 405, 735], ['Green Shard', 235, 705], ['Tiny Mushroom', 225, 615], ['Yellow Shard', 85, 625], ['Elixer', 145, 475], ['Revive', 215, 205], ['Ability Capsule', 155, 175], ['Repel', 385, 95], ['Link Heart', 465, 145]]], //End
     ], //R
     [
     
@@ -184,7 +194,31 @@ var mapList=[
     
     ], //V
     [
-    
+        ['WestGearenSewers', ['None'], [[850, 600], [[0,0], [850,600]]],
+            [],
+            [[695,435,615,435], [695,505,615,505]],
+            [['Zoom Lens', 425, 315], ['PP Up', 265, 535], ['Hyper Potion', 175, 535], ['Rare Candy', 215, 255], ['TM 84', 165, 255]]], //End
+        ['WestSewersDistortedPath', ['None'], [[450, 650], [[0,0], [450,650]]],
+            [],
+            [],
+            []], //End
+        ['WestGearenCityTop', ['West Gearen City'], [[560, 870], [[0,0], [560,870]]],
+            [],
+            [],
+            [['Magnet', 415, 375], ['Data Drive', 405, 355], ['Lemonade', 235, 155], ['Rose Incense', 105, 235]]], //End
+        ['WestGearenCityBot', ['West Gearen City'], [[600, 760], [[0,0], [600,760]]],
+            [],
+            [],
+            [['Synthetic Seed', 495, 485], ['Yellow Shard', 425, 445], ['Max Repel', 355, 345], ['Dusk Stone', 405, 275], ['Synthetic Seed', 445, 205], ['Float Stone', 455, 295], ['TM 27', 505, 205], ['Gourmet Treat', 295, 435], ['Max Repel', 195, 535], ['Muscle Wing', 205, 425], ['Zinc', 275, 145], 
+            ['Synthetic Seed', 345, 95]]], //End
+        ['WestGearenCityBuildings', ['None'], [[530, 400], [[0,0], [530,400]]],
+            [],
+            [],
+            [['Protective Pads', 445, 335]]], //End
+        ['WestGearenPowerplant', ['None'], [[1000, 850], [[175,450], [575,850]]],
+            [['Pokemon Trainer Amanda', 365, 785]],
+            [],
+            [['Magmarizer', 105, 215], ['Electirizer', 415, 335], ['Cell Battery', 515, 135], ['Cell Battery', 515, 225], ['TM 64', 905, 275], ['Metal Coat', 385, 495]]], //End
     ], //W
     [
     
