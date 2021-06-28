@@ -69,19 +69,18 @@ function showMapVersion2(selectedValue, changeView, folderName1, folderName2){
   }
   else {
     pictureCode = selectedValue.value;
-    hashNumber = pictureCode.charCodeAt(0)-65;
+    hashNumber = folderName2.charCodeAt(0)-65;
     var changeTitle=document.getElementById("currentMapLocation");
     changeTitle.innerHTML=selectedValue.options[selectedValue.selectedIndex].text;
   }
-  
 
   dataArray = null;
-  for(i=0; i<mapList[hashNumber].length; i++){
-    if(mapList[hashNumber][i]==undefined){
+  for(i=0; i<mapListLocKey[hashNumber].length; i++){
+    if(mapListLocKey[hashNumber][i]==undefined){
       break;
     }
-    if(mapList[hashNumber][i][0]==pictureCode){
-      dataArray=mapList[hashNumber][i];
+    if(mapListLocKey[hashNumber][i][0]==folderName2){
+      dataArray=mapListLocKey[hashNumber][i];
       break;
     }
   }
@@ -90,6 +89,18 @@ function showMapVersion2(selectedValue, changeView, folderName1, folderName2){
     fulltext='<p class="NoEncounters">Map Not Found</p>';
     thisMapEncounters.innerHTML=fulltext;
     return
+  }
+
+  actualLocation=dataArray[1]
+
+  for(i=0; i<mapList[actualLocation].length; i++){
+    if(mapList[actualLocation][i]==undefined){
+      break;
+    }
+    if(mapList[actualLocation][i][0]==pictureCode){
+      dataArray=mapList[actualLocation][i];
+      break;
+    }
   }
 
   var changeMapSize=document.getElementById("currentMap");
