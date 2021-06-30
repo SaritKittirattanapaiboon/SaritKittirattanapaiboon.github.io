@@ -348,7 +348,7 @@ var walkthroughTrainerList=[
       ['Team Xen Danni', 'Special', 'Guarding the green panel down the right set of stars', 'Chapter 4/WispyTower/Trainers/'],
       ['Team Xen Malik', 372, 1, [[443,0,30],[444,0,31],[147,0,30],[148,0,31]], [], 'First trainer down the left set of stairs', 'Chapter 4/WispyTower/Trainers/'],
       ['Team Xen Sheila', 372, 1, [[24,0,29],[422,0,30],[523,0,30]], [], 'Second trainer down the left set of stairs', 'Chapter 4/WispyTower/Trainers/'],
-      ['Team Xen Layla', 'Special', 'Guarding the green panel down the left set of stars', 'Chapter 4/WispyTower/Trainers/'],
+      ['Team Xen Layla', 'Special', 'Guarding the left room down the left set of stars', 'Chapter 4/WispyTower/Trainers/'],
       ['Team Xen Cecilia', 372, 1, [[64,0,30],[578,0,31],[353,0,31]], [], 'Guarding the right room down the left set of stairs', 'Chapter 4/WispyTower/Trainers/'],
     ], //Wispy Tower (0017)
     [
