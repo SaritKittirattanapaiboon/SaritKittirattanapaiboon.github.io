@@ -234,10 +234,10 @@ var mapListV1=[
 
 var mapListLocKey=[
     [
-        ['AmethystCave', 3]
+        ['AmethystCave', 3], ['AkuwaTown', 11]
     ], //A
     [
-
+        ['BlacksteepleArea', 13]
     ], //B
     [
         ['CaratosMountain', 5], ['ChrysalisManor', 7]
@@ -285,7 +285,7 @@ var mapListLocKey=[
     
     ], //Q
     [
-        ['Route2', 2]
+        ['Route2', 2], ['Route11Area', 12]
     ], //R
     [
         ['SheridanVillage', 4]
@@ -718,13 +718,90 @@ var mapList=[
 
     ], //Floria Island - Route 4 Area [0010]
     [
-        
+        ['AkuwaTown', ['Akuwa Town'], [[610, 950], [[0,0], [610,950]]],
+            [],
+            [],
+            []
+        ], //End
+        ['AkuwaBuildings', ['None'], [[440, 840], [[0,0], [440,840]]],
+            [],
+            [],
+            []
+        ], //End
+        ['AkuwaMiningCenter', ['None'], [[500, 480], [[0,0], [500,480]]],
+            [],
+            [],
+            []
+        ], //End
     ], //Floria Island - Akuwa Town [0011]
     [
-
+        ['Route11Evergreen', ['Route 11 & Evergreen Island', 'Route 11 (South Side)', 'Route 11 (North Side)'], [[1200, 1300], [[0,0], [800,800]]],
+            [['Youngster Simon', 435, 695], ['Battle Boy Sheen', 465, 385]],
+            [],
+            []
+        ], //End
+        ['SeaboundCave', ['Evergreen Cave South/Seabound Cave'], [[450, 700], [[0,0], [450,700]]],
+            [],
+            [],
+            []
+        ], //End
+        ['EvergreenCaveSouth', ['Evergreen Cave South/Seabound Cave'], [[450, 460], [[0,0], [450,460]]],
+            [],
+            [],
+            []
+        ], //End
+        ['EvergreenCaveNorth', ['Evergreen Cave North'], [[880, 750], [[80,0], [880,750]]],
+            [['Ace Trainer Clare', 145, 185], ['Lass Charlotte', 495, 65], ['Tourist Karlson', 445, 145], ['Technician Samuel and Battle Boy Ned', 425, 240]],
+            [],
+            []
+        ], //End
+        ['EvergreenForest', ['Evergreen Forest'], [[860, 800], [[0,0], [800,800]]],
+            [['Aroma Lady Shiela', 185, 255], ['Kimino Girl Sarai', 115, 565], ],
+            [],
+            []
+        ], //End
+        ['SpringOfPreservation', ['Evergreen Forest'], [[620, 400], [[0,0], [620,400]]],
+            [],
+            [],
+            []
+        ], //End
+        ['EvergreenTrench', ['Evergreen Trench'], [[1200, 1200], [[0,0], [800,800]]],
+            [],
+            [],
+            []
+        ], //End
+        ['SpringControlArea', ['None'], [[610, 700], [[0,0], [610,700]]],
+            [['Defense Mechanism', 345, 195], ['Defense Mechanism', 235, 465], ['Defense Mechanism', 385, 465]],
+            [],
+            [['Empoleon Crest', 405, 465]]
+        ], //End
     ], //Floria Island - Route 11 Area [0012]
     [
-
+        ['BlacksteepleExterior', ['None'], [[950, 1240], [[0,0], [950,1240]]],
+            [],
+            [],
+            []
+        ], //End
+        ['BlacksteepleInterior', ['None'], [[830, 480], [[0,0], [830,480]]],
+            [],
+            [],
+            []
+        ], //End
+        ['BlacksteepleCells', ['None'], [[240, 660], [[0,0], [240,660]]],
+            [],
+            [],
+            []
+        ], //End
+        ['BlacksteepleHiddenGrove', ['Secret Grove'], [[390, 940], [[0,0], [390,940]]],
+            [],
+            [],
+            []
+        ], //End
+        ['BlacksteepleTop', ['None'], [[580, 620], [[0,0], [580,620]]],
+            [],
+            [],
+            []
+        ], //End
     ], //Floria Island - Blacksteeple Area [0013]
     [
         ['WestGearenSewers', ['None'], [[850, 600], [[0,0], [850,600]]],
