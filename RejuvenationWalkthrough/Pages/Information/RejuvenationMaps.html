@@ -78,7 +78,7 @@
     <form class="areaSelect" id="AeviumPast">
       <select onchange="showHiddenList2(this);folderName2=this.value;">
         <option value="KugearenArea">Kugearen Area</option>
-        <option value="Route3Ambrette">Ambrette Town & Route 3</option>
+        <option value="Route3Ambrette">Route 3, Ambrette Town</option>
         <option value="MarbleMansion">Marble Mansion</option>
         <option value="Route4PastArea">Route 4 Area (Past)</option>
         <option value="SheridanVillageAreaPast">Sheridan Village Area (Past)</option>
@@ -110,6 +110,8 @@
         <option value="AxisHighUniversity">Axis High University</option>
         <option value="DistrictHope">District of Hope</option>
         <option value="ScholarDistrict">Scholar District</option>
+        <option value="NightmareCity">Nightmare City</option>
+        <option value="TheUnderground">The Underground</option>
       </select>
     </form>
     <form class="areaSelect" id="Badlands">
@@ -317,15 +319,15 @@
           <option value="KakoriVillageBuildings">Kakori Village Buildings</option>
           <option value="RangerHQ">Kakori Ranger HQ</option>
           <option value="KakoriHelpCenter">Kakori Help Center</option>
-          <option value="SafariZoneGrass">Safari Zone (Jeminra Woods)</option>
-          <option value="SafariZoneCave">Safari Zone (Jeminra Cave)</option>
+          <option value="SafariZoneGrass">Safari Zone Outside</option>
+          <option value="SafariZoneCaveCorrupt">Safari Zone Cave 1</option>
+          <option value="SafariZoneCave">Safari Zone Cave 2</option>
           <option value="KakoriGym">Kakori Gym</option>
         </select>
       </form>
       <form class="locationSelect" id="Route5Area">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
-          <option value="Route5">Route 5</option>
-          <option value="ValorShore">Valor Shore</option>
+          <option value="Route5Valor">Route 5 & Valor Shore</option>
           <option value="Route5Cabin">Route 5 Cabin</option>
         </select>
       </form>
@@ -333,13 +335,13 @@
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
           <option value="Route6">Route 6</option>
           <option value="AquamarineCave1">Aquamarine Cave Room 1</option>
-          <option value="AquamarineCave2">Aquamarine Cave Room 2</option>
+          <option value="AquamarineCave2">Aquamarine Cave Room 2</option> <!--Broken-->
           <option value="AquamarineCave3">Aquamarine Cave Room 3</option>
           <option value="AquamarineChamber">Aquamarine Chamber</option>
           <option value="AquamarineShrine">Aquamarine Shrine</option>
           <option value="AquamarineShore">Aquamarine Shore</option>
           <option value="AquamarineRuins">Aquamarine Ruins</option>
-          <option value="TerajumaCoralReef">Terajuma Coral Reef</option>
+          <option value="TerajumaCoralReef">Terajuma Coral Reef</option> <!--Broken-->
         </select>
       </form>
       <form class="locationSelect" id="TeilaResortArea">
@@ -439,12 +441,10 @@
       <form class="locationSelect" id="FarPast">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
           <option value="DesertedIslands">Deserted Islands</option>
-          <option value="TeilaHideoutOutside">Teila Hideout (Exterior)</option>
           <option value="TeilaHideoutInside">Teila Hideout (Interior)</option>
-          <option value="SSParadiseB3">S.S. Paradise B3</option>
-          <option value="SSParadiseB2">S.S. Paradise B2</option>
-          <option value="SSParadiseB1">S.S. Paradise B1</option>
-          <option value="SSParadise">S.S. Paradise Deck</option>
+          <option value="SSParadiseCells">S.S. Paradise B3</option>
+          <option value="SSParadiseTeleport">S.S. Paradise B2 & B1</option>
+          <option value="SSParadiseDeck">S.S. Paradise Deck</option>
           <option value="SSParadiseCaptain">Captain's Room</option>
           <option value="BlacksteeplePast">Blacksteeple Island</option>
           <option value="BlacksteepleVillage">Blacksteeple Village</option>
@@ -480,20 +480,17 @@
       </form>
       <form class="locationSelect" id="Route7Area">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
-          <option value="Route7Train">Route 7 - Train</option>
+          <option value="Route7Right">Route 7 - Right Side</option>
+          <option value="Route7Left">Route 7 - Left Side</option>
           <option value="OblitusTown">Oblitus Town</option>
-          <option value="OblitusTownBuildings">Oblitus Town Buildings</option>
-          <option value="Route7Left">Route 7 - Left</option>
-          <option value="Route7TopLeft">Route 7 - Top Left</option>
-          <option value="Route7Ranch">Route 7 - Yui's Ranch</option>
-          <option value="Route7Gate">Route 7 - GDC Gate</option>
+          <option value="Route7OblitusTownBuildings">Route 7/Oblitus Town Buildings</option>
           <option value="Route7RanchBuildings">Yui's Ranch Buildings</option>
-          <option value="Route7Buildings">Route 7 Buildings</option>
         </select>
       </form>
       <form class="locationSelect" id="HonecWoods">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
           <option value="HonecWoodsEntrance">Honec Woods Swamp</option>
+          <option value="HonecWoodsNorth">Honec Woods North</option>
           <option value="HonecWoodsCave">Honec Woods Cave Entrance</option>
           <option value="HonecWoodsShrine">Honec Woods Shrine</option>
           <option value="HonecWoodsPit">Honec Woods Swamp Pit</option>
@@ -504,14 +501,15 @@
       </form>
       <form class="locationSelect" id="DarchlightWoods">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
-          <option value="DarchlightWoodsEntrance">Darchlight Woods Entrace</option>
+          <option value="DarchlightWoodsEntrance">Darchlight Entrace</option>
           <option value="SensuMeadow">Sensu Meadow</option>
-          <option value="DarchlightWoodsNorth">Darchlight Woods North</option>
-          <option value="DarchlightWoodsSW">Darchlight Woods SW</option>
-          <option value="DarchlightWoodsCenter">Darchlight Woods Center</option>
-          <option value="DarchlightWoodsNW">Darchlight Woods NW</option>
+          <option value="DarchlightWoodsNorth">Darchlight North</option>
+          <option value="DarchlightWoodsIntersection">Darchlight Intersection</option>
+          <option value="DarchlightWoodsCenter">Darchlight Center</option>
+          <option value="DarchlightWoodsNW">Darchlight Northwest</option>
           <option value="ForgottenHill">Forgotten Hill</option>
-          <option value="DarchlightManor">Darchlight Manor</option>
+          <option value="DarchlightManorExt">Darchlight Manor (Outside)</option>
+          <option value="DarchlightManorInt">Darchlight Manor (Inside)</option>
           <option value="DarchlightManorBackyard">Darchlight Manor Backyard</option>
         </select>
       </form>
@@ -522,18 +520,16 @@
           <option value="DarchlightCaves2Light">Darchlight Caves 2 (Light)</option>
           <option value="DarchlightCaves2Dark">Darchlight Caves 2 (Dark)</option>
           <option value="DarchlightCavesLab">Darchlight Labs</option>
-          <option value="DarchlightCaves3Light">Darchlight Caves 3 (Light)</option> <!--Connected with 4-->
+          <option value="DarchlightCaves3Light">Darchlight Caves 3 (Light)</option> <!--Connected 2 Maps-->
           <option value="DarchlightCaves3Dark">Darchlight Caves 3 (Dark)</option>
           <option value="DarchlightForgeLight">Darchlight Forge (Light)</option>
           <option value="DarchlightForgeDark">Darchlight Forge (Dark)</option>
-          <option value="DarchlightCaves4Light">Darchlight Caves 4 (Light)</option> <!--Connected with 3-->
+          <option value="DarchlightCaves4Light">Darchlight Caves 4 (Light)</option> <!--Mushroom Room-->
           <option value="DarchlightCaves4Dark">Darchlight Caves 4 (Dark)</option>
-          <option value="DarchlightCaves5Light">Darchlight Caves 5 (Light)</option> <!--Mushroom Room-->
+          <option value="DarchlightCaves5Light">Darchlight Caves 5 (Light)</option> <!--Elevator (Ground) Room-->
           <option value="DarchlightCaves5Dark">Darchlight Caves 5 (Dark)</option>
-          <option value="DarchlightCaves6Light">Darchlight Caves 6 (Light)</option> <!--Elevator (Ground) Room-->
+          <option value="DarchlightCaves6Light">Darchlight Caves 6 (Light)</option> <!--Elevator (Top) Room-->
           <option value="DarchlightCaves6Dark">Darchlight Caves 6 (Dark)</option>
-          <option value="DarchlightCavesExitLight">Darchlight Caves 7 (Light)</option> <!--Elevator (Top) Room-->
-          <option value="DarchlightCavesExitDark">Darchlight Caves 7 (Dark)</option>
         </select>
       </form>
       <form class="locationSelect" id="AzureShore">
@@ -563,9 +559,7 @@
     <div> <!--Grand Dream City-->
       <form class="locationSelect" id="DreamDistrict">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
-          <option value="TrainStationStreet">Train Station Street</option>
           <option value="MainStreet">Main Street</option>
-          <option value="LeftsideArea">Leftside Area</option>
           <option value="GrandDreamStation">Grand Dream Station</option>
           <option value="DaycareBuilding">Daycare</option>
           <option value="BotanicalGarden">Botanical Garden</option>
@@ -574,10 +568,6 @@
           <option value="PokeStarStudiosExt">PokeStar Studios (Outside)</option>
           <option value="PokeStarStudiosInt">PokeStar Studios (Inside)</option>
           <option value="LeftsideAreaBuildings">Leftside Buildings</option>
-          <option value="TheUnderground">The Underground</option>
-          <option value="TheUndergroundBuildings">The Underground Buildings</option>
-          <option value="TheUndergroundLabs">The Underground Lab</option>
-          <option value="DreamDistrictGates">Dream District Gates</option>
         </select>
       </form>
       <form class="locationSelect" id="CentralSquare">
@@ -594,7 +584,6 @@
           <option value="DreamComplex">Dream Complex</option>
           <option value="ComplexPenthouse">Complex Penthouse</option>
           <option value="RightPenthouse">Right Wing Complex</option>
-          <option value="DreamComplex">Dream Complex</option>
           <option value="ToyBoxBuildings">Toy Box Area Buildings</option>
         </select>
       </form>
@@ -616,8 +605,8 @@
       <form class="locationSelect" id="AxisHighUniversity">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
           <option value="AxisHighUniversityGrounds">Axis High University Grounds</option>
-          <option value="AxisHighUniversity">Axis High University Gates</option>
-          <option value="GrandDreamStadium">Grand Dream Stadium</option>
+          <option value="GrandDreamStadiumExt">Grand Dream Stadium Exterior</option>
+          <option value="GrandDreamStadiumInt">Grand Dream Stadium Interior</option>
         </select>
       </form>
       <form class="locationSelect" id="DistrictHope">
@@ -638,6 +627,19 @@
           <option value="RecreationCenter">Recreation Center</option>
           <option value="BlakeoryAtheneum">Blakeory Atheneum</option>
           <option value="NationalPark">National Park</option>
+        </select>
+      </form>
+      <form class="locationSelect" id="NightmareCity">
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
+          <option value="NightmareCity">Nightmare City</option>
+          <option value="TheToyBox">The Toy Box</option>
+        </select>
+      </form>
+      <form class="locationSelect" id="TheUnderground">
+        <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
+          <option value="TheUnderground">The Underground</option>
+          <option value="TheUndergroundBuildings">The Underground Buildings</option>
+          <option value="TheUndergroundLabs">The Underground Lab</option>
         </select>
       </form>
     </div>
@@ -663,10 +665,11 @@
       <form class="locationSelect" id="ZorrailynLabyrinth">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
           <option value="ZorrailynLabyrinthG">Zorrailyn Labyrinth G</option>
-          <option value="ZorrailynLabyrinthG">Zorrailyn Labyrinth B1</option>
-          <option value="ZorrailynLabyrinthG">Zorrailyn Labyrinth B2</option>
-          <option value="ZorrailynLabyrinthG">Zorrailyn Labyrinth B3</option>
-          <option value="ZorrailynLabyrinthG">Zorrailyn Crypt</option>
+          <option value="ZorrailynLabyrinthB1">Zorrailyn Labyrinth B1</option>
+          <option value="ZorrailynLabyrinthB2">Zorrailyn Labyrinth B2</option>
+          <option value="ZorrailynLabyrinthB3">Zorrailyn Labyrinth B3</option>
+          <option value="ZorrailynLabyrinthB4">Zorrailyn Labyrinth B4</option>
+          <option value="ZorrailynCrypt">Zorrailyn Crypt</option>
           <option value="CastleZygardaExt">Castle Zygarda (Exterior)</option>
           <option value="CastleZygardaInt">Castle Zygarda (Interior)</option>
         </select>
@@ -676,7 +679,6 @@
           <option value="VoidalChasmG">Voidal Chasm G</option>
           <option value="VoidalChasmB1">Voidal Chasm B1</option>
           <option value="VoidalChasmB2">Voidal Chasm B2</option>
-          <option value="VoidalChasmB3">Voidal Chasm B3</option>
         </select>
       </form>
       <form class="locationSelect" id="SashilaVillage">
@@ -701,11 +703,11 @@
           <option value="ZoneZeroOutskirts">Outskirts</option>
           <option value="ZoneZero1">Area 1</option>
           <option value="ZoneZero1Buildings">Area 1 Buildings</option>
-          <option value="ZoneZero1Depths">Apartment Depths</option>
-          <option value="ZoneZero1Apartment">Abandoned Apartments</option>
+          <option value="ZoneZeroLuxApartment">Abandoned Apartments</option>
           <option value="ZoneZero2">Area 2</option>
-          <option value="ZoneZero2Building">Area 2 Building</option>
-          <option value="ZoneZeroUndergroundSanctuary">Underground Sanctuary</option>
+          <option value="ZoneZero2Building">Area 2 Buildings</option>
+          <option value="ZoneZeroDepths">Apartment Depths</option>
+          <option value="ZoneZeroSanctuary">Underground Sanctuary</option>
           <option value="ZoneZeroPass">Abandoned Home</option>
           <option value="ReldenIsland">Reldin Island</option>
         </select>
@@ -786,9 +788,11 @@
       } else if (curChangeValue=="TerajumaIsland"){
         return "TerajumaBeach";
       } else if (curChangeValue=="AeviumPast"){
-        return "Kugearen";
+        return "KugearenArea";
       } else if (curChangeValue=="TerrialIsland"){
-        return "Route7";
+        return "ExpressTrain";
+      } else if (curChangeValue=="GrandDreamCity"){
+        return "DreamDistrict";
       } else if (curChangeValue=="Badlands"){
         return "ZorrailynArea";
       }

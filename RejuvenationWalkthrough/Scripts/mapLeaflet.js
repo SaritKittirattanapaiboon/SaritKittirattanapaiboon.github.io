@@ -88,19 +88,33 @@ function showMapVersion2(selectedValue, changeView, folderName1, folderName2){
     var thisMapEncounters=document.getElementById("thisMapEncounters");
     fulltext='<p class="NoEncounters">Map Not Found</p>';
     thisMapEncounters.innerHTML=fulltext;
-    return
+    return;
   }
 
   actualLocation=dataArray[1]
 
+  if(mapList[actualLocation].length==0){
+      var thisMapEncounters=document.getElementById("thisMapEncounters");
+      fulltext='<p class="NoEncounters">Map Not Found</p>';
+      thisMapEncounters.innerHTML=fulltext;
+      return;
+  }
+
   for(i=0; i<mapList[actualLocation].length; i++){
     if(mapList[actualLocation][i]==undefined){
-      break;
+      return;
     }
     if(mapList[actualLocation][i][0]==pictureCode){
       dataArray=mapList[actualLocation][i];
       break;
     }
+  }
+
+  if(dataArray[0]!=pictureCode){
+    var thisMapEncounters=document.getElementById("thisMapEncounters");
+    fulltext='<p class="NoEncounters">Map Not Found</p>';
+    thisMapEncounters.innerHTML=fulltext;
+    return;
   }
 
   var changeMapSize=document.getElementById("currentMap");
