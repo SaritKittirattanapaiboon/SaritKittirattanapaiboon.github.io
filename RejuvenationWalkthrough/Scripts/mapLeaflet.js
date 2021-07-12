@@ -144,7 +144,7 @@ function showMapVersion2(selectedValue, changeView, folderName1, folderName2){
     setTimeout(1000);
     map.invalidateSize();
   
-    map.setMaxBounds([[0,0], [mapNumbers[0][0]+50,mapNumbers[0][1]]]);
+    map.setMaxBounds([[0,0], [mapNumbers[0][0],mapNumbers[0][1]]]);
     bounds = [[0,0], [mapNumbers[0][0],mapNumbers[0][1]]];
     map.fitBounds([mapNumbers[1][0],mapNumbers[1][1]]);
   
@@ -217,6 +217,70 @@ function addPins(currentData){
 
 }
 
+function changeEncounterTable(selectedValue){
+  if(typeof selectedValue == 'string'){
+    pictureCode=selectedValue;
+    hashNumber = selectedValue.charCodeAt(0)-65;
+    var changeTitle=document.getElementById("currentMapLocation");
+    if(pictureCode=="EGC-LeftSide"){
+      changeTitle.innerHTML="East Gearen City - Left"
+    } else {
+      changeTitle.innerHTML=pictureCode;
+    }
+  }
+  else {
+    pictureCode = selectedValue.value;
+    hashNumber = folderName2.charCodeAt(0)-65;
+    var changeTitle=document.getElementById("currentMapLocation");
+    changeTitle.innerHTML=selectedValue.options[selectedValue.selectedIndex].text;
+  }
+
+  dataArray = null;
+  for(i=0; i<mapListLocKey[hashNumber].length; i++){
+    if(mapListLocKey[hashNumber][i]==undefined){
+      break;
+    }
+    if(mapListLocKey[hashNumber][i][0]==folderName2){
+      dataArray=mapListLocKey[hashNumber][i];
+      break;
+    }
+  }
+  if(dataArray==null){
+    var thisMapEncounters=document.getElementById("thisMapEncounters");
+    fulltext='<p class="NoEncounters">Map Not Found</p>';
+    thisMapEncounters.innerHTML=fulltext;
+    return;
+  }
+
+  actualLocation=dataArray[1]
+
+  if(mapList[actualLocation].length==0){
+      var thisMapEncounters=document.getElementById("thisMapEncounters");
+      fulltext='<p class="NoEncounters">Map Not Found</p>';
+      thisMapEncounters.innerHTML=fulltext;
+      return;
+  }
+
+  for(i=0; i<mapList[actualLocation].length; i++){
+    if(mapList[actualLocation][i]==undefined){
+      return;
+    }
+    if(mapList[actualLocation][i][0]==pictureCode){
+      dataArray=mapList[actualLocation][i];
+      break;
+    }
+  }
+
+  if(dataArray[0]!=pictureCode){
+    var thisMapEncounters=document.getElementById("thisMapEncounters");
+    fulltext='<p class="NoEncounters">Map Not Found</p>';
+    thisMapEncounters.innerHTML=fulltext;
+    return;
+  }
+
+  createEncounterTable(dataArray[1]);
+}
+
 function createEncounterTable(locationName){
   var thisMapEncounters=document.getElementById("thisMapEncounters");
 
@@ -226,51 +290,76 @@ function createEncounterTable(locationName){
     return;
   }
 
+  var compactCheck=document.getElementById("compactEncounters");
   var fulltext="";
-  for(locationsMap=0; locationsMap<locationName.length; locationsMap++){
-    fullEncounterList = returnHashedArray(locationName[locationsMap]);
-    encounterTypeList=fullEncounterList[0][1];
-    for(encounterType=0; encounterType<encounterTypeList.length; encounterType++){
-      EncType = fullEncounterList[encounterType+1];
-      fulltext+='<table class="mapEncounterTable"><tr><th class="mapEncounterTableMethod" colspan="9">'+encounterTypeList[encounterType]+'</th></tr>';
-      methodList=EncType[1][1];
-      pokemonEncTypeList=EncType[2];
-      for(curPok=0; curPok<pokemonEncTypeList.length; curPok++){
-        fulltext+=createPokemonText(pokemonEncTypeList[curPok],methodList)+'<tr><td colspan="9"></td></tr>';
+  if(compactCheck.checked){
+    var newRowCheck=5;
+    for(locationsMap=0; locationsMap<locationName.length; locationsMap++){
+      fullEncounterList = returnHashedArray(locationName[locationsMap]);
+      encounterTypeList=fullEncounterList[0][1];
+      for(encounterType=0; encounterType<encounterTypeList.length; encounterType++){
+        EncType = fullEncounterList[encounterType+1];
+        fulltext+='<p class="compactTitle">'+fullEncounterList[0][0]+' - '+encounterTypeList[encounterType]+'</p>'
+        fulltext+='<table class="compactEncounterTable"><tr>';
+        methodList=EncType[1][1];
+        pokemonEncTypeList=EncType[2];
+        for(curPok=0; curPok<pokemonEncTypeList.length; curPok++){
+          fulltext+=createCompactPokemonText(pokemonEncTypeList[curPok],methodList);
+          newRowCheck-=1;
+          if(newRowCheck==0){
+            newRowCheck=5;
+            fulltext+='</tr><tr>'
+          }
+        }
+        newRowCheck=5;
+        fulltext+='</table><br>'
+      }
+    }
+  } else {
+    for(locationsMap=0; locationsMap<locationName.length; locationsMap++){
+      fullEncounterList = returnHashedArray(locationName[locationsMap]);
+      encounterTypeList=fullEncounterList[0][1];
+      for(encounterType=0; encounterType<encounterTypeList.length; encounterType++){
+        EncType = fullEncounterList[encounterType+1];
+        fulltext+='<table class="mapEncounterTable"><tr><th class="mapEncounterTableMethod" colspan="9">'+fullEncounterList[0][0]+' - '+encounterTypeList[encounterType]+'</th></tr>';
+        methodList=EncType[1][1];
+        pokemonEncTypeList=EncType[2];
+        for(curPok=0; curPok<pokemonEncTypeList.length; curPok++){
+          fulltext+=createPokemonText(pokemonEncTypeList[curPok],methodList)+'<tr><td colspan="9"></td></tr>';
+        }
+        fulltext=fulltext.slice(0,-30);
+        fulltext+='</table><br>'
+      }
+    }
+    /*
+    var timeofDayNum;
+    var timeofDayList=[];
+    var locationNumber=[];
+    var currentLocationArray;
+
+    //Random Encounters
+    for(var j=0; j < locationNumber.length; j++){
+      currentLocationArray=RandomEncounters[locationNumber[j]];
+      timeofDayList=[];
+
+      fulltext=fulltext+'<table class="mapEncounterTable"><tr><th class="mapEncounterTableMethod" colspan="9">'+currentLocationArray[0][currentLocationArray[0].length-1]+'</th></tr>';
+
+      timeofDayNum = currentLocationArray[1][0];
+      for (var i = 1; i <= timeofDayNum; i++){
+        timeofDayList.push(currentLocationArray[1][i]);
+      }
+
+      for(var i = 2; i < RandomEncounters[locationNumber[j]].length; i++){
+        fulltext=fulltext+createPokemonText(currentLocationArray[i],timeofDayList)+'<tr><td colspan="9"></td></tr>';
       }
       fulltext=fulltext.slice(0,-30);
-      fulltext+='</table><br>'
+      fulltext=fulltext+'</table><br>';
     }
-  }
-  thisMapEncounters.innerHTML=fulltext;
-  return; 
-
-  
-  var timeofDayNum;
-  var timeofDayList=[];
-  var locationNumber=[];
-  var currentLocationArray;
-
-  //Random Encounters
-  for(var j=0; j < locationNumber.length; j++){
-    currentLocationArray=RandomEncounters[locationNumber[j]];
-    timeofDayList=[];
-
-    fulltext=fulltext+'<table class="mapEncounterTable"><tr><th class="mapEncounterTableMethod" colspan="9">'+currentLocationArray[0][currentLocationArray[0].length-1]+'</th></tr>';
-
-    timeofDayNum = currentLocationArray[1][0];
-    for (var i = 1; i <= timeofDayNum; i++){
-      timeofDayList.push(currentLocationArray[1][i]);
-    }
-
-    for(var i = 2; i < RandomEncounters[locationNumber[j]].length; i++){
-      fulltext=fulltext+createPokemonText(currentLocationArray[i],timeofDayList)+'<tr><td colspan="9"></td></tr>';
-    }
-    fulltext=fulltext.slice(0,-30);
-    fulltext=fulltext+'</table><br>';
+    */
   }
   
   thisMapEncounters.innerHTML=fulltext;
+  return;
 }
 
 function createPokemonText(thisPokemon, listofTimes){
@@ -406,6 +495,69 @@ function createPokemonText(thisPokemon, listofTimes){
   currentPokemonFullText=currentPokemonNumberNameText+currentPokemonTypeRateText+currentPokemonAbilityText+currentPokemonStatText;
 
   return currentPokemonFullText;
+}
+
+function createCompactPokemonText(thisPokemon, listofTimes){
+  var currentPokemon;
+  var currentPokemonForm;
+
+  var currentPokemonNumberText;
+  var currentPokemonNumber;
+  var currentPokemonFormNumber;
+
+  var currentPokemonTypeRowSpan;
+  var currentPokemonTypeOne;
+  var currentPokemonTypeTwo;
+  var currentPokemonRates=[];
+
+  //For Loop Begins
+  currentPokemonRates=[];
+  currentPokemonAbilities=[];
+
+  //Setup
+  currentPokemonNumberText = thisPokemon[0][0].substr(0,3);
+  currentPokemonNumber = parseInt(currentPokemonNumberText);
+  currentPokemon = BattlePokedex[currentPokemonNumber-1];
+
+  //Form Check
+  if(thisPokemon[0][0].length==3){
+    currentPokemonFormNumber=0;
+  }
+  else {
+    currentPokemonFormNumber=thisPokemon[0][0].slice(thisPokemon[0][0].length-1);
+  }
+  currentPokemonFormNumber=parseInt(currentPokemonFormNumber);
+  currentPokemonForm=currentPokemon[currentPokemonFormNumber+7]; //7 things before the data
+
+  //Type Calculations
+  if(currentPokemonForm[1].length==2){
+    currentPokemonTypeRowSpan=1;
+    currentPokemonTypeOne=currentPokemonForm[1][0];
+    currentPokemonTypeTwo=currentPokemonForm[1][1];
+  }
+  else{
+    currentPokemonTypeRowSpan=2;
+    currentPokemonTypeOne=currentPokemonForm[1][0];
+  }
+
+  //Rate
+  for (var i = 0; i < thisPokemon[1].length; i++){
+    currentPokemonRates.push(thisPokemon[1][i]);
+  }
+
+  fulltext='<th class="compactPokemonPosition">'
+  fulltext+='<span class="type1" style="background-color: var(--type'+currentPokemonTypeOne+');"></span>'
+  if(currentPokemonTypeRowSpan=1){
+    fulltext+='<span class="type2" style="background-color: var(--type'+currentPokemonTypeTwo+');"></span>'
+  }
+  fulltext+='<img class="mapEncounterTableImage" src="../../images/PokemonSprites/'+thisPokemon[0][0]+'.png"><br>'
+  fulltext+=currentPokemonForm[0]+'<br>'
+  for (var i = 0; i < currentPokemonRates.length; i++){
+    fulltext+=listofTimes[i]+': '+currentPokemonRates[i]+'<br>';
+  }
+  fulltext.slice(0,-4);
+  fulltext+='</th>'
+  return fulltext;
 }
 
 function showHiddenList(selectElement){

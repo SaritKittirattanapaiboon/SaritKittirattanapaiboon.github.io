@@ -605,8 +605,8 @@
       <form class="locationSelect" id="AxisHighUniversity">
         <select size="7" onchange="currentlySelected=this;showMapVersion2(currentlySelected, true, folderName1, folderName2);">
           <option value="AxisHighUniversityGrounds">Axis High University Grounds</option>
-          <option value="GrandDreamStadiumExt">Grand Dream Stadium Exterior</option>
-          <option value="GrandDreamStadiumInt">Grand Dream Stadium Interior</option>
+          <option value="GrandDreamStadiumExt">Stadium Exterior</option>
+          <option value="GrandDreamStadiumInt">Stadium Interior</option>
         </select>
       </form>
       <form class="locationSelect" id="DistrictHope">
@@ -727,9 +727,10 @@
     <!--Pin Options-->
     <br>
     <p class="pinOptionsText">Pin Options</p>
-    <input type="checkbox" class="pinChecks" id="showTrainers" name="showTrainers" value="trainers" checked="true" onchange="showMapVersion2(currentlySelected, false);"><label class="pinCheckLabels" for="showTrainers"> Show Trainers</label><br>
-    <input type="checkbox" class="pinChecks" id="showConnections" name="showConnections" value="connections" checked="true" onchange="showMapVersion2(currentlySelected, false);"><label class="pinCheckLabels" for="showConnections"> Show Connections</label><br>
-    <input type="checkbox" class="pinChecks" id="showHiddenItems" name="showHiddenItems" value="hiddenItems" onchange="showMapVersion2(currentlySelected, false);" checked="true"><label class="pinCheckLabels" for="showHiddenItems"> Show Items</label><br>
+    <input type="checkbox" class="pinChecks" id="showTrainers" name="showTrainers" value="trainers" checked="true" onchange="showMapVersion2(currentlySelected, false, folderName1, folderName2);"><label class="pinCheckLabels" for="showTrainers"> Show Trainers</label><br>
+    <input type="checkbox" class="pinChecks" id="showConnections" name="showConnections" value="connections" checked="true" onchange="showMapVersion2(currentlySelected, false, folderName1, folderName2);"><label class="pinCheckLabels" for="showConnections"> Show Connections</label><br>
+    <input type="checkbox" class="pinChecks" id="showHiddenItems" name="showHiddenItems" value="hiddenItems" onchange="showMapVersion2(currentlySelected, false, folderName1, folderName2);" checked="true"><label class="pinCheckLabels" for="showHiddenItems"> Show Items</label><br>
+    <input type="checkbox" class="pinChecks" id="compactEncounters" name="compactEncounters" value="compactEnc" onchange="changeEncounterTable(currentlySelected, this.value);" checked="true"><label class="pinCheckLabels" for="compactEncounters"> Compact Encounters</label><br>
 
   </div>
 
@@ -743,6 +744,7 @@
       <br><br>
       <div class="currentMapEncounters" id="thisMapEncounters">
       </div>
+
     </div>
   </div>
 

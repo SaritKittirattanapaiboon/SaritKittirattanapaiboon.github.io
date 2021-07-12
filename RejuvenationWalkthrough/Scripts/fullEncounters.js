@@ -1424,7 +1424,7 @@ var AllEncounters=[
                 [['653'], ['Kakori Village, bottom right house', 'Give the Magic Wand to the girl'], 0, 2], //Fennekin
             ]
         ],
-    ], //Code 0059
+    ], //Code 0059 - Out of order
     [['Aquamarine Cave', ['Cave', 'Surfing', 'Fishing', 'Events']],
         ['Cave', [1, ['Random Encounter']],
             [

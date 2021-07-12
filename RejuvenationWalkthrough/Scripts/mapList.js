@@ -861,92 +861,92 @@ var mapList=[
         ], //End
     ], //Terajuma Island - Terajuma Beach [0015]
     [
-        ['DeepTerajuma1', ['None'], [[600, 470], [[0, 0], [600, 470]]], [], [], []], //End
-        ['DeepTerajuma2', ['None'], [[890, 600], [[0, 0], [800, 600]]], [], [], []], //End
-        ['DeepTerajuma3', ['None'], [[410, 800], [[0, 0], [410, 800]]], [], [], []], //End
-        ['HulaMeadow', ['None'], [[370, 360], [[0, 0], [370, 360]]], [], [], []], //End
-        ['TerajumaJungle', ['None'], [[950, 500], [[0, 0], [800, 500]]], [], [], []], //End
-        ['TyluricFalls', ['None'], [[370, 400], [[0, 0], [370, 400]]], [], [], []], //End
+        ['DeepTerajuma1', ['Deep Terajuma Jungle'], [[600, 470], [[0, 0], [600, 470]]], [], [], []], //End
+        ['DeepTerajuma2', ['Deep Terajuma Jungle'], [[890, 600], [[0, 0], [800, 600]]], [], [], []], //End
+        ['DeepTerajuma3', ['Deep Terajuma Jungle'], [[410, 800], [[0, 0], [410, 800]]], [], [], []], //End
+        ['HulaMeadow', ['Hula Meadow'], [[740, 720], [[0, 0], [740, 720]]], [], [], []], //End
+        ['TerajumaJungle', ['Terajuma Jungle'], [[950, 500], [[0, 0], [800, 500]]], [], [], []], //End
+        ['TyluricFalls', ['Deep Terajuma Jungle'], [[740, 800], [[0, 0], [740, 800]]], [], [], []], //End
     ], //Terajuma Island - Terajuma Jungle [0016]
     [
-        ['KakoriGym', ['None'], [[1650, 750], [[0, 0], [800, 750]]], [], [], []], //End
-        ['KakoriVillageExterior', ['None'], [[700, 520], [[0, 0], [700, 520]]], [], [], []], //End
-        ['RangerHQ', ['None'], [[650, 700], [[0, 0], [650, 700]]], [], [], []], //End
-        ['SafariZoneCave', ['None'], [[750, 650], [[0, 0], [750, 650]]], [], [], []], //End
-        ['SafariZoneCaveCorrupt', ['None'], [[750, 650], [[0, 0], [750, 650]]], [], [], []], //End
-        ['SafariZoneGrass', ['None'], [[900, 1550], [[0, 0], [800, 800]]], [], [], []], //End
+        ['KakoriGym', ['Kakori Village'], [[1650, 750], [[0, 0], [800, 750]]], [], [], []], //End
+        ['KakoriVillageExterior', ['Kakori Village'], [[700, 520], [[0, 0], [700, 520]]], [], [], []], //End
+        ['RangerHQ', ['Kakori Village'], [[650, 700], [[0, 0], [650, 700]]], [], [], []], //End
+        ['SafariZoneCave', ['Jeminra Woods: Purified Cave Area'], [[750, 650], [[0, 0], [750, 650]]], [], [], []], //End
+        ['SafariZoneCaveCorrupt', ['Jeminra Woods: Corrupted Cave Area'], [[750, 650], [[0, 0], [750, 650]]], [], [], []], //End
+        ['SafariZoneGrass', ['Jeminra Woods: Area 1 (Middle Left Area)', 'Jeminra Woods: Area 2 (Bottom Left Area)', 'Jeminra Woods: Area 3 (Upper Left Area)', 'Jeminra Woods: Area 4 (Beach Area)', 'Jeminra Woods: Area 5 (Maze Area)', 'Jeminra Woods: Special Area'], [[900, 1550], [[0, 0], [800, 800]]], [], [], []], //End
     ], //Terajuma Island - Kakori Village Area [0017]
     [
-        ['Route5Valor', ['None'], [[1150, 520], [[0, 0], [800, 520]]], [], [], []], //End
+        ['Route5Valor', ['Route 5/Valor Shore'], [[1150, 520], [[0, 0], [800, 520]]], [], [], []], //End
     ], //Terajuma Island - Route 5 & Valor Shore [0018]
     [
-        ['AquamarineCave1', ['None'], [[700, 700], [[0, 0], [700, 700]]], [], [], []], //End
-        ['AquamarineCave2', ['None'], [[700, 760], [[0, 0], [700, 760]]], [], [], []], //End
-        ['AquamarineCave3', ['None'], [[350, 500], [[0, 0], [350, 500]]], [], [], []], //End
-        ['AquamarineChamber', ['None'], [[680, 400], [[0, 0], [680, 400]]], [], [], []], //End
+        ['AquamarineCave1', ['Aquamarine Cave'], [[700, 700], [[0, 0], [700, 700]]], [], [], []], //End
+        ['AquamarineCave2', ['Aquamarine Cave'], [[700, 760], [[0, 0], [700, 760]]], [], [], []], //End
+        ['AquamarineCave3', ['Aquamarine Cave'], [[700, 1000], [[0, 0], [700, 1000]]], [], [], []], //End
+        ['AquamarineChamber', ['Aquamarine Cave'], [[680, 400], [[0, 0], [680, 400]]], [], [], []], //End
         ['AquamarineRuins', ['None'], [[680, 1000], [[0, 0], [680, 800]]], [], [], []], //End
-        ['AquamarineShore', ['None'], [[500, 550], [[0, 0], [500, 550]]], [], [], []], //End
-        ['AquamarineShrine', ['None'], [[500, 900], [[0, 0], [500, 800]]], [], [], []], //End
-        ['Route6', ['None'], [[570, 1330], [[0, 0], [570, 800]]], [], [], []], //End
-        ['TerajumaCoralReef', ['None'], [[560, 1330], [[0, 0], [560, 800]]], [], [], []], //End
+        ['AquamarineShore', ['Aquamarine Cave'], [[500, 550], [[0, 0], [500, 550]]], [], [], []], //End
+        ['AquamarineShrine', ['Aquamarine Cave'], [[500, 900], [[0, 0], [500, 800]]], [], [], []], //End
+        ['Route6', ['Route 6'], [[570, 1330], [[0, 0], [570, 800]]], [], [], []], //End
+        ['TerajumaCoralReef', ['Terajuma Coral Reef'], [[560, 1330], [[0, 0], [560, 800]]], [], [], []], //End
     ], //Terajuma Island - Route 6 & Aquamarine Cave [0019]
     [
-        ['ConcertHall', ['None'], [[640, 310], [[0, 0], [640, 310]]], [], [], []], //End
-        ['TeilaResortCabins', ['None'], [[450, 680], [[0, 0], [450, 680]]], [], [], []], //End
-        ['TeilaResortExterior', ['None'], [[720, 850], [[0, 0], [720, 800]]], [], [], []], //End
-        ['TeilaResortHotSprings', ['None'], [[430, 430], [[0, 0], [430, 430]]], [], [], []], //End
-        ['TeilaResortLobby', ['None'], [[370, 330], [[0, 0], [370, 330]]], [], [], []], //End
-        ['TeslaVilla', ['None'], [[700, 700], [[0, 0], [700, 700]]], [], [], []], //End
+        ['ConcertHall', ['None'], [[1280, 620], [[0, 0], [800, 620]]], [], [], []], //End
+        ['TeilaResortCabins', ['Teila Resort'], [[450, 680], [[0, 0], [450, 680]]], [], [], []], //End
+        ['TeilaResortExterior', ['Teila Resort'], [[720, 850], [[0, 0], [720, 800]]], [], [], []], //End
+        ['TeilaResortHotSprings', ['None'], [[800, 800], [[0, 0], [800, 800]]], [], [], []], //End
+        ['TeilaResortLobby', ['None'], [[740, 660], [[0, 0], [740, 660]]], [], [], []], //End
+        ['TeslaVilla', ['Teila Resort'], [[700, 700], [[0, 0], [700, 700]]], [], [], []], //End
     ], //Terajuma Island - Teila Resort [0020]
     [
         ['ChurchOfTheolia', ['None'], [[860, 400], [[0, 0], [800, 400]]], [], [], []], //End
-        ['IsleOfAngels', ['None'], [[1000, 500], [[0, 0], [800, 500]]], [], [], []], //End
+        ['IsleOfAngels', ['Isle of Angels'], [[1000, 500], [[0, 0], [800, 500]]], [], [], []], //End
         ['IsleOfAngelsFrozen', ['None'], [[1000, 500], [[0, 0], [800, 500]]], [], [], []], //End
-        ['KristilineTown', ['None'], [[670, 950], [[0, 0], [670, 800]]], [], [], []], //End
+        ['KristilineTown', ['Kristiline Town'], [[670, 950], [[0, 0], [670, 800]]], [], [], []], //End
         ['KristilineTownFrozen', ['None'], [[650, 950], [[0, 0], [650, 800]]], [], [], []], //End
-        ['KristilineTownHelp', ['None'], [[250, 240], [[0, 0], [250, 240]]], [], [], []], //End
-        ['SapphireMuseum', ['None'], [[300, 350], [[0, 0], [300, 350]]], [], [], []], //End
-        ['TowerOfTheoliaExterior', ['None'], [[2570, 490], [[0, 0], [800, 490]]], [], [], []], //End
-        ['TowerOfTheoliaInterior', ['None'], [[2000, 750], [[0, 0], [800, 750]]], [], [], []], //End
+        ['KristilineTownHelp', ['Kristiline Town'], [[750, 720], [[0, 0], [750, 720]]], [], [], []], //End
+        ['SapphireMuseum', ['None'], [[600, 700], [[0, 0], [600, 700]]], [], [], []], //End
+        ['TowerOfTheoliaExterior', ['Tower of Theolia'], [[2570, 490], [[0, 0], [800, 490]]], [], [], []], //End
+        ['TowerOfTheoliaInterior', ['Tower of Theolia'], [[2000, 750], [[0, 0], [800, 750]]], [], [], []], //End
     ], //Terajuma Island - Kristiline Town [0021]
     [
-        ['ValorChamberOfAwakening', ['None'], [[550, 400], [[0, 0], [550, 400]]], [], [], []], //End
-        ['ValorCliffside', ['None'], [[400, 680], [[0, 0], [400, 680]]], [], [], []], //End
-        ['ValorMountain1F', ['None'], [[600, 600], [[0, 0], [600, 600]]], [], [], []], //End
-        ['ValorMountain1FCold', ['None'], [[600, 600], [[0, 0], [600, 600]]], [], [], []], //End
-        ['ValorMountain1FHot', ['None'], [[600, 600], [[0, 0], [600, 600]]], [], [], []], //End
-        ['ValorMountain2F', ['None'], [[750, 600], [[0, 0], [750, 600]]], [], [], []], //End
-        ['ValorMountain2FCold', ['None'], [[750, 600], [[0, 0], [750, 600]]], [], [], []], //End
-        ['ValorMountain2FHot', ['None'], [[750, 600], [[0, 0], [750, 600]]], [], [], []], //End
-        ['ValorMountain3F', ['None'], [[900, 700], [[0, 0], [800, 700]]], [], [], []], //End
-        ['ValorMountain3FCold', ['None'], [[900, 700], [[0, 0], [800, 700]]], [], [], []], //End
-        ['ValorMountain3FHot', ['None'], [[900, 700], [[0, 0], [800, 700]]], [], [], []], //End
-        ['ValorMountain4F', ['None'], [[500, 600], [[0, 0], [500, 600]]], [], [], []], //End
-        ['ValorMountain4FCold', ['None'], [[500, 600], [[0, 0], [500, 600]]], [], [], []], //End
-        ['ValorMountain4FHot', ['None'], [[500, 600], [[0, 0], [500, 600]]], [], [], []], //End
-        ['ValorMountain5F', ['None'], [[600, 700], [[0, 0], [600, 700]]], [], [], []], //End
-        ['ValorMountainB1Cold', ['None'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
-        ['ValorMountainB1F', ['None'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
-        ['ValorMountainB1Hot', ['None'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
-        ['ValorMountainB2Cold', ['None'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
-        ['ValorMountainB2F', ['None'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
-        ['ValorMountainB2Hot', ['None'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
-        ['ValorMountainBlockade', ['None'], [[500, 400], [[0, 0], [500, 400]]], [], [], []], //End
+        ['ValorChamberOfAwakening', ['Chamber of Awakening'], [[550, 400], [[0, 0], [550, 400]]], [], [], []], //End
+        ['ValorCliffside', ['Valor Mountain Cliffside & Summit'], [[400, 680], [[0, 0], [400, 680]]], [], [], []], //End
+        ['ValorMountain1F', ['Valor Mountain (Normal)'], [[600, 600], [[0, 0], [600, 600]]], [], [], []], //End
+        ['ValorMountain1FCold', ['Valor Mountain (Calm)'], [[600, 600], [[0, 0], [600, 600]]], [], [], []], //End
+        ['ValorMountain1FHot', ['Valor Mountain (Fire)'], [[600, 600], [[0, 0], [600, 600]]], [], [], []], //End
+        ['ValorMountain2F', ['Valor Mountain (Normal)'], [[750, 600], [[0, 0], [750, 600]]], [], [], []], //End
+        ['ValorMountain2FCold', ['Valor Mountain (Calm)'], [[750, 600], [[0, 0], [750, 600]]], [], [], []], //End
+        ['ValorMountain2FHot', ['Valor Mountain (Fire)'], [[750, 600], [[0, 0], [750, 600]]], [], [], []], //End
+        ['ValorMountain3F', ['Valor Mountain (Normal)'], [[900, 700], [[0, 0], [800, 700]]], [], [], []], //End
+        ['ValorMountain3FCold', ['Valor Mountain (Calm)'], [[900, 700], [[0, 0], [800, 700]]], [], [], []], //End
+        ['ValorMountain3FHot', ['Valor Mountain (Fire)'], [[900, 700], [[0, 0], [800, 700]]], [], [], []], //End
+        ['ValorMountain4F', ['Valor Mountain (Normal)'], [[500, 600], [[0, 0], [500, 600]]], [], [], []], //End
+        ['ValorMountain4FCold', ['Valor Mountain (Calm)'], [[500, 600], [[0, 0], [500, 600]]], [], [], []], //End
+        ['ValorMountain4FHot', ['Valor Mountain (Fire)'], [[500, 600], [[0, 0], [500, 600]]], [], [], []], //End
+        ['ValorMountain5F', ['Valor Mountain (Normal)'], [[600, 700], [[0, 0], [600, 700]]], [], [], []], //End
+        ['ValorMountainB1Cold', ['Valor Mountain (Calm)'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
+        ['ValorMountainB1F', ['Valor Mountain (Normal)'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
+        ['ValorMountainB1Hot', ['Valor Mountain (Fire)'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
+        ['ValorMountainB2Cold', ['Valor Mountain (Calm)'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
+        ['ValorMountainB2F', ['Valor Mountain (Normal)'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
+        ['ValorMountainB2Hot', ['Valor Mountain (Fire)'], [[400, 400], [[0, 0], [400, 400]]], [], [], []], //End
+        ['ValorMountainBlockade', ['Valor Mountain (Normal)'], [[500, 400], [[0, 0], [500, 400]]], [], [], []], //End
         ['ValorMountainBlockadeBuilding', ['None'], [[800, 800], [[0, 0], [800, 800]]], [], [], []], //End
-        ['ValorMountainBlockadeCold', ['None'], [[500, 400], [[0, 0], [500, 400]]], [], [], []], //End
-        ['ValorMountainBlockadeHot', ['None'], [[500, 400], [[0, 0], [500, 400]]], [], [], []], //End
-        ['ValorSummit', ['None'], [[700, 920], [[0, 0], [700, 800]]], [], [], []], //End
+        ['ValorMountainBlockadeCold', ['Valor Mountain (Calm)'], [[500, 400], [[0, 0], [500, 400]]], [], [], []], //End
+        ['ValorMountainBlockadeHot', ['Valor Mountain (Fire)'], [[500, 400], [[0, 0], [500, 400]]], [], [], []], //End
+        ['ValorSummit', ['Valor Mountain Cliffside & Summit'], [[700, 920], [[0, 0], [700, 800]]], [], [], []], //End
     ], //Terajuma Island - Valor Mountain [0022]
     [
         ['BlakeoryCO', ['None'], [[700, 1000], [[0, 0], [700, 1000]]], [], [], []], //End
         ['KugearenCity', ['None'], [[550, 650], [[0, 0], [550, 650]]], [], [], []], //End
         ['KugearenCityBuildings', ['None'], [[650, 720], [[0, 0], [650, 720]]], [], [], []], //End
-        ['KugearenWoods', ['None'], [[920, 700], [[0, 0], [800, 700]]], [], [], []], //End
+        ['KugearenWoods', ['Kugearen Woods (Past)'], [[920, 700], [[120, 0], [920, 700]]], [], [], []], //End
     ], //Aevium Past - Kugearen Area [0023]
     [
         ['AmbretteTown', ['None'], [[800, 1120], [[0, 0], [800, 800]]], [], [], []], //End
         ['AmbretteTownBuildings', ['None'], [[660, 900], [[0, 0], [660, 800]]], [], [], []], //End
-        ['Route3Past', ['None'], [[650, 440], [[0, 0], [650, 440]]], [], [], []], //End
+        ['Route3Past', ['Route 3 (Past)'], [[650, 440], [[0, 0], [650, 440]]], [], [], []], //End
     ], //Aevium Past - Route 3, Ambrette Town [0024]
     [
         ['MarbleMansionBasement', ['None'], [[600, 800], [[0, 0], [600, 800]]], [], [], []], //End
@@ -961,7 +961,7 @@ var mapList=[
         ['HeracrossWoods', ['None'], [[500, 420], [[0, 0], [500, 420]]], [], [], []], //End
         ['SheridanVillageBuildingsPast', ['None'], [[900, 800], [[0, 0], [800, 800]]], [], [], []], //End
         ['SheridanVillageEntrancePast', ['None'], [[740, 800], [[0, 0], [740, 800]]], [], [], []], //End
-        ['SheridanVillagePast', ['None'], [[550, 530], [[0, 0], [550, 530]]], [], [], []], //End
+        ['SheridanVillagePast', ['Sheridan Village (Past)'], [[1100, 1060], [[0, 130], [800, 930]]], [], [], []], //End
         ['SpringOfPurificationPast', ['None'], [[1500, 780], [[0, 0], [800, 780]]], [], [], []], //End
         ['VivianHouse', ['None'], [[900, 800], [[0, 0], [800, 800]]], [], [], []], //End
     ], //Aevium Past - Sheridan Village (Past) [0027]
@@ -980,12 +980,12 @@ var mapList=[
     ], //Aevium Past - Wrong Timeline [0028]
     [
         ['MysteriousManor', ['None'], [[800, 1300], [[0, 0], [800, 800]]], [], [], []], //End
-        ['Route5Past', ['None'], [[600, 850], [[0, 0], [600, 800]]], [], [], []], //End
+        ['Route5Past', ['Route 5 (Past)'], [[600, 850], [[0, 0], [600, 800]]], [], [], []], //End
     ], //Aevium Past - Route 5 Past Area [0029]
     [
         ['GregorianLake', ['None'], [[380, 610], [[0, 0], [380, 610]]], [], [], []], //End
-        ['HiyoshiCityExterior', ['None'], [[800, 980], [[0, 0], [800, 800]]], [], [], []], //End
-        ['HiyoshiPass', ['None'], [[700, 500], [[0, 0], [700, 500]]], [], [], []], //End
+        ['HiyoshiCityExterior', ['Hiyoshi City (Past)'], [[800, 980], [[0, 0], [800, 800]]], [], [], []], //End
+        ['HiyoshiPass', ['Hiyoshi Pass (Past)'], [[700, 500], [[0, 0], [700, 500]]], [], [], []], //End
         ['RejuvenationCo', ['None'], [[490, 800], [[0, 0], [490, 800]]], [], [], []], //End
         ['RejuvenationCoInside', ['None'], [[500, 900], [[0, 0], [500, 800]]], [], [], []], //End
         ['UndergroundSanctuary1', ['None'], [[1000, 620], [[0, 0], [800, 620]]], [], [], []], //End
@@ -996,80 +996,80 @@ var mapList=[
     ], //Terrial Island - Express Train [0031]
     [
         ['OblitusTown', ['None'], [[780, 1600], [[0, 0], [780, 800]]], [], [], []], //End
-        ['Route7Left', ['None'], [[1130, 710], [[0, 0], [800, 710]]], [], [], []], //End
+        ['Route7Left', ['Route 7'], [[1130, 710], [[0, 0], [800, 710]]], [], [], []], //End
         ['Route7OblitusTownBuildings', ['None'], [[500, 800], [[0, 0], [500, 800]]], [], [], []], //End
-        ['Route7Right', ['None'], [[1780, 800], [[0, 0], [800, 800]]], [], [], []], //End
+        ['Route7Right', ['Route 7'], [[1780, 800], [[0, 0], [800, 800]]], [], [], []], //End
     ], //Terrial Island - Route 7 [0032]
     [
-        ['HonecWoodsCave', ['None'], [[660, 1120], [[0, 0], [660, 800]]], [], [], []], //End
-        ['HonecWoodsEntrance', ['None'], [[830, 800], [[0, 0], [800, 800]]], [], [], []], //End
-        ['HonecWoodsNorth', ['None'], [[410, 460], [[0, 0], [410, 460]]], [], [], []], //End
-        ['HonecWoodsShrine', ['None'], [[740, 780], [[0, 0], [740, 780]]], [], [], []], //End
-        ['KingdomOfGoomidra', ['None'], [[710, 700], [[0, 0], [710, 700]]], [], [], []], //End
+        ['HonecWoodsCave', ['Honec Woods'], [[660, 1120], [[0, 0], [660, 800]]], [], [], []], //End
+        ['HonecWoodsEntrance', ['Honec Woods'], [[830, 800], [[0, 0], [800, 800]]], [], [], []], //End
+        ['HonecWoodsNorth', ['Honec Woods'], [[410, 460], [[0, 0], [410, 460]]], [], [], []], //End
+        ['HonecWoodsShrine', ['Honec Woods'], [[740, 780], [[0, 0], [740, 780]]], [], [], []], //End
+        ['KingdomOfGoomidra', ['Kingdom of Goomidra'], [[710, 700], [[0, 0], [710, 700]]], [], [], []], //End
     ], //Terrial Island - Honec Woods [0033]
     [
         ['DarchlightManorBackyard', ['None'], [[720, 780], [[0, 0], [720, 780]]], [], [], []], //End
-        ['DarchlightManorExt', ['None'], [[480, 500], [[0, 0], [480, 500]]], [], [], []], //End
-        ['DarchlightWoodsCenter', ['None'], [[500, 490], [[0, 0], [500, 490]]], [], [], []], //End
-        ['DarchlightWoodsEntrance', ['None'], [[820, 650], [[0, 0], [800, 650]]], [], [], []], //End
-        ['DarchlightWoodsIntersection', ['None'], [[700, 800], [[0, 0], [700, 800]]], [], [], []], //End
-        ['DarchlightWoodsNorth', ['None'], [[600, 500], [[0, 0], [600, 500]]], [], [], []], //End
-        ['DarchlightWoodsNW', ['None'], [[530, 500], [[0, 0], [530, 500]]], [], [], []], //End
-        ['ForgottenHill', ['None'], [[900, 800], [[0, 0], [800, 800]]], [], [], []], //End
-        ['SensuMeadow', ['None'], [[500, 570], [[0, 0], [500, 570]]], [], [], []], //End
+        ['DarchlightManorExt', ['Darchlight Woods'], [[480, 500], [[0, 0], [480, 500]]], [], [], []], //End
+        ['DarchlightWoodsCenter', ['Darchlight Woods'], [[500, 490], [[0, 0], [500, 490]]], [], [], []], //End
+        ['DarchlightWoodsEntrance', ['Darchlight Woods'], [[820, 650], [[0, 0], [800, 650]]], [], [], []], //End
+        ['DarchlightWoodsIntersection', ['Darchlight Woods'], [[700, 800], [[0, 0], [700, 800]]], [], [], []], //End
+        ['DarchlightWoodsNorth', ['Darchlight Woods'], [[600, 500], [[0, 0], [600, 500]]], [], [], []], //End
+        ['DarchlightWoodsNW', ['Darchlight Woods'], [[530, 500], [[0, 0], [530, 500]]], [], [], []], //End
+        ['ForgottenHill', ['Darchlight Woods'], [[900, 800], [[0, 0], [800, 800]]], [], [], []], //End
+        ['SensuMeadow', ['Sensu Meadow'], [[500, 570], [[0, 0], [500, 570]]], [], [], []], //End
     ], //Terrial Island - Darchlight Woods [0034]
     [
-        ['DarchlightCaves1Dark', ['None'], [[500, 750], [[0, 0], [500, 750]]], [], [], []], //End
-        ['DarchlightCaves1Light', ['None'], [[500, 750], [[0, 0], [500, 750]]], [], [], []], //End
-        ['DarchlightCaves2Dark', ['None'], [[450, 1000], [[0, 0], [450, 800]]], [], [], []], //End
-        ['DarchlightCaves2Light', ['None'], [[450, 1000], [[0, 0], [450, 800]]], [], [], []], //End
-        ['DarchlightCaves3Dark', ['None'], [[770, 1250], [[0, 0], [770, 800]]], [], [], []], //End
-        ['DarchlightCaves3Light', ['None'], [[770, 1250], [[0, 0], [770, 800]]], [], [], []], //End
-        ['DarchlightCaves4Dark', ['None'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
-        ['DarchlightCaves4Light', ['None'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
-        ['DarchlightCaves5Dark', ['None'], [[900, 600], [[0, 0], [800, 600]]], [], [], []], //End
-        ['DarchlightCaves5Light', ['None'], [[900, 600], [[0, 0], [800, 600]]], [], [], []], //End
-        ['DarchlightCaves6Dark', ['None'], [[450, 500], [[0, 0], [450, 500]]], [], [], []], //End
-        ['DarchlightCaves6Light', ['None'], [[450, 500], [[0, 0], [450, 500]]], [], [], []], //End
-        ['DarchlightCavesLab', ['None'], [[500, 1000], [[0, 0], [500, 800]]], [], [], []], //End
-        ['DarchlightForgeDark', ['None'], [[700, 1200], [[0, 0], [700, 800]]], [], [], []], //End
-        ['DarchlightForgeLight', ['None'], [[700, 1200], [[0, 0], [700, 800]]], [], [], []], //End
+        ['DarchlightCaves1Dark', ['Darchlight Caves'], [[500, 750], [[0, 0], [500, 750]]], [], [], []], //End
+        ['DarchlightCaves1Light', ['Darchlight Caves'], [[500, 750], [[0, 0], [500, 750]]], [], [], []], //End
+        ['DarchlightCaves2Dark', ['Darchlight Caves'], [[450, 1000], [[0, 0], [450, 800]]], [], [], []], //End
+        ['DarchlightCaves2Light', ['Darchlight Caves'], [[450, 1000], [[0, 0], [450, 800]]], [], [], []], //End
+        ['DarchlightCaves3Dark', ['Darchlight Caves'], [[770, 1250], [[0, 0], [770, 800]]], [], [], []], //End
+        ['DarchlightCaves3Light', ['Darchlight Caves'], [[770, 1250], [[0, 0], [770, 800]]], [], [], []], //End
+        ['DarchlightCaves4Dark', ['Darchlight Caves'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
+        ['DarchlightCaves4Light', ['Darchlight Caves'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
+        ['DarchlightCaves5Dark', ['Darchlight Caves'], [[900, 600], [[0, 0], [800, 600]]], [], [], []], //End
+        ['DarchlightCaves5Light', ['Darchlight Caves'], [[900, 600], [[0, 0], [800, 600]]], [], [], []], //End
+        ['DarchlightCaves6Dark', ['Darchlight Caves'], [[450, 500], [[0, 0], [450, 500]]], [], [], []], //End
+        ['DarchlightCaves6Light', ['Darchlight Caves'], [[450, 500], [[0, 0], [450, 500]]], [], [], []], //End
+        ['DarchlightCavesLab', ['Darchlight Caves'], [[500, 1000], [[0, 0], [500, 800]]], [], [], []], //End
+        ['DarchlightForgeDark', ['Darchlight Caves'], [[700, 1200], [[0, 0], [700, 800]]], [], [], []], //End
+        ['DarchlightForgeLight', ['Darchlight Caves'], [[700, 1200], [[0, 0], [700, 800]]], [], [], []], //End
     ], //Terrial Island - Darchlight Caves [0035]
     [
-        ['AzureShore', ['None'], [[460, 580], [[0, 0], [460, 580]]], [], [], []], //End
+        ['AzureShore', ['Azure Shore'], [[460, 580], [[0, 0], [460, 580]]], [], [], []], //End
     ], //Terrial Island - Azure Shore [0036]
     [
-        ['Route8', ['None'], [[690, 600], [[0, 0], [690, 600]]], [], [], []], //End
+        ['Route8', ['Route 8'], [[690, 600], [[0, 0], [690, 600]]], [], [], []], //End
     ], //Terrial Island - Route 8 [0037]
     [
-        ['RoseTheatreExt', ['None'], [[1100, 800], [[0, 0], [800, 800]]], [], [], []], //End
-        ['Route9', ['None'], [[750, 850], [[0, 0], [750, 800]]], [], [], []], //End
+        ['RoseTheatreExt', ['Rose Theatre'], [[1100, 800], [[0, 0], [800, 800]]], [], [], []], //End
+        ['Route9', ['Route 9'], [[750, 850], [[0, 0], [750, 800]]], [], [], []], //End
     ], //Terrial Island - Route 9, Rose Theatre [0038]
     [
-        ['Route10', ['None'], [[460, 700], [[0, 0], [460, 700]]], [], [], []], //End
+        ['Route10', ['Route 10'], [[460, 700], [[0, 0], [460, 700]]], [], [], []], //End
     ], //Terrial Island - Route 10 [0039]
     [
-        ['MainStreet', ['None'], [[600, 1900], [[0, 0], [600, 800]]], [], [], []], //End
+        ['MainStreet', ['Main Street', 'Grand Dream City Wild Pokemon (Except Main Street Area)', 'Dream District'], [[600, 1900], [[0, 0], [600, 800]]], [], [], []], //End
         ['PokeStarStudiosExt', ['None'], [[650, 800], [[0, 0], [650, 800]]], [], [], []], //End
     ], //Grand Dream City - Dream District [0040]
     [
-        ['CentralSquareExt', ['None'], [[650, 640], [[0, 0], [650, 640]]], [], [], []], //End
+        ['CentralSquareExt', ['Grand Dream City Wild Pokemon (Except Main Street Area)', 'Central Square'], [[650, 640], [[0, 0], [650, 640]]], [], [], []], //End
     ], //Grand Dream City - Central Square [0041]
     [
         ['DreamComplex', ['None'], [[500, 600], [[0, 0], [500, 600]]], [], [], []], //End
-        ['ResidentialDistrictMain', ['None'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
-        ['ResidentialDistrictToyBox', ['None'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
+        ['ResidentialDistrictMain', ['Grand Dream City Wild Pokemon (Except Main Street Area)', 'Residential District'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
+        ['ResidentialDistrictToyBox', ['Grand Dream City Wild Pokemon (Except Main Street Area)', 'Residential District'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
     ], //Grand Dream City - Residential District [0042]
     [
         ['DepartmentOfDreams', ['None'], [[1000, 480], [[0, 0], [800, 480]]], [], [], []], //End
         ['MagnoliaTheatre', ['None'], [[700, 900], [[0, 0], [700, 800]]], [], [], []], //End
-        ['ShoppingDistrictMain', ['None'], [[550, 650], [[0, 0], [550, 650]]], [], [], []], //End
+        ['ShoppingDistrictMain', ['Grand Dream City Wild Pokemon (Except Main Street Area)'], [[550, 650], [[0, 0], [550, 650]]], [], [], []], //End
     ], //Grand Dream City - Shopping District [0043]
     [
-        ['JudicialDistrictMain', ['None'], [[530, 900], [[0, 0], [530, 800]]], [], [], []], //End
+        ['JudicialDistrictMain', ['Grand Dream City Wild Pokemon (Except Main Street Area)', 'Judicial District'], [[530, 900], [[0, 0], [530, 800]]], [], [], []], //End
     ], //Grand Dream City - Judicial District [0044]
     [
-        ['AxisHighUniversityGrounds', ['None'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
+        ['AxisHighUniversityGrounds', ['Axis High University'], [[550, 600], [[0, 0], [550, 600]]], [], [], []], //End
         ['GrandDreamStadiumExt', ['None'], [[450, 500], [[0, 0], [450, 500]]], [], [], []], //End
     ], //Grand Dream City - Axis High University [0045]
     [
@@ -1078,26 +1078,26 @@ var mapList=[
     ], //Grand Dream City - District of Hope [0046]
     [
         ['NationalPark', ['None'], [[440, 500], [[0, 0], [440, 500]]], [], [], []], //End
-        ['ScholarDistrictGrounds', ['None'], [[610, 840], [[0, 0], [610, 800]]], [], [], []], //End
+        ['ScholarDistrictGrounds', ['Grand Dream City Wild Pokemon (Except Main Street Area)', 'Scholar District'], [[610, 840], [[0, 0], [610, 800]]], [], [], []], //End
     ], //Grand Dream City - Scholar District [0047]
     [
-        ['NightmareCity', ['None'], [[1400, 1650], [[0, 0], [800, 800]]], [], [], []], //End
+        ['NightmareCity', ['Dream District - Nightmare'], [[1400, 1650], [[0, 0], [800, 800]]], [], [], []], //End
         ['TheToyBox', ['None'], [[760, 700], [[0, 0], [760, 700]]], [], [], []], //End
     ], //Grand Dream City - Nightmare City [0048]
     [
 
     ], //Grand Dream City - The Underground [0049]
     [
-        ['PoiloethalEntrance', ['None'], [[600, 500], [[0, 0], [600, 500]]], [], [], []], //End
-        ['RuinedCity', ['None'], [[600, 800], [[0, 0], [600, 800]]], [], [], []], //End
-        ['ZorrailynCoast', ['None'], [[1150, 860], [[0, 0], [800, 800]]], [], [], []], //End
-        ['ZorrailynDesertNorth', ['None'], [[650, 2400], [[0, 0], [650, 800]]], [], [], []], //End
+        ['PoiloethalEntrance', ['Zorrailyn Desert (Southeast Part)'], [[600, 500], [[0, 0], [600, 500]]], [], [], []], //End
+        ['RuinedCity', ['Ruined City'], [[600, 800], [[0, 0], [600, 800]]], [], [], []], //End
+        ['ZorrailynCoast', ['Zorrailyn Coast (Southwest Part)'], [[1150, 860], [[0, 0], [800, 800]]], [], [], []], //End
+        ['ZorrailynDesertNorth', ['Zorrailyn Desert (North Part)'], [[650, 2400], [[0, 0], [650, 800]]], [], [], []], //End
     ], //Badlands - Zorrailyn Area [0050]
     [
-        ['SandStreamCaveB1', ['None'], [[550, 1100], [[0, 0], [550, 800]]], [], [], []], //End
-        ['SandStreamCaveB2', ['None'], [[700, 800], [[0, 0], [700, 800]]], [], [], []], //End
-        ['SandStreamCaveDepths', ['None'], [[650, 800], [[0, 0], [650, 800]]], [], [], []], //End
-        ['SandStreamCaveG', ['None'], [[500, 520], [[0, 0], [500, 520]]], [], [], []], //End
+        ['SandStreamCaveB1', ['Sand Stream Cave'], [[550, 1100], [[0, 0], [550, 800]]], [], [], []], //End
+        ['SandStreamCaveB2', ['Sand Stream Cave'], [[700, 800], [[0, 0], [700, 800]]], [], [], []], //End
+        ['SandStreamCaveDepths', ['Sand Stream Cave'], [[650, 800], [[0, 0], [650, 800]]], [], [], []], //End
+        ['SandStreamCaveG', ['Sand Stream Cave'], [[500, 520], [[0, 0], [500, 520]]], [], [], []], //End
     ], //Badlands - Sand Stream Cave [0051]
     [
         ['CastleZygardaExt', ['None'], [[1010, 500], [[0, 0], [800, 500]]], [], [], []], //End
@@ -1107,24 +1107,24 @@ var mapList=[
         ['ZorrailynLabyrinthB4', ['None'], [[1000, 1250], [[0, 0], [800, 800]]], [], [], []], //End
     ], //Badlands - Zorrailyn Labyinth [0052]
     [
-        ['VoidalChasmB1', ['None'], [[1280, 840], [[0, 0], [800, 800]]], [], [], []], //End
-        ['VoidalChasmB2', ['None'], [[1250, 550], [[0, 0], [800, 550]]], [], [], []], //End
-        ['VoidalChasmG', ['None'], [[800, 650], [[0, 0], [800, 650]]], [], [], []], //End
+        ['VoidalChasmB1', ['Voidal Chasm'], [[1280, 840], [[0, 0], [800, 800]]], [], [], []], //End
+        ['VoidalChasmB2', ['Voidal Chasm'], [[1250, 550], [[0, 0], [800, 550]]], [], [], []], //End
+        ['VoidalChasmG', ['Voidal Chasm'], [[800, 650], [[0, 0], [800, 650]]], [], [], []], //End
     ], //Badlands - Voidal Chasm [0053]
     [
-        ['SashilaVillage', ['None'], [[850, 750], [[0, 0], [800, 750]]], [], [], []], //End
+        ['SashilaVillage', ['Sashila Village'], [[850, 750], [[0, 0], [800, 750]]], [], [], []], //End
     ], //Badlands - Sashila Village [0054]
     [
-        ['AlamissaUrban', ['None'], [[1170, 830], [[0, 0], [800, 800]]], [], [], []], //End
+        ['AlamissaUrban', ['Alamissa Urban'], [[1170, 830], [[0, 0], [800, 800]]], [], [], []], //End
     ], //Badlands - Alamissa Urban [0055]
     [
         ['NastasiaAirship', ['None'], [[400, 1060], [[0, 0], [400, 800]]], [], [], []], //End
     ], //Badlands - Nastasia's Airship [0056]
     [
         ['ReldenIsland', ['None'], [[800, 900], [[0, 0], [800, 800]]], [], [], []], //End
-        ['ZoneZero1', ['None'], [[890, 980], [[0, 0], [800, 800]]], [], [], []], //End
-        ['ZoneZero2', ['None'], [[900, 890], [[0, 0], [800, 800]]], [], [], []], //End
-        ['ZoneZeroDepths', ['None'], [[500, 1200], [[0, 0], [500, 800]]], [], [], []], //End
+        ['ZoneZero1', ['Zone Zero'], [[890, 980], [[0, 0], [800, 800]]], [], [], []], //End
+        ['ZoneZero2', ['Zone Zero'], [[900, 890], [[0, 0], [800, 800]]], [], [], []], //End
+        ['ZoneZeroDepths', ['Zone Zero'], [[500, 1200], [[0, 0], [500, 800]]], [], [], []], //End
         ['ZoneZeroOutskirts', ['None'], [[420, 500], [[0, 0], [420, 500]]], [], [], []], //End
         ['ZoneZeroPass', ['None'], [[600, 530], [[0, 0], [600, 530]]], [], [], []], //End
         ['ZoneZeroSanctuary', ['None'], [[1000, 700], [[0, 0], [800, 700]]], [], [], []], //End
