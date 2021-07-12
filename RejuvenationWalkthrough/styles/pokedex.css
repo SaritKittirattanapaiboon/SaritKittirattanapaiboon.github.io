@@ -40,3 +40,77 @@
     border: solid black 1px;
     width: 200px;
 }
+
+.pokedexSidebar {
+    height: calc(100vh - 100px); /* 100% Full-height */
+    width: 230px; /* 0 width - change this with JavaScript 230*/
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #3D5A80; /* Black*/
+    overflow-y: auto;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 100px; /* Place content 60px from the top */
+}
+
+.currentPokemonName {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.autocompleteTest{
+    position: relative;
+    display: inline-block;  
+}
+
+.autocompleteTest-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .autocompleteTest-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocompleteTest-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+  .autocompleteTest-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+.pokemonTextInput {
+    width: 95%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+
+    margin-left: 1%;
+}
+
+.buttonAnchor{
+    position: relative;
+    width: 100%;
+}
+
+.pokemonTextButton {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}

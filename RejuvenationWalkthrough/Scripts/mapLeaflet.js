@@ -312,7 +312,7 @@ function createEncounterTable(locationName){
           }
         }
         newRowCheck=5;
-        fulltext+='</table><br>'
+        fulltext+='</table><br>';
       }
     }
   } else {
@@ -512,7 +512,6 @@ function createCompactPokemonText(thisPokemon, listofTimes){
 
   //For Loop Begins
   currentPokemonRates=[];
-  currentPokemonAbilities=[];
 
   //Setup
   currentPokemonNumberText = thisPokemon[0][0].substr(0,3);

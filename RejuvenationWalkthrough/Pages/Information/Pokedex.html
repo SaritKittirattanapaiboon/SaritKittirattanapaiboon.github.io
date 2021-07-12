@@ -21,34 +21,24 @@
 
   <!-- Left Popup Side Bar -->
 
-  <div class="trainerSidebar" id="mapSidebarContent">
-    <h1 class="noSideBar">None</h1>
-  </div>
-
-  <div class="trainerSidebar" id="encounterSidebarContent">
-    <h1 class="noSideBar">None</h1>
-  </div>
-
-  <div class="trainerSidebar" id="shopSidebarContent">
-    <h1 class="noSideBar">None</h1>
-  </div>
-
-  <div class="trainerSidebar" id="fieldEffects">
-    <h1 class="noSideBar">None</h1>
+  <div class="pokedexSidebar">
+    <form autocomplete="off">
+      <div class="autocompleteTest">
+        <input class="pokemonTextInput" type="text" id="myTextInput" placeholder="Pokemon Name or Number" onclick="this.select();">
+      </div>
+    </form>
+    <div class="buttonAnchor">
+      <button class="pokemonTextButton" id="textInputButton" onclick="readText();">Click Here</button>
+    </div>
   </div>
 
   <!-- Main Walkthrough Content -->
   
   <div class="maincontent">
     <div class="currentLocation">
-      <span class="pokedexNumber">#003 - Venusaur</span>
+      <span class="pokedexNumber" id="pokemonBigName">Pokemon</span>
     </div>
     <div class="walkthrough">
-      <p class="walkthroughText">
-        <input type="text" id="myTextInput">     <button id="textInputButton" onclick="readText();">Click Here</button>
-      </p>
-      
-
       <div id=testOutput>
         <span class="pokedexAll">
           <table class="pokedexTable">
@@ -100,15 +90,8 @@
     })
     //Enter to send input text
     var input=document.getElementById("myTextInput");
-    input.addEventListener('keyup', function(event) {
-      // Number 13 is the "Enter" key on the keyboard
-      if (event.keyCode === 13) {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        // Trigger the button element with a click
-        document.getElementById("textInputButton").click();
-      }
-    });
+
+    autocomplete(input, PokemonListNumbers);
   </script>
 </body>
 </html>
