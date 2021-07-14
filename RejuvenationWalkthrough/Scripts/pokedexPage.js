@@ -1,7 +1,7 @@
 function readText(){
     var notFound=true;
     var inputField=document.getElementById("myTextInput"); //Input text field
-    var outputField=document.getElementById("testOutput"); //Output of the Pokedex
+    var outputField=document.getElementById("mainOutput"); //Output of the Pokedex
     var bigNameField=document.getElementById("pokemonBigName"); //Big Name on Top of page
     
     //Input text assessment
@@ -12,16 +12,18 @@ function readText(){
       inputName=inputtext;
       for(var i=0; i<PokemonList.length; i++){
         if(inputName.toLowerCase()==PokemonList[i]){
-            outputField.innerHTML=createbattlePokedexText(BattlePokedex[i],7);
+            returnText=createbattlePokedexText(BattlePokedex[i],7);
             bigNameField.innerHTML=BattlePokedex[i][0]+" - "+inputName;
             notFound=false;
+            return returnText;
         }
       }
       if(notFound){
-          outputField.innerHTML="Pokemon Not Found"
-          bigNameField.innerHTML="Pokemon"
+          outputField.innerHTML="Pokemon Not Found";
+          bigNameField.innerHTML="Pokemon";
+          return "";
       }
-      return
+      return "";
     }
 
     if(inputtext.search("_")==-1){
@@ -33,14 +35,46 @@ function readText(){
     }
 
     inputNumber=parseInt(inputtext.substr(0,3));
-    outputField.innerHTML=createbattlePokedexText(BattlePokedex[inputNumber-1],formNumber+7);
+    returnText=createbattlePokedexText(BattlePokedex[inputNumber-1],formNumber+7);
     bigNameField.innerHTML=BattlePokedex[inputNumber-1][0]+" - "+inputName;
+    return returnText;
+}
+
+function showText(alltext){
+  if(alltext==""){
+    alltext=readText();
+    if(alltext==""){
+      return "";
+    }
+  }
+  //Main Output (Always Show)
+  var docOut = document.getElementById("mainOutput");
+  docOut.innerHTML=alltext[0];
+
+  //Evolution Output (Checkbox)
+  docOut = document.getElementById("evoOutput");
+  var checkboxCheck=document.getElementById("showEvolution");
+  if(checkboxCheck.checked){
+    docOut.innerHTML=alltext[1];
+  } else {
+    docOut.innerHTML="";
+  }
+
+  docOut = document.getElementById("moveOutput");
+  var checkboxCheck=document.getElementById("showMoves");
+  if(checkboxCheck.checked){
+    docOut.innerHTML=alltext[2];
+  } else {
+    docOut.innerHTML="";
+  }
+  return alltext;
 }
 
 function createbattlePokedexText(PokemontoDetail, formNumber){
   var actualPokemon=PokemontoDetail[formNumber];
   var pokemonImageNumberString;
-  var i
+  var i;
+  var fulltext=[];
 
   statTitleNames=['HP', 'Attack', 'Defense', 'Special Attack', 'Special Defense', 'Speed', 'Stat Total']
 
@@ -51,50 +85,56 @@ function createbattlePokedexText(PokemontoDetail, formNumber){
     pokemonImageNumberString=PokemontoDetail[0]+"_"+String(formNumber-7);
   }
 
+  statColors = calcStatColor(actualPokemon[4]);
+
   //Image + Statbars
-  fulltext='<table class="pokedexTable"><tr><td rowspan="7" class="pokemonImageCell" style="text-align: center;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+pokemonImageNumberString+'.png"></td><td class="statTitles">HP:</td><td class="statBarContainer"><div class="statBar" style="width: '+String(2*actualPokemon[4][0]) +'px;"></div></td><td class="statNumber" style="width: 40px;">'+String(actualPokemon[4][0])+'</td></tr>';
+  fulltext.push('<table class="pokedexTable"><tr><td rowspan="7" class="pokemonImageCell" style="text-align: center;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+pokemonImageNumberString+'.png"><br>'+actualPokemon[0]+'</td><td class="statTitles">HP:</td><td class="statBarContainer"><div class="statBar" style="width: '+String(2*actualPokemon[4][0]) +'px;background-color: var(--'+statColors[0]+'"></div></td><td class="statNumber" style="width: 40px;">'+String(actualPokemon[4][0])+'</td></tr>');
   for(i=1; i<6; i++){
-    fulltext+='<tr><td class="statTitles">'+statTitleNames[i]+':</td><td class="statBarContainer"><div class="statBar" style="width: '+String(2*actualPokemon[4][i]) +'px;"></div></td><td class="statNumber" style="width: 40px;">'+String(actualPokemon[4][i])+'</td></tr>'
+    fulltext[0]+='<tr><td class="statTitles">'+statTitleNames[i]+':</td><td class="statBarContainer"><div class="statBar" style="width: '+String(2*actualPokemon[4][i]) +'px;background-color: var(--'+statColors[i]+'"></div></td><td class="statNumber" style="width: 40px;">'+String(actualPokemon[4][i])+'</td></tr>'
   }
-  fulltext+='<tr><td class="statTitles">'+statTitleNames[6]+':</td><td class="statBarContainer"><div class="statBar" style="width: '+String((500/720)*actualPokemon[4][6]) +'px;"></div></td><td class="statNumber" style="width: 40px;">'+String(actualPokemon[4][6])+'</td></tr>'
+  //Base Stat Total
+  fulltext[0]+='<tr><td class="statTitles">'+statTitleNames[6]+':</td><td class="statBarContainer"><div class="statBar" style="width: '+String((500/720)*actualPokemon[4][6]) +'px;background-color: var(--'+statColors[6]+'"></div></td><td class="statNumber" style="width: 40px;">'+String(actualPokemon[4][6])+'</td></tr>'
 
   //Type + Abilities
-  fulltext+='<tr><td style="text-align: center;"><span class="typeTable" style="background-color: var(--type'+actualPokemon[1][0]+');">'+actualPokemon[1][0]+'</span><br>'
+  fulltext[0]+='<tr><td style="text-align: center;"><span class="typeTable" style="background-color: var(--type'+actualPokemon[1][0]+');">'+actualPokemon[1][0]+'</span><br>'
   if(actualPokemon[1].length==2){
-    fulltext+='<span class="typeTable" style="background-color: var(--type'+actualPokemon[1][1]+');">'+actualPokemon[1][1]+'</span>'
+    fulltext[0]+='<span class="typeTable" style="background-color: var(--type'+actualPokemon[1][1]+');">'+actualPokemon[1][1]+'</span>'
   }
-  fulltext+='</td><td class="abilityTable" colspan="2">'
+  fulltext[0]+='</td><td class="abilityTable" colspan="2">'
   for(var i=0; i<actualPokemon[2].length; i++){
-    fulltext+='Ability '+String(i+1)+': '+actualPokemon[2][i]+'<br>';
+    fulltext[0]+='Ability '+String(i+1)+': '+actualPokemon[2][i]+'<br>';
   }
   if(actualPokemon[3][0]!='None'){
-    fulltext+='Hidden Ability: '+actualPokemon[3][0];
+    fulltext[0]+='Hidden Ability: '+actualPokemon[3][0];
     if(actualPokemon[3].length>1) {
-      fulltext+='<br>Other Ability: '+actualPokemon[3][1];
+      fulltext[0]+='<br>Other Ability: '+actualPokemon[3][1];
       //Exceptions "Other Abilities" -> Rockruff
     }
-    fulltext+='</td></tr>'
+    fulltext[0]+='</td></tr>'
   }
-  fulltext+='</table><br><br>'
+  fulltext[0]+='</table><br><br>'
 
   //Evolution Table
   baseForm=getBaseForm(PokemontoDetail, formNumber); //find the base form of the evolution line
   evolutionLine=getEvoLine(baseForm); //find the full evolution line for the base form
   evolutionNumbers=getEvoNumbers(evolutionLine); //calculate the number of rows and columns needed for the table
 
+  var curPokNumForm = getNumberForm(evolutionLine[0]); //Get number and form for BattlePokedex
   temptext=[];
   evolutionsToInsert=[];
+  evolutionMethods=[];
   for(var i=1; i<evolutionLine.length; i++){
     evolutionsToInsert.push(evolutionLine[i]);
+    evolutionMethods.push(BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][9][(i-1)*2]);
   }
 
-  fulltext+='<table class="evolutionTable"><tr>';
+  fulltext.push('<table class="evolutionTable"><tr>');
   curRowSpan=evolutionNumbers[0];
-  var curPokNumForm = getNumberForm(evolutionLine[0]);
+  
   setWidth=parseInt(600/(evolutionNumbers[1]+1));
-  fulltext+='<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionLine[0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>'
+  fulltext[1]+='<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionLine[0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>'
   if(evolutionLine.length==1){ //Only 1 Evolution
-    fulltext+='</tr></table>';
+    fulltext[1]+='</tr></table>';
   } else {
     while(evolutionsToInsert.length!=0){
       temptextVal=0;
@@ -105,31 +145,68 @@ function createbattlePokedexText(PokemontoDetail, formNumber){
           curRowSpan=0;
         }
         if(typeof(temptext[curInsertion])=='undefined'){
-          temptext.push('<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>Method</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>');
+          temptext.push('<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>');
+          evolutionMethods.shift();
         } else {
-          temptext[curInsertion]=temptext[curInsertion]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>Method</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>';
+          if(evolutionsToInsert[curInsertion][0]=='866'){ //Mr. Rime Exception
+            temptext[curInsertion+1]=temptext[curInsertion+1]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>';
+            evolutionMethods.shift();
+          } else if(evolutionsToInsert[curInsertion][0]=='122') { //Mr. Rime Exception
+            temptext[curInsertion]=temptext[curInsertion]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td><td></td><td></td>';
+            evolutionMethods.shift();
+          } else {
+            temptext[curInsertion]=temptext[curInsertion]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>';
+            evolutionMethods.shift();
+          }
         }
         if(evolutionsToInsert[curInsertion].length==1){
           //evolutionsToInsert.shift();
         } else {
           for(var i=1; i<evolutionsToInsert[curInsertion].length; i++){
             evolutionsToInsertTemp.push(evolutionsToInsert[curInsertion][i]);
+            evolutionMethods.push(BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][9][(i-1)*2]);
           }
         }
       }
       evolutionsToInsert=evolutionsToInsertTemp;
     }
-    fulltext+=temptext[0]+'</tr>'
+    fulltext[1]+=temptext[0]+'</tr>'
     for(var i=1; i<temptext.length; i++){
-      fulltext+='<tr>'+temptext[i]+'</tr>';
+      fulltext[1]+='<tr>'+temptext[i]+'</tr>';
     }
   }
+  fulltext[1]+='</table>';
 
-  
-  
-  fulltext+='</table>'
-  return fulltext
-}
+  //Levelup Moves
+  fulltext.push(outputMoves(actualPokemon[0]));
+
+  return fulltext;
+} //create an array of output strings for a Pokemon
+
+function outputMoves(pokeName){
+  var allmoves=JSON.parse(movetext)
+  if(pokeName==""){
+    return "None";
+  }
+  keyList=[]
+  moveList=[]
+  moveLevel=[]
+  fulltext='<table class="pokedexMoveTable"><thead><tr><th>Level</th><th>Move Name</th></tr></thead><tbody>'
+  for (var key in allmoves.pokemon_name){
+      if(allmoves.pokemon_name[key]==pokeName){
+          keyList.push(key)
+      }
+  }
+  for (var key in keyList){
+      moveList.push(allmoves.move_name[keyList[key]])
+      moveLevel.push(allmoves.level[keyList[key]])
+  }
+  for (var key in keyList){
+      fulltext+="<tr><td>"+moveLevel[key]+"</td><td>"+moveList[key]+"</td></tr>"
+  }
+  fulltext+='</tbody></table>'
+  return fulltext;
+} //get the level-up learnable moves for the Pokemon
 
 function getBaseForm(thisPokemon, formNumber){
   var nextPokemon=thisPokemon;
@@ -175,7 +252,7 @@ function getEvoLine(baseForm){
   }
 
   return evolutionLine;
-}
+} //get the base evolution for any Pokemon
 
 function getEvoNumbers(evolutionLine){
   var evoNumbers=[0,0]; //number of rows (max diverging evolutions) & number of columns (max number of evolutions)
@@ -193,7 +270,7 @@ function getEvoNumbers(evolutionLine){
     }
   }
   return evoNumbers;
-}
+} //get the number of rows/columns needed for each evolution line
 
 function getNumberForm(pokemonString){
   if(pokemonString.search("_")==-1){
@@ -201,9 +278,84 @@ function getNumberForm(pokemonString){
   } else {
     return [parseInt(pokemonString.substr(0,3)), parseInt(pokemonString.substr(4,1))];
   }
-}
+} //get the pokedex number and form from any string -> 019_1 is 019 for Rattata: Form 1 (Alolan)
 
-function autocomplete(inp, arr) {
+function calcStatColor(statNums){
+  statColors=[];
+  //HP
+  if(statNums[0]<=46){
+    statColors.push("veryLowStat");
+  } else if (statNums[0]<=69) {
+    statColors.push("belowAverageStat");
+  } else if (statNums[0]<=95) {
+    statColors.push("aboveAverageStat");
+  } else {
+    statColors.push("veryHighStat");
+  }
+  //Attack
+  if(statNums[1]<=47){
+    statColors.push("veryLowStat");
+  } else if (statNums[1]<=79) {
+    statColors.push("belowAverageStat");
+  } else if (statNums[1]<=110) {
+    statColors.push("aboveAverageStat");
+  } else {
+    statColors.push("veryHighStat");
+  }
+  //Defense
+  if(statNums[2]<=43){
+    statColors.push("veryLowStat");
+  } else if (statNums[2]<=73) {
+    statColors.push("belowAverageStat");
+  } else if (statNums[2]<=104) {
+    statColors.push("aboveAverageStat");
+  } else {
+    statColors.push("veryHighStat");
+  }
+  //Special Attack
+  if(statNums[3]<=40){
+    statColors.push("veryLowStat");
+  } else if (statNums[3]<=71) {
+    statColors.push("belowAverageStat");
+  } else if (statNums[3]<=103) {
+    statColors.push("aboveAverageStat");
+  } else {
+    statColors.push("veryHighStat");
+  }
+  //Special Defense
+  if(statNums[4]<=44){
+    statColors.push("veryLowStat");
+  } else if (statNums[4]<=71) {
+    statColors.push("belowAverageStat");
+  } else if (statNums[4]<=98) {
+    statColors.push("aboveAverageStat");
+  } else {
+    statColors.push("veryHighStat");
+  }
+  //Speed
+  if(statNums[5]<=38){
+    statColors.push("veryLowStat");
+  } else if (statNums[5]<=67) {
+    statColors.push("belowAverageStat");
+  } else if (statNums[5]<=96) {
+    statColors.push("aboveAverageStat");
+  } else {
+    statColors.push("veryHighStat");
+  }
+  //Base Stat Total
+  if(statNums[6]<=314){
+    statColors.push("veryLowStat");
+  } else if (statNums[6]<=432) {
+    statColors.push("belowAverageStat");
+  } else if (statNums[6]<=549) {
+    statColors.push("aboveAverageStat");
+  } else {
+    statColors.push("veryHighStat");
+  }
+  return statColors;
+} //get bar color for stats
+
+function autocomplete(inp, arr, alltext) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
     var currentFocus;
@@ -235,7 +387,7 @@ function autocomplete(inp, arr) {
                 b.addEventListener("click", function(e) {
                 /*insert the value for the autocomplete text field:*/
                 inp.value = this.getElementsByTagName("input")[0].value;
-                readText();
+                readText(alltext);
                 /*close the list of autocompleted values,
                 (or any other open lists of autocompleted values:*/
                 closeAllLists();
@@ -305,5 +457,5 @@ function autocomplete(inp, arr) {
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
-  }
+  } //For autocomplete in the text field
   

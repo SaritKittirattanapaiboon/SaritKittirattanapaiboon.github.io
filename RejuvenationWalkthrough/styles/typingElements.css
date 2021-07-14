@@ -27,6 +27,11 @@
     --rocksmashAvailable: #d36645;
     --fishingAvailable: #3573b9;
     --headbuttAvailable: #b7cec8;
+
+    --veryLowStat: rgb(196, 0, 0);
+    --belowAverageStat: rgb(197, 197, 0);
+    --aboveAverageStat: rgb(70, 156, 0);
+    --veryHighStat: rgb(0, 252, 0);
 }
 
 .bugType {

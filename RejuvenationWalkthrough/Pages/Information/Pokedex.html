@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../../styles/pokedex.css">
 
 <script src="../../Scripts/battlepokedex.js"></script>
+<script src="../../Scripts/pokemonMoves.js"></script>
 <script src="../../Scripts/pokedexPage.js"></script>
 <script src="../../Scripts/walkthroughElements.js"></script>
 <script src="../../Scripts/onload.js"></script>
@@ -28,8 +29,11 @@
       </div>
     </form>
     <div class="buttonAnchor">
-      <button class="pokemonTextButton" id="textInputButton" onclick="readText();">Click Here</button>
+      <button class="pokemonTextButton" id="textInputButton" onclick="alltext=readText(alltext);alltext=showText(alltext);">Click Here</button>
     </div>
+    <br><br><br>
+    <input type="checkbox" class="pinChecks" id="showEvolution" name="showEvolution" value="evolutions" checked="true" onchange="showText(alltext);"><label class="pinCheckLabels" for="showEvolution"> Show Evolution Table</label><br>
+    <input type="checkbox" class="pinChecks" id="showMoves" name="showMoves" value="moves" checked="true" onchange="showText(alltext);"><label class="pinCheckLabels" for="showMoves"> Show Moves</label><br>
   </div>
 
   <!-- Main Walkthrough Content -->
@@ -39,71 +43,13 @@
       <span class="pokedexNumber" id="pokemonBigName">Pokemon</span>
     </div>
     <div class="walkthrough">
-      <div id="testOutput">
-          <table class="pokedexTable">
-            <tr>
-              <td rowspan="7" class="pokemonImageCell"><img class="pokemonImageSource" src="../../images/PokemonSprites/003.png"></td>
-              <td class="statTitles">HP:</td><td class="statBarContainer"><div class="statBar" style="width: 160px;"></div></td>
-              <td class="statNumber" style="width: 40px;">80</td>
-            </tr>
-            <tr><td style="width: 150px;text-align: right;padding-right: 10px;">Attack:</td><td style="width: 500px;"><div style="background-color: rgb(0, 100, 100);width: 164px;height: 10px;"></div></td><td style="width: 40px;text-align: center;">82</td></tr>
-            <tr><td style="width: 150px;text-align: right;padding-right: 10px;">Defense:</td><td style="width: 500px;"><div style="background-color: rgb(0, 100, 100);width: 166px;height: 10px;"></div></td><td style="width: 40px;text-align: center;">83</td></tr>
-            <tr><td style="width: 150px;text-align: right;padding-right: 10px;">Special Attack:</td><td style="width: 500px;"><div style="background-color: rgb(0, 100, 100);width: 200px;height: 10px;"></div></td><td style="width: 40px;text-align: center;">100</td></tr>
-            <tr><td style="width: 150px;text-align: right;padding-right: 10px;">Special Defense:</td><td style="width: 500px;"><div style="background-color: rgb(0, 100, 100);width: 200px;height: 10px;"></div></td><td style="width: 40px;text-align: center;">100</td></tr>
-            <tr><td style="width: 150px;text-align: right;padding-right: 10px;">Speed:</td><td style="width: 500px;"><div style="background-color: rgb(0, 100, 100);width: 160px;height: 10px;"></div></td><td style="width: 40px;text-align: center;">80</td></tr>
-            <tr><td style="width: 150px;text-align: right;padding-right: 10px;">Stat Total:</td><td style="width: 500px;"><div style="background-color: rgb(0, 100, 100);width: 365px;height: 10px;"></div></td><td style="width: 40px;text-align: center;">525</td></tr>
-            <tr><td style="text-align: center;"><span class="typeTable" style="background-color: var(--typeGrass);">Grass</span><br><span class="typeTable" style="background-color: var(--typePoison);">Poison</span></td><td class="abilityTable" colspan="2">Ability 1:<br>Ability 2:<br>Hidden Ability:</td></tr>
-          </table>
-          <br>
-          <table class="evolutionTable">
-            <tr>
-              <td class="pokemonImageCell" style="width: 150px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/001.png"><br>Bulbasaur</td>
-              <td class="evolutionArrowCell"><div class="rightArrow"></div><br>Level 16</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 150px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/002.png"><br>Ivysaur</td>
-              <td style="text-align: center;font-size: 20px;"><div class="rightArrow"></div><br>Level 36</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 150px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/003.png"><br>Venusaur</td>
-              <td style="text-align: center;font-size: 20px;"><div class="rightArrow"></div><br>Mega Evolution</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 150px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/003_1.png"><br>Mega Venusaur</td>
-            </tr>
-          </table>
-          <br>
-          <table style="border: solid 1px black;border-collapse: collapse;width: 100%;">
-            <tr>
-              <td rowspan="8" class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/133.png"><br>Eevee</td>
-              <td style="text-align: center;font-size: 20px;"><div class="rightArrow"></div><br>Water Stone</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/134.png"><br>Vaporeon</td>
-            </tr>
-            <tr>
-              <td style="text-align: center;font-size: 20px;"><div class="rightArrow"></div><br>Thunder Stone</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/135.png"><br>Jolteon</td>
-            </tr>
-          </table>
-          <br>
-          <table style="border: solid 1px black;border-collapse: collapse;width: 100%;">
-            <tr>
-              <td colspan="8" class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/133.png"><br>Eevee</td>
-            </tr>
-            <tr>
-              <td style="text-align: center;font-size: 20px;"><div class="downEvolutionArrow"></div><br>Water Stone</td>
-              <td style="text-align: center;font-size: 20px;"><div class="downEvolutionArrow"></div><br>Thunder Stone</td>
-              <td style="text-align: center;font-size: 20px;"><div class="downEvolutionArrow"></div><br>Fire Stone</td>
-              <td style="text-align: center;font-size: 20px;"><div class="downEvolutionArrow"></div><br>Level up (Day)<br>Friendship > 255</td>
-              <td style="text-align: center;font-size: 20px;"><div class="downEvolutionArrow"></div><br>Level up (Night)<br>Friendship > 255</td>
-              <td style="text-align: center;font-size: 20px;"><div class="downEvolutionArrow"></div><br>Level up near Icy Rock</td>
-              <td style="text-align: center;font-size: 20px;"><div class="downEvolutionArrow"></div><br>Level up near Mossy Rock</td>
-              <td style="text-align: center;font-size: 20px;"><div class="downEvolutionArrow"></div><br>Level up<br>Friendship > 255<br>Have a Fairy-type move</td>
-            </tr>
-            <tr>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/134.png"><br>Vaporeon</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/135.png"><br>Jolteon</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/136.png"><br>Flareon</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/196.png"><br>Espeon</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/197.png"><br>Umbreon</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/470.png"><br>Leafeon</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/471.png"><br>Glaceon</td>
-              <td class="pokemonImageCell" style="text-align: center;width: 200px;border: solid 1px black;"><img class="pokemonImageSource" src="../../images/PokemonSprites/700.png"><br>Sylveon</td>
-            </tr>
-          </table>
+      <div id="mainOutput">
+        Input a Pokemon on the left
+      </div>
+      <div id="evoOutput">
+      </div>
+      <br>
+      <div id="moveOutput">
       </div>
     </div>
   </div>
@@ -118,15 +64,11 @@
   </div>
 
   <script>
-    window.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        escapeToClose();
-      }
-    })
+    alltext="";
+
     //Enter to send input text
     var input=document.getElementById("myTextInput");
-
-    autocomplete(input, PokemonListNumbers);
+    autocomplete(input, PokemonListNumbers, alltext);
   </script>
 </body>
 </html>
