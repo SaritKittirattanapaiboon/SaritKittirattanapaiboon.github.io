@@ -12,16 +12,20 @@ function readText(){
       inputName=inputtext;
       for(var i=0; i<PokemonList.length; i++){
         if(inputName.toLowerCase()==PokemonList[i]){
-            returnText=createbattlePokedexText(BattlePokedex[i],7);
-            bigNameField.innerHTML=BattlePokedex[i][0]+" - "+inputName;
-            notFound=false;
-            return returnText;
+          returnText=createbattlePokedexText(BattlePokedex[i],7);
+          bigNameField.innerHTML=BattlePokedex[i][0]+" - "+inputName;
+          notFound=false;
+          return returnText;
         }
       }
       if(notFound){
-          outputField.innerHTML="Pokemon Not Found";
-          bigNameField.innerHTML="Pokemon";
-          return "";
+        bigNameField.innerHTML="Pokemon";
+        outputField.innerHTML="Pokemon Not Found";
+        var allOutputs=document.getElementsByClassName("pokedexOutputs");
+        for(var i=1; i<allOutputs.length; i++){
+          allOutputs[i].innerHTML="";
+        }
+        return "";
       }
       return "";
     }
@@ -67,8 +71,30 @@ function showText(alltext){
   } else {
     docOut.innerHTML="";
   }
+
+  setClickables();
   return alltext;
 }
+
+function setClickables(){
+  var clickTable = document.getElementById("evolutionTable")
+  if(clickTable!=null){
+    var clickableLoop = clickTable.getElementsByClassName("pokemonImageCell")
+    for(var i=0; i<clickableLoop.length; i++){
+      pokemonToChangeTo = clickableLoop[i].id;
+      clickableLoop[i].onclick = function(){changePage(this)};
+    }
+  }
+  return
+}
+
+function changePage(changePokemon){
+  changePokemon=changePokemon.id;
+  var changeInput=document.getElementById("myTextInput");
+  changeInput.value=changePokemon;
+  alltext=readText();
+  alltext=showText(alltext);
+} //Change Pokemon on evolution image click
 
 function createbattlePokedexText(PokemontoDetail, formNumber){
   var actualPokemon=PokemontoDetail[formNumber];
@@ -128,11 +154,11 @@ function createbattlePokedexText(PokemontoDetail, formNumber){
     evolutionMethods.push(BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][9][(i-1)*2]);
   }
 
-  fulltext.push('<table class="evolutionTable"><tr>');
+  fulltext.push('<table class="evolutionTable" id="evolutionTable"><tr>');
   curRowSpan=evolutionNumbers[0];
   
   setWidth=parseInt(600/(evolutionNumbers[1]+1));
-  fulltext[1]+='<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionLine[0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>'
+  fulltext[1]+='<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" id="'+evolutionLine[0]+" - "+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionLine[0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>'
   if(evolutionLine.length==1){ //Only 1 Evolution
     fulltext[1]+='</tr></table>';
   } else {
@@ -145,17 +171,17 @@ function createbattlePokedexText(PokemontoDetail, formNumber){
           curRowSpan=0;
         }
         if(typeof(temptext[curInsertion])=='undefined'){
-          temptext.push('<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>');
+          temptext.push('<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" id="'+evolutionsToInsert[curInsertion][0]+" - "+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>');
           evolutionMethods.shift();
         } else {
           if(evolutionsToInsert[curInsertion][0]=='866'){ //Mr. Rime Exception
-            temptext[curInsertion+1]=temptext[curInsertion+1]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>';
+            temptext[curInsertion+1]=temptext[curInsertion+1]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" id="'+evolutionsToInsert[curInsertion][0]+" - "+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>';
             evolutionMethods.shift();
           } else if(evolutionsToInsert[curInsertion][0]=='122') { //Mr. Rime Exception
-            temptext[curInsertion]=temptext[curInsertion]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td><td></td><td></td>';
+            temptext[curInsertion]=temptext[curInsertion]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" id="'+evolutionsToInsert[curInsertion][0]+" - "+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td><td></td><td></td>';
             evolutionMethods.shift();
           } else {
-            temptext[curInsertion]=temptext[curInsertion]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>';
+            temptext[curInsertion]=temptext[curInsertion]+'<td rowspan="'+String(curRowSpan+1)+'" class="evolutionArrowCell"><div class="rightArrow"></div><br>'+evolutionMethods[0]+'</td>'+'<td rowspan="'+String(curRowSpan+1)+'" class="pokemonImageCell" id="'+evolutionsToInsert[curInsertion][0]+" - "+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'" style="width: '+String(setWidth)+'px;"><img class="pokemonImageSource" src="../../images/PokemonSprites/'+evolutionsToInsert[curInsertion][0]+'.png"><br>'+BattlePokedex[curPokNumForm[0]-1][curPokNumForm[1]+7][0]+'</td>';
             evolutionMethods.shift();
           }
         }
@@ -196,6 +222,18 @@ function outputMoves(pokeName){
       if(allmoves.pokemon_name[key]==pokeName){
           keyList.push(key)
       }
+  }
+  if(keyList.length==0){ //Pokemon Move Exception Check (Megas, etc)
+    pokeName=getMoveException(pokeName);
+    for (var key in allmoves.pokemon_name){
+      if(allmoves.pokemon_name[key]==pokeName){
+          keyList.push(key)
+      }
+    }
+    if(keyList.length==0){
+      fulltext="No Moves Available";
+      return fulltext;
+    }
   }
   for (var key in keyList){
       moveList.push(allmoves.move_name[keyList[key]])
@@ -354,6 +392,159 @@ function calcStatColor(statNums){
   }
   return statColors;
 } //get bar color for stats
+
+function getMoveException(pokeName){
+  if(pokeName.search("Mega")!=-1){ //Megas (ADD EXCEPT CHARIZARD AND MEWTWO)
+    pokeName=pokeName.slice(5);
+    if(pokeName.search("Charizard")!=-1 || pokeName.search("Mewtwo")!=-1){
+      pokeName=pokeName.substr(0,pokeName.length-2);
+    }
+    return pokeName;
+  }
+  else if(pokeName.search("Primal")!=-1){ //Primal Groudon/Kyogre
+    pokeName=pokeName.slice(7);
+    return pokeName;
+  }
+  //Different Form -> Different Moveset
+  else if(pokeName.search("Lycanroc")!=-1) { //Lycanroc
+    if(pokeName.search("Midday")!=-1) {
+      return "Lycanroc Midday";
+    } else if (pokeName.search("Midnight")!=-1){
+      return "Lycanroc Midnight";
+    } else {
+      return "Lycanroc Dusk";
+    }
+  }
+  else if(pokeName.search("Wormadam")!=-1) { //Wormadam
+    if(pokeName.search("Plant")!=-1) {
+      return "Wormadam Plant";
+    } else if (pokeName.search("Sandy")!=-1){
+      return "Wormadam Sandy";
+    } else {
+      return "Wormadam Trash";
+    }
+  }
+  else if(pokeName.search("Deoxys")!=-1){ //Deoxys
+    if(pokeName.search("Normal")!=-1) {
+      return "Deoxys Normal";
+    } else if (pokeName.search("Attack")!=-1){
+      return "Deoxys Attack";
+    } else if (pokeName.search("Defense")!=-1){
+      return "Deoxys Defense";
+    } else {
+      return "Deoxys Speed";
+    }
+  }
+  else if(pokeName.search("Shaymin")!=-1){ //Shaymin
+    if(pokeName.search("Land")!=-1) {
+      return "Shaymin Land";
+    }
+    return "Shaymin Sky";
+  }
+  else if(pokeName.search("Kyurem")!=-1){ //Kyurem
+    if(pokeName.search("Black")!=-1) {
+      return "Kyurem Black";
+    }
+    return "Kyurem White";
+  }
+  else if(pokeName.search("Meowstic")!=-1){ //Meowstic
+    if(pokeName.search("Male")!=-1) {
+      return "Meowstic Male";
+    }
+    return "Meowstic Female";
+  }
+  else if(pokeName.search("Hoopa")!=-1){ //Hoopa
+    if(pokeName.search("Unbound")!=-1) {
+      return "Hoopa Unbound";
+    }
+    return "Hoopa";
+  }
+  else if(pokeName.search("o-o")!=-1){ //Jangmo-o Line
+    if(pokeName.search("Jang")!=-1) {
+      return "Jangmo O";
+    } else if (pokeName.search("Hakamo")!=-1){
+      return "Hakamo O";
+    } 
+    return "Kommo O";
+  }
+  else if(pokeName.search("Toxtricity")!=-1){ //Toxtricity
+    if(pokeName.search("Amped")!=-1) {
+      return "Toxtricity Amped";
+    }
+    return "Toxtricity Low Key";
+  }
+  else if(pokeName.search("Indeedee")!=-1){ //Indeedee
+    if(pokeName.search("Male")!=-1) {
+      return "Indeedee Male";
+    }
+    return "Indeedee Female";
+  }
+  else if(pokeName.search("Urshifu")!=-1){ //Urshifu
+    if(pokeName.search("Single")!=-1) {
+      return "Urshifu Single Strike";
+    }
+    return "Urshifu Rapid Strike";
+  }
+  else if(pokeName.search("Calyrex")!=-1){ //Calyrex
+    if(pokeName.search("Ice")!=-1) {
+      return "Calyrex Ice";
+    }
+    return "Calyrex Shadow";
+  }
+  //Different Form -> Same Moveset
+  else if(pokeName.search("Castform")!=-1){ //Deoxys
+    return "Castform";
+  }
+  else if(pokeName.search("Rotom")!=-1){ //Pumpkaboo/Gourgeist
+    return "Rotom";
+  }
+  else if(pokeName.search("Giratina")!=-1){ //Pumpkaboo/Gourgeist
+    return "Giratina";
+  }
+  else if(pokeName.search("Tornadus")!=-1){ //Tornadus
+    return "Tornadus";
+  }
+  else if(pokeName.search("Thundurus")!=-1){ //Thundurus
+    return "Thundurus";
+  }
+  else if(pokeName.search("Landorus")!=-1){ //Landorus
+    return "Landorus";
+  }
+  else if(pokeName.search("Meloetta")!=-1){ //Meloetta
+    return "Meloetta";
+  }
+  else if(pokeName.search("Aegislash")!=-1){ //Aegislash
+    return "Aegislash";
+  }
+  else if(pokeName.search("Pumpkaboo")!=-1){ //Pumpkaboo/Gourgeist
+    return "Pumpkaboo";
+  }
+  else if(pokeName.search("Gourgeist")!=-1){ //Pumpkaboo/Gourgeist
+    return "Gourgeist";
+  }
+  else if(pokeName.search("Oricorio")!=-1){ //Oricorio
+    return "Oricorio";
+  }
+  else if(pokeName.search("Minior")!=-1){ //Minior
+    return "Minior";
+  }
+  else if(pokeName.search("Necrozma")!=-1){ //Necrozma
+    return "Necrozma";
+  }
+  else if(pokeName.search("Eiscue")!=-1){ //Eiscue
+    return "Eiscue Ice";
+  }
+  else if(pokeName.search("Zacian")!=-1){ //Zacian
+    return "Zacian";
+  }
+  else if(pokeName.search("Zamazenta")!=-1){ //Zamazenta
+    return "Zamazenta";
+  }
+
+  //Others (Somehow)
+
+  return "";
+} //get exception for moveset
 
 function autocomplete(inp, arr, alltext) {
     /*the autocomplete function takes two arguments,

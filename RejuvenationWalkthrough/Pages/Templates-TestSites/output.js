@@ -1,27 +1,54 @@
 var allmoves=JSON.parse(movetext)
+var allmovesDetails=JSON.parse(moveDetails)
 
 function outputMoves(pokeName){
     outputPlace=document.getElementById("testOutput")
     inputName=document.getElementById("pokemonName")
     pokeName=inputName.value
+    otherOutput=""
     if(pokeName==""){
         pokeName="Bulbasaur"
     }
     keyList=[]
     moveList=[]
     moveLevel=[]
-    fulltext='<table class="eventTrainerBattle">'
+    moveID=[]
+    tooltipOutput=[]
+    fulltext='<table class="pokedexMoveTable">'
     for (var key in allmoves.pokemon_name){
         if(allmoves.pokemon_name[key]==pokeName){
             keyList.push(key)
+            moveID.push(getIDByName(allmoves.move_name[key].toLowerCase()))
         }
     }
+    i=0;
     for (var key in keyList){
         moveList.push(allmoves.move_name[keyList[key]])
         moveLevel.push(allmoves.level[keyList[key]])
+        otherOutput="Move Type: ____<br>Power: "+allmovesDetails.power[moveID[i]]+"<br>Accuracy: "+allmovesDetails.accuracy[moveID[i]]
+        tooltipOutput.push(otherOutput);
+        i++
     }
+    i=0;
     for (var key in keyList){
-        fulltext+="<tr><td>"+moveLevel[key]+"</td><td>"+moveList[key]+"</td></tr>"
+        damageType=getdamageTypeEffect(allmovesDetails.type_id[moveID[i]],allmovesDetails.damage_class_id[moveID[i]])
+        fulltext+='<tr>'
+        fulltext+='<td class="levelCell">'+moveLevel[key]+'</td>'
+        fulltext+='<td class="typeCell" style="background-color: var(--type'+damageType[1]+');">'+damageType[1]+'</td>'
+        fulltext+='<td class="pokemonDamageTypeCell"><img class="damageType" src="../../images/moveTypeIcons/'+damageType[0]+'.png"></td>'
+        if(allmovesDetails.power[moveID[i]]==null){
+            fulltext+='<td class="powerCell">---</td>'
+        } else {
+            fulltext+='<td class="powerCell">'+allmovesDetails.power[moveID[i]]+'</td>'
+        }
+        if(allmovesDetails.power[moveID[i]]==null){
+            fulltext+='<td class="accCell">---</td>'
+        } else {
+            fulltext+='<td class="accCell">'+allmovesDetails.accuracy[moveID[i]]+'</td>'
+        }
+        fulltext+='<td class="pokemonMoveNameCell">'+moveList[key]+'</td>';
+        fulltext+='</tr>';
+        i++;
     }
     outputPlace.innerHTML=fulltext
     outputPlace=document.getElementById("speNum")
@@ -108,4 +135,69 @@ function emptyHashed(){
         fulltext+="[<br><br>], //"+String.fromCharCode(65 + i) + '<br>'
     }
     outputLoc.innerHTML=fulltext;
+}
+
+function getIDByName(code) {
+    code=code.replaceAll(" ", "-")
+    for (var key in allmovesDetails.identifier){
+        if(allmovesDetails.identifier[key]==code){
+            return key;
+        }
+    }
+}
+
+function getdamageTypeEffect(typeID, damagetypeID){
+    moveOutput=[]
+    //damage Type
+    if(damagetypeID==1){
+        moveOutput.push("other"); //status moves or other
+    } else if (damagetypeID==2) {
+        moveOutput.push("physical");
+    } else {
+        moveOutput.push("special");
+    }
+
+    //Type
+    if(typeID==1){
+        moveOutput.push("Normal");
+    } else if (typeID==2) {
+        moveOutput.push("Fighting");
+    } else if (typeID==3) {
+        moveOutput.push("Flying");
+    } else if (typeID==4) {
+        moveOutput.push("Poison");
+    } else if (typeID==5) {
+        moveOutput.push("Ground");
+    } else if (typeID==6) {
+        moveOutput.push("Rock");
+    } else if (typeID==7) {
+        moveOutput.push("Bug");
+    } else if (typeID==8) {
+        moveOutput.push("Ghost");
+    } else if (typeID==9) {
+        moveOutput.push("Steel");
+    } else if (typeID==10) {
+        moveOutput.push("Fire");
+    } else if (typeID==11) {
+        moveOutput.push("Water");
+    } else if (typeID==12) {
+        moveOutput.push("Grass");
+    } else if (typeID==13) {
+        moveOutput.push("Electric");
+    } else if (typeID==14) {
+        moveOutput.push("Psychic");
+    } else if (typeID==15) {
+        moveOutput.push("Ice");
+    } else if (typeID==16) {
+        moveOutput.push("Dragon");
+    } else if (typeID==17) {
+        moveOutput.push("Dark");
+    } else if (typeID==18) {
+        moveOutput.push("Fairy");
+    }
+
+
+
+
+    return moveOutput;
 }

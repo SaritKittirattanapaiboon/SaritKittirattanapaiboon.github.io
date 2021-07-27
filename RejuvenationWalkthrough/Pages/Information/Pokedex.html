@@ -43,13 +43,13 @@
       <span class="pokedexNumber" id="pokemonBigName">Pokemon</span>
     </div>
     <div class="walkthrough">
-      <div id="mainOutput">
+      <div class="pokedexOutputs" id="mainOutput">
         Input a Pokemon on the left
       </div>
-      <div id="evoOutput">
+      <div class="pokedexOutputs" id="evoOutput">
       </div>
       <br>
-      <div id="moveOutput">
+      <div class="pokedexOutputs" id="moveOutput">
       </div>
     </div>
   </div>
@@ -69,6 +69,8 @@
     //Enter to send input text
     var input=document.getElementById("myTextInput");
     autocomplete(input, PokemonListNumbers, alltext);
+
+    //setClickableEvoImages
   </script>
 </body>
 </html>
