@@ -255,7 +255,7 @@ function getBaseForm(thisPokemon, formNumber){
     if(nextPokemon[formNumber][8].search("_")==-1){
       formNumber=7;
     } else {
-      formNumber=parseInt(inputtext.substr(inputtext.search("_")+1,1)+7);
+      formNumber=parseInt(nextPokemon[formNumber][8].substr(nextPokemon[formNumber][8].search("_")+1,1))+7
     }
     nextPokemon=BattlePokedex[pokemonToAddNumber-1]
   }
@@ -396,8 +396,11 @@ function calcStatColor(statNums){
 function getMoveException(pokeName){
   if(pokeName.search("Mega")!=-1){ //Megas (ADD EXCEPT CHARIZARD AND MEWTWO)
     pokeName=pokeName.slice(5);
-    if(pokeName.search("Charizard")!=-1 || pokeName.search("Mewtwo")!=-1){
+    if(pokeName.search("Charizard")!=-1 || pokeName.search("Mewtwo")!=-1 || pokeName.search("Gengar")!=-1){
       pokeName=pokeName.substr(0,pokeName.length-2);
+    }
+    if(pokeName.search("Toxtricity")!=-1){
+      pokeName="Toxtricity Amped"
     }
     return pokeName;
   }
@@ -539,6 +542,22 @@ function getMoveException(pokeName){
   }
   else if(pokeName.search("Zamazenta")!=-1){ //Zamazenta
     return "Zamazenta";
+  }
+  //Spelling
+  else if(pokeName.search("Farfetch'd")!=-1){ //Farfetch'd
+    return "Farfetchd";
+  }
+  else if(pokeName.search("Mr. Mime")!=-1){ //Mr. Mime
+    if(pokeName.search("Galar")!=-1){
+      return "Mr Mime Galar"
+    }
+    return "Mr Mime";
+  }
+  else if(pokeName.search("Mime Jr.")!=-1){ //Mime Jr.
+    return "Mime Jr";
+  }
+  else if(pokeName.search("Mr. Rime")!=-1){ //Mr. Rime
+    return "Mr Rime";
   }
 
   //Others (Somehow)
