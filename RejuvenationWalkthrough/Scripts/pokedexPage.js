@@ -560,7 +560,17 @@ function getMoveException(pokeName){
     return "Mr Rime";
   }
 
-  //Others (Somehow)
+  //Others (Somehow) - Galarian -> Galar
+  else if(pokeName.search("Galar")!=-1){
+    pokeName=pokeName.substr(0,pokeName.length-10);
+    pokeName+="Galar"
+    return pokeName
+  }
+  else if(pokeName.search("Alolan")!=-1){
+    pokeName=pokeName.substr(0,pokeName.length-8);
+    pokeName+="Alola"
+    return pokeName
+  }
 
   return "";
 } //get exception for moveset
