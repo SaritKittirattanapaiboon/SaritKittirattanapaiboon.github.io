@@ -571,6 +571,37 @@ function getMoveException(pokeName){
     pokeName+="Alola"
     return pokeName
   }
+  else if(pokeName.search("Aevium")!=-1){
+    if(pokeName.search("Sandygast")!=-1){ //Aevium Sandygast
+      if(pokeName.search("Rock")!=-1){
+        return "Sandygast Aevia Rock"
+      }
+      else if(pokeName.search("Fire")!=-1){
+        return "Sandygast Aevia Fire"
+      } else {
+        return "Sandygast Aevia Ice"
+      }
+    }
+    else if(pokeName.search("Palossand")!=-1){ //Aevium Palossand
+      if(pokeName.search("Rock")!=-1){
+        return "Palossand Aevia Rock"
+      }
+      else if(pokeName.search("Fire")!=-1){
+        return "Palossand Aevia Fire"
+      } else {
+        return "Palossand Aevia Ice"
+      }
+    }
+    else if(pokeName.search("Paras")!=-1){ //Paras
+      return "Paras Aevia"
+    }
+    else if(pokeName.search("Parasect")!=-1){ //Parasect
+      return "Parasect Aevia"
+    }
+    pokeName=pokeName.substr(0,pokeName.length-8);
+    pokeName+="Aevia"
+    return pokeName
+  }
 
   return "";
 } //get exception for moveset
