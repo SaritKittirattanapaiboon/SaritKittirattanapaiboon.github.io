@@ -708,5 +708,4 @@ function autocomplete(inp, arr, alltext) {
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
-  } //For autocomplete in the text field
-  
+} //For autocomplete in the text field

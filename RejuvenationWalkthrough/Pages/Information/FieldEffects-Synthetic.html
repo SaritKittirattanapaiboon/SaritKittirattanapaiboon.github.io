@@ -27,6 +27,7 @@
     <a href="FieldEffects-Elemental.html#SkyField" class="encounterDetailsSidebar">Sky Field</a><br><br>
     <a href="FieldEffects-Elemental.html#VolcanicField" class="encounterDetailsSidebar">Volcanic Field</a><br><br>
     <a href="FieldEffects-Elemental.html#DragonsDen" class="encounterDetailsSidebar">Dragon's Den</a><br><br>
+    <a href="FieldEffects-Elemental.html#InfernalField" class="encounterDetailsSidebar">Infernal Field</a><br><br>
   </div>
 
   <div class="trainerSidebar" id="TelluricFields">
@@ -52,6 +53,7 @@
     <a href="FieldEffects-Synthetic.html#MirrorArena" class="encounterDetailsSidebar">Mirror Arena</a><br><br>
     <a href="FieldEffects-Synthetic.html#ChessBoard" class="encounterDetailsSidebar">Chess Board</a><br><br>
     <a href="FieldEffects-Synthetic.html#FlowerGardenField" class="encounterDetailsSidebar">Flower Garden Field</a><br><br>
+    <a href="FieldEffects-Synthetic.html#ColosseumField" class="encounterDetailsSidebar">Colosseum Field</a><br><br>
   </div>
 
   <div class="trainerSidebar" id="MagicalFields">
@@ -86,29 +88,27 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Sludge Wave, Acid Downpour</td><td class="FieldEffectEffects">Only when on a <a href="FieldEffects-Elemental.html#VolcanicField" class="FieldChanged">Volcanic Field</a> or a <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a></td></tr>
+        <tr><td class="FieldEffectEffects">Sludge Wave*, Acid Downpour</td><td class="FieldEffectEffects">Only when on a <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a><br>*Requires two uses</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
         <tr><td class="FieldEffectEffects">Solar Beam, Solar Blade<br>Seed Flare, Purify</td><td class="FieldEffectEffects">Field changes to a <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a></td></tr>
-        <tr><td class="FieldEffectEffects">Sky Uppercut</td><td class="FieldEffectEffects">Field changes to a <a href="FieldEffects-Telluric.html#MountainField" class="FieldChanged">Mountain Field</a></td></tr>
-        <tr><td class="FieldEffectEffects">Draco Meteor, Devastating Drake</td><td class="FieldEffectEffects">Field changes to a <a href="FieldEffects-Elemental.html#DragonsDen" class="FieldChanged">Dragon's Den</a></td></tr>
-        <tr><td class="FieldEffectEffects">Dragon Pulse</td><td class="FieldEffectEffects">Field changes to a <a href="FieldEffects-Elemental.html#DragonsDen" class="FieldChanged">Dragon's Den</a><br>Requires 2 uses</td></tr>
-        <tr><td class="FieldEffectEffects">Heat Wave, Eruption<br>Lava Plume, Blast Burn</td><td class="FieldEffectEffects">Field changes to a <a href="FieldEffects-Elemental.html#VolcanicField" class="FieldChanged">Volcanic Field</a><br>Additionally deals 50% Max HP to all Pokemon</td></tr>
+        <tr><td class="FieldEffectEffects">Lava Plume, Heat Wave, Eruption<br>Blast Burn, Inferno Overdrive</td><td class="FieldEffectEffects">Destroys the field<br>Deals 50% max HP damage to all active Pokemon</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
-        <tr><td colspan="2" class="FieldEffectEffects">All grounded Pokemon are Poisoned at the end of each turn<br><br>Poison-types and Steel-types are immune to being Poisoned by the field<br><br>Pokemon with these abilities are immune to being Poisoned: Immunity, Wonder Skin</td></tr>
-        <tr><td colspan="2" class="FieldEffectEffects">Stealth Rocks deals Poison-type damage instead of Rock-type damage</td></tr>
+        <tr><td colspan="2" class="FieldEffectEffects">All grounded Pokemon are Poisoned at the end of each turn<br><br>Poison-types and Steel-types are immune to being Poisoned by the field<br><br>Pokemon with these abilities are immune to being Poisoned: Immunity, Wonder Skin, Pastel Veil</td></tr>
+        <tr><td colspan="2" class="FieldEffectEffects">Stealth Rocks deals Poison-type damage</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
-        <tr><td class="FieldEffectEffects">Toxic Boost</td><td class="FieldEffectEffects">Damage boost increased from 50% to 100%</td></tr>
-        <tr><td class="FieldEffectEffects">Corrosion</td><td class="FieldEffectEffects">Increases Base Power of Poison-type moves by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Toxic Boost</td><td class="FieldEffectEffects">Damage boost increased to 2x</td></tr>
+        <tr><td class="FieldEffectEffects">Corrosion</td><td class="FieldEffectEffects">Base Power of all moves increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Liquid Ooze</td><td class="FieldEffectEffects">Damage inflicted by this ability is doubled</td></tr>
-        <tr><td class="FieldEffectEffects">Grass Pelt, Leaf Guard, Flower Viel</td><td class="FieldEffectEffects">Pokemon with these abilities take damage at the end of each turn</td></tr>
+        <tr><td class="FieldEffectEffects">Grass Pelt, Leaf Guard, Flower Veil</td><td class="FieldEffectEffects">Pokemon with these abilities take damage at the end of each turn</td></tr>
         <tr><td class="FieldEffectEffects">Poison Heal</td><td class="FieldEffectEffects">Pokemon with these abilities are healed at the end of each turn</td></tr>
         <tr><td class="FieldEffectEffects">Dry Skin</td><td class="FieldEffectEffects">If the user is Poison-type, heal at the end of every turn<br>Otherwise, the user takes damage at the end of every turn</td></tr>
         <tr><td class="FieldEffectEffects">Poison Touch, Poison Point</td><td class="FieldEffectEffects">The activation rate for these abilities are doubled</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Poison</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
@@ -118,8 +118,9 @@
         <tr><td colspan="2" class="FieldEffectEffects">Non-contact Flying-type moves have their Base Power decreased by 0.5x</td></tr>
         <tr><td class="FieldEffectEffects">Rock Tomb, Rock Slide, Stone Edge<br>Smack Down, Diamond Storm</td><td class="FieldEffectEffects">Deals Poison-type damage in addition to its usual type</td></tr>
         <tr><td class="FieldEffectEffects">Sludge Wave, Gunk Shot</td><td class="FieldEffectEffects">Deals Rock-type damage in addition to its usual type</td></tr>
-        <tr><td class="FieldEffectEffects">Seed Flare</td><td class="FieldEffectEffects">Base Power increased by 1.2x<br>Additionally turns the field into a <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a> </td></tr>
+        <tr><td class="FieldEffectEffects">Seed Flare, Apple Acid</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Ingrain</td><td class="FieldEffectEffects">Damages the user instead of healing<br>Damage is nullified if the user is Poison-type or Steel-type</td></tr>
+        <tr><td class="FieldEffectEffects">Tar Shot</td><td class="FieldEffectEffects">Additionally inflicts Poison onto the target</td></tr>
         <tr><td class="FieldEffectEffects">Toxic Thread</td><td class="FieldEffectEffects">Causes Badly Poisoned</td></tr>
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Gunk Shot</td></tr>
@@ -140,12 +141,13 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Charge Beam, Parabolic Charge, Ion Deluge<br>Wild Charge, Gigavolt Havoc</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Synthetic.html#ShortCircuitField" class="FieldChanged">Short-Circuit Field</a></td></tr>
+        <tr><td class="FieldEffectEffects">Charge Beam, Parabolic Charge, Ion Deluge, Overdrive<br>Aura Wheel, Wild Charge, Gigavolt Havoc</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Synthetic.html#ShortCircuitField" class="FieldChanged">Short-Circuit Field</a></td></tr>
         <tr><td class="FieldEffectEffects">Discharge</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Synthetic.html#ShortCircuitField" class="FieldChanged">Short-Circuit Field</a><br>Can alternate between Factory Field and Short-Circuit Field for each instance of damage</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
-        <tr><td class="FieldEffectEffects">Discharge, Ion Deluge<br>Bulldoze, Magnitude, Earthquake, Fissure<br>Self-Destruct, Gigavolt Havoc, Tectonic Rage</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Synthetic.html#ShortCircuitField" class="FieldChanged">Short-Circuit Field</a></td></tr>
+        <tr><td class="FieldEffectEffects">Ion Deluge, Overdrive, Aura Wheel<br>Bulldoze, Magnitude, Earthquake, Fissure<br>Self-Destruct, Explosion, Gigavolt Havoc, Tectonic Rage</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Synthetic.html#ShortCircuitField" class="FieldChanged">Short-Circuit Field</a></td></tr>
+        <tr><td class="FieldEffectEffects">Discharge</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Synthetic.html#ShortCircuitField" class="FieldChanged">Short-Circuit Field</a><br>Can alternate between Factory Field and Short-Circuit Field for each instance of damage</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
@@ -153,12 +155,15 @@
         <tr><td class="FieldEffectEffects">Galvanize</td><td class="FieldEffectEffects">Damage boost increased to 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Technician</td><td class="FieldEffectEffects">Applies to moves with Base Power up to 80</td></tr>
         <tr><td class="FieldEffectEffects">Motor Drive, Download</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
+        <tr><td class="FieldEffectEffects">Gulp Missile</td><td class="FieldEffectEffects">Always picks up a Pikachu when activated</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Steel</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Electric-type moves have their Base Power increased by 1.2x</td></tr>
-        <tr><td class="FieldEffectEffects">Flash Cannon, Gyro Ball, Gear Grind, Magnet Bomb</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
+        <tr><td class="FieldEffectEffects">Flash Cannon, Gyro Ball, Gear Grind<br>Magnet Bomb, Double Iron Bash</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
         <tr><td class="FieldEffectEffects">Steam Roller, Technoblast</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Steel Beam</td><td class="FieldEffectEffects">Recoil damage is set to 25% of the user's HP</td></tr>
         <tr><td class="FieldEffectEffects">Metal Sound, Iron Defense, Shift Gear, Autotomize</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Gear Up</td><td class="FieldEffectEffects">Stat changes are doubled<br>Additionally also boosts its user regardless of the user's ability</td></tr>
         <tr><td class="FieldEffectEffects">Magnet Rise</td><td class="FieldEffectEffects">Lasts for 8 turns instead of 5</td></tr>
@@ -179,27 +184,32 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Ion Deluge<br>Bulldoze, Magnitude, Earthquake, Fissure<br>Self-Destruct, Gigavolt Havoc, Tectonic Rage</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Synthetic.html#FactoryField" class="FieldChanged">Factory Field</a></td></tr>
+        <tr><td class="FieldEffectEffects">Ion Deluge, Overdrive, Aura Wheel<br>Bulldoze, Magnitude, Earthquake, Fissure<br>Self-Destruct, Explosion, Gigavolt Havoc, Tectonic Rage</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Synthetic.html#FactoryField" class="FieldChanged">Factory Field</a></td></tr>
         <tr><td class="FieldEffectEffects">Discharge</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Synthetic.html#Factory" class="FieldChanged">Factory Field</a><br>Can alternate between Factory Field and Short-Circuit Field for each instance of damage</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
-        <tr><td class="FieldEffectEffects">Charge Beam, Parabolic Charge, Ion Deluge<br>Wild Charge, Gigavolt Havoc</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Synthetic.html#FactoryField" class="FieldChanged">Factory Field</a></td></tr>
+        <tr><td class="FieldEffectEffects">Charge Beam, Parabolic Charge, Ion Deluge, Overdrive<br>Aura Wheel, Wild Charge, Gigavolt Havoc</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Synthetic.html#FactoryField" class="FieldChanged">Factory Field</a></td></tr>
         <tr><td class="FieldEffectEffects">Discharge</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Synthetic.html#Factory" class="FieldChanged">Factory Field</a><br>Can alternate between Factory Field and Short-Circuit Field for each instance of damage</td></tr>
         
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects">Galvanize</td><td class="FieldEffectEffects">Damage boost increased to 2x</td></tr>
-        <tr><td class="FieldEffectEffects">Steelworker</td><td class="FieldEffectEffects">Additionally adds the Electric-type to all moves in addition to their original type</td></tr>
+        <tr><td class="FieldEffectEffects">Steelworker</td><td class="FieldEffectEffects">Additionally adds the Electric-type to all Steel-type moves in addition to their original type</td></tr>
+        <tr><td class="FieldEffectEffects">Download</td><td class="FieldEffectEffects">Boosts both Attack and Special Attack on switch in</td></tr>
         <tr><td class="FieldEffectEffects">Plus, Minus, Surge Surfer</td><td class="FieldEffectEffects">Stat boost is activated regardless of other factors</td></tr>
+        <tr><td class="FieldEffectEffects">Volt Absorb</td><td class="FieldEffectEffects">Heals at the end of every turn</td></tr>
+        <tr><td class="FieldEffectEffects">Gulp Missile</td><td class="FieldEffectEffects">Always picks up a Pikachu when activated</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Electric</td></tr>
 
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Electric-type moves have their Base Power randomly changed to 0.5x to 2x</td></tr>
-        <tr><td class="FieldEffectEffects">Surf, Muddy Water, Hydro Vortex<br>Gear Grind, Magnet Bomb, Gyro Ball, Flash Cannon</td><td class="FieldEffectEffects">Deals Electric-type damage in addition to its usual type<br>Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Dazzling Gleam</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Dark Pulse, Night Daze, Night Slash<br>Shadow Punch, Shadow Force, Shadow Bone<br>Shadow Ball, Shadow Claw, Shadow Sneak</td><td class="FieldEffectEffects">Base Power increased by 1.3x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Electric-type moves have their Base Power randomly decreased or increased to between 0.5x to 2x</td></tr>
+        <tr><td class="FieldEffectEffects">Steel Beam</td><td class="FieldEffectEffects">Deals Electric-type damage in addition to its usual type<br>Base Power increased by 1.67x<br>Instantly KO's the user</td></tr>
+        <tr><td class="FieldEffectEffects">Surf, Muddy Water, Hydro Vortex<br>Gear Grind, Magnet Bomb, Gyro Ball</td><td class="FieldEffectEffects">Deals Electric-type damage in addition to its usual type<br>Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Dazzling Gleam, Flash Cannon</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Dark Pulse, Night Daze, Night Slash<br>Shadow Punch, Shadow Force, Shadow Bone<br>Shadow Ball, Shadow Claw, Shadow Sneak, Phantom Force</td><td class="FieldEffectEffects">Base Power increased by 1.3x</td></tr>
         <tr><td class="FieldEffectEffects">Zap Cannon</td><td class="FieldEffectEffects">Base accucary increased to 80</td></tr>
         <tr><td class="FieldEffectEffects">Metal Sound, Flash</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Magnet Rise</td><td class="FieldEffectEffects">Lasts for 8 turns instead of 5</td></tr>
@@ -231,12 +241,15 @@
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Download</td><td class="FieldEffectEffects">Boosts Attack and Special Attack by one stage when switching in</td></tr>
         <tr><td class="FieldEffectEffects">RKS System</td><td class="FieldEffectEffects">Pokemon with this ability have their type changed to ???-type at all times</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to ???</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Moves with a recharge turn (Hyper Beam, Giga Impact) do not need to recharge if the move knocks out the target</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Psychic-type moves have their Base Power increased by 1.2x</td></tr>
+        <tr><td class="FieldEffectEffects">Techno Blast, Super UMD Move</td><td class="FieldEffectEffects">Base power increased by 1.3x</td></tr>
         <tr><td class="FieldEffectEffects">Blizzard</td><td class="FieldEffectEffects">Base accuracy increased to 90</td></tr>
         <tr><td class="FieldEffectEffects">Self-Destruct, Explosion</td><td class="FieldEffectEffects">Lowers target's Defense by 0.5x</td></tr>
         <tr><td class="FieldEffectEffects">Metronome</td><td class="FieldEffectEffects">Will never choose a move with less than 70 Base Power</td></tr>
@@ -251,6 +264,7 @@
         <tr><th colspan="2" class="FieldEffectOverviewTable">Held Items</th></tr> <!--Items-->
         <tr><th class="FieldEffectType">Item</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects">Synthetic Seed</td><td class="FieldEffectEffects">Boosts user's Defense and Special Defense by one stage<br>Turns user into a ???-type</td></tr>
+        <tr><td class="FieldEffectEffects">Drives</td><td class="FieldEffectEffects">Genesect becomes immune to the held type of drive</td></tr>
       </table>
     </div>
 
@@ -260,21 +274,27 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
         <tr><td class="FieldEffectEffects" colspan="2">The moves below become High Striker moves, changing their Base Power randomly between 0.5x and 3x. Certain abilities guarentee that the Base Power will be increased by 3x</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Physical Fighting-type moves<br>Pound, Slam, Body Slam<br>Stomp, Strength, Giga Impact<br>Bulldoze, Magnitude, Earthquake<br>High Horsepower, Stomping Tantrum, Continental Crush<br>Sky Drop, Bounce, Smack Down, Heat Crash<br>Icicle Crash, Ice Hammer, Wood Hammer, Crabhammer<br>Dual Chop, Dragon Rush, Dragon Hammer<br>Iron Tail, Meteor Mash, Heavy Slam</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Pokemon with the following abiltiies always gets the 3x Base Power boost: Huge Power, Pure Power, Sheer Force, Guts</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Physical Fighting-type moves<br>Pound, Slam, Body Slam<br>Stomp, Strength, Giga Impact<br>Bulldoze, Magnitude, Earthquake<br>High Horsepower, Stomping Tantrum, Continental Crush<br>Sky Drop, Bounce, Smack Down, Heat Crash<br>Icicle Crash, Ice Hammer, Wood Hammer, Crabhammer<br>Dual Chop, Dragon Rush, Dragon Hammer<br>Iron Tail, Meteor Mash, Heavy Slam<br>Grav Apple, Brutal Swing, Double Iron Bash</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Pokemon with the following abiltiies always gets the 3x Base Power boost: Huge Power, Pure Power, Sheer Force, Guts, Iron Fist</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">A Pokemon's Attack stage impacts the probability of a high roll</td></tr>
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
+        <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Punk Rock</td><td class="FieldEffectEffects">Increases power of sound-based moves by an additional 50%</td></tr>
+        <tr><td class="FieldEffectEffects">Dancer</td><td class="FieldEffectEffects">Additionally boosts the Speed and Special Attack by one stage when the user uses a dance move on its own turn</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Normal</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Sound-based moves have their Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Payday</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
-        <tr><td class="FieldEffectEffects">Vine Whip, Power Whip, Petal Dance<br>Fire Lash, Fiery Dance, First Impression<br>Fly, Acrobatics, Brutal Swing</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Payday</td><td class="FieldEffectEffects">Base Power increased by 2x<br>Money dropped is increased</td></tr>
+        <tr><td class="FieldEffectEffects">Vine Whip, Power Whip, Fire Lash<br>Petal Dance, Fiery Dance<br>Revelation Dance, Drum Beating<br>Fly, Acrobatics, First Impression</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Acrobatics</td><td class="FieldEffectEffects">Always deal double damage regardless of held item</td></tr>
         <tr><td class="FieldEffectEffects">Sing</td><td class="FieldEffectEffects">Base accuracy increased to 100</td></tr>
-        <tr><td class="FieldEffectEffects">Acrobatics</td><td class="FieldEffectEffects">Deals double damage</td></tr>
-        <tr><td class="FieldEffectEffects">Dragon Dance, Quiver Dance, Swords Dance, Feather Dance</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
+        <tr><td class="FieldEffectEffects">Dragon Dance, Quiver Dance, Swords Dance, Feather Dance<br>Aquabatics</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Spotlight</td><td class="FieldEffectEffects">Additionally boosts the Attack and Special Attack of the user and the target by one stage</td></tr>
-        <tr><td class="FieldEffectEffects">Dancer</td><td class="FieldEffectEffects">Additionally boosts the Speed and Special Attack by one stage when the user uses a dance move on its own turn</td></tr>
         <tr><td class="FieldEffectEffects">Belly Drum</td><td class="FieldEffectEffects">Additionally boosts the Defense and Special Defense of the user by one stage</td></tr>
+        <tr><td class="FieldEffectEffects">Clangorous Soul</td><td class="FieldEffectEffects">Boosts all stats by 2 stages, but takes 50% max HP damage</td></tr>
         <tr><td class="FieldEffectEffects">Rain Dance</td><td class="FieldEffectEffects">Lasts 8 turns instead of 5</td></tr>
         <tr><td class="FieldEffectEffects">Encore</td><td class="FieldEffectEffects">Lasts 6 turns instead of 3</td></tr>
 
@@ -304,15 +324,16 @@
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects">Sand Veil, Snow Cloak, Color Change<br>Illusion, Magic Bounce, Tangled Feet</td><td class="FieldEffectEffects">Boosts user's Evasion by one stage on switch in</td></tr>
         <tr><td class="FieldEffectEffects">Magic Bounce</td><td class="FieldEffectEffects">Additionally boosts Evasion by one stage on activation</td></tr>
-        <tr><td class="FieldEffectEffects">Illusion</td><td class="FieldEffectEffects">Lowers opponent's Accuracy by one stage on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Illuminate</td><td class="FieldEffectEffects">Lowers opponent's Accuracy by one stage on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Steel</td></tr>
         
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Single-target non-contact Special moves have a chance to be reflected off the field if they miss, hitting the target anyways</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Missing a physical contact move causes the user to take 1/4 Max HP as recoil damage</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">The following moves have their Base Power increased by 2x if they reflect off the field:<br><br>Bubblebeam, Charge Beam, Psybeam<br>Ice Beam, Solar Beam, Hyper Beam<br>Tri-Attack, Origin Pulse</td></tr>
-        <tr><td class="FieldEffectEffects">Mirror Shot, Primastic Laser</td><td class="FieldEffectEffects">Base Power increased by 2x<br>Will never miss<br>Additionally reduces target's Accuracy</td></tr>
-        <tr><td class="FieldEffectEffects">Aurora Beam, Signal Beam, Dazzling Gleam<br>Luster Purge, Flash Cannon, Doom Desire, Technoblast</td><td class="FieldEffectEffects">Base Power increased by 1.5x<br>Will never miss</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">The following moves have their Base Power increased by 2x if they reflect off the field as stated above:<br><br>Bubblebeam, Charge Beam, Psybeam<br>Ice Beam, Solar Beam, Hyper Beam<br>Tri-Attack, Origin Pulse<br>Fleur Cannon, Moongeist Beam</td></tr>
+        <tr><td class="FieldEffectEffects">Mirror Shot</td><td class="FieldEffectEffects">Base Power increased by 2x<br>Will never miss<br>Always reduces target's Accuracy</td></tr>
+        <tr><td class="FieldEffectEffects">Aurora Beam, Signal Beam, Dazzling Gleam<br>Luster Purge, Flash Cannon, Doom Desire, Techno Blast<br>Primastic Laser, Photon Geyser</td><td class="FieldEffectEffects">Base Power increased by 1.5x<br>Will never miss</td></tr>
         <tr><td class="FieldEffectEffects">Double Team, Flash</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Mirror Move</td><td class="FieldEffectEffects">Additionally boosts user's Attack, Special Attack, and Accuracy by one stage on successful use</td></tr>
         <tr><td class="FieldEffectEffects">Mirror Coat</td><td class="FieldEffectEffects">Additionally boosts user's Defense, Special Defense, and Evasion by one stage on successful use</td></tr>
@@ -326,7 +347,53 @@
         <tr><th colspan="2" class="FieldEffectOverviewTable">Held Items</th></tr> <!--Items-->
         <tr><th class="FieldEffectType">Item</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects">Lax Incense, Brightpowder</td><td class="FieldEffectEffects">Boosts user's Evasion by one stage on switch in</td></tr>
-        <tr><td class="FieldEffectEffects"> Seed</td><td class="FieldEffectEffects">Boosts user's Evasion by two stage</td></tr>
+        <tr><td class="FieldEffectEffects">Synthetic Seed</td><td class="FieldEffectEffects">Boosts user's Evasion by two stage</td></tr>
+      </table>
+    </div>
+
+    <div class="FieldEffects" id="ColosseumField"> <!--ColosseumField-->
+      <p class="FieldEffectTitle">Colosseum Field [Synthetic]</p>
+      <p class="FieldEffectExplanation"></p>
+      <table class="FieldEffectTable">
+        <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
+        <tr><td class="FieldEffectEffects" colspan="2">Pokemon cannot be switched in or out of battle<br><br>Moves that force the opponent out (such as Roar or Whirlwind) will fail</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Knocking out a Pokemon will raise the user's highest stat by one stage</td></tr>
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
+        <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Skill Link</td><td class="FieldEffectEffects">Affected moves have their Base Power increased by 1.2x</td></tr>
+        <tr><td class="FieldEffectEffects">Justified, No Guard, Intrepid Sword</td><td class="FieldEffectEffects">Boosts Attack and Special Attack by one stage on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Battle Armor, Shell Armor</td><td class="FieldEffectEffects">Boosts Defense by one stage on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Mirror Armor, Magic Guard</td><td class="FieldEffectEffects">Boosts Special Defense by one stage on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Dauntless Shield</td><td class="FieldEffectEffects">Boosts Defense and Special Defense by one stage on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Defiant</td><td class="FieldEffectEffects">Additionally boosts Defense by two stages when activated</td></tr>
+        <tr><td class="FieldEffectEffects">Competitive</td><td class="FieldEffectEffects">Additionally boosts Special Defense by two stages when activated</td></tr>
+        <tr><td class="FieldEffectEffects">Emergency Exit</td><td class="FieldEffectEffects">Boosts Speed by two levels when activated. User does not switch out</td></tr>
+        <tr><td class="FieldEffectEffects">Quick Draw</td><td class="FieldEffectEffects">Next attack will be a critical hit when activated</td></tr>
+        <tr><td class="FieldEffectEffects">Wonder Guard</td><td class="FieldEffectEffects">Additionally protects against residual damage</td></tr>
+        <tr><td class="FieldEffectEffects">Stalwart</td><td class="FieldEffectEffects">Gains the effect of Sturdy</td></tr>
+        <tr><td class="FieldEffectEffects">Rattled, Wimp Out</td><td class="FieldEffectEffects">Attacks against Pokemon with these abilities will always be a critical hit</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Steel</td></tr>
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
+        <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Flying-type moves have their Base Power decreased by 0.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Payday, Beat Up, Pursuit<br>Fell Stinger, Reversal</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
+        <tr><td class="FieldEffectEffects">Sacred Sword, Secret Sword, Smart Strike<br>Smack Down, Brutal Swing, Submission, Meteor Assault<br>Bone Club, Bone Rush, Bonemerang<br>Vine Whip, Leaf Blade, Psycho Cut<br>First Impression, Punishment, Payback, Electroweb<br>Bullet Punch, Meteor Mash, Clanging Scales, Steamroller</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Wood Hammer, Dragon Hammer, Ice Hammer<br>Drill Run, Drill Peck, Storm Throw<br>Spirit Shackle, Anchor Shot, Power Whip<br>Throat Chop, Sucker Punch, Shadow Bone<br>Icicle Spear, Crabhammer, Fire Lash</td><td class="FieldEffectEffects">Base Power increased by 1.2x</td></tr>
+        <tr><td class="FieldEffectEffects">Swords Dance, King's Shield, Howl, No Retreat<br>Swagger, Flatter</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
+        <tr><td class="FieldEffectEffects">Roar</td><td class="FieldEffectEffects">Boosts the Attack of the user by two stages<br>Does not force the opponent to switch out</td></tr>
+        <tr><td class="FieldEffectEffects">First Impression</td><td class="FieldEffectEffects">Hits through Protect moves</td></tr>
+        <tr><td class="FieldEffectEffects">Spiky Shield</td><td class="FieldEffectEffects">Damage is doubled</td></tr>
+        <tr><td class="FieldEffectEffects">Baton Pass, Encore</td><td class="FieldEffectEffects">Always fails</td></tr>
+
+        <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Beat Up</td></tr>
+        <tr><td class="FieldEffectEffects">Camouflage</td><td class="FieldEffectEffects">Changes user's type to Steel</td></tr>
+        <tr><td class="FieldEffectEffects">Secret Power</td><td class="FieldEffectEffects">Can raise user's Attack</td></tr>
+        
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Held Items</th></tr> <!--Items-->
+        <tr><th class="FieldEffectType">Item</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Synthetic Seed</td><td class="FieldEffectEffects">Boosts user's Attack by two stages<br>Inflicts Taunt on the user</td></tr>
       </table>
     </div>
 
@@ -334,18 +401,31 @@
       <p class="FieldEffectTitle">Chess Board [Synthetic]</p>
       <p class="FieldEffectExplanation">This board boosts turns some moves into "Chess Attacks", dealing bonus damage to Pokemon with certain abilities. Some moves that boost Special Attack have their effect increased.</p>
       <table class="FieldEffectTable">
-        <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
-        <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
-        <tr><td class="FieldEffectEffects">Stomping Tantrum, Tectonic Rage</td><td class="FieldEffectEffects">Reverts to previous field</td></tr>
-        
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
+        <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Some abilities interact with moves that are turned into Chess Attacks: See Below</td></tr>
+        <tr><td class="FieldEffectEffects">Competitive</td><td class="FieldEffectEffects">Deals increasing damage based on target's current HP (Lower HP means higher damage)<br>Normal stat change effect is removed</td></tr>
+        <tr><td class="FieldEffectEffects">Queenly Majesty</td><td class="FieldEffectEffects">Base Power of all moves increase by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Reckless, Gorilla Tactics</td><td class="FieldEffectEffects">Base Power of all moves increase by 1.2x<br>Opponents have higher critical hit rate against the user</td></tr>
+        <tr><td class="FieldEffectEffects">Illusion</td><td class="FieldEffectEffects">Base Power of all moves increase by 1.2x while the Illusion is active</td></tr>
+        <tr><td class="FieldEffectEffects">Merciless</td><td class="FieldEffectEffects">Increases critical hit rate based on target's current HP (Lower HP means higher critical hit rate)</td></tr>
+        <tr><td class="FieldEffectEffects">Stance Change</td><td class="FieldEffectEffects">Additionally boosts and lower Attack and Defense when switching between its respective forms</td></tr>
+        <tr><td class="FieldEffectEffects">Stall</td><td class="FieldEffectEffects">Increases user's defense on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Klutz</td><td class="FieldEffectEffects">Will fail if attempting to use Chess Attacks (See Below)</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Psychic</td></tr>
+
+
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Some moves become Chess Attacks and have their Base Power increased by 1.5x while dealing Rock-type damage in addition to their usual type</td></tr>
-        <tr><td class="FieldEffectEffects">Psychic, Strength<br>Ancient Power, Tectonic Rage</td><td class="FieldEffectEffects">Becomes Chess Attacks</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Pokemon with the following abilities take double damage from Chess Attacks: Oblivious, Simple, Unaware, Klutz<br><br>Pokemon suffering from Confuse status take double damage from Chess Attacks (Does not stack with the above abilities)<br><br>Pokemon with the following abilities take half damage from Chess Attacks: Adaptability, Synchronize, Anticipation, Telepathy</td></tr>
-        <tr><td class="FieldEffectEffects">Fake Out, Feint, Feint Attack</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Nasty Plot</td><td class="FieldEffectEffects">Boosts user's Special Attack by 3 stages</td></tr>
-        <tr><td class="FieldEffectEffects">Calm Mind</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Some moves become Chess Attacks and have their Base Power increased by 1.5x while dealing Rock-type damage in addition to their usual type. Barrage has its Base Power increased by 2x instead.</td></tr>
+        <tr><td class="FieldEffectEffects">Psychic, Strength, Barrage, Gilded Arrow<br>Rock Throw, Ancient Power, Continental Crush</td><td class="FieldEffectEffects">These moves become Chess Attacks</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Pokemon with the following abilities take double damage from Chess Attacks: Oblivious, Simple, Unaware, Klutz, Defeatist<br><br>Pokemon suffering from Confuse status take double damage from Chess Attacks (Does not stack with the above abilities)<br><br>Pokemon with the following abilities take half damage from Chess Attacks: Adaptability, Synchronize, Anticipation, Telepathy<br><br>If the attacker is under the effect of Kinesis or Telekinesis, the damage is doubled (Stacks with the above abilities)</td></tr>
+        <tr><td class="FieldEffectEffects">Fake Out, Feint<br>Feint Attack, Sucker Punch</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">King's Shield, Obstruct</td><td class="FieldEffectEffects">Protect's users from all moves, including status moves</td></tr>
+        <tr><td class="FieldEffectEffects">False Surrender</td><td class="FieldEffectEffects">Additionally applies the Taunt status to the target</td></tr>
+        <tr><td class="FieldEffectEffects">Nasty Plot, Calm Mind</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
+        <tr><td class="FieldEffectEffects">No Retreat</td><td class="FieldEffectEffects">Increases Attack, Special Attack, and Speed by two stages, but lowers Defense and Special Defense by one stage</td></tr>
         <tr><td class="FieldEffectEffects">Trick Room</td><td class="FieldEffectEffects">Lasts 8 turns instead of 5</td></tr>
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Ancient Power</td></tr>

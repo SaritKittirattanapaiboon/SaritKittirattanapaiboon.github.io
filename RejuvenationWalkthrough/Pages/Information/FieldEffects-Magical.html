@@ -27,6 +27,7 @@
     <a href="FieldEffects-Elemental.html#SkyField" class="encounterDetailsSidebar">Sky Field</a><br><br>
     <a href="FieldEffects-Elemental.html#VolcanicField" class="encounterDetailsSidebar">Volcanic Field</a><br><br>
     <a href="FieldEffects-Elemental.html#DragonsDen" class="encounterDetailsSidebar">Dragon's Den</a><br><br>
+    <a href="FieldEffects-Elemental.html#InfernalField" class="encounterDetailsSidebar">Infernal Field</a><br><br>
   </div>
 
   <div class="trainerSidebar" id="TelluricFields">
@@ -52,6 +53,7 @@
     <a href="FieldEffects-Synthetic.html#MirrorArena" class="encounterDetailsSidebar">Mirror Arena</a><br><br>
     <a href="FieldEffects-Synthetic.html#ChessBoard" class="encounterDetailsSidebar">Chess Board</a><br><br>
     <a href="FieldEffects-Synthetic.html#FlowerGardenField" class="encounterDetailsSidebar">Flower Garden Field</a><br><br>
+    <a href="FieldEffects-Synthetic.html#ColosseumField" class="encounterDetailsSidebar">Colosseum Field</a><br><br>
   </div>
 
   <div class="trainerSidebar" id="MagicalFields">
@@ -86,29 +88,33 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Move: Psychic Terrain, Genesis Super Nova<br>Ability: Psychic Surge</td><td class="FieldEffectEffects">5 Turns</td></tr>
+        <tr><td class="FieldEffectEffects">Move: Psychic Terrain, Genesis Super Nova<br>Ability: Psychic Surge</td><td class="FieldEffectEffects">5 Turns<br>Only on empty fields</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
         <tr><td colspan="2" class="FieldEffectEffects">Priority moves will fail against grounded targets</td></tr>
+        <tr><td colspan="2" class="FieldEffectEffects">Shadow Sky end of turn damage is doubled</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Power Spot</td><td class="FieldEffectEffects">Damage boost increased to 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Telepathy</td><td class="FieldEffectEffects">Additionally doubles Speed</td></tr>
-        <tr><td class="FieldEffectEffects">Magician</td><td class="FieldEffectEffects">Additionaly lowers the accuracy of status moves against it to 50%</td></tr>
+        <tr><td class="FieldEffectEffects">Magician</td><td class="FieldEffectEffects">Additionally lowers the accuracy of status moves against it to 50%</td></tr>
         <tr><td class="FieldEffectEffects">Anticipation, Forewarn</td><td class="FieldEffectEffects">Boosts Special Attack by one stage on switch in</td></tr>
         <tr><td class="FieldEffectEffects">Pure Power</td><td class="FieldEffectEffects">Doubles Special Attack instead of Attack</td></tr>
+        <tr><td class="FieldEffectEffects">Zen Mode</td><td class="FieldEffectEffects">Is always active</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Psychic</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td colspan="2" class="FieldEffectEffects">Psychic-type moves from grounded Pokemon have their Base Power increased by 1.5x damage</td></tr>
         <tr><td colspan="2" class="FieldEffectEffects">Dark-type moves from grounded Pokemon have their Base Power increased by 0.5x damage</td></tr>
         <tr><td class="FieldEffectEffects">Strength, Ancient Power<br>Dragon Pulse, Water Pulse</td><td class="FieldEffectEffects">Deals Psychic-type damage in addition to its usual type</td></tr>
-        <tr><td class="FieldEffectEffects">Mystical Fire, Moonblast, Aura Sphere<br>Magical Leaf, Hex</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Mystical Fire, Moonblast, Aura Sphere<br>Magical Leaf, Hex, Mind Blown</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Hypnosis</td><td class="FieldEffectEffects">Base accuracy increased to 90</td></tr>
         <tr><td class="FieldEffectEffects">Calm Mind, Cosmic Power, Kinesis<br>Nasty Plot, Meditate</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Psych Up, Meditate<br>Mind Reader, Miracle Eye</td><td class="FieldEffectEffects">Additionally boosts Special Attack by two stages</td></tr>
-        <tr><td class="FieldEffectEffects">Shattered Psyche</td><td class="FieldEffectEffects">Additionally confuses the target</td></tr>
         <tr><td class="FieldEffectEffects">Kinesis</td><td class="FieldEffectEffects">Additionally lowers the target's Attack and Special Attack by 2 stages</td></tr>
+        <tr><td class="FieldEffectEffects">Telekinesis</td><td class="FieldEffectEffects">Additionally lowers the target's Defense and Special Defense by 2 stages</td></tr>
         <tr><td class="FieldEffectEffects">Trick Room, Magic Room, Wonder Room<br>Gravity</td><td class="FieldEffectEffects">Lasts 8 turns instead of 5</td></tr>
         
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Psychic</td></tr>
@@ -145,7 +151,9 @@
         <tr><td class="FieldEffectEffects">Cloud Nine</td><td class="FieldEffectEffects">Additionally boosts a random stat by one stage at the end of each turn</td></tr>
         <tr><td class="FieldEffectEffects">Wonder Skin</td><td class="FieldEffectEffects">Will always evade status move</td></tr>
         <tr><td class="FieldEffectEffects">Prism Armor</td><td class="FieldEffectEffects">Reduces damage taken to 0.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Pastel Veil</td><td class="FieldEffectEffects">Reduces damage taken by Poison-type moves to 0.5x</td></tr>
         <tr><td class="FieldEffectEffects">Bad Dreams</td><td class="FieldEffectEffects">Has no effect</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Dragon</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
@@ -155,13 +163,13 @@
         <tr><td class="FieldEffectEffects">Dark Pulse, Night Daze, Shadow Ball, Never-ending Nightmare</td><td class="FieldEffectEffects">Base Power decreased by 0.5x</td></tr>
         <tr><td class="FieldEffectEffects">Meditate, Cosmic Power</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Sonicboom</td><td class="FieldEffectEffects">Damage increased to 140 HP flat damage</td></tr>
-        <tr><td class="FieldEffectEffects">Wish</td><td class="FieldEffectEffects">Heal amount increased to 75% Max HP</td></tr>
+        <tr><td class="FieldEffectEffects">Wish</td><td class="FieldEffectEffects">Heal amount increased to 75% of user's max HP</td></tr>
         <tr><td class="FieldEffectEffects">Aurora Veil</td><td class="FieldEffectEffects">Can be used regardless of weather</td></tr>
         <tr><td class="FieldEffectEffects">Nightmare</td><td class="FieldEffectEffects">Has no effect</td></tr>
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Aurora Beam</td></tr>
         <tr><td class="FieldEffectEffects">Camouflage</td><td class="FieldEffectEffects">Changes user's type to Dragon</td></tr>
-        <tr><td class="FieldEffectEffects">Secret Power</td><td class="FieldEffectEffects">Can randomly inflict Poison, Burn, Freeze, or Paralysis</td></tr>
+        <tr><td class="FieldEffectEffects">Secret Power</td><td class="FieldEffectEffects">Can randomly inflict Poison, Burn, Freeze, Sleep, or Paralysis</td></tr>
         
         <tr><th colspan="2" class="FieldEffectOverviewTable">Held Items</th></tr> <!--Items-->
         <tr><th class="FieldEffectType">Item</th><th class="FieldEffectType">Modification</th></tr>
@@ -175,17 +183,17 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Black-Hole Eclipse</td><td class="FieldEffectEffects">Anywhere, anytime</td></tr>
         <tr><td class="FieldEffectEffects">Flame Burst, Heat Wave, Lava Plume, Burn Up<br>Eruption, Inferno, Blast Burn</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Magical.html#FrozenDimensionalField" class="FieldChanged">Frozen Dimensional Field</a></td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
         <tr><td class="FieldEffectEffects">Blizzard, Glaciate, Sheer Cold<br>Ice Burn, Freeze Shock, Cold Truth</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Magical.html#FrozenDimensionalField" class="FieldChanged">Frozen Dimensional Field</a></td></tr>
         <tr><td class="FieldEffectEffects">Purify</td><td class="FieldEffectEffects">Reverts to previous field</td></tr>
+        <tr><td class="FieldEffectEffects">Precipice Blades</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#InfernalField" class="FieldChanged">Infernal Field</a></td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
         <tr><td class="FieldEffectEffects" colspan="2">Pokemon with the Sleep status take 1/16 Max HP after each turn</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Ghost-type Pokemon are no longer immune to Shadow Tag</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">All weather effects (except for Shadow Sky) fail</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
@@ -193,22 +201,26 @@
         <tr><td class="FieldEffectEffects">Beast Boost</td><td class="FieldEffectEffects">Stat boost is increased to two stages when activated</td></tr>
         <tr><td class="FieldEffectEffects">Rattled</td><td class="FieldEffectEffects">Boosts the user's Speed by two stages on switch it</td></tr>
         <tr><td class="FieldEffectEffects">Pressure</td><td class="FieldEffectEffects">Increases PP usage by two instead of one</td></tr>
+        <tr><td class="FieldEffectEffects">Perish Body</td><td class="FieldEffectEffects">Additionally traps opponent went activated</td></tr>
+        <tr><td class="FieldEffectEffects">Shadow Tag</td><td class="FieldEffectEffects">Now also affects Ghost-type Pokemon</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Dark</td></tr>
         
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Shadow moves from Shadow Pokemon have their Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Dark-type moves have their Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Ghost-type moves have their Base Power increased by 1.2x</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Shadow moves from Shadow Pokemon have their Base Power increased by 1.2x</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Fairy-type moves have their Base Power decreased by 0.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Dimensional Thrash, Dimensional Pulse, Dimensional Zap<br>Dimensional Flare, Dimensional Snare<br>Hyperspace Fury, Hyperspace Hole<br>Spacial Rend, Roar of Time</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Hyperspace Fury, Hyperspace Hole<br>Spacial Rend, Roar of Time<br>Dynamax Cannon, Eterabeam, Shadow Force</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Dark Pulse, Night Daze</td><td class="FieldEffectEffects">Base Power increased by 1.2x<br>Additionally never misses</td></tr>
         <tr><td class="FieldEffectEffects">Dark Void</td><td class="FieldEffectEffects">Will never miss</td></tr>
         <tr><td class="FieldEffectEffects">Heal Block</td><td class="FieldEffectEffects">Additionally causes 1/16 Max HP damage over time</td></tr>
         <tr><td class="FieldEffectEffects">Embargo</td><td class="FieldEffectEffects">Additionally causes the opponent to be unable to switch</td></tr>
+        <tr><td class="FieldEffectEffects">Obstruct</td><td class="FieldEffectEffects">Additionally protects against status moves</td></tr>
         <tr><td class="FieldEffectEffects">Quash</td><td class="FieldEffectEffects">Priority is increased by 1</td></tr>
         <tr><td class="FieldEffectEffects">Gravity, Trick Room, Magic Room, Wonder Room</td><td class="FieldEffectEffects">Randomly lasts between 3-8 turns</td></tr>
         <tr><td class="FieldEffectEffects">Dig, Dive, Fly, Bounce</td><td class="FieldEffectEffects">Instantly KO's the user</td></tr>
-        <tr><td class="FieldEffectEffects">Lucky Chant</td><td class="FieldEffectEffects">Always fails</td></tr>
+        <tr><td class="FieldEffectEffects">Lucky Chant, Teatime</td><td class="FieldEffectEffects">Always fails</td></tr>
         
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Dark Pulse</td></tr>
@@ -228,11 +240,17 @@
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
         <tr><td class="FieldEffectEffects">Blizzard, Glaciate, Sheer Cold<br>Ice Burn, Freeze Shock, Cold Truth</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Magical.html#DimensionalField" class="FieldChanged">Dimensional Field</a></td></tr>
+        <tr><td class="FieldEffectEffects">Glaciate</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Elemental.html#InfernalField" class="FieldChanged">Infernal Field</a></td></tr>
         
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
         <tr><td class="FieldEffectEffects">Flame Burst, Heat Wave, Lava Plume, Burn Up<br>Eruption, Inferno, Blast Burn</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Magical.html#DimensionalField" class="FieldChanged">Dimensional Field</a></td></tr>
         <tr><td class="FieldEffectEffects">Seed Flare, Purify</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#IcyField" class="FieldChanged">Icy Field</a></td></tr>
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
+        <tr><td class="FieldEffectEffects" colspan="2">Effect of Room moves are permanent</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Hail weather lasts 8 turns</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Hail and Shadow Sky damage is doubled</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
@@ -241,22 +259,25 @@
         <tr><td class="FieldEffectEffects">Slush Rush</td><td class="FieldEffectEffects">Speed boost is active regardless of weather</td></tr>
         <tr><td class="FieldEffectEffects">Snow Cloak</td><td class="FieldEffectEffects">Evasion boost is active regardless of weather</td></tr>
         <tr><td class="FieldEffectEffects">Berserk, Rattled</td><td class="FieldEffectEffects">Stat changes are doubled when activated</td></tr>
-        <tr><td class="FieldEffectEffects">Snow Warning</td><td class="FieldEffectEffects">Lasts 8 turns instead of 5</td></tr>
+        <tr><td class="FieldEffectEffects">Hunger Switch</td><td class="FieldEffectEffects">Causes user to be in Hangry Mode</td></tr>
+        <tr><td class="FieldEffectEffects">Ice Face</td><td class="FieldEffectEffects">Protects against all moves</td></tr>
         <tr><td class="FieldEffectEffects">Magma Armor, Blaze, Flash Fire<br>Flare Boost, Solar Power, Flame Body</td><td class="FieldEffectEffects">Can never activate</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Ice</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Ice-type moves have their Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Dark-type moves have their Base Power increased by 1.2x</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Fire-type moves have their Base Power decreased by 0.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Watar Pulse, Surf, Muddy Water, Hydro Pump<br>Night Slash, Dark Pulse, Hyperspace Fury, Hyperspace Hole</td><td class="FieldEffectEffects">Deals Ice-type damage in addition to its usual type<br>Base Power increased by 1.2x</td></tr>
+        <tr><td class="FieldEffectEffects">Watar Pulse, Surf, Muddy Water, Hydro Pump<br>Night Slash, Dark Pulse</td><td class="FieldEffectEffects">Deals Ice-type damage in addition to its usual type<br>Base Power increased by 1.2x</td></tr>
+        <tr><td class="FieldEffectEffects">Hyperspace Fury, Hyperspace Hole</td><td class="FieldEffectEffects">Base Power increased by 1.2x</td></tr>
         <tr><td class="FieldEffectEffects">Dark Void</td><td class="FieldEffectEffects">Will never miss</td></tr>
         <tr><td class="FieldEffectEffects">Power Trip</td><td class="FieldEffectEffects">Damage per boost increased to 40 Base Power from 20 Base Power</td></tr>
         <tr><td class="FieldEffectEffects">Snarl</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Parting Shot</td><td class="FieldEffectEffects">Additionally lowers target's Speed</td></tr>
-        <tr><td class="FieldEffectEffects">Hail</td><td class="FieldEffectEffects">Lasts 8 turns instead of 5</td></tr>
+        <tr><td class="FieldEffectEffects">Aurora Veil</td><td class="FieldEffectEffects">Can be used regardless of weather</td></tr>
         <tr><td class="FieldEffectEffects">Ice Burn, Freeze Shock</td><td class="FieldEffectEffects">Lasts only one turn</td></tr>
-        <tr><td class="FieldEffectEffects">Gravity, Trick Room, Magic Room, Wonder Room</td><td class="FieldEffectEffects">Always fails</td></tr>
+        <tr><td class="FieldEffectEffects">Teatime, Court Change</td><td class="FieldEffectEffects">Always fails</td></tr>
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Ice Beam</td></tr>
         <tr><td class="FieldEffectEffects">Camouflage</td><td class="FieldEffectEffects">Changes user's type to Ice</td></tr>
@@ -274,7 +295,8 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Flash, Purify, Seed Flare<br>Dazzling Gleam, Sacred Fire, Origin Pulse, Judgement</td><td class="FieldEffectEffects">Only when on <a href="FieldEffects-Magical.html#HauntedField" class="FieldChanged">Haunted Field</a></td></tr>
+        <tr><td class="FieldEffectEffects">Flash, Dazzling Gleam</td><td class="FieldEffectEffects">Only when on <a href="FieldEffects-Magical.html#HauntedField" class="FieldChanged">Haunted Field</a><br>Only lasts until the end of the turn</td></tr>
+        <tr><td class="FieldEffectEffects">Purify, Sacred Fire, Origin Pulse, Judgement</td><td class="FieldEffectEffects">Only when on <a href="FieldEffects-Magical.html#HauntedField" class="FieldChanged">Haunted Field</a></td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
@@ -282,23 +304,29 @@
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Power Spot</td><td class="FieldEffectEffects">Allied damage boost increased to 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Justified</td><td class="FieldEffectEffects">Stat changes are doubled on activation</td></tr>
         <tr><td class="FieldEffectEffects">RKS System</td><td class="FieldEffectEffects">Pokemon with this ability have their type changed to Dark-type at all times</td></tr>
-        <tr><td class="FieldEffectEffects">Cursed Body</td><td class="FieldEffectEffects">Has no effect</td></tr>
+        <tr><td class="FieldEffectEffects">Cursed Body, Perish Body</td><td class="FieldEffectEffects">Has no effect</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Normal</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Normal-type moves deal super effective damage to Ghost-type Pokemon</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Fairy-type and special Normal-type moves have their Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Fairy-type moves have their Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Special Normal-type moves have their Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Dragon-type and Psychic-type moves have their Base Power increased by 1.2x</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Ghost-type and Dark-type moves have their Base Power decreased by 0.5x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Ghost-type moves have their Base Power decreased by 0.5x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Special Dark-type moves have their Base Power decreased by 0.5x</td></tr>
         <tr><td class="FieldEffectEffects">Mystical Fire, Sacred Fire<br>Magical Leaf, Ancient Power, Judgement</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Psystrike, Luster Purge, Psycho Boost, Hyperspace Hole<br>Mist Ball, Fleur Cannon, Aeroblast, Land's Wrath<br>Precipice Blades, Origin Pulse, Dragon Ascent<br>Spacial Rend, Roar of Time, Doom Desire<br>Sunsteel Strike, Moongeist Beam, Prismatic Laser<br>Crush Grip, Relic Song, Secret Sword, Multipulse</td><td class="FieldEffectEffects">Base Power increased by 1.3x</td></tr>
+        <tr><td class="FieldEffectEffects">Psystrike, Luster Purge, Psycho Boost, Hyperspace Hole<br>Mist Ball, Fleur Cannon, Aeroblast, Land's Wrath<br>Precipice Blades, Origin Pulse, Dragon Ascent<br>Spacial Rend, Roar of Time, Doom Desire<br>Sunsteel Strike, Moongeist Beam, Prismatic Laser<br>Crush Grip, Relic Song, Secret Sword, Multipulse<br>Genesis Supernova, Behemoth Blade, Behemoth Bash<br>Eternabeam, Dynamax Cannon</td><td class="FieldEffectEffects">Base Power increased by 1.3x</td></tr>
+        <tr><td class="FieldEffectEffects">Spirit Break</td><td class="FieldEffectEffects">Deals super-effective damage to Ghost-types</td></tr>
         <tr><td class="FieldEffectEffects">Cosmic Power</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Nature's Madness</td><td class="FieldEffectEffects">Damage increased to 75% of target's HP</td></tr>
-        <tr><td class="FieldEffectEffects">Wish</td><td class="FieldEffectEffects">Heal amount increased to 75% Max HP</td></tr>
+        <tr><td class="FieldEffectEffects">Wish</td><td class="FieldEffectEffects">Heal amount increased to 75% of user's max HP</td></tr>
+        <tr><td class="FieldEffectEffects">Life Dew</td><td class="FieldEffectEffects">Heal amount increased to 50% of recipient's max HP</td></tr>
         <tr><td class="FieldEffectEffects">Miracle Eye</td><td class="FieldEffectEffects">Additionally boosts user's Special Attack by 1 stage</td></tr>
-        <tr><td class="FieldEffectEffects">Curse</td><td class="FieldEffectEffects">Effect of Curse is lifted after each turn</td></tr>
+        <tr><td class="FieldEffectEffects">Curse (Ghost-type variant)</td><td class="FieldEffectEffects">Effects of Curse is lifted after each turn</td></tr>
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Judgement</td></tr>
         <tr><td class="FieldEffectEffects">Camouflage</td><td class="FieldEffectEffects">Changes user's type to Normal</td></tr>
@@ -316,36 +344,43 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Never-ending Nightmare</td><td class="FieldEffectEffects">Anywhere, anytime</td></tr>
         <tr><td class="FieldEffectEffects">Curse, Trick-or-Treat, Ominous Wind<br>Phantom Force, Shadow Force, Spectral Scream</td><td class="FieldEffectEffects">Only when on <a href="FieldEffects-Magical.html#BlessedField" class="FieldChanged">Blessed Field</a</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
-        <tr><td class="FieldEffectEffects">Flash, Purify, Seed Flare<br>Dazzling Gleam, Sacred Fire, Origin Pulse, Judgement</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Magical.html#BlessedField" class="FieldChanged">Blessed Field</a></td></tr>
+        <tr><td class="FieldEffectEffects">Flash, Dazzling Gleam</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Magical.html#BlessedField" class="FieldChanged">Blessed Field</a><br>Only lasts until the end of the turn</td></tr>
+        <tr><td class="FieldEffectEffects">Purify, Sacred Fire, Origin Pulse, Judgement</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Magical.html#BlessedField" class="FieldChanged">Blessed Field</a></td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
         <tr><td class="FieldEffectEffects" colspan="2">Pokemon with the Sleep status take 1/16 Max HP after each turn</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Power Spot</td><td class="FieldEffectEffects">Ally damage boost increased to 2x</td></tr>
         <tr><td class="FieldEffectEffects">Rattled</td><td class="FieldEffectEffects">Boosts the user's Speed by two stages on switch it</td></tr>
+        <tr><td class="FieldEffectEffects">Perish Body</td><td class="FieldEffectEffects">Additionally traps the target when activated</td></tr>
+        <tr><td class="FieldEffectEffects">Resuscitation</td><td class="FieldEffectEffects">Additionally resets stat changes when activated</td></tr>
+        <tr><td class="FieldEffectEffects">Wandering Spirit</td><td class="FieldEffectEffects">Additionally lowers user's Speed by one stage at the end of each turn</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Ghost</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Ghost-type moves deal super effective damage to Normal-type Pokemon</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Ghost-type moves have their Base Power increased by 1.3x</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Dark-type and special Fairy-type moves have their Base Power decreased by 0.7x</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Psychic-type moves have their Base Power decreased by 0.5x</td></tr>
         <tr><td class="FieldEffectEffects">Fire Spin, Flame Charge, Flame Burst, Inferno</td><td class="FieldEffectEffects">Deals Ghost-type damage in addition to its usual type<br>Base Power increased by 1.3x</td></tr>
-        <tr><td class="FieldEffectEffects">Will-o-Wisp, Hypnosis</td><td class="FieldEffectEffects">Base accuracy increased to 90</td></tr>
+        <tr><td class="FieldEffectEffects">Will-O-Wisp, Hypnosis</td><td class="FieldEffectEffects">Base accuracy increased to 90</td></tr>
         <tr><td class="FieldEffectEffects">Scary Face</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Night Shade</td><td class="FieldEffectEffects">Damage increased to 1.5x the user's level</td></tr>
         <tr><td class="FieldEffectEffects">Nightmare</td><td class="FieldEffectEffects">Damage increased</td></tr>
+        <tr><td class="FieldEffectEffects">Fire Spin</td><td class="FieldEffectEffects">Damage increased to 1/6 of target's max HP per turn</td></tr>
         <tr><td class="FieldEffectEffects">Curse</td><td class="FieldEffectEffects">When used by a Ghost-type Pokemon, only consume 25% of user's HP</td></tr>
         <tr><td class="FieldEffectEffects">Spite</td><td class="FieldEffectEffects">Drains 2 more PP than usual</td></tr>
         <tr><td class="FieldEffectEffects">Lick</td><td class="FieldEffectEffects">Chance to inflict Paralysis increased to 100%</td></tr>
         <tr><td class="FieldEffectEffects">Ominous Wind</td><td class="FieldEffectEffects">Chance of raising all stats increased to 20%</td></tr>
         <tr><td class="FieldEffectEffects">Phantom Force, Shadow Force</td><td class="FieldEffectEffects">Only lasts 1 turn</td></tr>
+        <tr><td class="FieldEffectEffects">Spirit Break</td><td class="FieldEffectEffects">Deals super-effective damage to Ghost-types</td></tr>
+        <tr><td class="FieldEffectEffects">Mean Look, Fire Spin</td><td class="FieldEffectEffects">Targets both opponents in a Double Battle</td></tr>
+        <tr><td class="FieldEffectEffects">Magic Powder</td><td class="FieldEffectEffects">Additionally puts target to sleep</td></tr>
         <tr><td class="FieldEffectEffects">Destiny Bond</td><td class="FieldEffectEffects">No longer fails when used consecutively</td></tr>
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Phantom Force</td></tr>
@@ -354,7 +389,7 @@
         
         <tr><th colspan="2" class="FieldEffectOverviewTable">Held Items</th></tr> <!--Items-->
         <tr><th class="FieldEffectType">Item</th><th class="FieldEffectType">Modification</th></tr>
-        <tr><td class="FieldEffectEffects"> Seed</td><td class="FieldEffectEffects">Boosts user's Defense and Special Defense by one stage<br>Inflicts Burn on the user</td></tr>
+        <tr><td class="FieldEffectEffects">Magical Seed</td><td class="FieldEffectEffects">Boosts user's Defense and Special Defense by one stage<br>Inflicts Burn on the user</td></tr>
       </table>
     </div>
 
@@ -368,6 +403,10 @@
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
         <tr><td class="FieldEffectEffects" colspan="2">The type chart is inverted</td></tr>
+
+        <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
+        <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to a random type</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
@@ -385,10 +424,6 @@
       <p class="FieldEffectTitle">Bewitched Woods [Magical]</p>
       <p class="FieldEffectExplanation">In the Bewitched Woods, Fairy-type and Grass-type moves are boosted, along with a few Dark-type moves. Grounded Grass-type Pokemon will heal each turn, and Pokemon afflicted with Sleep will lose health each turn. Steel-type and Poison-type Pokemon no longer have strong leverage on Fairy-type and Grass-type Pokemon on this field</p>
       <table class="FieldEffectTable">
-        <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
-        <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Moves</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a></td></tr>
-
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
         <tr><td class="FieldEffectEffects">Purify</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Telluric.html#ForestField" class="FieldChanged">Forest Field</a></td></tr>
@@ -399,24 +434,27 @@
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Power Spot</td><td class="FieldEffectEffects">Ally damage boost increased to 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Cotton Down</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Natural Cure</td><td class="FieldEffectEffects">Cures status effect at the end of each turn</td></tr>
         <tr><td class="FieldEffectEffects">Flower Veil</td><td class="FieldEffectEffects">Activates for all Pokemon types</td></tr>
         <tr><td class="FieldEffectEffects">Flower Gift</td><td class="FieldEffectEffects">Form change activated regardless of weather</td></tr>
         <tr><td class="FieldEffectEffects">Effect Spore</td><td class="FieldEffectEffects">Activation chance is doubled</td></tr>
         <tr><td class="FieldEffectEffects">Prankster</td><td class="FieldEffectEffects">Can affect Dark-type Pokemon</td></tr>
+        <tr><td class="FieldEffectEffects">Pastel Veil</td><td class="FieldEffectEffects">Additionally nullifies user's Fairy-type weaknesses</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Fairy</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Fairy-type and Grass-type moves deal super effective damage to Steel-type Pokemon</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Poison-type moves deal neutral damage to Grass-type and Fairy-type Pokemon</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Dark-type moves deal neutral damage to Fairy-type Pokemon<br>Fairy-type moves deal neutral damage to Dark-type Pokemon</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Fairy-type and Grass-type moves have their Base Power increased by 1.3x</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Dark-type moves have their Base Power increased by 1.2x</td></tr>
-        <tr><td class="FieldEffectEffects">Mystical Fire, Hex</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Fairy-type and Grass-type moves have their Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Dark-type moves have their Base Power increased by 1.3x</td></tr>
+        <tr><td class="FieldEffectEffects">Mystical Fire, Hex, Spirit Break</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Bubblebeam, Aurora Beam, Charge Beam<br>Ice Beam, Signal Beam, Hyper Beam<br>Psybeam, Magical Leaf, Flash Cannon</td><td class="FieldEffectEffects">Base Power increased by 1.4x</td></tr>
         <tr><td class="FieldEffectEffects">Dark Pulse, Night Daze, Moonblast</td><td class="FieldEffectEffects">Base Power increased by 1.2x</td></tr>
         <tr><td class="FieldEffectEffects">Poison Powder, Sleep Powder, Stun Spore, Grasswhistle</td><td class="FieldEffectEffects">Base accuracy increased to 95</td></tr>
-        <tr><td class="FieldEffectEffects">Moves</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Moonlight</td><td class="FieldEffectEffects">Heal amount increased to 75% of user's Max HP</td></tr>
         <tr><td class="FieldEffectEffects">Strength Sap</td><td class="FieldEffectEffects">Additionally lowers target's Special Attack</td></tr>
         <tr><td class="FieldEffectEffects">Forest's Curse</td><td class="FieldEffectEffects">Additionally inflicts Curse to the target</td></tr>
@@ -443,12 +481,7 @@
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
         <tr><td class="FieldEffectEffects">Dark Pulse, Dark Void, Night Daze</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Magical.html#DarkCrystalCavern" class="FieldChanged">Dark Crystal Cavern</a></td></tr>
-        <tr><td class="FieldEffectEffects">Bulldoze, Magnitude, Earthquake, Tectonic Rage</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a></td></tr>
-        <tr><td class="FieldEffectEffects">Heat Wave, Lava Plume, Magma Drift<br>Inferno, Eruption, Overheat<br>Fire Lash, Fever Pitch, Fusion Flare</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#VolcanicField" class="FieldChanged">Volcanic Field</a></td></tr>
-        <tr><td class="FieldEffectEffects">Blizzard, Subzero Slammer</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#IcyField" class="FieldChanged">Icy Field</a></td></tr>
-        <tr><td class="FieldEffectEffects">Sky Uppercut</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Telluric.html#MountainField" class="FieldChanged">Mountain</a></td></tr>
-        <tr><td class="FieldEffectEffects">Draco Meteor, Devastating Drake</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#DragonsDen" class="FieldChanged">Dragon's Den</a></td></tr>
-        <tr><td class="FieldEffectEffects">Dragon Pulse</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#DragonsDen" class="FieldChanged">Dragon's Den<br>Requires 2 uses</a></td></tr>
+        <tr><td class="FieldEffectEffects">Bulldoze, Magnitude, Earthquake, *Tectonic Rage</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a><br>Requires two uses<br>*Requires only one use</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">General Changes</th></tr> <!--General Changes-->
         <tr><td class="FieldEffectEffects" colspan="2">Stealth Rocks deal, randomly out of these four, Fire-type, Water-type, Grass-type, or Psychic-type damage</td></tr>
@@ -456,13 +489,14 @@
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects">Prismatic Armor</td><td class="FieldEffectEffects">Damage taken decreased by 0.5</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Rock</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Rock-type moves deal, randomly out of these four, Fire-type, Water-type, Grass-type, or Psychic-type damage in addition to its usual type<br>These moves also gain the additional typing: Strength, Rock Climb, Judgement</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Rock-type moves deal, randomly out of these four, Fire-type, Water-type, Grass-type, or Psychic-type damage in addition to its usual type<br>These moves also gain the additional typing: Strength, Rock Climb, Judgement, Prismatic Laser, Multi-Attack</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Dragon-type moves have their Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Rock Tomb, Power Gem, Ancient Power, Diamond Storm<br>Rock Smash, Multi Attack, Prismatic Laser, Luster Purge</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Aurora Beam, Signal Beam, Moongeist Beam, Dazzling Gleam<br>Mirror Shot, Flash Cannon, Technoblast, Doom Desire</td><td class="FieldEffectEffects">Base Power increased by 1.3x</td></tr>
+        <tr><td class="FieldEffectEffects">Rock Tomb, Power Gem, Ancient Power, Diamond Storm<br>Rock Smash, Prismatic Laser, Luster Purge</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Aurora Beam, Signal Beam, Moongeist Beam, Dazzling Gleam<br>Mirror Shot, Flash Cannon, Techno Blast, Doom Desire<br>Menacing Moonraze Maelstrom, Photon Geyser</td><td class="FieldEffectEffects">Base Power increased by 1.3x</td></tr>
         <tr><td class="FieldEffectEffects">Rock Polish</td><td class="FieldEffectEffects">Additionally increases user's Attack and Special Attack by one stage</td></tr>
         <tr><td class="FieldEffectEffects">Aurora Veil</td><td class="FieldEffectEffects">Can be used regardless of weather</td></tr>
 
@@ -482,30 +516,24 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Dark Pulse, Dark Void, Night Daze</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Magical.html#DarkCrystalCavern" class="FieldChanged">Dark Crystal Cavern</a></td></tr>
+        <tr><td class="FieldEffectEffects">Dark Pulse, Dark Void, Night Daze</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Magical.html#CrystalCavern" class="FieldChanged">Crystal Cavern</a></td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Change/Destruction</th></tr> <!--Destruction-->
         <tr><th class="FieldEffectType">Moves</th><th class="FieldEffectType">Change</th></tr>
-        <tr><td class="FieldEffectEffects">Move: Sunny Day<br>Ability: Drought</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Magical.html#CrystalCavern" class="FieldChanged">Crystal Cavern</a><br>Only while Sunny weather is active; Reverts back to Dark Crystal Cavern after Sunny weather is gone</td></tr>
-        <tr><td class="FieldEffectEffects">Bulldoze, Magnitude, Earthquake, Tectonic Rage</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a></td></tr>
-        <tr><td class="FieldEffectEffects">Heat Wave, Lava Plume, Magma Drift<br>Inferno, Eruption, Overheat<br>Fire Lash, Fever Pitch, Fusion Flare</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#VolcanicField" class="FieldChanged">Volcanic Field</a></td></tr>
-        <tr><td class="FieldEffectEffects">Blizzard, Subzero Slammer</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#IcyField" class="FieldChanged">Icy Field</a></td></tr>
-        <tr><td class="FieldEffectEffects">Sky Uppercut</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Telluric.html#MountainField" class="FieldChanged">Mountain</a></td></tr>
-        <tr><td class="FieldEffectEffects">Draco Meteor, Devastating Drake</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#DragonsDen" class="FieldChanged">Dragon's Den</a></td></tr>
-        <tr><td class="FieldEffectEffects">Dragon Pulse</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Elemental.html#DragonsDen" class="FieldChanged">Dragon's Den<br>Requires 2 uses</a></td></tr>
+        <tr><td class="FieldEffectEffects">Move: Sunny Day<br>Ability: Drought</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Magical.html#CrystalCavern" class="FieldChanged">Crystal Cavern</a><br>Only while Sunny weather is active<br>Reverts back to Dark Crystal Cavern after Sunny weather is gone</td></tr>
+        <tr><td class="FieldEffectEffects">Bulldoze, Magnitude, Earthquake, Tectonic Rage</td><td class="FieldEffectEffects">Field changes to <a href="FieldEffects-Telluric.html#Cave" class="FieldChanged">Cave</a><br>Base Power increased by 1.3x</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
-        <tr><td class="FieldEffectEffects">Prismatic Armor, Shadow Shield</td><td class="FieldEffectEffects">Damage taken decreased by 0.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Prism Armor, Shadow Shield</td><td class="FieldEffectEffects">Damage taken decreased by 0.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Dark</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
-        <tr><td class="FieldEffectEffects">Dark Pulse, Night Daze, Night Slash<br>Shadow Ball, Shadow Claw<br>Shadow Punch, Shadow Force, Shadow Sneak<br>Aurora Beam, Signal Beam, Dazzling Gleam<br>Mirror Shot, Flash Cannon, Doom Desire<br>Power Gym, Technoblast, Luster Purge</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Moongeist Beam, Shadow Bone</td><td class="FieldEffectEffects">Damage increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Dark Pulse, Night Daze, Night Slash<br>Shadow Ball, Shadow Claw<br>Shadow Punch, Shadow Force, Shadow Sneak<br>Aurora Beam, Signal Beam, Dazzling Gleam<br>Mirror Shot, Flash Cannon, Doom Desire<br>Power Gem, Technoblast, Luster Purge<br>Moongeist Beam, Shadow Bone<br>Black Hole Eclipse, Menacing Moonraze Maelstrom</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Prismatic Laser</td><td class="FieldEffectEffects">Damage increased by 2x</td></tr>
         <tr><td class="FieldEffectEffects">Dark Void</td><td class="FieldEffectEffects">Base accuracy increased to 100</td></tr>
         <tr><td class="FieldEffectEffects">Flash</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
-
-        <tr><td class="FieldEffectEffects">Prismatic Laser, Black-Hole Eclipse</td><td class="FieldEffectEffects">Damage increased by 2x</td></tr>
         <tr><td class="FieldEffectEffects">Moonlight</td><td class="FieldEffectEffects">Heal amount increased to 75% of user's Max HP</td></tr>
         <tr><td class="FieldEffectEffects">Morning Sun, Synthesis</td><td class="FieldEffectEffects">Heal amount decreased to 25% of user's Max HP</td></tr>
         <tr><td class="FieldEffectEffects">Aurora Veil</td><td class="FieldEffectEffects">Can be used regardless of weather</td></tr>
@@ -527,40 +555,44 @@
       <table class="FieldEffectTable">
         <tr><th colspan="2" class="FieldEffectOverviewTable">Terrain Creation</th></tr> <!--Creation-->
         <tr><th class="FieldEffectType">Moves/Abilities</th><th class="FieldEffectType">Note</th></tr>
-        <tr><td class="FieldEffectEffects">Mist, Misty Terrain</td><td class="FieldEffectEffects">3 Turns<br>Only when in <a href="FieldEffects-Elemental.html#DragonsDen" class="FieldChanged">Dragon's Den</a></td></tr>
         <tr><td class="FieldEffectEffects">Mist Ball</td><td class="FieldEffectEffects">Only when in <a href="FieldEffects-Elemental.html#DragonsDen" class="FieldChanged">Dragon's Den</a></td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Abilities Modified</th></tr> <!--Abilities-->
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
+        <tr><td class="FieldEffectEffects">Steely Spirit</td><td class="FieldEffectEffects">Damage boost is increased to 2x</td></tr>
         <tr><td class="FieldEffectEffects">Marvel Scale</td><td class="FieldEffectEffects">Defense boost is activated regardless of status conditions</td></tr>
-        <tr><td class="FieldEffectEffects">Magician</td><td class="FieldEffectEffects">Additionally boosts Special Attack on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Intrepid Sword</td><td class="FieldEffectEffects">Additionally boosts Attack and Special Attack on switch in</td></tr>
         <tr><td class="FieldEffectEffects">Battle Armor, Shell Armor</td><td class="FieldEffectEffects">Additionally boosts Defense on switch in</td></tr>
-        <tr><td class="FieldEffectEffects">Magic Guard, Magic Bounce</td><td class="FieldEffectEffects">Additionally boosts Special Defense on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Magician</td><td class="FieldEffectEffects">Additionally boosts Special Attack on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Magic Guard, Magic Bounce<br>Mirror Armor, Pastel Veil</td><td class="FieldEffectEffects">Additionally boosts Special Defense on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Dauntless Shield, Power of Alchemy</td><td class="FieldEffectEffects">Additionally boosts Defense and Special Defense on switch in</td></tr>
         <tr><td class="FieldEffectEffects">Stance Change</td><td class="FieldEffectEffects">Additionally boosts Attack by one stage and lowers Defense by one stage when switching to Blade Forme<br><br>Additionally boosts Defense by one stage and lowers Attack by one stage when switching to Shield Forme</td></tr>
         <tr><td class="FieldEffectEffects">Soul-Heart</td><td class="FieldEffectEffects">Additionally boosts Special Defense when activated</td></tr>
         <tr><td class="FieldEffectEffects">Queenly Majesty</td><td class="FieldEffectEffects">Additionally deals 1.5x damage</td></tr>
-        <tr><td class="FieldEffectEffects">Power of Alchemy</td><td class="FieldEffectEffects">Damage taken decreased by 0.5</td></tr>
+        <tr><td class="FieldEffectEffects"></td><td class="FieldEffectEffects">Damage taken decreased by 0.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Fairy</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Dragon-type moves have their Base Power increased by 2x</td></tr>
-        <tr><td class="FieldEffectEffects" colspan="2">Fairy-type and Steel-type moves have their Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Fairy-type moves have their Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects" colspan="2">Steel-type moves have their Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Fire-type moves deal Dragon-type damage in addition to their usual type</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Steel-type moves deal super effective damage to Dragon-type Pokemon</td></tr>
 
-        <tr><td class="FieldEffectEffects">Cut, Slash, Sacred Sword, Secret Sword</td><td class="FieldEffectEffects">Deals Steel-type damage instead of its usual type<br>Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Draining Kiss, Mist Ball</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Leaf Blade, Solar Blade, Night Slash, Smart Strike<br>Mystical Fire, Magical Leaf, Relic Song, Fleur Cannon<br>Ancient Power, Sparkling Aria, Moongeist Beam</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Draining Kiss, Mist Ball</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
+        <tr><td class="FieldEffectEffects">Cut, Slash, Sacred Sword, Secret Sword</td><td class="FieldEffectEffects">Deals Steel-type damage instead of its usual type<br>Base Power is increased by 1.5x (Does not stack with the above Steel-type boost)</td></tr>
+        <tr><td class="FieldEffectEffects">Leaf Blade, Solar Blade, Night Slash, Smart Strike<br>Psycho Cut, Razor Shell, Behemoth Blade<br>Mystical Fire, Magical Leaf, Relic Song, Fleur Cannon<br>Ancient Power, Sparkling Aria, Moongeist Beam<br>Behemoth Bash</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Swords Dance, Acid Armor, Noble Roar</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Wish</td><td class="FieldEffectEffects">Heal amount increased to 75% of user's HP</td></tr>
         <tr><td class="FieldEffectEffects">Floral Healing</td><td class="FieldEffectEffects">Heal amount increased to 66% of target's HP</td></tr>
         <tr><td class="FieldEffectEffects">Healing Wish</td><td class="FieldEffectEffects">Additionally boosts the recipient's Attack and Special Attack by one stage</td></tr>
         <tr><td class="FieldEffectEffects">Miricle Eye</td><td class="FieldEffectEffects">Additionally boosts the user's Special Attack by one stage</td></tr>
         <tr><td class="FieldEffectEffects">Crafty Shield, Flower Shield</td><td class="FieldEffectEffects">Additionally boosts user's Defense and Special Defense by one stage on use</td></tr>
-        <tr><td class="FieldEffectEffects">King's Shield, Spiky Shield</td><td class="FieldEffectEffects">Additionally protects from all moves, including status moves</td></tr>
-        <tr><td class="FieldEffectEffects">King's Shield</td><td class="FieldEffectEffects">Additionally lower's the attacker's Special Attack by two stages on contact</td></tr>
+        <tr><td class="FieldEffectEffects">King's Shield</td><td class="FieldEffectEffects">Protects from all moves, including status moves<br>Additionally lower's the attacker's Special Attack by two stages on contact</td></tr>
         <tr><td class="FieldEffectEffects">Sweet Kiss, Draining Kiss</td><td class="FieldEffectEffects">Additionally cure's the target's Sleep condition</td></tr>
         <tr><td class="FieldEffectEffects">Forest's Curse</td><td class="FieldEffectEffects">Additionally inflicts Curse on the target</td></tr>
+        <tr><td class="FieldEffectEffects">Strange Steam</td><td class="FieldEffectEffects">Always inflicts Confuse onto the target</td></tr>
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Secret Sword</td></tr>
         <tr><td class="FieldEffectEffects">Camouflage</td><td class="FieldEffectEffects">Changes user's type to Fairy</td></tr>
@@ -592,25 +624,29 @@
         <tr><th class="FieldEffectType">Ability</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects">Marvel Scale</td><td class="FieldEffectEffects">Defense boost is activated regardless of status conditions</td></tr>
         <tr><td class="FieldEffectEffects">Victory Star</td><td class="FieldEffectEffects">Additionally boosts user's and allies' damage by 1.5x</td></tr>
-        <tr><td class="FieldEffectEffects">Illuminate</td><td class="FieldEffectEffects">Additionally boosts user's Special Attack on switch in</td></tr>
+        <tr><td class="FieldEffectEffects">Illuminate</td><td class="FieldEffectEffects">Additionally boosts user's Special Attack on switch in<br>Applies Spotlight on any ally that has Mirror Armor</td></tr>
         <tr><td class="FieldEffectEffects">Adaptability</td><td class="FieldEffectEffects">Additionally copies the opponent's ability (Similar to Trace)</td></tr>
         <tr><td class="FieldEffectEffects">Shadow Shield</td><td class="FieldEffectEffects">Damage taken decreased by 0.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Mirror Armor</td><td class="FieldEffectEffects">Protects the user and its allies from priority moves</td></tr>
+        <tr><td class="FieldEffectEffects">Solar Idol</td><td class="FieldEffectEffects">Always activated</td></tr>
+        <tr><td class="FieldEffectEffects">Mimicry</td><td class="FieldEffectEffects">Changes user's type to Dark</td></tr>
 
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Psychic-type and Dark-type moves have their Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Dark-type moves deal Fairy-type damage in addition to its usual type</td></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Fairy-type moves have their Base Power increased by 1.3x</td></tr>
-        <tr><td class="FieldEffectEffects">Solar Beam</td><td class="FieldEffectEffects">Deals Fairy-type damage instead of its usual type</td></tr>
-        <tr><td class="FieldEffectEffects">Solar Blade</td><td class="FieldEffectEffects">Deals Fairy-type damage in addition to its usual type</td></tr>
+        <tr><td class="FieldEffectEffects">Solar Beam, Solar Blade</td><td class="FieldEffectEffects">Deals Fairy-type damage instead of its usual type</td></tr>
         <tr><td class="FieldEffectEffects">Doom Desire</td><td class="FieldEffectEffects">Deals Fire-type damage in addition to its usual type<br>Base Power increased by 4x</td></tr>
-        <tr><td class="FieldEffectEffects">Swift, Comet Punch, Meteor Mash, Draco Meteor, Spacial Rend<br>Hyperspace Hole, Hyperspace Fury, Moongeist Beam, Sunsteel Strike, Black-Hole Eclipse</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
-        <tr><td class="FieldEffectEffects">Aurora Beam, Signal Beam, Solar Beam, Dazzling Gleam<br>Mirror Shot, Flash Cannon, Luster Purge, Moonblast, Technoblast</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
+        <tr><td class="FieldEffectEffects">Swift, Comet Punch, Meteor Mash, Draco Meteor, Spacial Rend<br>Hyperspace Hole, Hyperspace Fury, Moongeist Beam, Sunsteel Strike, Black-Hole Eclipse<br>Meteor Assault, Searing Sunraze Smash, Menacing Moonraze Maelstrom<br>Light that Burns the Sky</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
+        <tr><td class="FieldEffectEffects">Aurora Beam, Signal Beam, Solar Beam, Dazzling Gleam<br>Mirror Shot, Flash Cannon, Luster Purge, Moonblast, Techno Blast<br>Photon Geyser, Prismatic Laser</td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Cosmic Power, Flash</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
         <tr><td class="FieldEffectEffects">Wish</td><td class="FieldEffectEffects">Heal amount increased to 75% of user's HP</td></tr>
         <tr><td class="FieldEffectEffects">Moonlight</td><td class="FieldEffectEffects">Heal amount increased to 70% of user's HP</td></tr>
         <tr><td class="FieldEffectEffects">Healing Wish, Lunar Dance</td><td class="FieldEffectEffects">Additionally boosts the recipient's Attack and Special Attack by one stage</td></tr>
+        <tr><td class="FieldEffectEffects">Meteor Assault</td><td class="FieldEffectEffects">Can be used instantly without charging up</td></tr>
         <tr><td class="FieldEffectEffects">Aurora Veil</td><td class="FieldEffectEffects">Can be used regardless of weather</td></tr>
+        <tr><td class="FieldEffectEffects">Trick Room, Magic Room, Wonder Room</td><td class="FieldEffectEffects">Lasts 8 turns instead of 5</td></tr>
 
         <tr><td class="FieldEffectEffects">Nature Power</td><td class="FieldEffectEffects">Turns into Moonblast</td></tr>
         <tr><td class="FieldEffectEffects">Camouflage</td><td class="FieldEffectEffects">Changes user's type to Dark</td></tr>
@@ -645,13 +681,12 @@
         <tr><td class="FieldEffectEffects">Multitype, RKS System</td><td class="FieldEffectEffects">Changes type at the end of every turn<br>Types are chosen separately between the two abilities</td></tr>
         <tr><td class="FieldEffectEffects">Shadow Shield</td><td class="FieldEffectEffects">Damage taken decreased by 0.5x</td></tr>
 
-
         <tr><th colspan="2" class="FieldEffectOverviewTable">Moves Modified</th></tr> <!--Moves-->
         <tr><th class="FieldEffectType">Move</th><th class="FieldEffectType">Modification</th></tr>
         <tr><td class="FieldEffectEffects" colspan="2">Dark-type moves have their Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Doom Desire</td><td class="FieldEffectEffects">Deals Fire-type damage in addition to its usual type<br>Base Power increased by 4x</td></tr>
         <tr><td class="FieldEffectEffects">Black-Hole Eclipse</td><td class="FieldEffectEffects">Damage increased by 4x</td></tr>
-        <tr><td class="FieldEffectEffects">Swift, Comet Punch, Vacuum Wave<br>Ancient Power, Meteor Mash, Future Sight<br>Moonblast, Draco Meteor, Spacial Rend<br>Hyperspace Hole, Hyperspace Fury</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
+        <tr><td class="FieldEffectEffects">Swift, Comet Punch, Vacuum Wave<br>Ancient Power, Meteor Mash, Future Sight<br>Moonblast, Draco Meteor, Spacial Rend<br>Hyperspace Hole, Hyperspace Fury<br>Searing Sunraze Smash, Menacing Moonraze Maelstrom<br>Light that Burns the Sky</td><td class="FieldEffectEffects">Base Power increased by 2x</td></tr>
         <tr><td class="FieldEffectEffects">
           Aurora Beam, Signal Beam, Dazzling Gleam<br>
           Eruption, Power Gem, Multiattack<br>
@@ -667,7 +702,8 @@
           Relic Song, Technoblast, Oblivion Wing<br>
           Land's Wrath, Thousand Arrows, Thousand Waves<br>
           Steam Eruption, Diamond Storm, Fleur Cannon<br>
-          Sunsteel Strike, Moongeist Beam, Prismatic Laser, Spectral Thief
+          Sunsteel Strike, Moongeist Beam, Prismatic Laser, Spectral Thief<br>
+          Genesis Supernova, Soul-eating Seven Star Strike, Core Enforcer
         </td><td class="FieldEffectEffects">Base Power increased by 1.5x</td></tr>
         <tr><td class="FieldEffectEffects">Dark Void</td><td class="FieldEffectEffects">Base accuracy increased to 100</td></tr>
         <tr><td class="FieldEffectEffects">Cosmic Power, Flash</td><td class="FieldEffectEffects">Stat changes are doubled</td></tr>
