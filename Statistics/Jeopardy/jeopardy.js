@@ -124,3 +124,9 @@ function showAnswer(thisAnswer){
 
     document.getElementById("answerArea").innerHTML=temptext
 } //Show the answer to the question
+
+function resetAll(){
+    document.getElementById("gameLocation").innerHTML = "";
+    document.getElementById("chooseSet").innerHTML = '<div class="buttonLoc"><button class="setButton" onclick="setNumber=1;setSet()">Chapter 1-2</button></div><div class="buttonLoc"><button class="setButton" onclick="setNumber=2;setSet();">Chapter 3</button></div><div class="buttonLoc"><button class="setButton" onclick="setNumber=3;setSet();">Chapter 4-5</button></div>'
+    document.getElementById('chooseSet').style.display='block';
+}
