@@ -31,8 +31,10 @@ body {
 
 #probabilityTable {
     border-collapse: collapse;
-    width: 100%;
+    width: 96%;
     table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #probabilityTable th {
