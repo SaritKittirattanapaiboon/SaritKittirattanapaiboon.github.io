@@ -31,7 +31,7 @@ function displayDice(diceFrequencies){
     while(curNumber<7){
         if(diceFrequencies[curNumber-1]>0){
             for(i=0;i<diceFrequencies[curNumber-1];i++){
-                tabletext += '<td><img src="'+curNumber+'Dice.png"></td>'
+                tabletext += '<td><img src="'+curNumber+'Dice.png" style="width:150px;"></td>'
             }
         }
         curNumber++;
