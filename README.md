@@ -1,6 +1,5 @@
 # SaritKittirattanapaiboon.github.io
 
-A gaming walkthrough website to test out and practice HTML/CSS/Javascript
+A general site for all my project demos.
 
-Edit 1:Added the actual walkthrough page
-
+Any questions can be directed to k.sarith97@gmail.com
