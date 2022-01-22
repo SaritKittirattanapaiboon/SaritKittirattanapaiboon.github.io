@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perudo/Liar's Dice</title>
+    <link rel="stylesheet" href="perudo.css">
+
+    <script src="perudo.js"></script> <!--Main Javascript-->
+</head>
+
+<body>
+    <div class="inputArea">
+        Number of Your Dice: <input type="text" id="numberOfDiceInput"><br><br>
+        Number of Other People's Dice: <input type="text" id="numberofRemainingDiceInput"><br><br>
+        <button id="diceRollButton" onclick="mycurrentDice=rollDice();generateProbabilityTable(mycurrentDice);">Roll Dice</button>
+    </div>
+    <br><br>
+    <div id="diceRollResult">
+    </div>
+    <br><br>
+    <div class="calculationArea">
+        <p style="font-size: 25px;font-weight: bolder;">Probability Table:</p>
+        <div id="probabilityTableLoc">
+            <table id="probabilityTable">
+            </table>
+        </div>
+    </div>
+
+
+
+    <script>
+        var mycurrentDice = [];
+    </script>
+</body>
