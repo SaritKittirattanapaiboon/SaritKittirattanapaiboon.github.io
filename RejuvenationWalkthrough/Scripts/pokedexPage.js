@@ -231,6 +231,7 @@ function createbattlePokedexText(PokemontoDetail, formNumber){
   return fulltext;
 } //create an array of output strings for a Pokemon
 
+//DEPRECATED
 function outputMovesV0(pokeName){
   var allmoves=JSON.parse(movetext)
   if(pokeName==""){
@@ -316,7 +317,7 @@ function outputMoves(pokeName){
       i++;
   }
   return fulltext
-}  //get the level-uplearnable moves for the Pokemon
+}  //get the level-up learnable moves for the Pokemon
 
 function getIDByName(code) {
   code=code.replaceAll(" ", "-")
