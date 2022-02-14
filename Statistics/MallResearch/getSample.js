@@ -1,25 +1,38 @@
 let allCitizens = []
+var fileAmount = 63;
+var individualFileAmount = 48752;
 
 function loadAllCitizens(){
     fileNameBase = 'allCitizens'
-    for(loop = 0; loop < 547; loop++){
+    for(loop = 0; loop < fileAmount; loop++){
         allCitizens.push(JSON.parse(eval(fileNameBase + String(loop))));
     }
-}
+} //Initilize all the population files
 
 
 function getRandomCitizen(){
+    let fileArray = new Array(fileAmount); fileArray.fill(0);
+    let individualArray = new Array(individualFileAmount); individualArray.fill(0); //Arrays to ensure that there are no repeated samples
+
     randomCitizensAge = [];
     randomCitizensHeight = [];
     randomCitizensWeight = [];
     randomCitizensPurpose = [];
     randomCitizensMoney = [];
-    var tableString = '<table id="sampleResultTable"><tr><th>ID</th><th>Age</th><th>Height (cm)</th><th>Weight (kg)</th><th>Purpose of Visit</th><th>Amount of Money Spent</th>';
-    var sampleSize = 100;
+    var tableString = '<table id="sampleResultTable"><tr><th>ID</th><th>Age</th><th>Height (cm)</th><th>Weight (kg)</th><th>Purpose of Visit</th><th>Amount of Money Spent (Baht)</th>';
+    var sampleSize = 100; //sample size value, replace with text input from page if needed
+
+    randomFile = Math.floor(Math.random() * fileAmount); //Random File
+    randomID = Math.floor(Math.random() * individualFileAmount); //Random ID
     
+    //Loop for selecting the samples and creating the table
     for(loop = 0; loop < sampleSize; loop++){
-        randomFile = Math.floor(Math.random() * 547); //Random File
-        randomID = Math.floor(Math.random() * 1687); //Random ID
+        while(fileArray[randomFile] != 0 && individualArray[randomID] != 0){
+            randomFile = Math.floor(Math.random() * fileAmount); //Random File
+            randomID = Math.floor(Math.random() * individualFileAmount); //Random ID
+        } //Ensure that there is no repeated samples
+        fileArray[randomFile] = 1;
+        individualArray[randomID] = 1;
 
         randomCitizensAge.push(allCitizens[randomFile]['Age'][randomID]); //For Analysis
         randomCitizensHeight.push(allCitizens[randomFile]['Height'][randomID]); //For Analysis
@@ -40,17 +53,19 @@ function getRandomCitizen(){
     tableString += '</table>';
     document.getElementById("tableResult").innerHTML = tableString;
 
+    /////////// Get and display analysis of data
     allPurposes = getPercentages(randomCitizensPurpose);
-
     var numericalString = '<table id="numericalResultTable">'
     numericalString += '<tr class="numbers"><td colspan="3">Average Age (Years):<br>Standard Deviation Age (Years):</td><td colspan="3">' + getAverage(randomCitizensAge) + '</td><td colspan="3">Average Money Spent (Baht):<br>Standard Deviation Money Spent (Baht):</td><td colspan="3">' + getAverage(randomCitizensMoney) + '</td></tr>';
     numericalString += '<tr class="numbers"><td colspan="3">Average Height (cm):<br>Standard Deviation Height (cm):</td><td colspan="3">' + getAverage(randomCitizensHeight) + '</td><td colspan="3">Average Weight (kg)<br>Standard Deviation Weight (kg)</td><td colspan="3">' + getAverage(randomCitizensWeight) + '</td></tr>';
     numericalString += '<tr class="percentages"><td colspan="2">Shopping %</td><td colspan="2">' + allPurposes[0] + '%</td><td colspan="2">Eating %</td><td colspan="2">' + allPurposes[1] + '%</td><td colspan="2">Socializing %</td><td colspan="2">' + allPurposes[2] + '%</td>'
     numericalString += '<tr class="percentages"><td colspan="2">Movies %</td><td colspan="2">' + allPurposes[3] + '%</td><td colspan="2">Work-Related %</td><td colspan="2">' + allPurposes[4] + '%</td><td colspan="2">Others %</td><td colspan="2">' + allPurposes[5] + '%</td>'
     numericalString += '</table><br><br>';
-
     document.getElementById("numericalResult").innerHTML = numericalString;
-}
+    ///////////
+
+    
+} //Get a random sample of 100 individuals
 
 function getAverage(arrayHere){
     sum = 0;
@@ -66,8 +81,7 @@ function getAverage(arrayHere){
     stdev = Math.round(Math.sqrt(sum/arrayHere.length)*100)/100
 
     return mean + '<br>' + stdev
-    //return sum/arrayHere.length;
-}
+} //Get average and standard deviation as strings
 
 function getPercentages(arrayHere){
     allCounts = [0,0,0,0,0,0] //[Shopping, Eating, Socializing, Movies, Work, Others]
@@ -85,9 +99,9 @@ function getPercentages(arrayHere){
         } else if (arrayHere[loop][1]=='o'){ //Socializing
             allCounts[2]++;
         } else {
-            allCounts[0]++;
+            allCounts[0]++; //Shopping
         }
     }
 
     return allCounts;
-}
+} //Get percentages of each reason to visit ******* Will need to change if sample size is NOT 100
