@@ -1,0 +1,61 @@
+body {
+    background-color: antiquewhite;
+    overflow: scroll;
+}
+
+#samplingButton {
+    width: 30%;
+    margin-left: 35%;
+}
+
+#sampleResultTable{
+    border-collapse: collapse;
+    width: 84%;
+    margin-left: 8%;
+    table-layout: fixed;
+}
+
+#sampleResultTable tr:nth-child(even) {
+    background-color: rgb(247, 205, 205);
+}
+
+#sampleResultTable tr:nth-child(odd) {
+    background-color: rgb(250, 167, 167);
+}
+
+#sampleResultTable th{
+    border: 2px black solid;
+    text-align: center;
+    width: 14%;
+}
+
+#sampleResultTable td{
+    border: 1px black solid;
+    text-align: center;
+    width: 14%;
+    font-size: 18px;
+}
+
+#numericalResultTable{
+    border-collapse: collapse;
+    width: 84%;
+    margin-left: 8%;
+    table-layout: fixed;
+}
+
+#numericalResultTable tr.numbers {
+    background-color: rgb(247, 205, 205);
+}
+
+#numericalResultTable tr.percentages {
+    background-color: rgb(250, 167, 167);
+}
+
+#numericalResultTable td{
+    border: 1px black solid;
+    text-align: center;
+    width: 14%;
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}

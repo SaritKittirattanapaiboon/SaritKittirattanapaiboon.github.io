@@ -834,8 +834,8 @@ function autocomplete(inp, arr, alltext) {
       for (var i = 0; i < x.length; i++) {
         if (elmnt != x[i] && elmnt != inp) {
         x[i].parentNode.removeChild(x[i]);
+        }
       }
-    }
     }
     /*execute a function when someone clicks in the document:*/
     document.addEventListener("click", function (e) {
