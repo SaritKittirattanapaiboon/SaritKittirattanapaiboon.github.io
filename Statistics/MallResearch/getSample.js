@@ -141,7 +141,7 @@ function getGenPercentages(arrayHere){
     }
 
     return allCounts;
-} //Get percentages of each reason to visit ******* Will need to change if sample size is NOT 100
+} //Get percentages of genders ******* Will need to change if sample size is NOT 100
 
 function getComPercentages(arrayHere){
     allCounts = [0,0,0,0] //[Parking, Food, Hangout, Directions]
@@ -160,4 +160,4 @@ function getComPercentages(arrayHere){
     }
 
     return allCounts;
-} //Get percentages of each reason to visit ******* Will need to change if sample size is NOT 100
+} //Get percentages of complaints ******* Will need to change if sample size is NOT 100
