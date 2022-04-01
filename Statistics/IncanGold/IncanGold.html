@@ -50,14 +50,19 @@
     <div id="allresults" style="min-height: 300px;width: 70%;font-size: 20px;padding-left: 20px;">
         <p class="templeNameClass" style="text-align: center;">Temple 1:</p>
         <div id="Round1Result"></div><br>
+        <div id="Round1ResultAfter"></div><br>
         <p class="templeNameClass" style="text-align: center;">Temple 2:</p>
         <div id="Round2Result"></div><br>
+        <div id="Round2ResultAfter"></div><br>
         <p class="templeNameClass" style="text-align: center;">Temple 3:</p>
         <div id="Round3Result"></div><br>
+        <div id="Round3ResultAfter"></div><br>
         <p class="templeNameClass" style="text-align: center;">Temple 4:</p>
         <div id="Round4Result"></div><br>
+        <div id="Round4ResultAfter"></div><br>
         <p class="templeNameClass" style="text-align: center;">Temple 5:</p>
         <div id="Round5Result"></div><br>
+        <div id="Round5ResultAfter"></div><br>
     </div>
 
     <div style="position: fixed;right: 0px;top: 0px;background-color:#00a0d1;padding-top: 2%;padding-bottom: 1000px;width: 25%;padding-left: 10px;border-radius: 15px;">
@@ -78,6 +83,7 @@
         <div id="AllButtons" style="width: 100%;font-size: 20px;">
             <button onclick="setUpDeck(currenttempleNum+1);">Shuffle Cards</button>
             <button onclick="drawCard();">Draw Card</button>
+            <button onclick="drawCardAfter();">Check Next Card (After Game is Over)</button>
         </div>
     
         <div id="PlayersLeaveDiv" style="width: 100%; right: 50px;">
@@ -100,22 +106,25 @@
     <script>
         allGemCards = ["Gem01", "Gem02", "Gem03", "Gem04", "Gem05", "Gem06", "Gem07", "Gem08", "Gem09", "Gem10", "Gem11", "Gem12", "Gem13", "Gem14", "Gem15", "Gem16", "Gem17", "Gem18", "Gem19", "Gem20", "Gem21", "Gem22", "Gem23", "Gem24", "Gem25", "Gem26", "Gem27", "Gem28", "Gem29", "Gem30"];
         allTrapCards = ["TrapF", "TrapF", "TrapF", "TrapS", "TrapS", "TrapS", "TrapR", "TrapR", "TrapR", "TrapM", "TrapM", "TrapM", "TrapP", "TrapP", "TrapP"];
+        tempTrapCount = [3,3,3,3,3];
         trapNumbers = [0,0,0,0,0];
         trapCount = [3,3,3,3,3];
         allArtifactCards = [];
         templeNames = ['Round1Result', 'Round2Result', 'Round3Result', 'Round4Result', 'Round5Result'];
         playedCards = [];
 
-        endOfGame=false;
+        endOfGame=true;
         addedArtifact=false;
         playerNumEntered=false;
+        afterOverCardCheck=false;
+        alreadyShuffled = false;
         totalCards=0;
         GemCardsNum=0;
         TrapCardsNum=0;
         ArtCardsNum=0;
         numberOfPlayers=0;
         playersRemaining=0;
-        currenttempleNum=0;
+        currenttempleNum=-1;
                 
         function displayCardNumbers(){
             numberValueLoc = document.getElementById("CardsLeft");
@@ -147,6 +156,9 @@
             if(!playerNumEntered || currenttempleNum>4){
                 return;
             }
+            if(!endOfGame){
+                return;
+            }
             playedCards = [];
             currentTrapDeck = allTrapCards.slice();
             currentGemDeck = allGemCards.slice();
@@ -157,7 +169,7 @@
             currentTrapDeck = shuffle(currentTrapDeck);
             currentGemDeck = shuffle(currentGemDeck);
             currentTrapDeck = shuffle(currentTrapDeck);
-            if(allArtifactCards.length<roundNumber && !addedArtifact){
+            if(allArtifactCards.length<=roundNumber && !addedArtifact){
                 allArtifactCards.push("Artifact");
                 addedArtifact = true;
             }
@@ -168,8 +180,22 @@
             ArtCardsNum = allArtifactCards.length;
             totalCards = GemCardsNum + TrapCardsNum + ArtCardsNum;
             playersRemaining = numberOfPlayers;
-            
+            currenttempleNum += 1;
+            alreadyShuffled = true;
+            trapCount = tempTrapCount;
+
             displayCardNumbers();
+        }
+
+        function drawCardAfter(){
+            if(!endOfGame){
+                return;
+            }
+            afterOverCardCheck = true;
+            endOfGame = false;
+            drawCard();
+            afterOverCardCheck = false;
+            endOfGame = true;
         }
 
         function drawCard(){
@@ -212,10 +238,15 @@
             currentText = generateTable(playedCards);
 
             if(endGameCheck()){
-                currentText += '<p style="text-align:center;font-weight:bolder">The temple has collapsed. End of Round.</p>'
-                endOfGame = true;
-                addedArtifact = false;
-                currenttempleNum += 1;
+                if(afterOverCardCheck){
+
+                } else {
+                    resultAfterDiv = document.getElementById(templeNames[currenttempleNum] + "After");
+                    resultAfterDiv.innerHTML += '<p style="text-align:center;font-weight:bolder">The temple has collapsed. End of Round.</p>'
+                    endOfGame = true;
+                    addedArtifact = false;
+                    tempTrapCount = trapCount;
+                }
             } else {
                 currentText += altText;
             }
@@ -247,6 +278,9 @@
         }
 
         function endGameCheck(){
+            if(afterOverCardCheck){
+                return true;
+            }
             if(trapNumbers[0]==2){
                 locationNum=allTrapCards.indexOf('TrapF');
                 allTrapCards.splice(locationNum,1);
@@ -292,8 +326,9 @@
         function reset(){
             allGemCards = ["Gem01", "Gem02", "Gem03", "Gem04", "Gem05", "Gem06", "Gem07", "Gem08", "Gem09", "Gem10", "Gem11", "Gem12", "Gem13", "Gem14", "Gem15", "Gem16", "Gem17", "Gem18", "Gem19", "Gem20", "Gem21", "Gem22", "Gem23", "Gem24", "Gem25", "Gem26", "Gem27", "Gem28", "Gem29", "Gem30"];
             allTrapCards = ["TrapF", "TrapF", "TrapF", "TrapS", "TrapS", "TrapS", "TrapR", "TrapR", "TrapR", "TrapM", "TrapM", "TrapM", "TrapP", "TrapP", "TrapP"];
+            tempTrapCount = [3,3,3,3,3];
             allArtifactCards = [];
-            endOfGame=false;
+            endOfGame=true;
             addedArtifact=false;
             totalCards=0;
             GemCardsNum=0;
@@ -312,7 +347,7 @@
             resultDiv = document.getElementById("Round5Result");
             resultDiv.innerHTML = "";
 
-            currenttempleNum=0;
+            currenttempleNum=-1;
             currentTemple=templeNames[0];
         }
         
@@ -395,13 +430,13 @@
             displayCardNumbers();
 
             if(playersRemaining==0){
-                resultDiv = document.getElementById(templeNames[currenttempleNum]);
+                resultDiv = document.getElementById(templeNames[currenttempleNum] + "After");
                 currentText = resultDiv.innerHTML;
                 currentText += '<p style="font-weight:bolder;text-align:center;">All players have left the temple. End of Round.</p>';
                 resultDiv.innerHTML = currentText;
                 endOfGame = true;
                 addedArtifact = false;
-                currenttempleNum += 1;
+                tempTrapCount = trapCount;
             }
         }
 
