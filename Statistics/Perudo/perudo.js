@@ -1,4 +1,4 @@
-function rollDice(){
+function rollDice(mode){
     var numberofDice = document.getElementById("numberOfDiceInput").value;
     if(numberofDice==0){numberofDice=5;}
 
@@ -20,18 +20,27 @@ function rollDice(){
         curRoll++;
     }
     
-    diceRollResultElement.innerHTML = displayDice(diceFrequencies);;
+    diceRollResultElement.innerHTML = displayDice(diceFrequencies,mode);
 
     return diceFrequencies;
 }
 
-function displayDice(diceFrequencies){
+function displayDice(diceFrequencies,mode){
     curNumber = 1;
     tabletext = '<table id="diceResultTable"><tbody><tr>'
     while(curNumber<7){
         if(diceFrequencies[curNumber-1]>0){
             for(i=0;i<diceFrequencies[curNumber-1];i++){
-                tabletext += '<td><img src="'+curNumber+'Dice.png" style="width:150px;"></td>'
+                if(curNumber == 1){
+                    if(mode == 1){
+                        tabletext += '<td><img src="'+curNumber+'Dice.png" style="width:150px;"></td>'
+                    } else {
+                        tabletext += '<td><img src="0Dice.png" style="width:150px;"></td>'
+                    }
+                } else {
+                    tabletext += '<td><img src="'+curNumber+'Dice.png" style="width:150px;"></td>'
+                }
+                
             }
         }
         curNumber++;
