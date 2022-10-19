@@ -354,19 +354,19 @@ function generateTable(cardArray){
     while(cellCount<cardArray.length){
         tableString += '<td>'
         if(cardArray[cellCount].search("Spider")!=-1){
-            tableString += '<img class="allImages" src="Spider.png"><br>'
+            tableString += '<img class="allImages" src="Spider.svg"><br>'
         } else if (cardArray[cellCount].search("Snake")!=-1){
-             tableString += '<img class="allImages" src="Snake2.png"><br>'
+             tableString += '<img class="allImages" src="Snake.svg"><br>'
         } else if (cardArray[cellCount].search("Fire")!=-1){
-            tableString += '<img class="allImages" src="Fire.png"><br>'
+            tableString += '<img class="allImages" src="Fire.svg"><br>'
         } else if (cardArray[cellCount].search("Rock")!=-1){
             tableString += '<img class="allImages" src="Rock.png"><br>'
         } else if (cardArray[cellCount].search("Mummy")!=-1){
             tableString += '<img class="allImages" src="Mummy.png"><br>'
         } else if (cardArray[cellCount].search("Artifact")!=-1){
-            tableString += '<img class="allImages" src="Artifact.png"><br>'
+            tableString += '<img class="allImages" src="Treasure.svg"><br>'
         } else {
-            tableString += '<img class="allImages" src="Gem.png"><br>'
+            tableString += '<img class="allImages" src="Gem.svg"><br>'
         } 
         tableString += cardArray[cellCount] + '</td>';
         cellCount++;
