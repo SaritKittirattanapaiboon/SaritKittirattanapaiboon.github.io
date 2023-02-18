@@ -1,0 +1,58 @@
+<head>
+    <style>
+        #gameContainer{
+            height: 100%;
+            width: 100%;
+        }
+
+        .obstacle{
+            position: absolute;
+            right: 0;
+            height: 100px;
+            width: 30px;
+            background-color: red;
+            animation: rightToLeft 3s linear;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes rightToLeft {
+            from {
+                right: 0%;
+            }
+            to {
+                right: 100%;
+            }
+        }
+
+        #obstacle1{
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            bottom: 20px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        randomNumber = 0;
+
+        function gameStart(){
+            obstacle1 = setInterval(createObstacle1, 3000);
+        }
+
+        function createObstacle1(){
+            randomNumber = Math.floor(Math.random()*100)
+            if(randomNumber > 70){
+                document.getElementById("obstacle1").innerHTML = '<div class="obstacle" id="obstacle1_1"></div>';
+                curObstacle = document.getElementById("obstacle1_1");
+                curObstacle.addEventListener("animationend", function(){
+                    curObstacle.remove();
+                })
+            }
+        }
+    </script>
+</head>
+<body onload="gameStart();">
+    <div id="gameContainer">
+        <div id="obstacle1"></div>
+    </div>
+</body>

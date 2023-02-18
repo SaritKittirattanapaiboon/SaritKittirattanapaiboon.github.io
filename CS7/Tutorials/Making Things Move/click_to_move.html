@@ -1,0 +1,68 @@
+<head>
+    <style>
+        body{
+            background-color: aqua;
+        }
+
+        .box{
+            position: absolute;
+            border: 1px black;
+            width: 100px;
+            height: 100px;
+        }
+
+        #number1{
+            left: 200px;
+            top: 200px;
+            z-index: 1;
+            background-color: red;
+        }
+
+        #number2{
+            left: 400px;
+            top: 200px;
+            z-index: 1;
+            background-color: purple;
+        }
+
+        #number3{
+            left: 600px;
+            top: 200px;
+            z-index: 1;
+            background-color: brown;
+        }
+    </style>
+    <script>
+        currentlySelected = null;
+        moving = false;
+
+        function chooseMe(givenID){
+            if(moving == true){ //When the box is already moving, we want to place it down and stop moving
+                currentlySelected.style.zIndex = 2;
+                currentlySelected = null;
+                moving = false;
+            }
+            else {
+                currentlySelected = document.getElementById(givenID);
+                currentlySelected.style.zIndex = 3;
+                moving = true;
+            }
+        }
+
+        document.addEventListener('mousemove', function(event){
+            if(currentlySelected == null){
+                return;
+            }
+            thisbox = currentlySelected;
+            xPosition = event.clientX - 50;
+            yPosition = event.clientY - 50;
+            thisbox.style.top = yPosition + 'px';
+            thisbox.style.left = xPosition + 'px';
+        })
+    </script>
+</head>
+<body>
+    <div class="box" id="number1" onclick="chooseMe(this.id);"></div>
+    <div class="box" id="number2" onclick="chooseMe(this.id);"></div>
+    <div class="box" id="number3" onclick="chooseMe(this.id);"></div>
+</body>

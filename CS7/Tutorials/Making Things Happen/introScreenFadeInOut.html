@@ -1,0 +1,66 @@
+<head>
+    <style>
+        body{
+            background-color: aqua;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #introScreen{
+            width: 100%;
+            height: 100%;
+            background-color: burlywood;
+
+            color: darkorchid;
+            font-size: 350px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .fadeOutClass{
+            animation: fadeOut 2s linear;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes fadeOut {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+
+        #box{
+            position: absolute;
+            width: 40%;
+            left: 30%;
+            top: 20%;
+
+            font-size: 150px;
+            text-align: center;
+
+            z-index: -1;
+        }
+    </style>
+    <script>
+        function fadeMe(givenID){
+            currentlySelected = document.getElementById(givenID);
+            currentlySelected.classList.add('fadeOutClass');
+            currentlySelected.addEventListener('animationend', function(){
+                document.getElementById('box').style.zIndex = 1;
+                currentlySelected.remove();
+            })
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        Hi I'm the actual thing
+    </div>
+    <div id="introScreen" onclick="fadeMe(this.id);">
+        Hi I'm the Intro Screen
+    </div>
+
+</body>

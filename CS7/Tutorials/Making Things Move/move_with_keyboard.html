@@ -1,0 +1,44 @@
+<head>
+    <style>
+        body{
+            background-color: aqua;
+        }
+
+        #box{
+            position: absolute;
+            left: 100px;
+            top: 200px;
+            border: 1px black;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        xPosition = 100;
+        yPosition = 200;
+
+        document.addEventListener('keydown', function(event){
+            thisbox = document.getElementById("box");
+            if(event.key == 'w'){
+                    yPosition = yPosition - 5;
+                    thisbox.style.top = thisbox.style.top = yPosition + 'px';
+            }
+            if(event.key == 's'){
+                    yPosition = yPosition + 5;
+                    thisbox.style.top = thisbox.style.top = yPosition + 'px';
+            }
+            if(event.key == 'a'){
+                    xPosition = xPosition - 5;
+                    thisbox.style.left = thisbox.style.left = xPosition + 'px';
+            }
+            if(event.key == 'd'){
+                    xPosition = xPosition + 5;
+                    thisbox.style.left = thisbox.style.left = xPosition + 'px';
+            }
+        })
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>

@@ -1,0 +1,55 @@
+<head>
+    <style>
+        body{
+            background-color: aqua;
+        }
+
+        #box{
+            position: absolute;
+            left: 100px;
+            bottom: 0px;
+            border: 1px black;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+
+    </style>
+    <script>
+        jumping = false; //Check if the character is currently jumping
+        jumper = null; //No Jumper Yet
+        gravity = 5; //Speed of falling
+        position = 0; //Set current box position (0 means on the ground)
+
+        function startGame(){
+            jumper = document.getElementById("box"); //get the jumper
+            updateBox(); //Function to update the position of the box
+        }
+
+        document.addEventListener('keydown',function (event){ //Jump on w press
+            if(event.key == 'w'){
+                if(jumping == true){
+                    return; //Don't allow mid-air jumping
+                }
+                position = 100; //Jump to position 100
+                jumper.style.bottom = '100px';
+                jumping = true;
+            }
+        })
+
+        function updateBox(){
+            if(jumping == true){
+                position = position - gravity;
+                jumper.style.bottom = position + "px";
+                if(position <= 0){ //Stop jumping with position is the ground
+                    jumping = false;
+                }
+            }
+            requestAnimationFrame(updateBox);
+        }
+    </script>
+</head>
+<body onload="startGame();">
+    <div id="box"></div>
+</body>

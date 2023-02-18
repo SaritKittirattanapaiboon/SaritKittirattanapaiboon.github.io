@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #gameContainer {
+      position: relative;
+      height: 500px;
+      width: 500px;
+      border: 1px black solid;
+    }
+    #dino {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      height: 30px;
+      width: 20px;
+    }
+  </style>
+</head>
+<body onload="startGame()">
+  <div id="gameContainer">
+    <img id="dino" src="dino.png">
+  </div>
+
+  <script>
+    const dino = document.getElementById("dino");
+    const gameContainer = document.getElementById("gameContainer");
+    let gravity = 9;
+    let position = 0;
+    upDirection = true;
+
+    document.addEventListener("keydown", keyDownHandler, false);
+
+    function keyDownHandler(e) {
+    if (e.key == "Space" || e.key == "Up" || e.key == "ArrowUp") {
+        if(upDirection){
+            gravity = -9;
+            upDirection = false;
+        } else {
+            gravity = 9;
+            upDirection = true
+        }
+    }
+    }
+
+    function updateDino() {
+        position += gravity;
+        if (position >= gameContainer.offsetHeight - dino.offsetHeight || position <= 0) {
+            gravity = 0;
+        }
+        dino.style.bottom = position + "px";
+        requestAnimationFrame(updateDino);
+    }
+
+    function startGame() {
+        updateDino();
+    }
+  </script>
+</body>
+</html>

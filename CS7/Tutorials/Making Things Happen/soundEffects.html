@@ -1,0 +1,50 @@
+<head>
+    <style>
+        body{
+            background-color: aqua;
+            margin: 0;
+            padding: 0;
+        }
+
+        #box{
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            top: 200px;
+            background-color: red;
+
+            color: azure;
+            font-size: 100px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        backgroundMusic = false;
+
+        function playSoundEffect(){
+            soundEffect = document.getElementById("soundEffect");
+            soundEffect.volume = 0.3; //Set volume between 0 and 1 (0 is muted, 1 is max volume. Default is max)
+            soundEffect.currentTime = 0; //Set to play sound from beginning
+            soundEffect.play(); //play
+        }
+
+        function startBackgroundMusic(){
+            if(backgroundMusic == true){
+                return; //Do nothing if bgm is already on
+            }
+            soundEffect = document.getElementById("backgroundMusic");
+            soundEffect.volume = 0.2; //Set volume between 0 and 1 (0 is muted, 1 is max volume. Default is max)
+            soundEffect.currentTime = 0; //Set to play sound from beginning
+            soundEffect.loop = true;
+            soundEffect.play(); //play
+            backgroundMusic = true;
+        }
+    </script>
+</head>
+<body onclick="startBackgroundMusic();">
+    <div id="box" onclick="playSoundEffect()">Click Me!<br><a href="https://orangefreesounds.com/">Orange Free Sounds</a> is a good resource for sound effects</div>
+
+    <!--For the sake of organization, put all your sounds & music at the bottom of the page-->
+    <audio id="soundEffect" src="boing.mp3"></audio>
+    <audio id="backgroundMusic" src="bgm.mp3"></audio>
+</body>

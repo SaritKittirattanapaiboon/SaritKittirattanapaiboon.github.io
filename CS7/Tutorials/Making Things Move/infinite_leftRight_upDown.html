@@ -1,0 +1,104 @@
+<head>
+    <style>
+        body{
+            background-color: aqua;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .box{
+            position: absolute;
+            border: 1px black;
+            width: 100px;
+            height: 100px;
+        }
+
+        #number1{
+            top: 200px;
+            z-index: 1;
+            background-color: red;
+            animation: moveLeft 3s linear infinite;
+        }
+
+        @keyframes moveLeft {
+            from {
+                right: 0;
+            }
+            to {
+                right: 100%;
+            }
+        }
+
+        #number2{
+            left: 400px;
+            z-index: 1;
+            background-color: purple;
+            animation: moveUp 3s linear infinite;
+        }
+
+        @keyframes moveUp {
+            from {
+                bottom: 0;
+            }
+            to {
+                bottom: 100%;
+            }
+        }
+
+        #number3{
+            left: 200px;
+            z-index: 1;
+            background-color: brown;
+            animation: moveDown 3s linear infinite;
+        }
+
+        @keyframes moveDown {
+            from {
+                top: 0;
+            }
+            to {
+                top: 100%;
+            }
+        }
+
+        #number4{
+            top: 400px;
+            z-index: 1;
+            background-color: green;
+            animation: moveRight 3s linear infinite;
+        }
+
+        @keyframes moveRight {
+            from {
+                left: 0;
+            }
+            to {
+                left: 100%;
+            }
+        }
+    </style>
+    <script>
+        currentlySelected = null;
+        moving = false;
+
+        document.addEventListener('mousemove', function(event){
+            if(currentlySelected == null){
+                return;
+            }
+            thisbox = currentlySelected;
+            xPosition = event.clientX - 50;
+            yPosition = event.clientY - 50;
+            thisbox.style.top = yPosition + 'px';
+            thisbox.style.left = xPosition + 'px';
+        })
+    </script>
+</head>
+<body>
+    <div class="box" id="number1"></div>
+    <div class="box" id="number2"></div>
+    <div class="box" id="number3"></div>
+    <div class="box" id="number4"></div>
+</body>

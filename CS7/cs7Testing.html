@@ -1,0 +1,149 @@
+<head>
+    <style>
+        
+        .titlescreenguys{
+            height: 40%;
+            
+        }
+
+        #basketballguy1{
+            height: 25%;
+
+            z-index: -1;
+            position: absolute;
+            left: 637.5;
+            top: 300px;
+
+        }
+        #basketballguy3{
+            height: 25%;
+
+            z-index: -1;
+            position: absolute;
+            left: 637.5;
+            top: 300px;
+
+        }
+
+        #basketballguy2{
+            height: 25%;
+
+            z-index: -1;
+            position: absolute;
+            left: 637.5;
+            top: 300px;
+
+        }
+
+        #backgroundImage{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -2;
+            top: 0px;
+            left: 0px;
+        }
+        .flipped{
+            position: absolute;
+            transform: scaleX(-1) ;
+        }
+        #initialScreen{
+            width: 100%;
+            height: 100%;
+            z-index: 100000;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: cyan;
+        }
+        #startbutton{
+            left: 50%;
+            top: 50%;
+            z-index: 3;
+        }
+        #cursor{
+            height: 100px;
+            width: 100px;
+            
+        }
+    </style>
+    <script>
+
+        xPosition = 400;
+        yPosition = 400;
+        
+        function chooseMe(givenID){
+            currentlySelected = document.getElementById(givenID);
+        }
+
+
+        document.addEventListener('keydown',function (event){
+            if(event.key == 'w'){
+                    thisbox = currentlySelected
+                    yPosition = yPosition - 5;
+                    thisbox.style.top = thisbox.style.top = yPosition + 'px';
+            }
+        })
+        document.addEventListener('keydown',function (event){
+            if(event.key == 's'){
+                    thisbox = currentlySelected
+                    yPosition = yPosition + 5;
+                    thisbox.style.top = thisbox.style.top = yPosition + 'px';
+            }
+        })
+        document.addEventListener('keydown',function (event){
+            if(event.key == 'a'){
+                    thisbox = currentlySelected
+                    xPosition = xPosition - 5;
+                    thisbox.style.left = thisbox.style.left = xPosition + 'px';
+                    currentlySelected.classList.remove('flipped');
+            }
+        })
+        document.addEventListener('keydown',function (event){
+            if(event.key == 'd'){
+                    thisbox = currentlySelected
+                    xPosition = xPosition + 5;
+                    thisbox.style.left = thisbox.style.left = xPosition + 'px';
+                    currentlySelected.classList.add('flipped');
+            }
+        })
+        /*function initialScreenDisappear(){
+            document.getElementById("initialScreen").style.display = 'none';
+            document.getElementsByClassName("basketballguys").style.display = 'none';
+            document.getElementById("picktext").style.display = 'none';
+        }
+        
+        document.addEventListener('mousemove', function(event){
+            xPosition = event.clientX - 50;
+            yPosition = event.clientY - 50;
+            cursor.style.top = yPosition + 'px';
+            cursor.style.left = xPosition + 'px';
+
+            <img src="basketballcursor.png" id="cursor">
+
+            <div id="initialScreen">
+        <button id="startbutton" onclick="initialScreenDisappear()">
+            Start
+        </button>
+        <div id="picktext">
+            pick a character
+        </div>
+
+         <img src="basketballguy4.png" onclick="basketballpick1()" class="titlescreenguys">
+        <img src="basketballguy5.png" onclick="basketballpick2()" class="titlescreenguys">
+        <img src="basketballguy6.png" onclick="basketballpick3()" class="titlescreenguys">
+
+        currentlySelected = null;
+        })*/
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <img id="basketballguy1" src="basketballguy1.png" onclick="chooseMe(this.id);">
+        <img id="basketballguy3" src="basketballguy3.png" onclick="chooseMe(this.id);">
+        <img id="basketballguy2" src="basketballguy2.png" onclick="chooseMe(this.id);">
+        <img id="backgroundImage" src="BasketballCourt.png">
+    </div>
+</body>
